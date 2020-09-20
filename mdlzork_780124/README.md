@@ -13,8 +13,12 @@ Other changes to this file:
 ~~~
 
 ## defs.89 --> 78defs.mud
-The "defs"-file builds, among other things, FLAHWORDs. The 1978 version of FLAGWORD could take a second argument to each bit and if this second argument was something other than <>, FLAGWORD created a bit-tester MACRO. This functionality is no longer available so I removed all bit-testers in call to FLAGWORD and replaced them with new MACROs at the end of the file.
+The "defs"-file builds, among other things, FLAGWORDs. The 1978 version of FLAGWORD could take a second argument to each bit and if this second argument was something other than <>, FLAGWORD created a bit-tester MACRO. This functionality is no longer available so I removed all bit-testers in call to FLAGWORD and replaced them with new MACROs at the end of the file.
 
+Example (for OVIS?):
+~~~
+<DEFMAC OVIS? ('OBJ) <FORM TRNN .OBJ ,OVISON>>
+~~~
 Other changes to this file:
 ~~~
 * Change EOL to "(Windows CR LF)"

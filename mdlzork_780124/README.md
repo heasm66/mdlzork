@@ -14,6 +14,7 @@ defs.89 --> 78defs.mud
 * Change OFFSET to NOFFSET on row 4, 5, 307, 546, 552 & 553
 * Remove all "bit-testers" from calls to FLAGWORD
 * Create "bit-testers" for:
+~~~
 	RSEEN?			RSEENBIT
 	RLIGHT?			RLIGHTBIT
 	STAGGERED?		ASTAGGERED
@@ -21,13 +22,14 @@ defs.89 --> 78defs.mud
 	READABLE?		READBIT
 	CAN-TAKE?		TAKEBIT
 	DOOR?			DOORBIT
-	TRANSPARENT?	TRANSBIT
+	TRANSPARENT?		TRANSBIT
 	EDIBLE?			FOODBIT
 	DRINKABLE?		DRINKBIT
 	BURNABLE?		BURNBIT
 	FIGHTING?		FIGHTBIT
 	OOPEN?			OPENBIT
 	OTOUCH?			TOUCHBIT
+~~~
   and place last in the file.
 	
 makstr.25 --> 78makstr.mud

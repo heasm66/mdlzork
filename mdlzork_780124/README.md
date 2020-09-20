@@ -1,20 +1,27 @@
 # Mainframe Zork from 1978-01-24
 
-81prim.mud
-----------
-* File is from 1981-version. This version has a different definition of FLAGWORD that will require changes in defs.mud.
-* Change EOL to "(Windows CR LF)"
-* Change row 54 to:
-	(<LENGTH? .ELEM 1> <PRINT .ELEM> <ERROR NEWSTRUC>)>
+## 81prim.mud
+The "prim"-file is missing so I used the file from the 1981-version. This version has a different definition of FLAGWORD that will require changes in "defs".
 
-defs.89 --> 78defs.mud
-----------------------
+Other changes to this file:
+~~~
+* Change EOL to "(Windows CR LF)"
+* Change line 54 from:
+	(<LENGTH? .ELEM 1> <ERROR NEWSTRUC>)>
+  to
+	(<LENGTH? .ELEM 1> <PRINT .ELEM> <ERROR NEWSTRUC>)>
+~~~
+
+## defs.89 --> 78defs.mud
+The "defs"-file builds, among other things, FLAHWORDs. The 1978 version of FLAGWORD could take a second argument to each bit and if this second argument was something other than <>, FLAGWORD created a bit-tester MACRO. This functionality is no longer available so I removed all bit-testers in call to FLAGWORD and replaced them with new MACROs at the end of the file.
+
+Other changes to this file:
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all \[FF] & [FF]
 * Change OFFSET to NOFFSET on row 4, 5, 307, 546, 552 & 553
 * Remove all "bit-testers" from calls to FLAGWORD
 * Create "bit-testers" for:
-~~~
 	RSEEN?			RSEENBIT
 	RLIGHT?			RLIGHTBIT
 	STAGGERED?		ASTAGGERED
@@ -29,9 +36,9 @@ defs.89 --> 78defs.mud
 	FIGHTING?		FIGHTBIT
 	OOPEN?			OPENBIT
 	OTOUCH?			TOUCHBIT
-~~~
   and place last in the file.
-	
+~~~
+
 makstr.25 --> 78makstr.mud
 --------------------------
 * Change EOL to "(Windows CR LF)"

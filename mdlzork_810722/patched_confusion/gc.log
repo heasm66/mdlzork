@@ -1,0 +1,945 @@
+Increasing heap size by 65536 after 0 allocated bytes
+Adding block map for size 0
+Initiating full world-stop collection 1 after 0 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 1 after 0 allocd bytes + 0 wasted bytes
+Found new system malloc AllocationBase at 0x700000
+Collection 0 reclaimed 0 bytes ---> heapsize = 65536 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = 0
+Immediately reclaimed 0 bytes in heap of size 65536 bytes
+0 (atomic) + 0 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Adding block map for size 8
+Adding block map for size 6
+Adding block map for size 10
+Adding block map for size 340
+Adding block map for size 36
+Adding block map for size 256
+Adding block map for size 4
+Adding block map for size 12
+Adding block map for size 20
+Adding block map for size 42
+Adding block map for size 60
+Increasing heap size by 65536 after 6896 allocated bytes
+Adding block map for size 84
+Adding block map for size 128
+Adding block map for size 512
+Adding block map for size 16
+Adding block map for size 146
+Adding block map for size 2
+Grew dl table to 1 entries
+Grew dl table to 2 entries
+Grew dl table to 4 entries
+Increasing heap size by 65536 after 51888 allocated bytes
+Grew dl table to 8 entries
+Adding block map for size 18
+Grew dl table to 16 entries
+Adding block map for size 24
+Adding block map for size 102
+Adding block map for size 1
+Adding block map for size 28
+Increasing heap size by 69632 after 76996 allocated bytes
+Increasing heap size by 90112 after 145980 allocated bytes
+Initiating full world-stop collection 2 after 234340 allocd bytes
+4096 bytes in heap blacklisted for interior pointers
+--> Marking for collection 2 after 234340 allocd bytes + 1560 wasted bytes
+Collection 1 reclaimed 0 bytes ---> heapsize = 356352 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -126648
+Immediately reclaimed 4424 bytes in heap of size 356352 bytes
+10776 (atomic) + 69840 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Grew dl table to 32 entries
+Grew dl table to 64 entries
+Adding block map for size 14
+Increasing heap size by 122880 after 140824 allocated bytes
+Grew dl table to 128 entries
+Initiating full world-stop collection 3 after 255264 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 3 after 255264 allocd bytes + 0 wasted bytes
+Collection 2 reclaimed 55544 bytes ---> heapsize = 479232 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -48752
+Immediately reclaimed 98704 bytes in heap of size 479232 bytes
+11760 (atomic) + 96032 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 4 after 227360 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 4 after 227360 allocd bytes + 0 wasted bytes
+Collection 3 reclaimed 222016 bytes ---> heapsize = 479232 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -41840
+Immediately reclaimed 64656 bytes in heap of size 479232 bytes
+12376 (atomic) + 98152 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 5 after 225968 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 5 after 225968 allocd bytes + 0 wasted bytes
+Collection 4 reclaimed 229672 bytes ---> heapsize = 479232 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -44368
+Immediately reclaimed 53936 bytes in heap of size 479232 bytes
+13016 (atomic) + 100256 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 6 after 218728 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 6 after 218728 allocd bytes + 0 wasted bytes
+Collection 5 reclaimed 216992 bytes ---> heapsize = 479232 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -41216
+Immediately reclaimed 52992 bytes in heap of size 479232 bytes
+13616 (atomic) + 104304 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Increasing heap size by 163840 after 212176 allocated bytes
+Grew dl table to 256 entries
+Initiating full world-stop collection 7 after 390648 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 7 after 390648 allocd bytes + 0 wasted bytes
+Collection 6 reclaimed 221560 bytes ---> heapsize = 643072 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -33192
+Immediately reclaimed 134744 bytes in heap of size 643072 bytes
+16056 (atomic) + 130712 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 8 after 339992 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 8 after 339992 allocd bytes + 0 wasted bytes
+Collection 7 reclaimed 344784 bytes ---> heapsize = 643072 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -35408
+Immediately reclaimed 140720 bytes in heap of size 643072 bytes
+18104 (atomic) + 140816 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Increasing heap size by 217088 after 239456 allocated bytes
+Initiating full world-stop collection 9 after 496336 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 9 after 496336 allocd bytes + 0 wasted bytes
+Collection 8 reclaimed 291744 bytes ---> heapsize = 860160 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -42312
+Immediately reclaimed 330424 bytes in heap of size 860160 bytes
+19672 (atomic) + 225032 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 10 after 392348 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 10 after 392348 allocd bytes + 0 wasted bytes
+Collection 9 reclaimed 434872 bytes ---> heapsize = 860160 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -80452
+Immediately reclaimed 218556 bytes in heap of size 860160 bytes
+22468 (atomic) + 293016 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Increasing heap size by 290816 after 328744 allocated bytes
+Initiating full world-stop collection 11 after 632416 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 11 after 632416 allocd bytes + 0 wasted bytes
+Collection 10 reclaimed 320916 bytes ---> heapsize = 1150976 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -52256
+Immediately reclaimed 390112 bytes in heap of size 1150976 bytes
+35764 (atomic) + 401176 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 12 after 506160 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 12 after 506160 allocd bytes + 0 wasted bytes
+Collection 11 reclaimed 508168 bytes ---> heapsize = 1150976 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -48424
+Immediately reclaimed 287448 bytes in heap of size 1150976 bytes
+46252 (atomic) + 490544 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Adding block map for size 68
+Increasing heap size by 385024 after 402464 allocated bytes
+Initiating full world-stop collection 13 after 798424 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 13 after 798424 allocd bytes + 0 wasted bytes
+Collection 12 reclaimed 411040 bytes ---> heapsize = 1536000 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -41424
+Immediately reclaimed 519728 bytes in heap of size 1536000 bytes
+58220 (atomic) + 644720 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 14 after 644496 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 14 after 644496 allocd bytes + 0 wasted bytes
+Collection 13 reclaimed 656744 bytes ---> heapsize = 1536000 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -51304
+Immediately reclaimed 358296 bytes in heap of size 1536000 bytes
+68956 (atomic) + 764312 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Increasing heap size by 516096 after 502352 allocated bytes
+Adding block map for size 48
+Initiating full world-stop collection 15 after 1031040 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 15 after 1031040 allocd bytes + 0 wasted bytes
+Collection 14 reclaimed 517976 bytes ---> heapsize = 2052096 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -50640
+Immediately reclaimed 641584 bytes in heap of size 2052096 bytes
+91628 (atomic) + 968408 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 16 after 804976 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 16 after 804976 allocd bytes + 0 wasted bytes
+Collection 15 reclaimed 790720 bytes ---> heapsize = 2052096 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -33656
+Immediately reclaimed 498824 bytes in heap of size 2052096 bytes
+106116 (atomic) + 1129336 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 15 msecs
+Increasing heap size by 688128 after 622544 allocated bytes
+Initiating full world-stop collection 17 after 1303656 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 17 after 1303656 allocd bytes + 0 wasted bytes
+Collection 16 reclaimed 657656 bytes ---> heapsize = 2740224 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -71152
+Immediately reclaimed 834064 bytes in heap of size 2740224 bytes
+129636 (atomic) + 1388440 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 18 after 1021560 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 18 after 1021560 allocd bytes + 0 wasted bytes
+Collection 17 reclaimed 1023516 bytes ---> heapsize = 2740224 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -70596
+Immediately reclaimed 592956 bytes in heap of size 2740224 bytes
+141284 (atomic) + 1585904 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Increasing heap size by 917504 after 792864 allocated bytes
+Initiating full world-stop collection 19 after 1738896 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 19 after 1738896 allocd bytes + 0 wasted bytes
+Collection 18 reclaimed 816164 bytes ---> heapsize = 3657728 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -61048
+Immediately reclaimed 1143176 bytes in heap of size 3657728 bytes
+153708 (atomic) + 1929936 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 20 after 1388968 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 20 after 1388968 allocd bytes + 0 wasted bytes
+Collection 19 reclaimed 1364680 bytes ---> heapsize = 3657728 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -32056
+Immediately reclaimed 881352 bytes in heap of size 3657728 bytes
+163436 (atomic) + 2207544 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Increasing heap size by 1220608 after 1057200 allocated bytes
+Adding block map for size 170
+Initiating full world-stop collection 21 after 2269820 allocd bytes
+4096 bytes in heap blacklisted for interior pointers
+--> Marking for collection 21 after 2269820 allocd bytes + 2044 wasted bytes
+Collection 20 reclaimed 1121540 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -101540
+Immediately reclaimed 1354592 bytes in heap of size 4878336 bytes
+205024 (atomic) + 2353600 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 22 after 2007252 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 22 after 2007252 allocd bytes + 0 wasted bytes
+Collection 21 reclaimed 1982824 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -65684
+Immediately reclaimed 1146732 bytes in heap of size 4878336 bytes
+213892 (atomic) + 2373344 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 23 after 1942672 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 23 after 1942672 allocd bytes + 0 wasted bytes
+Collection 22 reclaimed 1912192 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -22692
+Immediately reclaimed 1070940 bytes in heap of size 4878336 bytes
+214012 (atomic) + 2383176 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 24 after 1924172 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 24 after 1924172 allocd bytes + 0 wasted bytes
+Collection 23 reclaimed 1933624 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -19888
+Immediately reclaimed 954960 bytes in heap of size 4878336 bytes
+214680 (atomic) + 2388032 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 25 after 1921640 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 25 after 1921640 allocd bytes + 0 wasted bytes
+Collection 24 reclaimed 1938648 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -25056
+Immediately reclaimed 900640 bytes in heap of size 4878336 bytes
+214872 (atomic) + 2392096 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 26 after 1920580 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 26 after 1920580 allocd bytes + 0 wasted bytes
+Collection 25 reclaimed 1920960 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -13836
+Immediately reclaimed 870900 bytes in heap of size 4878336 bytes
+215572 (atomic) + 2395712 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 27 after 1927816 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 27 after 1927816 allocd bytes + 0 wasted bytes
+Collection 26 reclaimed 1971832 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -46364
+Immediately reclaimed 744164 bytes in heap of size 4878336 bytes
+215932 (atomic) + 2402720 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 28 after 1906344 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 28 after 1906344 allocd bytes + 0 wasted bytes
+Collection 27 reclaimed 1899276 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -28480
+Immediately reclaimed 737472 bytes in heap of size 4878336 bytes
+216492 (atomic) + 2408928 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 29 after 1905048 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 29 after 1905048 allocd bytes + 0 wasted bytes
+Collection 28 reclaimed 1920400 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -33192
+Immediately reclaimed 712280 bytes in heap of size 4878336 bytes
+217316 (atomic) + 2413424 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 30 after 1889080 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 30 after 1889080 allocd bytes + 0 wasted bytes
+Collection 29 reclaimed 1916448 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -50096
+Immediately reclaimed 666704 bytes in heap of size 4878336 bytes
+217892 (atomic) + 2422888 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 31 after 1872024 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 31 after 1872024 allocd bytes + 0 wasted bytes
+Collection 30 reclaimed 1872216 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -40384
+Immediately reclaimed 688704 bytes in heap of size 4878336 bytes
+219316 (atomic) + 2423680 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 32 after 1870744 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 32 after 1870744 allocd bytes + 0 wasted bytes
+Collection 31 reclaimed 1865088 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 63 msecs
+Bytes recovered before sweep - f.l. count = -24408
+Immediately reclaimed 696488 bytes in heap of size 4878336 bytes
+219412 (atomic) + 2434448 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 63 msecs
+Initiating full world-stop collection 33 after 1859744 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 33 after 1859744 allocd bytes + 0 wasted bytes
+Collection 32 reclaimed 1883552 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -37960
+Immediately reclaimed 687032 bytes in heap of size 4878336 bytes
+219468 (atomic) + 2433808 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 34 after 1870016 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 34 after 1870016 allocd bytes + 0 wasted bytes
+Collection 33 reclaimed 1880824 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -38560
+Immediately reclaimed 678240 bytes in heap of size 4878336 bytes
+220460 (atomic) + 2434904 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 0 msecs
+Initiating full world-stop collection 35 after 1862840 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 35 after 1862840 allocd bytes + 0 wasted bytes
+Collection 34 reclaimed 1872864 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -38376
+Immediately reclaimed 682520 bytes in heap of size 4878336 bytes
+221156 (atomic) + 2441632 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 36 after 1861584 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 36 after 1861584 allocd bytes + 0 wasted bytes
+Collection 35 reclaimed 1874576 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -41112
+Immediately reclaimed 683880 bytes in heap of size 4878336 bytes
+223076 (atomic) + 2443576 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 37 after 1856024 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 37 after 1856024 allocd bytes + 0 wasted bytes
+Collection 36 reclaimed 1852432 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -27248
+Immediately reclaimed 677264 bytes in heap of size 4878336 bytes
+223740 (atomic) + 2455200 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 38 after 1835160 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 38 after 1835160 allocd bytes + 0 wasted bytes
+Collection 37 reclaimed 1870984 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -53232
+Immediately reclaimed 643088 bytes in heap of size 4878336 bytes
+225332 (atomic) + 2458608 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 39 after 1831048 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 39 after 1831048 allocd bytes + 0 wasted bytes
+Collection 38 reclaimed 1829432 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -41600
+Immediately reclaimed 654720 bytes in heap of size 4878336 bytes
+226580 (atomic) + 2458432 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 40 after 1826640 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 40 after 1826640 allocd bytes + 0 wasted bytes
+Collection 39 reclaimed 1817456 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -22304
+Immediately reclaimed 661728 bytes in heap of size 4878336 bytes
+227100 (atomic) + 2465840 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 41 after 1827720 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 41 after 1827720 allocd bytes + 0 wasted bytes
+Collection 40 reclaimed 1860360 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -45008
+Immediately reclaimed 630832 bytes in heap of size 4878336 bytes
+228956 (atomic) + 2474440 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 42 after 1815760 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 42 after 1815760 allocd bytes + 0 wasted bytes
+Collection 41 reclaimed 1825120 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -44784
+Immediately reclaimed 610576 bytes in heap of size 4878336 bytes
+229876 (atomic) + 2478776 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 43 after 1816752 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 43 after 1816752 allocd bytes + 0 wasted bytes
+Collection 42 reclaimed 1822672 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -41200
+Immediately reclaimed 622352 bytes in heap of size 4878336 bytes
+230812 (atomic) + 2485344 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 44 after 1805768 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 44 after 1805768 allocd bytes + 0 wasted bytes
+Collection 43 reclaimed 1812672 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -38920
+Immediately reclaimed 636920 bytes in heap of size 4878336 bytes
+232148 (atomic) + 2486992 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 45 after 1816264 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 45 after 1816264 allocd bytes + 0 wasted bytes
+Collection 44 reclaimed 1825944 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -38728
+Immediately reclaimed 624824 bytes in heap of size 4878336 bytes
+233460 (atomic) + 2489752 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 46 after 1813088 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 46 after 1813088 allocd bytes + 0 wasted bytes
+Collection 45 reclaimed 1813528 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -29312
+Immediately reclaimed 630144 bytes in heap of size 4878336 bytes
+234548 (atomic) + 2496152 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 47 after 1804232 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 47 after 1804232 allocd bytes + 0 wasted bytes
+Collection 46 reclaimed 1840232 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -57032
+Immediately reclaimed 602424 bytes in heap of size 4878336 bytes
+237068 (atomic) + 2501512 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 48 after 1787624 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 48 after 1787624 allocd bytes + 0 wasted bytes
+Collection 47 reclaimed 1783640 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -43640
+Immediately reclaimed 603528 bytes in heap of size 4878336 bytes
+238844 (atomic) + 2505128 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 49 after 1784832 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 49 after 1784832 allocd bytes + 0 wasted bytes
+Collection 48 reclaimed 1795928 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -45008
+Immediately reclaimed 593968 bytes in heap of size 4878336 bytes
+239908 (atomic) + 2508424 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 50 after 1774016 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 50 after 1774016 allocd bytes + 0 wasted bytes
+Collection 49 reclaimed 1783280 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -46056
+Immediately reclaimed 592920 bytes in heap of size 4878336 bytes
+242540 (atomic) + 2518800 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 51 after 1780480 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 51 after 1780480 allocd bytes + 0 wasted bytes
+Collection 50 reclaimed 1781568 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -38152
+Immediately reclaimed 613112 bytes in heap of size 4878336 bytes
+244276 (atomic) + 2519808 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 32 msecs
+Initiating full world-stop collection 52 after 1776952 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 52 after 1776952 allocd bytes + 0 wasted bytes
+Collection 51 reclaimed 1789464 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -41040
+Immediately reclaimed 602032 bytes in heap of size 4878336 bytes
+245476 (atomic) + 2532736 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 53 after 1728992 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 53 after 1728992 allocd bytes + 0 wasted bytes
+Collection 52 reclaimed 1728240 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -30816
+Immediately reclaimed 591776 bytes in heap of size 4878336 bytes
+245252 (atomic) + 2533424 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 16 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 54 after 1759936 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 54 after 1759936 allocd bytes + 0 wasted bytes
+Collection 53 reclaimed 1779784 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -41656
+Immediately reclaimed 568648 bytes in heap of size 4878336 bytes
+246948 (atomic) + 2544352 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 55 after 1765048 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 55 after 1765048 allocd bytes + 0 wasted bytes
+Collection 54 reclaimed 1764952 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -32344
+Immediately reclaimed 565672 bytes in heap of size 4878336 bytes
+247460 (atomic) + 2547912 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 56 after 1737216 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 56 after 1737216 allocd bytes + 0 wasted bytes
+Collection 55 reclaimed 1730808 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -16848
+Immediately reclaimed 577072 bytes in heap of size 4878336 bytes
+248020 (atomic) + 2553776 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 57 after 1728928 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 57 after 1728928 allocd bytes + 0 wasted bytes
+Collection 56 reclaimed 1749952 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -28784
+Immediately reclaimed 561040 bytes in heap of size 4878336 bytes
+248620 (atomic) + 2556480 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 58 after 1721976 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 58 after 1721976 allocd bytes + 0 wasted bytes
+Collection 57 reclaimed 1729880 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 63 msecs
+Bytes recovered before sweep - f.l. count = -27728
+Immediately reclaimed 537520 bytes in heap of size 4878336 bytes
+249092 (atomic) + 2561808 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 78 msecs
+Initiating full world-stop collection 59 after 1726240 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 59 after 1726240 allocd bytes + 0 wasted bytes
+Collection 58 reclaimed 1744912 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -37760
+Immediately reclaimed 547968 bytes in heap of size 4878336 bytes
+249348 (atomic) + 2566704 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 63 msecs
+Initiating full world-stop collection 60 after 1723936 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 60 after 1723936 allocd bytes + 0 wasted bytes
+Collection 59 reclaimed 1729880 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -35840
+Immediately reclaimed 553984 bytes in heap of size 4878336 bytes
+250756 (atomic) + 2567344 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 61 after 1708096 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 61 after 1708096 allocd bytes + 0 wasted bytes
+Collection 60 reclaimed 1709096 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -28000
+Immediately reclaimed 545440 bytes in heap of size 4878336 bytes
+250692 (atomic) + 2575080 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 62 after 1699096 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 62 after 1699096 allocd bytes + 0 wasted bytes
+Collection 61 reclaimed 1702568 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -22768
+Immediately reclaimed 562960 bytes in heap of size 4878336 bytes
+250740 (atomic) + 2577672 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 15 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 63 after 1704216 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 63 after 1704216 allocd bytes + 0 wasted bytes
+Collection 62 reclaimed 1714888 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -24544
+Immediately reclaimed 548896 bytes in heap of size 4878336 bytes
+250660 (atomic) + 2590312 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 64 after 1690064 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 64 after 1690064 allocd bytes + 0 wasted bytes
+Collection 63 reclaimed 1693912 bytes ---> heapsize = 4878336 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -19688
+Immediately reclaimed 533272 bytes in heap of size 4878336 bytes
+250740 (atomic) + 2599208 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Increasing heap size by 1630208 after 1679392 allocated bytes
+Initiating full world-stop collection 65 after 3311896 allocd bytes
+4096 bytes in heap blacklisted for interior pointers
+--> Marking for collection 65 after 3311896 allocd bytes + 4096 wasted bytes
+Collection 64 reclaimed 1717448 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -30168
+Immediately reclaimed 1792552 bytes in heap of size 6508544 bytes
+255228 (atomic) + 2606784 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 66 after 3302512 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 66 after 3302512 allocd bytes + 0 wasted bytes
+Collection 65 reclaimed 3317632 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -25104
+Immediately reclaimed 1666544 bytes in heap of size 6508544 bytes
+255636 (atomic) + 2619840 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 67 after 3290000 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 67 after 3290000 allocd bytes + 0 wasted bytes
+Collection 66 reclaimed 3309824 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -25328
+Immediately reclaimed 1670416 bytes in heap of size 6508544 bytes
+255964 (atomic) + 2621504 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 68 after 3288864 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 68 after 3288864 allocd bytes + 0 wasted bytes
+Collection 67 reclaimed 3305672 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -22184
+Immediately reclaimed 1591640 bytes in heap of size 6508544 bytes
+256156 (atomic) + 2630160 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 69 after 3286456 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 69 after 3286456 allocd bytes + 0 wasted bytes
+Collection 68 reclaimed 3312976 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -29120
+Immediately reclaimed 1482304 bytes in heap of size 6508544 bytes
+256204 (atomic) + 2646456 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 70 after 3272208 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 70 after 3272208 allocd bytes + 0 wasted bytes
+Collection 69 reclaimed 3282512 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -20448
+Immediately reclaimed 1450016 bytes in heap of size 6508544 bytes
+256348 (atomic) + 2662376 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 71 after 3250096 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 71 after 3250096 allocd bytes + 0 wasted bytes
+Collection 70 reclaimed 3284724 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -36516
+Immediately reclaimed 1421660 bytes in heap of size 6508544 bytes
+256820 (atomic) + 2663480 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 72 after 3258132 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 72 after 3258132 allocd bytes + 0 wasted bytes
+Collection 71 reclaimed 3279664 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -39968
+Immediately reclaimed 1373152 bytes in heap of size 6508544 bytes
+258888 (atomic) + 2670936 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 73 after 3241312 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 73 after 3241312 allocd bytes + 0 wasted bytes
+Collection 72 reclaimed 3249640 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -29992
+Immediately reclaimed 1366744 bytes in heap of size 6508544 bytes
+260288 (atomic) + 2673512 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 74 after 3236324 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 74 after 3236324 allocd bytes + 0 wasted bytes
+Collection 73 reclaimed 3256368 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -31748
+Immediately reclaimed 1352700 bytes in heap of size 6508544 bytes
+261116 (atomic) + 2679368 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 75 after 3232800 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 75 after 3232800 allocd bytes + 0 wasted bytes
+Collection 74 reclaimed 3259024 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -39620
+Immediately reclaimed 1332540 bytes in heap of size 6508544 bytes
+262452 (atomic) + 2683120 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 76 after 3236448 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 76 after 3236448 allocd bytes + 0 wasted bytes
+Collection 75 reclaimed 3244800 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -29876
+Immediately reclaimed 1313612 bytes in heap of size 6508544 bytes
+263636 (atomic) + 2689888 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 77 after 3218672 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 77 after 3218672 allocd bytes + 2044 wasted bytes
+Collection 76 reclaimed 3244544 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -37792
+Immediately reclaimed 1270884 bytes in heap of size 6508544 bytes
+266288 (atomic) + 2697024 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 78 after 3215076 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 78 after 3215076 allocd bytes + 0 wasted bytes
+Collection 77 reclaimed 3216244 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 125 msecs
+Bytes recovered before sweep - f.l. count = -24892
+Immediately reclaimed 1302212 bytes in heap of size 6508544 bytes
+268404 (atomic) + 2696288 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 141 msecs
+Initiating full world-stop collection 79 after 3219952 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 79 after 3219952 allocd bytes + 0 wasted bytes
+Collection 78 reclaimed 3233928 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -20820
+Immediately reclaimed 1314476 bytes in heap of size 6508544 bytes
+269636 (atomic) + 2699680 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 80 after 3204480 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 80 after 3204480 allocd bytes + 0 wasted bytes
+Collection 79 reclaimed 3238936 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -38180
+Immediately reclaimed 1252060 bytes in heap of size 6508544 bytes
+272068 (atomic) + 2707136 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 81 after 3196444 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 81 after 3196444 allocd bytes + 0 wasted bytes
+Collection 80 reclaimed 3200680 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -24560
+Immediately reclaimed 1273872 bytes in heap of size 6508544 bytes
+272944 (atomic) + 2710312 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Initiating full world-stop collection 82 after 3182272 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 82 after 3182272 allocd bytes + 0 wasted bytes
+Collection 81 reclaimed 3214544 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -39040
+Immediately reclaimed 1238912 bytes in heap of size 6508544 bytes
+274720 (atomic) + 2710696 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 83 after 3179500 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 83 after 3179500 allocd bytes + 0 wasted bytes
+Collection 82 reclaimed 3194664 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -36668
+Immediately reclaimed 1228996 bytes in heap of size 6508544 bytes
+276228 (atomic) + 2717536 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 84 after 3185720 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 84 after 3185720 allocd bytes + 2044 wasted bytes
+Collection 83 reclaimed 3194088 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -27752
+Immediately reclaimed 1248156 bytes in heap of size 6508544 bytes
+279792 (atomic) + 2720560 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 85 after 3176624 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 85 after 3176624 allocd bytes + 0 wasted bytes
+Collection 84 reclaimed 3189164 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 0 msecs
+Bytes recovered before sweep - f.l. count = -25384
+Immediately reclaimed 1211608 bytes in heap of size 6508544 bytes
+280996 (atomic) + 2732656 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 0 msecs
+Initiating full world-stop collection 86 after 3162496 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 86 after 3162496 allocd bytes + 0 wasted bytes
+Collection 85 reclaimed 3184080 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -31792
+Immediately reclaimed 1225680 bytes in heap of size 6508544 bytes
+285364 (atomic) + 2736968 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 15 msecs
+Initiating full world-stop collection 87 after 3156788 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 87 after 3156788 allocd bytes + 0 wasted bytes
+Collection 86 reclaimed 3174236 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -32752
+Immediately reclaimed 1220624 bytes in heap of size 6508544 bytes
+287088 (atomic) + 2739888 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Initiating full world-stop collection 88 after 3154632 allocd bytes
+0 bytes in heap blacklisted for interior pointers
+--> Marking for collection 88 after 3154632 allocd bytes + 0 wasted bytes
+Collection 87 reclaimed 3180256 bytes ---> heapsize = 6508544 bytes
+World-stopped marking took 16 msecs
+Bytes recovered before sweep - f.l. count = -41112
+Immediately reclaimed 1204072 bytes in heap of size 6508544 bytes
+290496 (atomic) + 2744352 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 16 msecs
+Increasing heap size by 2170880 after 2206416 allocated bytes
+Initiating full world-stop collection 89 after 4912476 allocd bytes
+4096 bytes in heap blacklisted for interior pointers
+--> Marking for collection 89 after 4912476 allocd bytes + 51248 wasted bytes
+Collection 88 reclaimed 2479760 bytes ---> heapsize = 8679424 bytes
+World-stopped marking took 15 msecs
+Bytes recovered before sweep - f.l. count = -138996
+Immediately reclaimed 1499404 bytes in heap of size 8679424 bytes
+304320 (atomic) + 3161032 (composite) collectable bytes in use
+Finalize + initiate sweep took 0 + 0 msecs
+Complete collection took 31 msecs
+Increasing heap size by 3551232 after 0 allocated bytes
+Increasing heap size by 6291456 after 4866588 allocated bytes

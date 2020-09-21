@@ -16,7 +16,7 @@ This is the source files that Bob Supnik released 2003. The version here is with
 ## Playing the games
 To play the games you'll need Confusion that can be found at [IF-Archive](http://www.ifarchive.org/indexes/if-archive/programming/mdl/interpreters/confusion/), Matthew Russotto's
 [homepage](http://www.russotto.net/git/mrussotto/confusion) or Benjamin Slade's [patched version](https://gitlab.com/emacsomancer/confusion-mdl). Benjamin Slade also have a
-[blog post](https://babbagefiles.xyz/zork-confusion/) about compiling it. The Win32-version (by David Kinder) contains ha precompiled version that works fine on these Windows 
+[blog post](https://babbagefiles.xyz/zork-confusion/) about compiling it. The Win32-version (by David Kinder) contains a precompiled version that works fine on these Windows 
 versions that I tried: Windows7 (32-bit) and Windows10 (64-bit).
 
 When you have Confusion running in the same directory as the source, you type (in Confusion):

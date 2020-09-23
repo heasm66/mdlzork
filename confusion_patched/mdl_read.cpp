@@ -20,6 +20,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <errno.h>
+#include <unistd.h>
 
 #define BANGCHAR(ch) (('!' << 8) | (ch))
 #define IS_BANGCHAR(ch) (((ch) >> 8) == '!')

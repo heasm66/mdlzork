@@ -8,7 +8,7 @@ perl (version 5.30.3-1)
 libgc-devel (version 8.0.4-1)
 make (version 4.3-1)
 ~~~
-and on Ubuntu 20.04 LTS (sudo apt-get install <package>):
+and on Ubuntu 20.04 LTS (sudo apt-get install *package*):
 ~~~
 build-essential
 libgc-dev (version 7.6.4)

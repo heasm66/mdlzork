@@ -5,7 +5,7 @@ FC := gfortran
 #  -fd-lies-as-code -> include debugging statements
 #  -fd-lines-as-comments -> ignore debugging statements
 #DEBUG= -fd-lines-as-code
-FFLAGS ?= -g -ffixed-form -fd-lines-as-comments
+FFLAGS ?= -g -ffixed-form -fd-lines-as-comments -fallow-invalid-boz
 
 SRC_DIR := src
 DATA_DIR := data

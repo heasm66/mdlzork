@@ -28,6 +28,7 @@
 #include "mdl_builtins.h"
 #include "mdl_assoc.hpp"
 #include "mdl_strbuf.h"
+#include <unistd.h>
 
 #define DECODE_TENEX_FILESPECS
 

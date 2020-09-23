@@ -11,7 +11,7 @@ make (version 4.3-1)
 and on Ubuntu 20.04 LTS (sudo apt-get install <package>):
 ~~~
 build-essential
-libgc-dev
+libgc-dev (version 7.6.4)
 ~~~
 If you want to run Confusion in Windows, outside CygWin the following files must be in the same directory as "mdli.exe":
 ~~~

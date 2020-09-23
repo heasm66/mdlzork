@@ -5,7 +5,7 @@ make (version 4.3-1)
 gcc-g++ (version 10.2.0-1)
 gcc-fortran (version 10.2.0-1)
 ~~~
-and on Ubuntu 20.04 LTS (sudo apt-get install):
+and on Ubuntu 20.04 LTS (sudo apt-get install *package*):
 ~~~
 build-essential 
 gfortan (version 9.3.0)

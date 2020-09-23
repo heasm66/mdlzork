@@ -7,8 +7,8 @@ gcc-fortran (version 10.2.0-1)
 ~~~
 and on Ubuntu 20.04 LTS (sudo apt-get install):
 ~~~
-build-essential
-gfortan
+build-essential 
+gfortan (version 9.3.0)
 ~~~
 If the version of gfortran is lower than 10 (check with: gfortran --version) you must remove the "-fallow-invalid-boz" from the Makefile.
 

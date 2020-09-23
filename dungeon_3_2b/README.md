@@ -1,4 +1,26 @@
-DUNGEON (Zork I)
+# Dungeon (Zork)
+This is patched to compile with latest gcc. I have tried building it on CygWin and on Ubuntu 20.04 LTS, both 64-bit. Bevare that there are some warnings. On CygWin I had the following packages, which might or might not be needed, installed:
+~~
+make (version 4.3-1)
+gcc-g++ (version 10.2.0-1)
+gcc-fortran (version 10.2.0-1)
+~~~
+and on Ubuntu 20.04 LTS (sudo apt-get install ):
+~~~
+build-essential
+gfortan
+~~~
+If you want to run Dungeon in Windows, outside CygWin the following files must be in the same directory as "dungeon.exe":
+~~~
+cygwin1.dll
+cygquadmath-0.dll
+cyggcc_s-seh-1.dll
+cyggfortran-5.dll
+~~~
+
+## README from orginal package
+
+DUNGEON (Zork)
 ==============
 
 This is Robert Supnik's Dungeon V3.2B for various DEC Fortrans, ported to MS-DOS

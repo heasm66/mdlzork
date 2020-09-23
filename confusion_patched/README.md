@@ -6,6 +6,7 @@ On CygWin I had the following packages, which might or might not be needed, inst
 gcc-g++ (version 10.2.0-1)
 perl (version 5.30.3-1)
 libgc-devel (version 8.0.4-1)
+make (version 4.3-1)
 ~~~
 and on Ubuntu 20.04 LTS (sudo apt-get install <package>):
 ~~~

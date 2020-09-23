@@ -1,6 +1,6 @@
 # Dungeon (Zork)
 This is patched to compile with latest gcc. I have tried building it on CygWin and on Ubuntu 20.04 LTS, both 64-bit. Bevare that there are some warnings. On CygWin I had the following packages, which might or might not be needed, installed:
-~~
+~~~
 make (version 4.3-1)
 gcc-g++ (version 10.2.0-1)
 gcc-fortran (version 10.2.0-1)

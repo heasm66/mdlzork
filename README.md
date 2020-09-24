@@ -10,7 +10,7 @@ This is a more complete version. I've patched it up and I believe it's playable 
 doing something in a dark room (like LIGHT LAMP). This could be a bug in the original source, but it's not present in the compiled game of this version that is 
 playable on the PDP-10 ITS emulator. I have fixed with he fix that's used in the later versions.
 ## 1979-12-11
-I have not started patching this version that I belive is very similar to the 1981 version.
+This version is almost identical with the 1981 version. The 1981 version have three small bugfixes and another issue of the US NEWS & DUNGEON REPORT.
 ## 1981-07-22
 This is the source files that Bob Supnik released 2003. The version here is with Matthew Russotto's patches to make it work under Confusion.
 ## Dungeon 3.2b

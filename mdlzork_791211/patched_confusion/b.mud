@@ -170,7 +170,7 @@
 	       <PRINC "... \"">)>
 	T>
 
-\ 
+
 
 <DEFINE RINFO (A "OPTIONAL" (RMS '![])
 	       "AUX" R (OUTCHAN .OUTCHAN) (HERO ,PLAYER) (LAMP <FIND-OBJ "LAMP">)) 
@@ -364,7 +364,7 @@
 	       <PRINC <STRINGP <RID .R>>>
 	       <PRINC !\}>)>>
 
-\ 
+
 
 <DEFINE OBJECT-NAME (O "OPTIONAL" (A? <>) "AUX" (OUTCHAN .OUTCHAN))
 	#DECL ((O) OBJECT (A?) <OR ATOM FALSE> (OUTCHAN) CHANNEL)
@@ -626,7 +626,7 @@
 
 <GDECL (OBITTYS) <UVECTOR [REST FIX]> (ODESCS) <VECTOR [REST STRING]>>
 
-\ 
+
 
 <GDECL (ACTIONS WORDS) OBLIST>
 
@@ -795,7 +795,7 @@
 	      .STR>
 	.STR>
 
-\ 
+
 
 "GET-VERBS -- print various verb garbage -- probably doesn't work?"
 
@@ -815,7 +815,7 @@
 	      .V>
 	<LENGTH .V>>
 
-\ 
+
 
 "GET-WORDS -- print various garbage about WORDS"
 
@@ -842,7 +842,7 @@
     .V>
    </ <LENGTH .V> 2>>
 
-\ 
+
 
 "ORDER -- sorter for uvectors of atoms"
 

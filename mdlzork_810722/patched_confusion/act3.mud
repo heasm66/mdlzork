@@ -28,7 +28,7 @@ immediately." ,LONG-TELL1>
 
 <SETG THEN 0>
 
-\ 
+
 
 ;"SUBTITLE A DROP IN THE BUCKET"
 
@@ -72,7 +72,7 @@ immediately." ,LONG-TELL1>
     	   <ROOM-INFO>)>
     <PUT .PRSVEC 2 .PRSO>>
 
-\ 
+
 
 ;"SUBTITLE CHOMPERS IN WONDERLAND"
 
@@ -321,7 +321,7 @@ and nods his head-like appendage in thanks.">)
 	       <TELL ,ROBOTDIE ,LONG-TELL1>
 	       <REMOVE-OBJECT <COND (<VERB? "THROW"> <PRSI>) (<PRSO>)>>)>> 
 
-\ 
+
 
 ;"SUBTITLE MORE RANDOM VERBS"
 
@@ -343,7 +343,7 @@ and nods his head-like appendage in thanks.">)
 <DEFINE YELL ()
     <TELL "Aaaarrrrrrrrgggggggggggggghhhhhhhhhhhhhh!">>
 
-\ 
+
 
 ;"SUBTITLE BANK OF ZORK"
 
@@ -539,7 +539,7 @@ fingers, leaving you alone.">
     <OR <MEMQ .OBJ <AOBJS ,WINNER>>
 	<AND .CAN <HELD? .CAN>>>>
 
-\ 
+
 
 ;"SUBTITLE TOITY POIPLE BOIDS A CHOIPIN' AN' A BOIPIN' ... "
 
@@ -696,7 +696,7 @@ The egg is now open.">
     <COND (<VERB? "CLUP" "CLDN" "CLUDG">
 	   <TELL "The cliff is too steep for climbing.">)>>
 
-\
+
 ; "SUBTITLE CHINESE PUZZLE SECTION (COURTESY OF WILL WENG)"
 
 <GDECL (CPHERE)

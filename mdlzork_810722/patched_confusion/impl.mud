@@ -973,5 +973,3 @@ Return from edit.">
 <DEFINE WNA ()
     <TELL "Wrong number of arguments." 0>
     <LISTEN>>
-
-

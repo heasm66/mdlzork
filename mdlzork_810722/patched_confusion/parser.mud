@@ -395,7 +395,7 @@ has failed."
 
 <SETG STUFFVEC [![!] []]>
 
-\ 
+
 
 "GET-IT-OBJ -- decide what 'IT' is referring to.  Algorithm is
 highly random and subject to change without notice."

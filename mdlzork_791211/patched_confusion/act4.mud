@@ -97,7 +97,7 @@
 	<GOTO <SFIND-ROOM "TSTRS">>
 	<ROOM-DESC>>
 
-\ 
+
 
 ;"SUBTITLE It's All Done with Mirrors"
 
@@ -636,7 +636,7 @@ are aroused.">)>
 		 (<SETG POLEUP!-FLAG 1>
 		  <TELL "The pole now rests on the stone floor.">)>)>>
 
-\ 
+
 
 ; "SUBTITLE The Spanish Inquisition"
 
@@ -866,7 +866,7 @@ panel is " ,LONG-TELL
 	  (<==? ,WINNER ,PLAYER>
 	   <TELL "You will be lost without me.">)>>
 
-\ 
+
 
 ;"SUBTITLE 'The end had come, and this was it; he dropped her in the Flaming Pit.'"
 
@@ -1047,7 +1047,7 @@ into a larger area.">)
 	<COND (<VERB? "OPEN">
 	       <TELL "The door is securely fastened.">)>>
 
-\ 
+
 
 "=========== The Ultimate Winnage =========="
 
@@ -1057,7 +1057,7 @@ into a larger area.">)
 	       <TELL ,WIN-TOTALLY>
 	       <FINISH (". Won Totally!")>)>>
 
-\ 
+
 
 "=========== Doing it the Lazy Way ========="
 
@@ -1131,7 +1131,7 @@ envelops you, and the earth shakes briefly.  Then all is quiet.">
 	      .STR>
 	.STR>
 
-\
+
 
 <DEFINE TURNTO ()
     <COND (<OBJECT-ACTION>)

@@ -26,7 +26,7 @@
 
 <NEWTYPE PREP WORD>
 
-\ 
+
 
 ;"generalized oflags tester"
 
@@ -56,7 +56,7 @@
 <DEFMAC ATRO ('ADV 'BIT)
   <FORM PUT .ADV ,AFLAGS <FORM CHTYPE <FORM ORB <FORM AFLAGS .ADV> .BIT> FIX>>>
 
-\ 
+
 
 ;"room definition"
 
@@ -138,7 +138,7 @@
 
 ;"unusable exit description"
 
-\ 
+
 
 ;"PARSER related types"
 
@@ -222,7 +222,7 @@
 
 <NEWSTRUC PHRASE VECTOR PPREP PREP POBJ OBJECT>
 
-\ 
+
 
 ;"BITS FOR 2ND ARG OF CALL TO TELL (DEFAULT IS 1)"
 
@@ -417,7 +417,7 @@
 <DEFMAC GLOBAL? ('OBJ)
   <FORM NOT <FORM 0? <FORM CHTYPE <FORM ANDB ',STAR-BITS <FORM OGLOBAL .OBJ>> FIX>>>>
 
-\ 
+
 
 ;"demons"
 
@@ -457,7 +457,7 @@
 <NEWSTRUC QUESTION VECTOR QSTR STRING			      ;"question to ask"
 	  QANS VECTOR			        ;"answers (as returned by LEX)">
 
-\ 
+
 
 <SETG LOAD-MAX 100>
 
@@ -500,7 +500,7 @@
        (CPOBJS) UVECTOR
        (CPHERE) FIX>
 
-\ 
+
 ; "SUBTITLE POBLIST HACKS"
 <SETG PPSTRING <ISTRING 5>>
 
@@ -516,7 +516,7 @@
 <DEFINE HASH (NAME OBL)
   #DECL ((NAME) <PRIMTYPE WORD> (OBL) POBLIST)
   <+ 1 <MOD <CHTYPE .NAME FIX> <LENGTH .OBL>>>>
-\
+
 
 "UTILITY MACROS"
 

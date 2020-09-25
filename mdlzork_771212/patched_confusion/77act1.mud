@@ -375,7 +375,7 @@ axe.">>
 		      <TELL
 "The troll, disarmed, cowers in terror, pleading for his life in
 the guttural tongue of the trolls.">
-		      T)>
+		      T)>)
 	      (<==? .PA ,FIRST?!-WORDS> <PROB 33>)
 	      (<==? .PA ,DEAD\!!-WORDS> <SETG TROLL-FLAG!-FLAG T>)
 	      (<==? .PA ,OUT\!!-WORDS>

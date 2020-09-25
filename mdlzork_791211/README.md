@@ -1,5 +1,6 @@
 # Mainframe Zork from 1979-12-11
 This version is almost indentical to the 1981 version. Below are the differences with the 1981 version listed.
+All unprintable charecters are removed.
 ## act1.mud
 ~~~
 1921c1921,1925

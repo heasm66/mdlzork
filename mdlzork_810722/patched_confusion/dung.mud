@@ -6081,7 +6081,7 @@ them." )>
 |			  |
 ---^----^----^----^----^---")>
 	 
-\
+
 ; "SUBTITLE BANK OBJECTS"
 
 <OBJECT ["BILLS" "STACK" "PILE"]
@@ -6509,7 +6509,7 @@ be quite impossible for you to exit.
 
 <SETG OPPV <IVECTOR <LENGTH ,VILLAINS> '<>>>
 
-\
+
 
 ; "SUBTITLE DEMONS"
 

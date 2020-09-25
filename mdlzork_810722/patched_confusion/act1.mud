@@ -21,7 +21,7 @@
 		      <EVAL <PARSE .BODY>>)>)>
 	<DISMISS T>>
 
-\
+
 ; "SUBTITLE THE WHITE HOUSE"
 
 <DEFINE EAST-HOUSE ()
@@ -170,7 +170,7 @@ With the rug moved, the dusty cover of a closed trap-door appears." ,LONG-TELL1>
 	       <NOT <TRNN <SFIND-OBJ "DOOR"> ,OPENBIT>>>
 	  <TELL "Underneath the rug is a closed trap door.">)>>
 
-\
+
 ; "SUBTITLE TROLL"
 
 <DEFINE AXE-FUNCTION ()
@@ -238,7 +238,7 @@ not look pleased." ,LONG-TELL1>
 		    <VERB? "HELLO">>
 	       <TELL "Unfortunately, the troll can't hear you.">)>>
 
-\
+
 ; "SUBTITLE GRATING/MAZE"
 
 <SETG LEAVES-GONE!-FLAG <>>
@@ -365,7 +365,7 @@ of blinding blue light.">>
 	  <PUT .LLD ,ROBJS .L>)>
    T>
 
-\
+
 ; "SUBTITLE THE GLACIER"
 
 <SETG GLACIER-MELT!-FLAG <>>
@@ -416,7 +416,7 @@ you in the dark.">>
     <ODESC1 .T "There is a burned out ivory torch here.">
     <TRZ .T <+ ,LIGHTBIT ,ONBIT ,FLAMEBIT>>>
 
-\
+
 ; "SUBTITLE MIRROR, MIRROR, ON THE WALL"
 
 <DEFINE MIRROR-ROOM ()
@@ -466,7 +466,7 @@ you in the dark.">>
 "You have broken the mirror.  I hope you have a seven years supply of
 good luck handy.">)>)>> 
 
-\
+
 ; "SUBTITLE AROUND AND AROUND IT GOES..."
 
 <DEFINE CAROUSEL-ROOM () 
@@ -489,7 +489,7 @@ good luck handy.">)>)>>
 	<AND <TYPE? <SET CX <NTH <REXITS ,HERE> <* 2 <+ 1 <MOD <RANDOM> 8>>>>> CEXIT>
 	     <CXROOM .CX>>>
 
-\
+
 ; "SUBTITLE THE DOME"
 
 <DEFINE TORCH-ROOM ()
@@ -517,7 +517,7 @@ from the floor below.">)>)
 	      (ELSE <SETG EGYPT-FLAG!-FLAG T>)>
 	<>>
 
-\
+
 ; "SUBTITLE LAND OF THE DEAD"
 
 
@@ -810,7 +810,7 @@ a reservoir.">
 "You are in a large cavernous room, north of a large reservoir.">)>
 	       <TELL "There is a tunnel leaving the room to the north.">)>>
 
-\
+
 
 ; "SUBTITLE WATER, WATER EVERYWHERE..."
 
@@ -919,7 +919,7 @@ a reservoir.">
 	       <TELL "The water splashes on the walls, and evaporates immediately.">
 	       <REMOVE-OBJECT .RW>)>>
 
-\
+
 ; "SUBTITLE CYCLOPS"
 
 <SETG CYCLOWRATH!-FLAG 0>
@@ -1009,7 +1009,7 @@ His enflamed tongue protrudes from his man-sized mouth.">)>)
 	(<TELL <NTH ,CYCLOMAD <ABS .FOO>>>)>
   .FOO>
 
-\
+
 ; "SUBTITLE ECHO ECHO ECHO"
 
 <SETG ECHO-FLAG!-FLAG <>>
@@ -1056,7 +1056,7 @@ His enflamed tongue protrudes from his man-sized mouth.">)>)
 
 <SETG EGG-SOLVE!-FLAG <>>
 
-\
+
 ; "SUBTITLE A SEEDY LOOKING GENTLEMAN..."
 
 <DEFINE ROBBER ROBBER (HACK
@@ -1431,7 +1431,7 @@ suddenly vanish.">)>
 	       <ROOM-INFO>)
 	      (T <TELL "Nothing happens.">)>>
 
-\
+
 
 ; "SUBTITLE RANDOM VERBS"
 
@@ -1822,7 +1822,7 @@ probably).">
 <DEFINE ZORK ()
     <TELL "At your service!">>
 
-\
+
 ; "SUBTITLE RANDOM FUNCTIONS"
 
 <SETG ON-POLE!-FLAG <>>
@@ -1860,7 +1860,7 @@ turned into a pile of dust.">)>>
 "Congratulations!  Unlike the other vandals, who merely stole the
 artist's masterpieces, you have destroyed one.">)>>
 
-\
+
 
 ; "SUBTITLE LET THERE BE LIGHT SOURCES"
 
@@ -1986,7 +1986,7 @@ burn.">)
 		<COND (<NOT <LIT? ,HERE>>
 		       <TELL "It is now completely dark.">)>)>)>>
 
-\
+
 
 ; "SUBTITLE ASSORTED WEAPONS"
 
@@ -2033,8 +2033,3 @@ burn.">)
 			  #DECL ((V) OBJECT)
 			  <COND (<==? .R <OROOM .V>> <MAPLEAVE T>)>>
 		  .VILLAINS>>>
-
-
-
- 
-

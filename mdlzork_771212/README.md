@@ -1,6 +1,8 @@
 # Mainframe Zork from 1977-12-12
+
 These are the changes that was done to the files to be able to run them under Confusion.
-¨¨¨
+
+~~~
 81prim.mud
 ==========
 * File is from 1981-version.

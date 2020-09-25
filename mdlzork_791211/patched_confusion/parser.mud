@@ -31,7 +31,7 @@ time.  Don't bother when COMPILEing or GLUEing."
 
 <GDECL (BUNUVEC BUNCH) <UVECTOR [REST OBJECT]> (BUNCHERS) <LIST [REST VERB]>>
 
-\ 
+
 
 "EPARSE -- top level entry to parser.  calls SPARSE to set up the
 parse-vector, then, calls SYN-MATCH to see if the sentence matches any
@@ -395,7 +395,7 @@ has failed."
 
 <SETG STUFFVEC [![!] []]>
 
-\ 
+
 
 "GET-IT-OBJ -- decide what 'IT' is referring to.  Algorithm is
 highly random and subject to change without notice."
@@ -422,7 +422,7 @@ highly random and subject to change without notice."
 	  .L>
 	.OBJ>
 
-\ 
+
 
 "SYN-MATCH -- checks to see if the objects supplied match any of the
 syntaxes of the sentence's verb.  if none do, and there are several
@@ -501,7 +501,7 @@ slot is used to determine what objects to try to take."
 	       <AND <NOT <VPREP .VARG>> <TRNN .POBJ .VBIT>>)
 	      (<AND <NOT .POBJ> <0? .VBIT>>)>>
 
-\ 
+
 
 "TAKE-IT-OR-LEAVE-IT -- finish setup of parse-vector.  take objects from room if
 allowed, flush prepositions from prepositional phrases.  Its value is more or less
@@ -572,7 +572,7 @@ the object from the room.  Its value is more or less ignored."
 	<PUT .PV 3 .SAV3>
 	.RES>
 
-\ 
+
 
 "---------------------------------------------------------------------
 GWIM & FWIM -- all this idiocy is used when the loser didn't specify
@@ -650,7 +650,7 @@ and takeable, or visible and in something that's visible and open)"
     .OBJS>
    .NOBJ>
 
-\ 
+
 
 "GET-OBJECT -- used to see if an object is accessible.  it looks for
 an object that can be described by an adjective-noun pair.
@@ -748,7 +748,7 @@ containment.
 	  .NEFALS)
 	 (.OOBJ)>>
 
-\ 
+
 
 <SETG ORPHANS [<> <> <> <> <> <>]>
 
@@ -800,7 +800,7 @@ containment.
 	      (<TELL <VSTR .ACTION> 1 " what?">)>
 	<>>
 
-\ 
+
 
 "PRSTR -- printing routine to print uc/lc atom pname"
 
@@ -846,7 +846,7 @@ containment.
 	      .STR>
 	.STR>
 
-\ 
+
 
 ;"Here is some code for handling BUNCHes."
 
@@ -1014,9 +1014,3 @@ do the TAKE, etc. if necessary and calls the VERB function.
 			     <PUT .S 1 <ASCII <- .C 32>>>)>>
 	      .STR>
 	.STR>
-    
- 
-
- 
-
- 

@@ -61,7 +61,7 @@
 
 ; "FOR SR"
 <SETG OFIXUPS []>
-
+
 ; "SUBTITLE PURE STRUCTURE FROM ROOMS"
 
 <PSETG FLUSHSTR1 
@@ -193,7 +193,7 @@ song bird and the sounds of the forest.">
 "He who puts his hand to the plow and looks back is not fit for the
 kingdom of winners.  In any case, \"back\" doesn't work.">
 
-\
+
 
 ;"SUBTITLE PURE STRUCTURE FROM ACT1"
 
@@ -463,7 +463,7 @@ condiments for his upcoming snack."
    " doesn't do anything."]>
 
 
-
+
 
 ;"SUBTITLE PURE STRUCTURE FROM ACT2"
 
@@ -540,7 +540,7 @@ than weight, namely the ability to blow you to smithereens.">
 tresspassers, but for a small fee, I'll show you the way out.'  You
 notice the gnome nervously glancing at his watch.">
 
-\
+
 
 ;"SUBTITLE PURE STRUCTURE FROM ACT3"
 
@@ -697,7 +697,7 @@ a small opening.">
 "As you descend, you realize that the rope is slippery from the grime
 of the coal chute and that your grasp will not last long.">
 
-\
+
 
 ;"SUBTITLE PURE STRUCTURE FROM ACT4"
 
@@ -897,7 +897,7 @@ the treasure, then you watch as your counterpart dissolves into a
 mist and disappears, a sardonic grin on his face.
 ">
 
-\
+
 
 ;"SUBTITLE PURE STRUCTURE FROM MELEE"
 
@@ -1129,7 +1129,7 @@ threat to his livelihood."]]!]>
 
 <PSETG DEF3-RES <UVECTOR ,DEF3A <REST ,DEF3A> ,DEF3B <REST ,DEF3B> ,DEF3C>>
 
-\
+
 
 "VOCABULARY"
 
@@ -1206,7 +1206,7 @@ threat to his livelihood."]]!]>
 	 BRFLAG2!-FLAG
 	 ]>
 
-\
+
 
 ; "SUBTITLE ACTORS"
 
@@ -1228,7 +1228,7 @@ threat to his livelihood."]]!]>
 		    <GET-OBJ "ROBOT"> ROBOT-ACTOR 3 0]
 		   ADV>>>
 
-\
+
 
 ; "SUBTITLE GLOBAL OBJECTS"
 
@@ -1515,7 +1515,7 @@ threat to his livelihood."]]!]>
 	 ,OVISON
 	 <>>
 
-\
+
 
 ; "SUBTITLE DIRECTIONS"
 
@@ -1532,7 +1532,7 @@ threat to his livelihood."]]!]>
 <DSYNONYM "EXIT" "OUT" "LEAVE">
 <DSYNONYM "CROSS" "TRAVE">
 
-\
+
 
 ; "SUBTITLE CEVENT DEFINITIONS"
 
@@ -1563,7 +1563,7 @@ threat to his livelihood."]]!]>
 	<CEVENT 0 END-GAME-HERALD <> "EGHER">
 	<CEVENT 0 ZGNOME-INIT T "ZGNIN">
 	<CEVENT 0 ZGNOME-FUNCTION T "ZGLIN">>>
-\
+
 
 ; "SUBTITLE ROOMS"
 
@@ -1577,7 +1577,7 @@ threat to his livelihood."]]!]>
 
 <PSETG INDENTSTR <REST <ISTRING 8 !\ > 8>>
 
-\
+
 
 ; "SUBTITLE HOUSE AND VICINITY"
 
@@ -1657,7 +1657,7 @@ and all the windows are barred."
        LIVING-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RHOUSEBIT ,RSACREDBIT>>
 
-\
+
 
 ; "SUBTITLE FOREST"
 
@@ -1747,7 +1747,7 @@ to the east, where a small clearing may be seen through the trees."
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
        (RGLOBAL ,HOUSEBIT)>
 
-\
+
 
 ; "SUBTITLE CELLAR AND VICINITY"
 
@@ -1806,7 +1806,7 @@ left through either the north, south, or west exits."
        <>
        <+ ,RLANDBIT ,RLIGHTBIT>>
 
-\
+
 
 ; "SUBTITLE MAZE"
 
@@ -1905,7 +1905,7 @@ left through either the north, south, or west exits."
        ,MAZEDESC ,SMAZEDESC
        <EXIT "WEST" "MAZ14" "SOUTH" "MAZE7" "NE" "CYCLO">>
 
-\
+
 
 ; "SUBTITLE CYCLOPS AND HIDEAWAY"
 
@@ -1940,7 +1940,7 @@ created passage to the east."
 	,RLANDBIT
 	(RVAL 25)>
 
-\
+
 
 ; "SUBTITLE RESERVOIR AREA"
 
@@ -2078,7 +2078,7 @@ flowing water below."
 			 T
 			 COFFIN-CURE> "EAST" "DAM" "SOUTH" "CAROU">>
 
-\
+
 
 ; "SUBTITLE ECHO ROOM"
 
@@ -2148,7 +2148,7 @@ heard faintly to the north."
        <EXIT "EAST" "MIRR2" "NORTH"
  #NEXIT "You hear the whir from the round room but can find no entrance.">>
 
-\
+
 
 ; "SUBTITLE COAL MINE AREA"
 
@@ -2264,7 +2264,7 @@ passage. In the shaft can be seen a heavy iron chain."
       BATS-ROOM
       <+ ,RLANDBIT ,RSACREDBIT>>
 
-\
+
 
 ; "SUBTITLE COAL MINE"
 
@@ -2307,7 +2307,7 @@ passage. In the shaft can be seen a heavy iron chain."
        ,SMINDESC
        <EXIT "EAST" "MINE1" "WEST" "MINE5" "DOWN" "TLADD" "SOUTH" "MINE6">>
 
-\
+
 
 ;"SUBTITLE DOME/TORCH AREA"
 
@@ -2491,7 +2491,7 @@ appears to be an altar."
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RSACREDBIT>>
 
-\
+
 
 ; "SUBTITLE FLOOD CONTROL DAM #3"
 
@@ -2533,7 +2533,7 @@ room are in the west and south ends."
        MAINT-ROOM
        ,RLANDBIT>
 
-\
+
 
 ;"SUBTITLE RIVER AREA"
 
@@ -2746,7 +2746,7 @@ around.  It is possible to climb down into the canyon from here."
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>>
 
-\
+
 
 ;"SUBTITLE VOLCANO AREA"
 
@@ -2851,7 +2851,7 @@ There are exits here to the west and the south."
 
 <SETG BLOC <GET-ROOM "VLBOT">>
 
-\
+
 
 ; "SUBTITLE ALICE IN WONDERLAND"
 
@@ -2957,7 +2957,7 @@ falling.  The only exit to this room is to the west."
        <EXIT "EXIT" "ALISM" "WEST" "ALISM">
        (<GET-OBJ "FLASK"> <GET-OBJ "POOL"> <GET-OBJ "PLEAK"> <GET-OBJ "SAFFR">)>
 
-\
+
 
 ; "SUBTITLE BANK OF ZORK"
 
@@ -3105,7 +3105,7 @@ The lone exit is to the north."
 
 <SETG SCOL-ROOM <GET-ROOM "BKVW">>
 
-\
+
 
 ;"SUBTITLE CHINESE PUZZLE ROOMS"
 
@@ -3261,7 +3261,7 @@ are exits to the west and south."
       <+ ,RLANDBIT ,RLIGHTBIT>
       (RGLOBAL <+ ,CPLADDER ,CPWALL>)>
 
-\
+
 ; "SUBTITLE PALANTIR ROOMS"
 
 <SETG PALANDOOR <DOOR "PDOOR" "PALAN" "PRM">>
@@ -3357,7 +3357,7 @@ is a very narrow crack in the north wall."
       <>
       <+ ,RLANDBIT ,RSACREDBIT ,RLIGHTBIT>>
 
-\
+
 ; "SUBTITLE END GAME"
 
 <SETG MR-D <CEXIT "FROBOZZ" "MRD" "" <> MRGO>>
@@ -3696,7 +3696,7 @@ the Frobozz Magic Boat Co., etc."
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
        (RVAL 35)>
 
-\
+
 
 ; "SUBTITLE END GAME GOODIES"
 
@@ -3714,7 +3714,7 @@ the Frobozz Magic Boat Co., etc."
 
 <SETG SOUTHEND <GET-ROOM "MRA">>	;"southern limit of mirror"
 
-\
+
 
 ; "SUBTITLE VOCABULARY"
 
@@ -3785,7 +3785,7 @@ L;"funny verbs"
 
 <SADD-ACTION "VERBO" VERBOSE>
 
-
+
 
 ;"real verbs"
 
@@ -4238,7 +4238,7 @@ L;"funny verbs"
 
 <ADD-BUNCHER "TAKE" "DROP" "PUT" "COUNT">
 
-\
+
 
 ; "SUBTITLE ACTOR ABILITIES"
 
@@ -4253,7 +4253,7 @@ L;"funny verbs"
 	 ["TAKE" "DROP" "PUT" "THROW" "PUSH" "TURN" "TRNTO" "SPIN"
           "FOLLO" "STAY" "OPEN" "CLOSE" "KILL"]>>
 
-\
+
 
 ; "SUBTITLE OBJECTS"
 
@@ -4752,7 +4752,7 @@ Keeper of the Dungeon for amazing untastefulness." )>
 	<+ ,OVISON ,DOORBIT ,NDESCBIT>
 	DDOOR-FUNCTION>
 
-\
+
 
 <OBJECT ["STRAD" "VIOLI"]
 	["FANCY"]
@@ -6188,7 +6188,7 @@ ______________________________________________________________
 	()
 	(ODESC1 "There is a Gnome of Zurich here.")>
 
-\
+
 ;"SUBTITLE FOREST OBJECTS"
 
 <OBJECT ["NEST"]
@@ -6270,7 +6270,7 @@ crystal window below its left wing you can see the remains of
 intricate machinery.  It is not clear what result winding it would
 have, as the mainspring seems sprung.")>
 
-\ 
+
 
 ;"SUBTITLE CHINESE PUZZLE OBJECTS"
 
@@ -6359,7 +6359,7 @@ be quite impossible for you to exit.
 	 OSIZE
 	 4)> ,OROOM <GET-ROOM "CP">>
 
-\
+
 ; "SUBTITLE PALANTIR OBJECTS"
 
 
@@ -6475,7 +6475,7 @@ be quite impossible for you to exit.
 	 ODESC1
 	 "There is red crystal sphere here.")>
 
-\
+
 
 ;"SUBTITLE LISTS OF OBSCURE ROOMS"
 
@@ -6492,7 +6492,7 @@ be quite impossible for you to exit.
        <GET-ROOM "KITCH">
        <GET-ROOM "EHOUS">)>
 
-\
+
 
 ; "SUBTITLE LISTS OF VILLAINS AND WEAPONRY"
 
@@ -6528,7 +6528,7 @@ be quite impossible for you to exit.
 	   <CHTYPE [FIGHTING ,VILLAINS () <1 ,ROOMS> <GET-OBJ "TROLL"> <>]
 		   HACK>>>
 
-\
+
 
 ; "SUBTITLE END GAME QUESTIONS"
 
@@ -6559,4 +6559,3 @@ in Zorkmids?" ["30003"]>
 <ADD-INQOBJ <GET-OBJ "KNIFE">>
 
 <ADD-QUESTION "In which room is 'Hello, Sailor!' useful?" ["NONE" "NOWHE"]>
-

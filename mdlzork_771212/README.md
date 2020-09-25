@@ -63,11 +63,6 @@ act3.17 --> 77act3.mud
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 
-np.93 --> 77np.mud
-======================
-* Change EOL to "(Windows CR LF)"
-* Remove all [FF] & [NUL]
-
 rooms.99 --> 77rooms.mud
 ========================
 * Change EOL to "(Windows CR LF)"
@@ -82,6 +77,15 @@ rooms.99 --> 77rooms.mud
 	<COND (<=? <SAVE .FN> "SAVED"> <INT-LEVEL 0> ;"T)
 	      (T"
 * Change !\[NUL] on row 55 to <ASCII 0>
+
+77patch.mud
+===========
+* This is a new file that includes som additions to make this Zork run under Confusion
+
+np.93 --> 77np.mud
+======================
+* Change EOL to "(Windows CR LF)"
+* Remove all [FF] & [NUL]
 
 melee.105 --> 78melee.mud
 =========================

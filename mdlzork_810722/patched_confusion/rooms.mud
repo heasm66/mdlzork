@@ -107,7 +107,7 @@
 	       <INT-LEVEL 0>
 	       <START "WHOUS" .ST>)>>
 
-
+
 
 "Stuff for diverting gc's"
 
@@ -1378,7 +1378,7 @@ the program again.">
 		       <PRINC ", and ">)>>
 	.OLST>>
 
-
+
 ;"WALK --
 	GIVEN A DIRECTION, WILL ATTEMPT TO WALK THERE"
 
@@ -1599,7 +1599,7 @@ the program again.">
 			    <TELL "Thrown.">)>)
 		    (<TELL "You are not carrying that.">)>>>
 
-
+
 "STUFF FOR 'EVERYTHING' AND 'VALUABLES'"
 
 <SETG OBJ-UV <CHUTYPE <REST <IUVECTOR 20> 20> OBJECT>>
@@ -1729,7 +1729,7 @@ the program again.">
 		 <AND <NOT .FLG> <NOT <0? <OTVAL .OBJ>>>>>
 	     <OR <NOT .BUT> <NOT <MEMQ .OBJ .BUT>>>>>
 
-
+
 
 <DEFINE OPENER OPEN-ACT ("AUX" (OUTCHAN ,OUTCHAN)) 
 	#DECL ((OUTCHAN) CHANNEL (OPEN-ACT) ACTIVATION)

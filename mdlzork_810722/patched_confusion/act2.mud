@@ -170,7 +170,7 @@ at your touch.  It must not have been very valuable.">)>>
 
 <GDECL (LIGHT-SHAFT) FIX>
 
-\ 
+
 
 ;"SUBTITLE OLD MAN RIVER, THAT OLD MAN RIVER..."
 
@@ -387,7 +387,7 @@ the falls.">)
 "Swimming is not allowed in this dungeon.">)
 	  (<TELL <PICK-ONE .SWIMYUKS>>)>>
 
-\ 
+
 
 ;"SUBTITLE LURKING GRUES"
 
@@ -397,7 +397,7 @@ the falls.">)
 	  (<VERB? "FIND">
 	   <TELL ,GRUE-DESC2 ,LONG-TELL1>)>>
 
-\ 
+
 
 ;"THE VOLCANO"
 
@@ -790,4 +790,4 @@ appointment!' He disappears, leaving you alone on the ledge." ,LONG-TELL1>)>
 	  (<TELL 
 "The gnome appears increasingly nervous.">
 	   <OR ,GNOME-FLAG!-FLAG <CLOCK-INT ,GNOIN 5>>
-	   <SETG GNOME-FLAG!-FLAG T>)>>
+	   <SETG GNOME-FLAG!-FLAG T>)>>

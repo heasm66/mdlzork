@@ -29,7 +29,7 @@
 
 "
 
-\
+
 
 <DEFINE REMOVE-OBJECT (OBJ "OPTIONAL" (WINNER ,WINNER) "AUX" OCAN OROOM)
 	#DECL ((OBJ) OBJECT (OCAN) <OR OBJECT FALSE> (OROOM) <OR FALSE ROOM>
@@ -95,7 +95,7 @@
 	   <SEARCH-LIST <OID .OBJ> <OCONTENTS .AV> <>>)
 	  (<SEARCH-LIST <OID .OBJ> <ROBJS .RM> <>>)>>
 
-\
+
 
 "Villains, thieves, and scoundrels"
 
@@ -136,7 +136,7 @@
       <COND (<==? <HOBJ .X> .OBJ> <MAPLEAVE .X>)>>
     .DEMS>>
 
-\
+
 
 ; "The guiding light"
 
@@ -183,7 +183,7 @@
 			     <MAPLEAVE T>)>>
 	      .L>>
 
-\
+
 ; "Random Utilities"
 
 <DEFINE PICK-ONE (VEC) 
@@ -219,7 +219,7 @@
 			      <RETURN .AL>)
 			     (<SET OL .NL> <SET NL <REST .NL>>)>>)>>
 
-\
+
 
 ; "These are for debugging only!"
 
@@ -253,5 +253,3 @@
 		(<APPLY .FCN>)>>
    <PUT <PUT <PUT .PV 3 .PRSI> 2 .PRSO> 1 .PRSA>
    .R>
-
-

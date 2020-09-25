@@ -790,4 +790,4 @@ appointment!' He disappears, leaving you alone on the ledge." ,LONG-TELL1>)>
 	  (<TELL 
 "The gnome appears increasingly nervous.">
 	   <OR ,GNOME-FLAG!-FLAG <CLOCK-INT ,GNOIN 5>>
-	   <SETG GNOME-FLAG!-FLAG T>)>>
+	   <SETG GNOME-FLAG!-FLAG T>)>>

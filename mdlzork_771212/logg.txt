@@ -18,7 +18,7 @@ defs.63 --> 77defs.mud
 	READABLE?		READBIT
 	CAN-TAKE?		TAKEBIT
 	DOOR?			DOORBIT
-	TRANSPARENT?	TRANSBIT
+	TRANSPARENT?		TRANSBIT
 	EDIBLE?			FOODBIT
 	DRINKABLE?		DRINKBIT
 	BURNABLE?		BURNBIT
@@ -43,6 +43,10 @@ act1.38 --> 77act1.mud
 * Change !\[ESC] on row 5 to <ASCII 27>
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
+* Move line 391
+      (<==? .PA ,FIRST?!-WORDS> <PROB 33>)
+  to line 379 (before line with DEAD\!!-WORDS).
+
 
 act2.27 --> 77act2.mud
 ======================

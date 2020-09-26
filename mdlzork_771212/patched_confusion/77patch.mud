@@ -14,6 +14,8 @@
 
 <SET REDEFINE <>>
 
+<SETG DBG <>> 	;"DEBUG-Flag, set to T to avoid death"
+
 ;"BITS FOR 2ND ARG OF CALL TO TELL (DEFAULT IS 1)"
 
 <MSETG LONG-TELL *400000000000*>

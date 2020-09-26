@@ -376,7 +376,6 @@ axe.">>
 "The troll, disarmed, cowers in terror, pleading for his life in
 the guttural tongue of the trolls.">
 		      T)>)
-	      (<==? .PA ,FIRST?!-WORDS> <PROB 33>)
 	      (<==? .PA ,DEAD\!!-WORDS> <SETG TROLL-FLAG!-FLAG T>)
 	      (<==? .PA ,OUT\!!-WORDS>
 	       <TRZ <FIND-OBJ "AXE"> ,OVISON>
@@ -389,6 +388,7 @@ the guttural tongue of the trolls.">
 "The troll stirs, quickly resuming a fighting stance.">)>
 	       <PUT .T ,ODESC1 ,TROLLDESC>
 	       <SETG TROLL-FLAG!-FLAG <>>)
+	      (<==? .PA ,FIRST?!-WORDS> <PROB 33>)
 	      (<AND <OR <==? .PA ,THROW!-WORDS>
 			<==? .PA ,GIVE!-WORDS>>
 		    .PRSO>

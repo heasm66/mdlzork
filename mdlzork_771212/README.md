@@ -48,10 +48,6 @@ act1.38 --> 77act1.mud
 * Change !\[ESC] on row 5 to <ASCII 27>
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
-* Move line 391
-      (<==? .PA ,FIRST?!-WORDS> <PROB 33>)
-  to line 379 (before line with DEAD\!!-WORDS).
-
 
 act2.27 --> 77act2.mud
 ======================
@@ -106,6 +102,9 @@ dung.56 --> 77dung.mud
 	#CEXIT {		<CEXIT
 	#EXIT {			<EXIT
 	}				>
+* Add words IN! and OUT!
+	<SADD-ACTION "IN!" TIME>	;"villain regains consciousness"
+	<SADD-ACTION "OUT!" TIME>	;"villain loses consciousness"
 ~~~
 
 The original release contains two different versions of act1 and np. For this release the latest of the files where used. Below are the differences between the files listed. 

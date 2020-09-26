@@ -2907,6 +2907,10 @@ Warranty:
 
 <SADD-ACTION "FIRST?" TIME>	;"funny verb for surprise by villains"
 
+<SADD-ACTION "IN!" TIME>	;"villain regains consciousness"
+
+<SADD-ACTION "OUT!" TIME>	;"villain loses consciousness"
+
 <SADD-ACTION "DIAGN" DIAGNOSE>
 
 <SADD-ACTION "HACK?" TIME>	;"funny verb for villain fight decisions"

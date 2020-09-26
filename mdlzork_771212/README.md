@@ -82,6 +82,11 @@ np.93 --> 77np.mud
 ======================
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
+* Change line 205 from
+   <OR <CAN-TAKE? .OBJ> <NOT <VTRNN .VRB ,VTBIT>>>>
+to
+   <AND <CAN-TAKE? .OBJ> <NOT <VTRNN .VRB ,VTBIT>>>>
+This is probably an original bug. The OR makes the game always TAKE takable items and ignoring the NO-TAKE flag. This makes the game unwinnable because you can't BOARD the boat.
 
 melee.105 --> 78melee.mud
 =========================

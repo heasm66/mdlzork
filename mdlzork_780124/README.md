@@ -118,6 +118,7 @@ dung.129 --> 78dung.mud
 	#EXIT {			<EXIT
 	#DOOR {			<DOOR 
 	}				>
+Change "\.lunch" to "lunch" on line 219
 
 mrf.65 --> 78mrf.mud
 --------------------

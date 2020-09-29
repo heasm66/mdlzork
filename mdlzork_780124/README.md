@@ -101,13 +101,15 @@ Other changes to this file:
 * Remove all [FF] & [NUL]
 * #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax.
   So change all occurances of (search-and-replace):
+~~~
 	#ROOM {			<ROOM 
 	#OBJECT {		<OBJECT 
 	#FIND-OBJ {		<FIND-OBJ 
 	#CEXIT {		<CEXIT
 	#EXIT {			<EXIT
 	#DOOR {			<DOOR 
-	}				>
+	}			>
+~~~
 * Change "\.lunch" to "lunch" on line 219
 
 ## mrf.65 --> 78mrf.mud
@@ -120,14 +122,16 @@ Other changes to this file:
 * Remove all [FF] & [NUL]
 * #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax.
   So change all occurances of (search-and-replace):
+~~~
 	#ROOM {			<ROOM 
 	#OBJECT {		<OBJECT 
 	#FIND-OBJ {		<FIND-OBJ 
 	#CEXIT {		<CEXIT
 	#EXIT {			<EXIT
 	#DOOR {			<DOOR 
-	}				>
-
+	}			>
+~~~
+	
 ## 78mrf-patch.mud
 * Adds things to make end-game work, sort of...
 	- Added questions for "the Spanish Inquisition"

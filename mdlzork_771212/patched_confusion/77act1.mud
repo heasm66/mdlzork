@@ -1072,8 +1072,8 @@ condiments for his upcoming snack."
 			    <READSTRING .B
 					,INCHAN
 					.READER-STRING>>
-		       <READCHR ,INCHAN>
-		       <OR ,ALT-FLAG <READCHR ,INCHAN>>
+		       ;"<READCHR ,INCHAN>
+		       <OR ,ALT-FLAG <READCHR ,INCHAN>>"
 		       <SETG MOVES <+ ,MOVES 1>>
 		       <COND (<AND <EPARSE <LEX .B <REST .B .L> T> T>
 				   <==? <SET VERB <1 .PRSVEC>> .WALK>

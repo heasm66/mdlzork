@@ -1,6 +1,6 @@
 # Mainframe Zork from 1978-01-24
 This is basically the same game as 1977-12-12 with the end-game added. Note that the end-game is not complete and it is not possible to solve the last puzzle with the
-dungeon master, the parapet and the prison cell. The game was obviously still in construction. This is also clear from the lack of hints in the end-game thhat later
+dungeon master, the parapet and the prison cell. The game was obviously still in construction. This is also clear from the lack of hints in the end-game that later
 was added.
 
 ## 81prim.mud

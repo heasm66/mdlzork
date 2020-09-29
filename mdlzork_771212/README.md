@@ -48,6 +48,9 @@ act1.38 --> 77act1.mud
 * Change !\[ESC] on row 5 to <ASCII 27>
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
+* Change line 1075-76 to:
+	;"<READCHR ,INCHAN>
+	<OR ,ALT-FLAG <READCHR ,INCHAN>>"
 
 act2.27 --> 77act2.mud
 ======================

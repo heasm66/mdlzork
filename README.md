@@ -3,16 +3,13 @@ These are the currently known MDL sources of the mainframe Zork. I have slightly
 Confusion, the MDL emulator, “a MDL interpreter which works just well enough to play the original Zork all the way through”. The status of the different
 versions here are listed below.
 ## 1977-12-12
-There is a couple of files missing from this version, most notably the "melee"-file. I have tried to modify and use the "melee"-file from the 1978-version. But there is still 
-bugs in this version. You can play it all the way until you encounter the troll, when the game crashes.
+This is currently the earliest version avaiable. There is a couple of files missing, most notably the "melee"-file. This version is reconstructed with the "melee"-file from the 1978 version and some later for versions for tell.mud and prim.mud. The game is a 500 point version and fully functional and playable all the way to he end. There is no end-game so you are finished when you reached 500 points. 
 ## 1978-01-24
-This is a more complete version. I've patched it up and I believe it's playable all the way to the end. There was one strange bug that made the game crash if you tried
-doing something in a dark room (like LIGHT LAMP). This could be a bug in the original source, but it's not present in the compiled game of this version that is 
-playable on the PDP-10 ITS emulator. I have fixed with he fix that's used in the later versions.
+This is basically the same as the 1977 version with some parser improvements and an added end-game. The end-game is not completely finished and it is not possible to solve the last puzzly with the dungeon master to reach the finishing room and message.
 ## 1979-12-11
-This version is almost identical with the 1981 version. The 1981 version have three small bugfixes and another issue of the US NEWS & DUNGEON REPORT.
+This version is a 616 point version with a 100 points end-game that is almost identical with the 1981 version.
 ## 1981-07-22
-This is the source files that Bob Supnik released 2003. The version here is with Matthew Russotto's patches to make it work under Confusion.
+This version is almost identical to the 1979 version. There is only three small bugfixes and another issue of the US NEWS & DUNGEON REPORT. This is the source files that Bob Supnik released 2003 and the basis for many later versions of the game. The version here is with Matthew Russotto's patches to make it work under Confusion.
 ## Dungeon 3.2b
 This is not MDL, actually it's the Fortran version that Bob Supnik wrote that closely follows the 1981 version.
 ## Playing the games

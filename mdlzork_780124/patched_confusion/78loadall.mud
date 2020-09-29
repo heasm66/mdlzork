@@ -11,3 +11,6 @@
 <VLOAD "78np.mud">
 <VLOAD "78melee.mud">
 <VLOAD "78dung.mud">
+<VLOAD "78mrf.mud">
+<VLOAD "78mrr.mud">
+<VLOAD "78mrf-patch.mud">

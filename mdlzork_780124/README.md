@@ -44,30 +44,41 @@ Other changes to this file:
 ~~~
 
 ## makstr.25 --> 78makstr.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Change OFFSET to NOFFSET
+~~~
 
 ## 09tell-repl.mud
+~~~
 * File is MTRs replacement version of TELL from Confusion.
 * Change EOL to "(Windows CR LF)"
 * Change row 33 to
     <PRINTSTRING <CHTYPE .S1 STRING> .OUTCHAN .L>
+~~~
 
 ## act1.71 --> 78act1.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Change !\[ESC] on row 5 to <ASCII 27>
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
+~~~
 
 ## act2.37 --> 78act2.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
+~~~
 
 ## act3.18 --> 78act3.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
+~~~
 
 ## rooms.165 --> 78rooms.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Change row 280 to:
@@ -76,64 +87,72 @@ Other changes to this file:
 * Remark/change row 631-632 to:
 	;"<READCHR ,INCHAN>
 	  <OR ,ALT-FLAG <READCHR ,INCHAN>>"
+~~~
 
 ## 78patch.mud
-* This is a new file that includes som additions to make this Zork run under Confusion
+This is a new file that includes som additions to make this Zork run under Confusion
 
 ## np.168 --> 78np.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Change #PREP OF!-WORDS to <FIND-PREP "OF"> on line 164 & 175
 * change row 492 from
-	      (<AND <NOT .OBJ> <NOT <EMPTY? .OBJ>>> <RETURN ,NEFALS .GET-OBJ>)>
+	(<AND <NOT .OBJ> <NOT <EMPTY? .OBJ>>> <RETURN ,NEFALS .GET-OBJ>)>
 	to
-	      (<AND <LIT? .HERE> <NOT .OBJ> <NOT <EMPTY? .OBJ>>> <RETURN ,NEFALS .GET-OBJ>)>
+	(<AND <LIT? .HERE> <NOT .OBJ> <NOT <EMPTY? .OBJ>>> <RETURN ,NEFALS .GET-OBJ>)>
   Without this the game crashes when you do things in dark rooms. The fix is from 81 version
   but I think the 77 alternative will also work.
-  
+~~~
+
 ## melee.105 --> 78melee.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
+~~~
 
 ## dung.129 --> 78dung.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Change "\.lunch" to "lunch" on line 219
-* #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax.
-  So change all occurances of (search-and-replace):
-~~~
-#ROOM {			<ROOM 
-#OBJECT {		<OBJECT 
-#FIND-OBJ {		<FIND-OBJ 
-#CEXIT {		<CEXIT
-#EXIT {			<EXIT
-#DOOR {			<DOOR 
-}			>
+* #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax. So change all occurances of (search-and-replace):
+	#ROOM {			<ROOM
+	#OBJECT {		<OBJECT
+	#FIND-OBJ {		<FIND-OBJ
+	#CEXIT {		<CEXIT
+	#EXIT {			<EXIT
+	#DOOR {			<DOOR
+	}			>
 ~~~
 
 ## mrf.65 --> 78mrf.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Add <GUNASSIGN TURNTO> to line 981 to release TURNTO and reattach it to new routine
+~~~
 
 ## mrr.56 --> 78mrr.mud
+~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax.
   So change all occurances of (search-and-replace):
-~~~
-#ROOM {			<ROOM 
-#OBJECT {		<OBJECT 
-#FIND-OBJ {		<FIND-OBJ 
-#CEXIT {		<CEXIT
-#EXIT {			<EXIT
-#DOOR {			<DOOR 
-}			>
+	#ROOM {			<ROOM
+	#OBJECT {		<OBJECT
+	#FIND-OBJ {		<FIND-OBJ
+	#CEXIT {		<CEXIT
+	#EXIT {			<EXIT
+	#DOOR {			<DOOR
+	}			>
 ~~~
 
 ## 78mrf-patch.mud
+~~~
 * Adds things to make end-game work, sort of...
 	- Added questions for "the Spanish Inquisition"
 	- OFFSET for index of QUESTION and ANSWERs
 	- Redefine NUMS for numbers up to 8
+~~~

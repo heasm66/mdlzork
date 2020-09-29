@@ -66,6 +66,9 @@ Other changes to this file:
 * Change !\[ESC] on row 5 to <ASCII 27>
 * Remove all [FF] & [NUL]
 * Change OFFSET to NOFFSET
+* Change line 1104-05 to:
+	;"<READCHR ,INCHAN>
+	<OR ,ALT-FLAG <READCHR ,INCHAN>>"
 ~~~
 
 ## act2.37 --> 78act2.mud

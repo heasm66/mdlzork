@@ -8,7 +8,7 @@
 
 <DEFINE DO-SAVE ("AUX" MSG)
 	<SET MSG <SAVE "<SAVEFILE>ZORK.SAVE">>
-	<TELL "Saved.">>
+	<TELL "Saving.">>
 
 <DEFINE DO-RESTORE () <TELL "Restored."> <RESTORE "<SAVEFILE>ZORK.SAVE">>
 

@@ -1,4 +1,7 @@
 # Mainframe Zork from 1978-01-24
+This is basically the same game as 1977-12-12 with the end-game added. Note that the end-game is not complete and it is not possible to solve the last puzzle with the
+dungeon master, the parapet and the prison cell. The game was obviously still in construction. This is also clear from the lack of hints in the end-game thhat later
+was added.
 
 ## 81prim.mud
 The "prim"-file is missing so I used the file from the 1981-version. This version has a different definition of FLAGWORD that will require changes in "defs".
@@ -117,7 +120,8 @@ This is a new file that includes som additions to make this Zork run under Confu
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Change "\.lunch" to "lunch" on line 219
-* #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax. So change all occurances of (search-and-replace):
+* #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax. 
+  So change all occurances of (search-and-replace):
 	#ROOM {			<ROOM
 	#OBJECT {		<OBJECT
 	#FIND-OBJ {		<FIND-OBJ

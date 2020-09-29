@@ -114,7 +114,7 @@ Change "\.lunch" to "lunch" on line 219
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
 * Add <GUNASSIGN TURNTO> to line 981 to release TURNTO and reattach it to new routine
-	
+
 ## mrr.56 --> 78mrr.mud
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
@@ -133,4 +133,3 @@ Change "\.lunch" to "lunch" on line 219
 	- Added questions for "the Spanish Inquisition"
 	- OFFSET for index of QUESTION and ANSWERs
 	- Redefine NUMS for numbers up to 8
-

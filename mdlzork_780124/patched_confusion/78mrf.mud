@@ -978,7 +978,7 @@ the Frobozz Magic Boat Co., etc.
 ">>
 
 
-
+<GUNASSIGN TURNTO>	;"Release TURNTO and reattach to new routine."
 <DEFINE TURNTO ()
     <COND (<OBJECT-ACTION>)
 	  (<TELL "That cannot be turned.">)>>

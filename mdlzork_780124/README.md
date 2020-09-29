@@ -108,7 +108,7 @@ Other changes to this file:
 	#EXIT {			<EXIT
 	#DOOR {			<DOOR 
 	}				>
-Change "\.lunch" to "lunch" on line 219
+* Change "\.lunch" to "lunch" on line 219
 
 ## mrf.65 --> 78mrf.mud
 * Change EOL to "(Windows CR LF)"

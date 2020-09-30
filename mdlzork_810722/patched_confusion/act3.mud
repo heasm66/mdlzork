@@ -1378,7 +1378,7 @@ of rope, which is dangling down the slide.">)>)>>
 
 <DEFINE PLAY ()
     <COND (<==? <PRSO> <FIND-OBJ "STRAD">>
-	   <COND (<TRNN <PRSI> ,WEAPONBIT>
+	   <COND (<AND <NOT <EMPTY? <PRSI>>> <TRNN <PRSI> ,WEAPONBIT>>
 		  <TELL "Very good. The violin is now worthless.">
 		  <OTVAL <PRSO> 0>)
 		 (<TELL "An amazingly offensive noise issues from the violin.">)>)

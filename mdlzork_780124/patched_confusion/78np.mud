@@ -628,7 +628,7 @@ do the TAKE, etc. if necessary and calls the VERB function.
 		<TELL <ODESC2 .OBJ> 0 ":
  ">
 		<PUT .PV 2 .OBJ>
-		<COND (<TAKE-IT-OR-LEAVE-IT .SYN .PV <>> <APPLY-RANDOM .VFCN>)>
+		<COND (<TAKE-IT-OR-LEAVE-IT .SYN .PV> <APPLY-RANDOM .VFCN>)>
 		<OR <==? ,HERE .HERE> <RETURN>>
 		<AND <==? .OBJS .BUN> <RETURN>>>>
 

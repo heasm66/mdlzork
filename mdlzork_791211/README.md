@@ -1,7 +1,15 @@
 # Mainframe Zork from 1979-12-11
-This version is almost indentical to the 1981 version. Below are the differences with the 1981 version listed.
+This version is almost indentical to the 1981 version. See differences with the 1981 version below.
 All unprintable charecters are removed.
-## act1.mud
+
+## Changes in this version
+~~~~
+Change line 1381 in act3.mud to make "play violin" respond "An amazingly offensive noise issues from the violin.":
+	   <COND (<AND <NOT <EMPTY? <PRSI>>> <TRNN <PRSI> ,WEAPONBIT>>
+~~~
+
+## Differences between the 1979 and 1981 version
+### act1.mud
 ~~~
 1921c1921,1925
 <         <COND (<VERB? "TRNON" "BURN" "LIGHT">
@@ -13,7 +21,7 @@ All unprintable charecters are removed.
 >               (<VERB? "TRNON" "BURN" "LIGHT">
 ~~~
 The 1981 version have added a extra predicate when you pick up the burning candles.
-## act3.mud
+### act3.mud
 ~~~
 1245,1247c1245,1249
 <                      <COND (<OR <==? .HERE <SFIND-ROOM "CPANT">>
@@ -27,7 +35,7 @@ The 1981 version have added a extra predicate when you pick up the burning candl
 >                              "The rope dangles down into the darkness.">)>
 ~~~
 The 1981 version have different messages for the rope in the Dome and the Coal Mine.
-## dung.mud
+### dung.mud
 ~~~
 5149c5149
 < "There is an issue of US NEWS & DUNGEON REPORT dated 3/17/79 here."
@@ -58,7 +66,7 @@ The 1981 version have different messages for the rope in the Dome and the Coal M
 >       <+ ,OVISON ,TAKEBIT ,TIEBIT ,SACREDBIT>
 ~~~
 New issue of the US NEWS & DUNGEON REPORT and the thief is prohibited to steal the rope.
-## rooms.mud
+### rooms.mud
 ~~~
 405c405
 < <DEFINE DO-SCRIPT ("AUX" CH (UNM ,XUNM) (MUDDLE ,MUDDLE))

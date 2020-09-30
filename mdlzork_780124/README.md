@@ -109,6 +109,9 @@ This is a new file that includes som additions to make this Zork run under Confu
 	(<AND <LIT? .HERE> <NOT .OBJ> <NOT <EMPTY? .OBJ>>> <RETURN ,NEFALS .GET-OBJ>)>
   Without this the game crashes when you do things in dark rooms. The fix is from 81 version
   but I think the 77 alternative will also work.
+* Change line 631 to
+	<COND (<TAKE-IT-OR-LEAVE-IT .SYN .PV> <APPLY-RANDOM .VFCN>)>
+  Removing the last argument (<>) to TAKE-IT-OR-LEAVE-IT to fix the bug when using multiple items.
 ~~~
 
 ## melee.105 --> 78melee.mud

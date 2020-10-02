@@ -150,7 +150,7 @@ has failed."
 	     <RETURN T>)
 	    (<=? .Y "AND">
 	     <COND (<EMPTY? <SET VV <REST .VV 3>>> <RETURN T>)>
-	     <SET ANDFLG T>
+	     <COND (<N=? <PRSO> <>> <SET ANDFLG T>)> ;"AND is only allowed between NOUN-phrases"
 	     <AGAIN>)>
       <SET X <PSTRING .Y>>
       <COND

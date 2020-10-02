@@ -5,7 +5,10 @@ All unprintable charecters are removed.
 ## Changes in this version
 ~~~~
 Change line 1381 in act3.mud to make "play violin" respond "An amazingly offensive noise issues from the violin.":
-	   <COND (<AND <NOT <EMPTY? <PRSI>>> <TRNN <PRSI> ,WEAPONBIT>>
+	<COND (<AND <NOT <EMPTY? <PRSI>>> <TRNN <PRSI> ,WEAPONBIT>>
+	   
+Change line 153 in parser.mud to:
+	<COND (<N=? <PRSO> <>> <SET ANDFLG T>)> ;"AND is only allowed between NOUN-phrases"
 
 Differences between the 1979 and 1981 version
 =============================================

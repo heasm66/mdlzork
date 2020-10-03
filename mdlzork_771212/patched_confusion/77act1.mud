@@ -1961,7 +1961,7 @@ burn.">)
 		      <TELL "With what?">
 		      <PUT <SET ORPHANS ,ORPHANS>
 			   ,OFLAG T>
-		      <PUT .ORPHANS ,OVERB .PRSACT>
+		      <PUT .ORPHANS ,OVERB LIGHT!-ACTIONS>
 		      <PUT .ORPHANS ,OSLOT1 .C>
 		      <PUT .ORPHANS ,OPREP <CHTYPE WITH!-WORDS PREP>>
 		      <SETG PARSE-WON <>>

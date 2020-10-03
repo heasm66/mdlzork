@@ -51,6 +51,8 @@ act1.38 --> 77act1.mud
 * Change line 1075-76 to:
 	;"<READCHR ,INCHAN>
 	<OR ,ALT-FLAG <READCHR ,INCHAN>>"
+* Change line 1964 to:
+	<PUT .ORPHANS ,OVERB LIGHT!-ACTIONS>
 
 act2.27 --> 77act2.mud
 ======================

@@ -1383,9 +1383,9 @@ of rope, which is dangling down the slide.">)>)>>
 		  <OTVAL <PRSO> 0>)
 		 (<TELL "An amazingly offensive noise issues from the violin.">)>)
 	  (<TRNN <PRSO> ,VILLAIN>
-	   <JIGS-UP 
-"You are so engrossed in the role of the " 1 <ODESC2 <PRSO>> "that
-you kill yourself, just as he would have done!">)>>
+	   <JIGS-UP <STRING
+"You are so engrossed in the role of the " <ODESC2 <PRSO>> " that
+you kill yourself, just as he would have done!">>)>>
 
 <DEFINE MAKER ("AUX" (HERE ,HERE) (COINS <SFIND-OBJ "BAGCO">))
     #DECL ((HERE) ROOM (COINS) OBJECT)

@@ -6,7 +6,7 @@ Changes in this version:
 Change line 1381 in act3.mud to make "play violin" respond "An amazingly offensive noise issues from the violin.":
 	<COND (<AND <NOT <EMPTY? <PRSI>>> <TRNN <PRSI> ,WEAPONBIT>>
 
-Change line 153 in parser.mud to:
+Change line 153 in parser.mud to prevent the parser from crashing with phrases like "HELLLO, SAILOR":
 	<COND (<N=? <PRSO> <>> <SET ANDFLG T>)> ;"AND is only allowed between NOUN-phrases"
 
 Change line 1386-88 in act3.mud to make "play me/thief/troll" work:

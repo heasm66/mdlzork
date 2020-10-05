@@ -9,7 +9,11 @@ Change line 1381 in act3.mud to make "play violin" respond "An amazingly offensi
 Change line 153 in parser.mud to:
 	<COND (<N=? <PRSO> <>> <SET ANDFLG T>)> ;"AND is only allowed between NOUN-phrases"
 
-Change line 1386-88 in act3.mud to:
+Change line 1386-88 in act3.mud to make "play me/thief/troll" work:
 	   <JIGS-UP <STRING
 "You are so engrossed in the role of the " <ODESC2 <PRSO>> " that
 you kill yourself, just as he would have done!">>)>>
+
+Change line 1207-08 in dung.mud to make save/restore during thief melee (for FLAGS to be properly saved/restored they have to be defined in MGVALS.)
+	 THIEF-ENGROSSED!-FLAG
+	 ]>

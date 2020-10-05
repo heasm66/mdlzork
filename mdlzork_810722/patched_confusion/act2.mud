@@ -412,6 +412,7 @@ the falls.">)
 	#DECL ((ARG) <OR ATOM FALSE> (BALL CONT) OBJECT 
 	       (BINF) <OR FALSE OBJECT> (M) <OR FALSE VECTOR>
 	       (BALLACT) ACTIVATION (R) <OR NEXIT CEXIT DOOR ROOM>)
+	<COND (.BINF <SET BINF <SETG BINF!-FLAG <1 <OCONTENTS .CONT>>>>)> ;"Rebind BINF to OBJ burning in receptacle."
 	<COND (<==? .ARG READ-OUT>
 	       <COND (<VERB? "LOOK">
 		      <COND (.BINF

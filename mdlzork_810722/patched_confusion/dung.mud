@@ -393,7 +393,7 @@ as the student may register for Reeling and Writhing, Mystery
 Stretching and Fainting in Coils).  Advanced students are expected to
 learn Laughing and Grief.
 
-				William Barton Flathead, Fovnder
+				William Barton Flathead, Founder
 
 (The brochure continues in this vein for a few hundred more pages.)">
 

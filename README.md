@@ -36,4 +36,4 @@ when you saved and you had to wait 24h before you could restore and continue pla
 
 Thanks to Tim Anderson, Marc Blank, Bruce Daniels and Dave Lebling for creating the original Zork and to Matthew Russotto for building Confusion. 
 
-(For a modern version of Zork, I recommend Jeff Claar's C++ adaption. This version is carefully made from the 810722 version. See https://bitbucket.org/jclaar3/zork/src/master/) 
+(For a modern version of Zork, I recommend Jeff Claar's C++ adaption. This version is carefully made from the 810722 MDL source. See https://bitbucket.org/jclaar3/zork/src/master/) 

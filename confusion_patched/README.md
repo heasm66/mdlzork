@@ -269,6 +269,9 @@ XORB           xorb            SUBR    mdl_builtin_eval_xorb             Yes
 
     *ERROR*
     "BAD-TYPE-SPECIFICATION1"
+  This is because ANY is missing from ROOT OBLIST. A fix to this is to add ANY to ROOT by:
+    ANY!-ROOT
+  Do this before ANY is used for the first time, otherwise ANY will end up on another OBLIST. 
 
 * User-defined TYPEs can't use the # syntax to CHTYPE.
     <NEWTYPE NT ATOM>

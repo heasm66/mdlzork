@@ -35,3 +35,5 @@ There is only one save slot in Zork, but you can always make your own copies in 
 when you saved and you had to wait 24h before you could restore and continue playing.
 
 Thanks to Tim Anderson, Marc Blank, Bruce Daniels and Dave Lebling for creating the original Zork and to Matthew Russotto for building Confusion. 
+
+(For a modern version of Zork I recommend Jeff Claar's C++ adaption carefully made from the 810722 version, https://bitbucket.org/jclaar3/zork/src/master/) 

@@ -21,3 +21,7 @@ Change line 1207-08 in dung.mud to make save/restore during thief melee (for FLA
 BINF!-FLAG is used to hold the OBJECT that's burning in the receptacle. When restored it is unlikly that the pointer will point to the same OBJECT. 
 To fix this add this line after line 414 in act2.mud to make save/restore work during balloon ride:
 	<COND (.BINF <SET BINF <SETG BINF!-FLAG <1 <OCONTENTS .CONT>>>>)> ;"Rebind BINF to OBJ burning in receptacle."
+
+Change line 396 in dung.mud to fix typo:
+	Fovnder --> Founder
+	

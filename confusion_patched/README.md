@@ -260,5 +260,26 @@ VALUE          value           SUBR    mdl_builtin_eval_value            Yes
 VECTOR         vector          SUBR    mdl_builtin_eval_vector           Yes                           
 WARRANTY       warranty        SUBR    mdl_builtin_eval_warranty                   Not used in Zork    
 XORB           xorb            SUBR    mdl_builtin_eval_xorb             Yes                           
-
 ~~~
+
+## Known issues in Confusion
+~~~
+* The token ANY isn't recognized in DECL-statements.
+    <DECL? 56 ANY>
+
+    *ERROR*
+    "BAD-TYPE-SPECIFICATION1"
+
+* User-defined TYPEs can't use the # syntax to CHTYPE.
+    <NEWTYPE NT ATOM>
+    <CHTYPE FOO NT>   -->   #NT FOO
+    #NT BAR           -->   "Something not an atom in the oblist"
+
+* Muddle56 recognizes this syntax as a call to a FUNCTION.
+    #+ {1 2 3}
+    
+    *ERROR*
+    "#ATOM does not name a type"
+~~~
+
+    

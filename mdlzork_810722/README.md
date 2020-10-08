@@ -25,3 +25,7 @@ To fix this add this line after line 414 in act2.mud to make save/restore work d
 Change line 396 in dung.mud to fix typo:
 	Fovnder --> Founder
 	
+Changed more typos in dung.mud:
+	Line 164, 572 & 2028: Removed double-space in sentence.
+	Line 424: Added "." at end of sentence.
+	Line 1969 & 2045: accomodate --> accommodate

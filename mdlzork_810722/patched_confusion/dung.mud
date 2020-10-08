@@ -161,7 +161,7 @@ FLAG-NAMES
 "You clearly are a suicidal maniac.  We don't allow psychotics in the
 cave, since they may harm other adventurers.  Your remains will be
 installed in the Land of the Living Dead, where your fellow
-adventurers  may gloat over them.">
+adventurers may gloat over them.">
 
 ;<PSETG NO-PATCH
 
@@ -421,7 +421,7 @@ condiments for his upcoming snack."
 <PSETG HELLOS
       '["Hello."
 	"Good day."
-	"Nice weather we've been having lately"
+	"Nice weather we've been having lately."
 	"Goodbye."]>
 
 <PSETG WHEEEEE
@@ -569,7 +569,7 @@ flask's contents are fatal.">
 
 <PSETG CRUSHED
 "The room seems to have become too small to hold you.  It seems that
-the  walls are not as compressible as your body, which is somewhat
+the walls are not as compressible as your body, which is somewhat
 demolished.">
 
 <PSETG ICEMUNG
@@ -1966,7 +1966,7 @@ passage."
        "Rocky Crawl"
        <EXIT "WEST" "RAVI1" "EAST" "DOME" "NW"
 	     <CEXIT "EGYPT-FLAG" "EGYPT"
-		    "The passage is too narrow to accomodate coffins."
+		    "The passage is too narrow to accommodate coffins."
 		    T COFFIN-CURE>>>
 
 <ROOM "RESES"
@@ -2025,7 +2025,7 @@ travels to the north and the east."
 
 <ROOM "INSTR"
 "You are on the gently flowing stream.  The upstream route is too narrow
-to  navigate and the downstream route is invisible due to twisting
+to navigate and the downstream route is invisible due to twisting
 walls.  There is a narrow beach to land on."
        "Stream"
        <EXIT "UP" #NEXIT "The way is too narrow."
@@ -2042,7 +2042,7 @@ ascending staircase in the room as well as doors, east and south."
        "Egyptian Room"
        <EXIT "UP" "ICY" "SOUTH" "LEDG3"
 	      "EAST" <CEXIT "EGYPT-FLAG" "CRAW1"
-			     "The passage is too narrow to accomodate coffins." T
+			     "The passage is too narrow to accommodate coffins." T
 			     COFFIN-CURE>>
        (<GET-OBJ "COFFI">)>
 

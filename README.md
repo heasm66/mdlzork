@@ -3,9 +3,9 @@ These are the currently known MDL sources of the mainframe Zork. I have slightly
 Confusion, the MDL emulator, “a MDL interpreter which works just well enough to play the original Zork all the way through”. The status of the different
 versions here are listed below.
 ## 1977-12-12
-This is currently the earliest version avaiable. There is a couple of files missing, most notably the "melee"-file. This version is reconstructed with the "melee"-file from the 1978 version and some later for versions for tell.mud and prim.mud. The game is a 500 point version and fully functional and playable all the way to he end. There is no end-game so you are finished when you reached 500 points. 
+This is currently the earliest version available. There is a couple of files missing, most notably the "melee"-file. This version is reconstructed with the "melee"-file from the 1978 version and some later for versions for tell.mud and prim.mud. The game is a 500 point version and fully functional and playable all the way to he end. There is no end-game so you are finished when you reached 500 points. 
 ## 1978-01-24
-This is basically the same as the 1977 version with some parser improvements and an added end-game. The end-game is not completely finished and it is not possible to solve the last puzzly with the dungeon master to reach the finishing room and message.
+This is basically the same as the 1977 version with some parser improvements and an added end-game. The end-game is not completely finished and it is not possible to solve the last puzzle with the dungeon master to reach the finishing room and message.
 ## 1979-12-11
 This version is a 616 point version with a 100 points end-game that is almost identical with the 1981 version.
 ## 1981-07-22

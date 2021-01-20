@@ -34,8 +34,8 @@ Changed more typos in dung.mud:
 Differences between the 1979 and 1981 version
 =============================================
 
-act1.mud
---------
+act1.253<->act1.254
+-------------------
 
 1921c1921,1925
 <         <COND (<VERB? "TRNON" "BURN" "LIGHT">
@@ -47,8 +47,8 @@ act1.mud
 >               (<VERB? "TRNON" "BURN" "LIGHT">
 The 1981 version have added a extra predicate when you pick up the burning candles.
 
-act3.mud
---------
+act3.198<->act3.199
+-------------------
 
 1245,1247c1245,1249
 <                      <COND (<OR <==? .HERE <SFIND-ROOM "CPANT">>
@@ -63,8 +63,8 @@ act3.mud
 ~~~
 The 1981 version have different messages for the rope in the Dome and the Coal Mine.
 
-dung.mud
---------
+dung.354<->dung.355
+-------------------
 
 5149c5149
 < "There is an issue of US NEWS & DUNGEON REPORT dated 3/17/79 here."
@@ -96,8 +96,8 @@ dung.mud
 ~~~
 New issue of the US NEWS & DUNGEON REPORT and the thief is prohibited to steal the rope.
 
-rooms.mud
----------
+rooms.393<->rooms.394
+---------------------
 
 405c405
 < <DEFINE DO-SCRIPT ("AUX" CH (UNM ,XUNM) (MUDDLE ,MUDDLE))

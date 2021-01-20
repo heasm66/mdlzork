@@ -1013,7 +1013,7 @@ do the TAKE, etc. if necessary and calls the VERB function.
 			     <PUT .S 1 <ASCII <- .C 32>>>)>>
 	      .STR>
 	.STR>
-    
+
  
 
  

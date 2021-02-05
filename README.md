@@ -12,6 +12,8 @@ This version is a 616 point version with a 100 points end-game that is almost id
 This version is almost identical to the 1979 version. There is only three small bugfixes and another issue of the US NEWS & DUNGEON REPORT. This is the source files that Bob Supnik released 2003 and the basis for many later versions of the game. The version here is with Matthew Russotto's patches to make it work under Confusion.
 ## Dungeon 3.2b
 This is not MDL, actually it's the Fortran version that Bob Supnik wrote that closely follows the 1981 version.
+## Binaries for PDP-10 ITS
+These are recovered files that works with MDL in the [PDP-10 ITS emulator](https://github.com/PDP-10/its). 
 ## Playing the games
 To play the games you'll need Confusion. There is a patched version in this repository that should compile with the latest gcc. The orginal can be found at [IF-Archive](http://www.ifarchive.org/indexes/if-archive/programming/mdl/interpreters/confusion/), Matthew Russotto's
 [homepage](http://www.russotto.net/git/mrussotto/confusion) or Benjamin Slade's [patched version](https://gitlab.com/emacsomancer/confusion-mdl). Benjamin Slade also have a

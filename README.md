@@ -12,6 +12,8 @@ This version is a 616 point version with a 100 points end-game that is almost id
 This version is almost identical to the 1979 version. There is only three small bugfixes and another issue of the US NEWS & DUNGEON REPORT. This is the source files that Bob Supnik released 2003 and the basis for many later versions of the game. The version here is with Matthew Russotto's patches to make it work under Confusion.
 ## Dungeon 3.2b
 This is not MDL, actually it's the Fortran version that Bob Supnik wrote that closely follows the 1981 version.
+## Zork 285
+This is not MDL. Instead it's is a ZIL-version of the very first Zork from June 14th, 1977.
 ## Binaries for PDP-10 ITS
 These are recovered files that works with MDL in the [PDP-10 ITS emulator](https://github.com/PDP-10/its). 
 ## Playing the games

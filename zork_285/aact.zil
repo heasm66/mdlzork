@@ -2811,7 +2811,7 @@ condiments for his upcoming snack."
             <SET S <PTSIZE .TX>>
             <COND (<OR <=? .S ,NEXIT>
                        <AND <=? .S ,CEXIT>
-                            <NOT <GETB .TX ,CEXIT-VAR>>>>  
+                            <NOT <GETB .TX ,CEXITFLAG>>>>  
                     <JIGS-UP <PICK-ONE ,JUMPLOSS>>)>)      
           (T <TELL <PICK-ONE .WHEEEEE> CR>)>> 
 

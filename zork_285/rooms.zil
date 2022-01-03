@@ -51,13 +51,13 @@
     <COND (<AND <NOT <LIT? .RM>> <PROB 75>>
             <COND (<SET NRM <GETPT .RM .WHERE>>
                 <SET PTS <PTSIZE .NRM>>
-                <SET LEAVINGS <0 .NRM>>  ;"Where to?"
+                <SET LEAVINGS <GET .NRM ,REXIT>>  ;"Where to?"
                 <COND (<AND <=? .PTS ,UEXIT>  ;"There's an UEXIT there and the room is lit. 75% chance for success." 
                             <LIT? .LEAVINGS>>
                         <GOTO .LEAVINGS> 
                         <ROOM-INFO <>>) 
                       (<AND <=? .PTS ,CEXIT>  ;"There's an CEXIT there with true FLAG and the room is lit. 75% chance for success."
-                            <VALUE <GETB .NRM ,CEXIT-VAR>>
+                            <VALUE <GETB .NRM ,CEXITFLAG>>
                             <LIT? .LEAVINGS>>
                         <GOTO .LEAVINGS> 
                         <ROOM-INFO <>>)
@@ -71,15 +71,15 @@
                     <JIGS-UP <PICK-ONE ,NO-LIGHTS>>)>)
           (<SET NRM <GETPT .RM .WHERE>>
                 <SET PTS <PTSIZE .NRM>>
-                <SET LEAVINGS <GET .NRM ,EXIT-RM>>                  ;"Where to?"
+                <SET LEAVINGS <GET .NRM ,REXIT>>                  ;"Where to?"
                 <COND (<=? .PTS ,UEXIT> 
                         <GOTO .LEAVINGS> 
                         <ROOM-INFO <>>)
                       (<=? .PTS ,CEXIT>
-                        <COND (<VALUE <GETB .NRM ,CEXIT-VAR>>       ;"FLAG is true"
+                        <COND (<VALUE <GETB .NRM ,CEXITFLAG>>       ;"FLAG is true"
                                 <GOTO .LEAVINGS> 
                                 <ROOM-INFO <>>)
-                              (<SET STR <GET .NRM ,CEXIT-MSG>>      ;"FLAG is false"
+                              (<SET STR <GET .NRM ,CEXITSTR>>      ;"FLAG is false"
                                 <TELL .STR CR>)
                               (T 
                                 <TELL "There is no way to go in this direction." CR>)>)

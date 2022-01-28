@@ -8,7 +8,10 @@
   
   (Original source: https://github.com/MITDDC) 
   *****************************************************************************"
-
+;"Changelog Release 3
+  * Removed constant definitions of UEXIT, NEXIT and more. There are ZIL defined ones used instead. 
+  * #25: Fixed problem with handling of the glacier.
+"
 ;"Changelog Release 2
   * Changed logic in RDCOM to be more like MDL-original.
   * Add 'behind you' to to text when going through trap-door.

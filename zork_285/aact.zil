@@ -2092,9 +2092,18 @@ there is a passageway leading west." CR>
                     <REMOVE ,ICE>
                     <MOVE ,TORCH ,STREA>
                     <SETG GLACIER-FLAG T>)
-                  (<TELL
+                  (T <TELL
 "The glacier is unmoved by your ridiculous attempt." CR>
-                    <RFALSE>)>)>>
+                    <RFALSE>)>)
+          (<W=? .PRSACT ,W?TAKE>
+            <TELL <PICK-ONE ,YUKS> CR>)>>
+
+<GLOBAL YUKS
+    <LTABLE
+"Nice try."
+"You can't be serious."
+"Chomp, Chomp."
+"What would you do if you succeeded?">>
 
 <ROUTINE RESERVOIR-SOUTH ("AUX" (PRSACT <1 ,PRSVEC>)) 
     <IFFLAG (DEBUG <TELL "RESERVOIR-SOUTH" CR>)>

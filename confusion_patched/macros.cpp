@@ -29,6 +29,7 @@
 #include "mdl_assoc.hpp"
 #include "mdl_strbuf.h"
 #include <unistd.h>
+#include <time.h>
 
 #define DECODE_TENEX_FILESPECS
 

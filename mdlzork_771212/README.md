@@ -115,7 +115,6 @@ dung.56 --> 77dung.mud
 * Add words IN! and OUT!
 	<SADD-ACTION "IN!" TIME>	;"villain regains consciousness"
 	<SADD-ACTION "OUT!" TIME>	;"villain loses consciousness"
-* Change "\.lunch" to "lunch" on line 234
 ~~~
 
 The original release contains two different versions of act1 and np. For this release the latest of the files where used. Below are the differences between the files listed. 

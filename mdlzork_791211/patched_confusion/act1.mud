@@ -140,7 +140,7 @@ into darkness."
 		<TRZ .DOOR ,TOUCHBIT>)>
 	 <>)
 	(<EMPTY? .AOBJS>
-	 <TELL "Going up empty-handed is a bad idead.">
+	 <TELL "Going up empty-handed is a bad idea.">
 	 T)
 	(T
 	 <SETG LIGHT-LOAD!-FLAG <>>)>>

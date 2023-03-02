@@ -221,7 +221,7 @@ and all the windows are barred."
 <ADD-OBJECT
  <OBJECT "FOOD"
 	  "A hot pepper sandwich is here."
-	  "lunch"
+	  "\.lunch"
 	  %<>
 	  %<> () <FIND-OBJ "SBAG"> %<+ ,FOODBIT ,TAKEBIT ,OVISON> 0 0 0 5 0>
 ["SANDW" "LUNCH" "PEPPE" "DINNE" "SNACK"]>

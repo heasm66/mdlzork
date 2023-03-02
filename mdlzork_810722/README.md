@@ -32,3 +32,7 @@ Changed more typos in dung.mud:
 
 Changed typo in act1.mud:
 	Line 143: idead --> idea
+	
+Changed line 608 in rooms.mud to:
+        <AND .FULL <NOT <0? <CHTYPE <ANDB .FULL 1> FIX>>>>>
+

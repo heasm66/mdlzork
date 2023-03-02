@@ -31,6 +31,9 @@ Changed more typos in dung.mud:
 	Line 424: Added "." at end of sentence.
 	Line 1969 & 2045: accomodate --> accommodate
 
+Changed typo in act1.mud:
+	Line 143: idead --> idea
+	
 Differences between the 1979 and 1981 version
 =============================================
 

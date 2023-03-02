@@ -216,7 +216,7 @@ and all the windows are barred."
 <ADD-OBJECT
  <OBJECT "FOOD"
 	  "A hot pepper sandwich is here."
-	  "lunch"
+	  "\.lunch"
 	  %<>
 	  %<> () <FIND-OBJ "SBAG"> %<+ ,FOODBIT ,TAKEBIT ,OVISON>>
 ["SANDW" "LUNCH" "DINNE"] ["HOT" "PEPPE"]>

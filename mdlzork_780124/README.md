@@ -125,7 +125,6 @@ This is a new file that includes som additions to make this Zork run under Confu
 ~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
-* Change "\.lunch" to "lunch" on line 219
 * #OBJECT {arg} is the same as a function call like <OBJECT arg>, but Confusion doesn't understand that syntax. 
   So change all occurances of (search-and-replace):
 	#ROOM {			<ROOM

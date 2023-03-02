@@ -605,7 +605,7 @@ SETG'ED TO THAT."
      <COND
       (<NOT <LIT? .RM>> <TELL "I can't see anything.">)
       (<OR <AND <NOT .FULL> <NOT ,NO-OBJ-PRINT!-FLAG>>
-	   <NOT <0? <CHTYPE <ANDB .FULL 1> FIX>>>>
+	   <AND .FULL <NOT <0? <CHTYPE <ANDB .FULL 1> FIX>>>>>
        <MAPF <>
 	<FUNCTION (X) 
 		#DECL ((X) OBJECT)

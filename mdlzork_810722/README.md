@@ -29,3 +29,6 @@ Changed more typos in dung.mud:
 	Line 164, 572 & 2028: Removed double-space in sentence.
 	Line 424: Added "." at end of sentence.
 	Line 1969 & 2045: accomodate --> accommodate
+
+Changed typo in act1.mud:
+	Line 143: idead --> idea

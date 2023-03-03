@@ -217,7 +217,8 @@ but you seem to have found a bottom.  Thanks for your assistance.">>
             <TELL "Take what?" CR>
             <RTRUE>)>
     <COND (<OCAN .OBJ> <SET OBJ <OCAN .OBJ>>)>  ;"If OBJ is in container in ROOM, use container instead."
-    <COND (<AND <IN? .OBJ .RM> <CAN-TAKE? .OBJ>>
+    ;"<COND (<AND <IN? .OBJ .RM> <CAN-TAKE? .OBJ>>"
+	<COND (<IN? .OBJ .RM>
             ;"Strangely because OBJ isn't counted itself, only items contained by it. You usually 
               can carry 9 objects (LOAD-MAX is 8) but if the 9th you try to pick up is a 
               container (bottle) you are denied."

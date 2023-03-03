@@ -2542,6 +2542,7 @@ dam." CR>
           (<AND .O? ,GATE-FLAG <NOT ,LOW-TIDE> .WRENCH? .DAM?>
             <TELL "The sluice gates have opened and water pours through the dam." CR>
             <PUTP ,TRUNK ,P?OFLAGS 1>
+			<MOVE ,TRUNK ,RESES>
             <SETG LOW-TIDE T>)
           (<AND <OR .O? .C?> ,GATE-FLAG .WRENCH? .DAM?>
             <TELL "Look around you." CR>)         
@@ -2603,7 +2604,15 @@ the east wall of the room (apparently, a leak has occurred in a pipe.)" CR>
                     <TELL "Click." CR>)
                   (<W=? .PRSO ,W?YELLO>
                     <SETG GATE-FLAG T>
-                    <TELL "Click." CR>)>)>>
+                    <TELL "Click." CR>)>)>
+	<COND (<AND <W=? .PRSACT ,W?PLUG> <W=? .PRSO ,W?LEAK> <G? .HACK 0>>
+			<COND (<IN? ,PUTTY ,WINNER>
+					<TELL 
+"By some miracle of elfen technology, you have managed to stop the leak|
+in the dam." CR>
+					<PUTP ,HERE ,P?RVARS -1>)
+				  (T <TELL "With your bare hands?" CR>)>)>>		
+
 
 <ROUTINE CAVE2-ROOM ("AUX" (PRSACT <1 ,PRSVEC>) C)
     <IFFLAG (DEBUG <TELL "CAVE2-ROOM" CR>)>
@@ -2725,7 +2734,7 @@ do not exactly lower your insurance premiums, either." CR>)
 "The cyclops ignores all injury to his body with a shrug." CR>)> <>)
           (<W=? .PRSACT ,W?TAKE>
             <TELL 
-"The cyclops is rather heavy and doesn't take kindly to being grabbed." CR>)>>
+"The cyclops is pretty heavy and does not take kindly to being grabbed." CR>)>>
 
 <ROUTINE CYCLOPS-ROOM ("AUX" (VEC ,PRSVEC) (RM ,HERE) (VARS <GETP .RM ,P?RVARS>)) 
     <COND (<AND <W=? <1 .VEC> ,W?LOOK> <OR <NOT ,PATCHED> <LIT? .RM>>>

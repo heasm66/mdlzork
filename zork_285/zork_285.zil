@@ -11,6 +11,9 @@
 ;"Changelog Release 3
   * Removed constant definitions of UEXIT, NEXIT and more. There are ZIL defined ones used instead. 
   * #25: Fixed problem with handling of the glacier.
+  * #32: Fixed CAN-TAKE?
+  * Fixed 'plug leak'.
+  * Change to message when trying to 'get cyclops'.
 "
 ;"Changelog Release 2
   * Changed logic in RDCOM to be more like MDL-original.
@@ -86,6 +89,7 @@
 
 <ROUTINE GO ()
     <FIXED-FONT-ON>  ;"Fixed font for a more 'terminal' feeling."
+	<REMOVE ,TRUNK>	 ;"Start with trunk out of scope."
     <SAVE-IT>>
 
 <ROUTINE SLEEP (SEC)
@@ -265,12 +269,14 @@ Henrik Åsman, Stockholm 2021" CR>>
 <ROUTINE V-UNPATCHED () 
     <COND (<NOT ,PATCHED> <TELL ,CAN-NOT-DO-THAT CR> <RTRUE>)>
     <TELL "Patches is now turned off." CR>
+	<COND (<=? <GETP ,TRUNK ,P?OFLAGS> 0> <MOVE ,TRUNK ,RESES>)>
     <SETG PATCHED <>>>
 
+;"CAN-TAKE? is only used to exclude things for the thief to steal. 
+  In MDL it returns T for everything except objects in the NASTIES
+  global variable."
 <ROUTINE CAN-TAKE? (OBJ)
-    <OR <BTST <GETP .OBJ ,P?OFLAGS> 1>              ;"Visible,"
-             <NOT ,PATCHED>                         ;"or unpatched,"
-             <AND <VICTIMS?> <=? VICTIMS? .OBJ>>>>  ;"or one of the victims."
+	<NOT <=? .OBJ ,DAM ,ICE ,BONES ,RUG ,THIEF ,TROLL ,CYCLO ,COFFI>>>
 
 ;"Extract and prints compile date from header."
 <ROUTINE REMARKABLY-DISGUSTING-CODE ()
@@ -278,4 +284,3 @@ Henrik Åsman, Stockholm 2021" CR>>
     <TELL <NTH ,MONTHS <+ <* <- <GETB 0 20> 48> 10> <- <GETB 0 21> 48>>>>
     <TELL " " N <+ <* <- <GETB 0 22> 48> 10> <- <GETB 0 23> 48>>>
     <TELL ", 20" N <+ <* <- <GETB 0 18> 48> 10> <- <GETB 0 19> 48>> ".">>
-

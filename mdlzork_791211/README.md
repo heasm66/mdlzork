@@ -40,6 +40,9 @@ Changed line 608 in rooms.mud to:
 Changed line 1177 in act3.mud to (issue #37):
 	<VERB? "MOVE" "PULL">)>>
 	
+Changed typo in dung.mud:
+	Line 503: of  unfriendly rocks --> of unfriendly rocks
+	
 Differences between the 1979 and 1981 version
 =============================================
 

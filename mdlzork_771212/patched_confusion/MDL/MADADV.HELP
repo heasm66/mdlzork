@@ -1,11 +1,3 @@
-Editorials
-
- 1.  Users on ITS:   say ZORK^K to DDT rather than :ZORK to get a
-      zork--this keeps you from tying up more than one of the three
-      available slots.
- 2.  Bugs, comments, etc. are always welcome.  
-     Send mail to DUNGEON@MIT-DMS
-
 Useful commands
 
     The 'brief' command suppresses printing of long room descriptions
@@ -18,11 +10,6 @@ what the game is about.
 you wish to continue playing.
     The 'script', 'unscript', 'save', and 'restore' commands are
 useful if you are a local user.  
-    Although the best way to report bugs is to send mail to
-DUNGEON@MIT-DMS, there are 'bug' and 'feature' commands built in to
-the game.  These generate files which must, alas, be manually
-transmitted to the maintainers.  It is, however, better than nothing.
-
 Dungeon Command Parser
     
     A command is one line of text terminated by a carriage return.
@@ -53,7 +40,6 @@ following types of things.
     DOORs, BUTTONs)
 
  Prepositions:
-
     It may be necessary in some cases to include prepositions, but
     the parser attempts to handle cases which aren't ambiguous
     without.  Thus 'Give car to demon' will work, as will 'Give demon
@@ -65,18 +51,6 @@ following types of things.
 
     The parser understands a reasonable number of things.  Rather
     than listing them, we advise you to do reasonable things.
-
- Multiple Objects:
-
-    Sentences of the following forms will parse:
-	Put A and B and C in trophy case
-	Put A, B, and C in trophy case
-	Give A and B to the troll
-    The following will not:
-	Put A B in case
-	Take A B C
-    The point is that an AND or a <comma> are required so as not
-    to hopelessly confuse the parser.
 
  Ambiguity:
 

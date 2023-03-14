@@ -165,3 +165,5 @@ This is a new file that includes som additions to make this Zork run under Confu
 	- OFFSET for index of QUESTION and ANSWERs
 	- Redefine NUMS for numbers up to 8
 ~~~
+
+Timestamps of the original madadv.help and madadv.info are 780111 and 770614.

@@ -35,4 +35,8 @@ Changed typo in act1.mud:
 	
 Changed line 622 in rooms.mud to:
         <AND .FULL <NOT <0? <CHTYPE <ANDB .FULL 1> FIX>>>>>
+	
+Changed line 1177 in act3.mud to (issue #37):
+	<VERB? "MOVE" "PULL">)>>
+
 

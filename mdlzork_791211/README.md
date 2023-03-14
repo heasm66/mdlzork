@@ -205,3 +205,5 @@ rooms.393<->rooms.394
 >              <FINISH <>>
 >              <REPEAT () <QUIT>>)
 Extra DECL-check and error-handling in the 1981 version.
+
+Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.

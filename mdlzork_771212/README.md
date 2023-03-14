@@ -136,3 +136,5 @@ The original release contains two different versions of act1 and np. For this re
 275a277
 >                                 <PUT .PV 1 .SF>
 ~~~
+
+Timestamps of the original madadv.help and madadv.info are 771215 and 770614.

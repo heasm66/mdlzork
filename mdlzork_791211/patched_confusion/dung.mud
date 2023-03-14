@@ -500,7 +500,7 @@ the front of the machine is a large lid, which is ">
 <PSETG OVER-FALLS-STR
 "I didn't think you would REALLY try to go over the falls in a
 barrel. It seems that some 450 feet below, you were met by a number
-of  unfriendly rocks and boulders, causing your immediate demise.  Is
+of unfriendly rocks and boulders, causing your immediate demise.  Is
 this what 'over a barrel' means?">
 
 <PSETG OVER-FALLS-STR1

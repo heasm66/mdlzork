@@ -7413,7 +7413,7 @@ mdl_value_t *mdl_builtin_eval_file_length(mdl_value_t *form, mdl_value_t *args)
         return mdl_call_error_ext("CHANNEL-CLOSED", "Channel closed but nonzero", NULL); // shouldn't happen
     if (fgetpos(f,&savepos) == -1) 
         return mdl_call_error("FILE-LENGTH-UNAVAILABLE", NULL); // not an original MDL error
-    if (fseek(f, SEEK_END, 0) == -1)
+    if (fseek(f, 0, SEEK_END) == -1)
         return mdl_call_error("FILE-LENGTH-UNAVAILABLE", NULL); // not an original MDL error
     endpos = ftello(f);
     fsetpos(f, &savepos);

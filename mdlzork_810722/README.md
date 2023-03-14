@@ -42,5 +42,6 @@ Changed line 1177 in act3.mud to (issue #37):
 Changed typo in dung.mud:
 	Line 503: of  unfriendly rocks --> of unfriendly rocks
 
+Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.
 
 

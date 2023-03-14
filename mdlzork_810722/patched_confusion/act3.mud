@@ -1174,7 +1174,7 @@ a distant room, which can be described clearly....">
 		 1
 		 <ODESC2 .OBJ>
 		 " falls from it and onto the floor.">
-	   <>)>>
+	   <VERB? "MOVE" "PULL">)>>
 
 <DEFINE SLIDE-EXIT ("AUX" (W <WEIGHT <AOBJS ,WINNER>>))
     #DECL ((W) FIX)

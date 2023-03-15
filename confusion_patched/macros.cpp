@@ -2198,7 +2198,7 @@ mdl_value_t *mdl_std_apply(mdl_value_t *applier, mdl_value_t *apply_to, int appl
     if (apply_as == MDL_TYPE_SUBR || 
         apply_as == MDL_TYPE_FSUBR)
     {
-        if (applier->v.w < built_in_table.size())
+        if (applier->v.w < (MDL_INT)built_in_table.size())
         {
             mdl_built_in_t built_in = built_in_table[applier->v.w];
             mdl_frame_t *frame;

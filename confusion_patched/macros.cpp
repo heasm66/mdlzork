@@ -610,7 +610,7 @@ bool mdl_oblists_are_reasonable(mdl_value_t *oblists)
 mdl_value_t *mdl_get_atom(const char *pname, bool insert_allowed, mdl_value_t *default_oblists)
 {
 
-    char *trailer = strstr(pname, "!-");
+    const char *trailer = strstr(pname, "!-");
     if (trailer == NULL)
     {
         return mdl_get_atom_default_oblist(pname, insert_allowed, default_oblists);

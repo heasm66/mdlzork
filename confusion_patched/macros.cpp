@@ -700,7 +700,8 @@ mdl_value_t *mdl_new_string(int len)
 mdl_value_t *mdl_new_string(int len, const char *s)
 {
     mdl_value_t *result = mdl_new_string(len);
-    strncpy(result->v.s.p, s, len);
+    memcpy(result->v.s.p, s, len);
+    result->v.s.p[len] = '\0';
     return result;
 }
 

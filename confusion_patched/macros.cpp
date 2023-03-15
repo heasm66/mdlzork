@@ -3021,7 +3021,7 @@ void mdl_interp_init()
     mdl_set_lval(mdl_value_atom_outchan->v.a, def_outchan, initial_frame);
     mdl_set_gval(mdl_value_atom_outchan->v.a, def_outchan);
     
-    last_assoc_clean = GC_gc_no;
+    last_assoc_clean = GC_get_gc_no();
 }
 
 bool mdl_is_true(mdl_value_t *item)

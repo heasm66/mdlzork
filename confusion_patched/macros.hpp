@@ -20,6 +20,9 @@
 #include <vector>
 #include <string>
 #include <map>
+#ifdef MDL32
+#include <climits>
+#endif
 #include <setjmp.h>
 #include <float.h>
 #include "mdl_builtin_types.h"

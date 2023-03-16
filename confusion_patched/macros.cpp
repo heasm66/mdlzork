@@ -5791,8 +5791,8 @@ mdl_value_t *mdl_builtin_eval_multiply(mdl_value_t *form, mdl_value_t *args)
 /* SUBR * */
 {
     MDL_INT accum = 1;
-    MDL_FLOAT faccum;
-     bool floating = false;
+    MDL_FLOAT faccum = 1;
+    bool floating = false;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5829,7 +5829,7 @@ mdl_value_t *mdl_builtin_eval_add(mdl_value_t *form, mdl_value_t *args)
 /* SUBR + */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
 
     mdl_value_t *argp = LREST(args, 0);
@@ -5867,9 +5867,9 @@ mdl_value_t *mdl_builtin_eval_subtract(mdl_value_t *form, mdl_value_t *args)
 /* SUBR - */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
-    bool firstarg = true;;
+    bool firstarg = true;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5924,9 +5924,9 @@ mdl_value_t *mdl_builtin_eval_divide(mdl_value_t *form, mdl_value_t *args)
 /* SUBR / */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
-    bool firstarg = true;;
+    bool firstarg = true;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5986,7 +5986,7 @@ mdl_value_t *mdl_builtin_eval_min(mdl_value_t *form, mdl_value_t *args)
 /* SUBR */
 {
     MDL_INT accum = MDL_INT_MAX;
-    MDL_FLOAT faccum = MDL_FLOAT_MAX;;
+    MDL_FLOAT faccum = MDL_FLOAT_MAX;
     bool floating = false;
     bool firstarg = true;
 

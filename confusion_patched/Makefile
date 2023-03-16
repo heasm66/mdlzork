@@ -15,7 +15,7 @@
 
 CDEBUGFLAGS = -g -DGC_DEBUG
 COPTFLAGS = -O2
-CWARNFLAGS =  -Wall -Wno-switch
+CWARNFLAGS =  -Wall -Wno-switch -Wno-unused-but-set-variable
 LIBS = -lgc -lgccpp
 CFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS)
 CXXFLAGS = $(CDEBUGFLAGS) $(COPTFLAGS) $(CWARNFLAGS)

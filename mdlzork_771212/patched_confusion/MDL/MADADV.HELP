@@ -22,7 +22,7 @@ introduced by this:  'unscr' is 'UNSCRipt', not 'UNSCRew'.
     You are talking to a fairly stupid parser, which understands the
 following types of things.
 
- Actions:	
+ Actions:       
     Among the more obvious of these, TAKE, DROP, etc.  Fairly general
     forms of these may be used:  PICK UP, PUT DOWN, etc.
 
@@ -60,7 +60,7 @@ following types of things.
     assume that it should be used.  Otherwise, the parser will ask.
     Most questions asked by the parser can be answered (e.g. With
     what?).
-	 
+         
   Inventory:  Lists the objects in your possession.
 
   Look: Prints a description of your surroundings.

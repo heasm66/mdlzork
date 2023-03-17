@@ -1,8 +1,8 @@
 ZORK User Information
 
 I. Getting a ZORK
-
-    a. ITS:  Say ZORK^K to DDT rather than :ZORK to get a zork.
+ 
+    a. ITS:  Say ZORK^K to DDT rather than :ZORK to get a zork. 
     b. 10X/20X:  Invoke the local dungeon (usually ZORK.EXE)
 
 II. Bugs, comments, suggestions...
@@ -33,7 +33,7 @@ III. Typing to Zork.
      <ctrl-D>:  redisplay the buffer
      <ctrl-L>:  redisplay the buffer.  Sometimes this also clears the
         screen.
-
+     
      <altmode/cr>:  terminate commands
      <ctrl-S>:  flush long typeouts
      <ctrl-G>:  like the QUIT command (vide infra)
@@ -65,7 +65,7 @@ in the current game).
    Brief:        Supresses printing of long room descriptions for rooms
                  which have been visited.  Short object descriptions
                  are also used in such rooms.
-
+ 
    Super(brief): Suppresses printing of all long descriptions, even
                  on the first visit.  Short object descriptions are
                  always used.
@@ -78,10 +78,10 @@ first visit to a room in verbose mode) may always be obtained by
 saying 'look'.  See also the 'room' and 'object' commands.
 
  b. Help
-
+    
     Info:        Prints a file which might give some idea of
                  what the game is about.
-
+     
     Help:        Prints a short summary of useful commands.
 
     Doc:         Prints this.
@@ -99,7 +99,7 @@ saying 'look'.  See also the 'room' and 'object' commands.
 
  d. Hard copy (directory owners only!)
 
-    Scrip(t):    Script to a file ZORK.SCRIPT
+    Scrip(t):    Script to a file ZORK.SCRIPT 
 
     Unscr(ipt):  End scripting
 
@@ -110,15 +110,15 @@ saying 'look'.  See also the 'room' and 'object' commands.
     Resto(re):   Restore a saved game (from ZORK.SAVE)
                  Only the player who created the save file can restore
                  it at a later time!  You are warned.
-
+                
  f. Bugs, etc.
 
     Bug:         Although the best way to report bugs is to send mail
                  to ZORK@MIT-DMS, there is a 'bug' and command
-                 built in to the game.  This generates files which
+                 built in to the game.  This generates files which 
                  must, alas, be manually transmitted to the
                  maintainers.  It is, however, better than nothing.
-
+     
     Featu(re):   Like Bug, to make a suggestion for a feature.
 
  g. General
@@ -147,7 +147,7 @@ saying 'look'.  See also the 'room' and 'object' commands.
                  for 'I don't know the word TORHC' -> say 'OOPS TORCH'.
 
 VI.  Zork Command Parser
-
+     
        A command is one line of text terminated by a carriage return or
     altmode.  For reasons of simplicity all words are distinguished by
     their first five letters.  All others are ignored.  For example,
@@ -158,7 +158,7 @@ VI.  Zork Command Parser
        You are talking to a moderately stupid parser, which understands
     the following types of things.
 
- Actions:
+ Actions:       
 
      Among the more obvious of these, TAKE, DROP, etc.  Fairly general
      forms of these may be used:  PICK UP, PUT DOWN, etc.
@@ -170,8 +170,8 @@ VI.  Zork Command Parser
      only certain situations.  Because words are only five letters,
      you must say 'nw' for 'northwest':  the latter is truncated to
      'north', which isn't quite what you had in mind.
-
- Objects:
+     
+ Objects: 
 
      Most objects have names, and can be referenced by them.  At most,
      two objects can be specified in one command.
@@ -211,7 +211,7 @@ VI.  Zork Command Parser
      to hopelessly confuse the parser.
      Special objects named 'everything' and 'valuables' exist; one
      may, for example, say 'take everything' and 'put valuables in
-     trophy case'.
+     trophy case'. 
 
  Multiple commands:
 
@@ -229,11 +229,11 @@ VI.  Zork Command Parser
      specified.  If there is only one possible object, the parser will
      assume that it should be used.  Otherwise, the parser will ask.
      Most questions asked by the parser can be answered (e.g. With
-     what?).
+     what?).  
+         
+ Errors:        
 
- Errors:
-
-     There are a number of errors which the parser may find in an input
+     There are a number of errors which the parser may find in an input 
      sentence.  Some of the more common ones are listed here:
 
     1. 'I don't know the word ZROK'.  Probably the most common parser
@@ -290,7 +290,7 @@ VII.  Theories
      The following 'theories' are fundamental to the game and should
      be noted:
 
-  Containment:
+  Containment:  
 
       Some objects can contain other objects.  Many such containers
       can be opened and closed; the rest are always open.  They may or
@@ -310,11 +310,11 @@ VII.  Theories
 
       Occupants of the dungeon will, as a rule, fight back when
       attacked; they may in some cases attack you unprovoked.  Useful
-      verbs here are 'attack <villain> with <weapon>', 'kill', etc.
+      verbs here are 'attack <villain> with <weapon>', 'kill', etc. 
       Knife-throwing may or may not be useful.  The adventurer has a
       fighting strength, which varies with time:  in particular, being
-      in a fight, getting killed, and getting injured, all lower it.
-      One's carrying capacity may also be reduced after a fight.
+      in a fight, getting killed, and getting injured, all lower it. 
+      One's carrying capacity may also be reduced after a fight. 
       Strength is regained with time.  (Thus, it is not a good idea to
       fight someone immediately after being killed.)  Other details
       may become apparent in the course of a few melees.  The
@@ -325,6 +325,6 @@ VII.  Theories
       There are some objects in the labyrinth which are rumoured to have
       the ability to transport the fearless adventurer to mysterious
       regions which are inaccessible on foot.  Needless to say, the
-      adventurer faces great personal peril as he encounters these
+      adventurer faces great personal peril as he encounters these     
       regions.  The 'vehicles' can usually be entered with the 'board'
-      command, and can be exited with the 'disembark' command.
+      command, and can be exited with the 'disembark' command. 

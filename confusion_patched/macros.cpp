@@ -6186,7 +6186,7 @@ mdl_value_t *mdl_builtin_eval_abs(mdl_value_t *form, mdl_value_t *args)
 #ifdef MDL32
         return mdl_new_float(fabsf(num->v.fl));
 #else
-        return mdl_new_float(fabs(num->v.w));
+        return mdl_new_float(fabs(num->v.fl));
 #endif
     }
     else if (num->type == MDL_TYPE_FIX)

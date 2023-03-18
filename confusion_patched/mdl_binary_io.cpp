@@ -21,11 +21,10 @@
 #include "mdl_assoc.hpp"
 #include <vector>
 #include <map>
-#include <ext/hash_set>
+#include <unordered_set>
 #include <string.h>
 
-using __gnu_cxx::hash_set;
-using __gnu_cxx::hash;
+using std::unordered_set;
 using std::vector;
 using std::map;
 using std::pair;
@@ -73,7 +72,7 @@ public:
     }
 };
 
-typedef hash_set<struct obj_in_image_t, hash_obj_in_image> obj_image_hash_t;
+typedef unordered_set<struct obj_in_image_t, hash_obj_in_image> obj_image_hash_t;
 typedef vector<struct obj_in_image_t, traceable_allocator<struct obj_in_image_t> > obj_image_list_t;
 typedef map<intptr_t, struct mdl_value_t *> chan_map_t;
 
@@ -211,7 +210,7 @@ static int mdl_read_primtype(FILE *f, primtype_t *primtype)
     else 
         return -1;
 #else
-    intmax_t tmp;
+    intmax_t tmp = 0;
     int err;
 
     err = mdl_read_encint(f, &tmp, false);
@@ -243,7 +242,7 @@ static int mdl_read_objtype(FILE *f, objtype_t *objtype)
     else 
         return -1;
 #else
-    intmax_t tmp;
+    intmax_t tmp = 0;
     int err;
 
     err = mdl_read_encint(f, &tmp, false);
@@ -273,7 +272,7 @@ static int mdl_read_intptr(FILE *f, intptr_t *val)
     return (fscanf(f, "IP %td\n", (ptrdiff_t *)val) != 1);
 #else
     int err;
-    intmax_t tmp;
+    intmax_t tmp = 0;
     err = mdl_read_encint(f, &tmp, false);
     *val = (intptr_t)tmp;
     return err;
@@ -298,7 +297,7 @@ static int mdl_read_int(FILE *f, int *val)
 #ifdef MDL_DEBUG_BINARY_IO
     return (fscanf(f, "I %d\n", val) != 1);
 #else
-    intmax_t tmp;
+    intmax_t tmp = 0;
     int err;
 
     err = mdl_read_encint(f, &tmp, true);
@@ -333,7 +332,7 @@ static int mdl_read_MDL_INT(FILE *f, MDL_INT *val)
  #endif
 #else
     int err;
-    intmax_t tmp;
+    intmax_t tmp = 0;
 
     err = mdl_read_encint(f, &tmp, true);
     *val = (MDL_INT)tmp;

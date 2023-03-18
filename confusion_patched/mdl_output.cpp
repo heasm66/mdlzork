@@ -436,12 +436,12 @@ const char *mdl_quote_atomname(const char *name, bool *nonnump)
     else if (*s == '-') 
     {
         newlen++;
-        *s++;
+        s++;
     }
     else if (*s == '*') 
     {
         newlen++;
-        *s++;
+        s++;
         octal = true;
     }
     while ((ch = *s++))

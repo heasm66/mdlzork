@@ -610,7 +610,7 @@ bool mdl_oblists_are_reasonable(mdl_value_t *oblists)
 mdl_value_t *mdl_get_atom(const char *pname, bool insert_allowed, mdl_value_t *default_oblists)
 {
 
-    char *trailer = strstr(pname, "!-");
+    const char *trailer = strstr(pname, "!-");
     if (trailer == NULL)
     {
         return mdl_get_atom_default_oblist(pname, insert_allowed, default_oblists);
@@ -700,7 +700,8 @@ mdl_value_t *mdl_new_string(int len)
 mdl_value_t *mdl_new_string(int len, const char *s)
 {
     mdl_value_t *result = mdl_new_string(len);
-    strncpy(result->v.s.p, s, len);
+    memcpy(result->v.s.p, s, len);
+    result->v.s.p[len] = '\0';
     return result;
 }
 
@@ -2197,7 +2198,7 @@ mdl_value_t *mdl_std_apply(mdl_value_t *applier, mdl_value_t *apply_to, int appl
     if (apply_as == MDL_TYPE_SUBR || 
         apply_as == MDL_TYPE_FSUBR)
     {
-        if (applier->v.w < built_in_table.size())
+        if (applier->v.w < (MDL_INT)built_in_table.size())
         {
             mdl_built_in_t built_in = built_in_table[applier->v.w];
             mdl_frame_t *frame;
@@ -3021,7 +3022,7 @@ void mdl_interp_init()
     mdl_set_lval(mdl_value_atom_outchan->v.a, def_outchan, initial_frame);
     mdl_set_gval(mdl_value_atom_outchan->v.a, def_outchan);
     
-    last_assoc_clean = GC_gc_no;
+    last_assoc_clean = GC_get_gc_no();
 }
 
 bool mdl_is_true(mdl_value_t *item)
@@ -5790,8 +5791,8 @@ mdl_value_t *mdl_builtin_eval_multiply(mdl_value_t *form, mdl_value_t *args)
 /* SUBR * */
 {
     MDL_INT accum = 1;
-    MDL_FLOAT faccum;
-     bool floating = false;
+    MDL_FLOAT faccum = 1;
+    bool floating = false;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5828,7 +5829,7 @@ mdl_value_t *mdl_builtin_eval_add(mdl_value_t *form, mdl_value_t *args)
 /* SUBR + */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
 
     mdl_value_t *argp = LREST(args, 0);
@@ -5866,9 +5867,9 @@ mdl_value_t *mdl_builtin_eval_subtract(mdl_value_t *form, mdl_value_t *args)
 /* SUBR - */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
-    bool firstarg = true;;
+    bool firstarg = true;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5923,9 +5924,9 @@ mdl_value_t *mdl_builtin_eval_divide(mdl_value_t *form, mdl_value_t *args)
 /* SUBR / */
 {
     MDL_INT accum = 0;
-    MDL_FLOAT faccum;
+    MDL_FLOAT faccum = 0;
     bool floating = false;
-    bool firstarg = true;;
+    bool firstarg = true;
 
     mdl_value_t *argp = LREST(args, 0);
     while (argp)
@@ -5985,7 +5986,7 @@ mdl_value_t *mdl_builtin_eval_min(mdl_value_t *form, mdl_value_t *args)
 /* SUBR */
 {
     MDL_INT accum = MDL_INT_MAX;
-    MDL_FLOAT faccum = MDL_FLOAT_MAX;;
+    MDL_FLOAT faccum = MDL_FLOAT_MAX;
     bool floating = false;
     bool firstarg = true;
 

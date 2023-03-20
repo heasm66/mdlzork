@@ -2,10 +2,10 @@
 
 <OR <GASSIGNED? ROSE!-OBJECTS>
     <PROG ()
-	<GOBJECT ["MIRRO" "STRUC"] "mirror" MIRROR-FUNCTION MIRRORBIT ,OVISON>
-	<GOBJECT ["ROSE" "COMPA"] "compass rose" <> ROSEBIT ,OVISON>
-	<GOBJECT ["CHANN"] "stone channel" <> CHANBIT ,OVISON>
-	<GOBJECT ["WALL"] "wooden wall" WALL-FUNCTION WALLBIT ,OVISON>>>
+        <GOBJECT ["MIRRO" "STRUC"] "mirror" MIRROR-FUNCTION MIRRORBIT ,OVISON>
+        <GOBJECT ["ROSE" "COMPA"] "compass rose" <> ROSEBIT ,OVISON>
+        <GOBJECT ["CHANN"] "stone channel" <> CHANBIT ,OVISON>
+        <GOBJECT ["WALL"] "wooden wall" WALL-FUNCTION WALLBIT ,OVISON>>>
 
 
 ; "ROOMS"
@@ -20,7 +20,7 @@
 <ROOM "MRD"
        "" "Hallway" T
        <EXIT "NORTH" "FDOOR" "NE" "FDOOR" "NW" "FDOOR"
-	      "SOUTH" %,MR-G "SE" %,MR-G "SW" %,MR-G>
+              "SOUTH" %,MR-G "SE" %,MR-G "SW" %,MR-G>
        ()
        %<> 0 %,RLANDBIT %<+ ,ROSEBIT ,CHANBIT ,WALLBIT>> 
 
@@ -33,21 +33,21 @@
 <ROOM "MRC"
        "" "Hallway" T
        <EXIT "NORTH" %,MR-G "NW" %,MR-G "NE" %,MR-G
-	      "ENTER" %,MIREX "SOUTH" %,MR-B "SW" %,MR-B "SE" %,MR-B>
+              "ENTER" %,MIREX "SOUTH" %,MR-B "SW" %,MR-B "SE" %,MR-B>
        ()
        MRCF 0 %,RLANDBIT %<+ ,MIRRORBIT ,ROSEBIT ,CHANBIT ,WALLBIT>>
 
 <ROOM "MRB"
        "" "Hallway" T
        <EXIT "NORTH" %,MR-C "NW" %,MR-C "NE" %,MR-C
-	      "ENTER" %,MIREX "SOUTH" %,MR-A "SW" %,MR-A "SW" %,MR-A>
+              "ENTER" %,MIREX "SOUTH" %,MR-A "SW" %,MR-A "SW" %,MR-A>
        ()
        MRBF 0 %,RLANDBIT %<+ ,MIRRORBIT ,ROSEBIT ,CHANBIT ,WALLBIT>>
 
 <ROOM "MRA"
        "" "Hallway" T
        <EXIT "NORTH" %,MR-B "NW" %,MR-B "NE" %,MR-B
-	      "ENTER" %,MIREX "SOUTH" "MREYE">
+              "ENTER" %,MIREX "SOUTH" "MREYE">
        ()
        MRAF 0 %,RLANDBIT %<+ ,MIRRORBIT ,ROSEBIT ,CHANBIT ,WALLBIT>>
 
@@ -102,18 +102,18 @@
 <ROOM "INMIR"
        "" "Inside Mirror" T
        <EXIT "NORTH" %,MOUT "SOUTH" %,MOUT "EAST" %,MOUT "WEST" %,MOUT
-	      "NE" %,MOUT "NW" %,MOUT "SE" %,MOUT "SW" %,MOUT>
+              "NE" %,MOUT "NW" %,MOUT "SE" %,MOUT "SW" %,MOUT>
        (<FIND-OBJ "YLWAL"> <FIND-OBJ "WHWAL">
-	<FIND-OBJ "RDWAL"> <FIND-OBJ "BLWAL">
-	<FIND-OBJ "OAKND"> <FIND-OBJ "PINND">
-	<FIND-OBJ "WDBAR"> <FIND-OBJ "LPOLE">
-	<FIND-OBJ "SPOLE">)
+        <FIND-OBJ "RDWAL"> <FIND-OBJ "BLWAL">
+        <FIND-OBJ "OAKND"> <FIND-OBJ "PINND">
+        <FIND-OBJ "WDBAR"> <FIND-OBJ "LPOLE">
+        <FIND-OBJ "SPOLE">)
        MAGIC-MIRROR
        0 %,RLANDBIT %<+ ,ROSEBIT ,CHANBIT ,WALLBIT>>
 
 <ADD-OBJECT
  <GOBJECT ["MASTE" "KEEPE" "DUNGE"] "dungeon master" MASTER-FUNCTION MASTERBIT
-	 ,OVISON ,VICBIT ,ACTORBIT>
+         ,OVISON ,VICBIT ,ACTORBIT>
  ["KEEPE"] ["DUNGE"]>
 
 <PUT <FIND-OBJ "MASTE">
@@ -123,49 +123,49 @@
 <PUT <FIND-OBJ "MASTE">
      ,ORAND
      <ADD-ACTOR 
-	<SETG MASTER <CHTYPE [<FIND-ROOM "BDOOR"> () 0 <> <FIND-OBJ "MASTE"> MASTER-ACTOR 3 T 0]
-		ADV>>>>
+        <SETG MASTER <CHTYPE [<FIND-ROOM "BDOOR"> () 0 <> <FIND-OBJ "MASTE"> MASTER-ACTOR 3 T 0]
+                ADV>>>>
 
 <ADD-OBJECT <AOBJECT "YLWAL" "yellow panel" MPANELS ,OVISON ,NDESCBIT>
-	    ["WALL" "PANEL"] ["YELLO"]>
+            ["WALL" "PANEL"] ["YELLO"]>
 <ADD-OBJECT <AOBJECT "RDWAL" "red panel" MPANELS ,OVISON ,NDESCBIT>
-	    ["WALL" "PANEL"] ["RED"]>
+            ["WALL" "PANEL"] ["RED"]>
 <ADD-OBJECT <AOBJECT "BLWAL" "black panel" MPANELS ,OVISON ,NDESCBIT>
-	    ["WALL" "PANEL"] ["BLACK"]>
+            ["WALL" "PANEL"] ["BLACK"]>
 <ADD-OBJECT <AOBJECT "WHWAL" "white panel" MPANELS ,OVISON ,NDESCBIT>
-	    ["WALL" "PANEL"] ["WHITE"]>
+            ["WALL" "PANEL"] ["WHITE"]>
 <ADD-OBJECT <AOBJECT "PINND" "pine wall" MENDS ,OVISON ,NDESCBIT ,DOORBIT>
-	    ["WALL" "PANEL" "DOOR"] ["PINE"]>
+            ["WALL" "PANEL" "DOOR"] ["PINE"]>
 <ADD-OBJECT <AOBJECT "OAKND" "oak wall" MENDS ,OVISON ,NDESCBIT>
-	    ["WALL" "PANEL"] ["OAK"]>
+            ["WALL" "PANEL"] ["OAK"]>
 <ADD-OBJECT <SOBJECT "WDBAR" "wooden bar" ,OVISON ,NDESCBIT>
-	    ["BAR"] ["WOODE"]>
+            ["BAR"] ["WOODE"]>
 <ADD-OBJECT <SOBJECT "LPOLE" "long pole" ,OVISON ,NDESCBIT>
-	    ["POLE" "POST"] ["LONG" "CENTE"]>
+            ["POLE" "POST"] ["LONG" "CENTE"]>
 <ADD-OBJECT <AOBJECT "SPOLE" "short pole" SHORT-POLE ,OVISON ,NDESCBIT>
-	    ["POLE" "POST"] ["SHORT"]>
+            ["POLE" "POST"] ["SHORT"]>
 
 <ADD-OBJECT <AOBJECT "DIAL" "sundial" DIAL ,OVISON ,NDESCBIT ,TURNBIT>
-	    ["SUNDI"] ["SUN"]>
+            ["SUNDI"] ["SUN"]>
 <ADD-OBJECT <AOBJECT "DBUTT" "large button" DIALBUTTON ,OVISON ,NDESCBIT>
-	    ["BUTTO"] ["LARGE"]>
+            ["BUTTO"] ["LARGE"]>
 
 <ADD-OBJECT <SOBJECT "ONE" "number one" ,OVISON ,NDESCBIT>
-	    ["1"]>
+            ["1"]>
 <ADD-OBJECT <SOBJECT "TWO" "number two" ,OVISON ,NDESCBIT>
-	    ["2"]>
+            ["2"]>
 <ADD-OBJECT <SOBJECT "THREE" "number three" ,OVISON ,NDESCBIT>
-	    ["3"]>
+            ["3"]>
 <ADD-OBJECT <SOBJECT "FOUR" "number four" ,OVISON ,NDESCBIT>
-	    ["4"]>
+            ["4"]>
 <ADD-OBJECT <AOBJECT "FIVE" "number five" TAKE-FIVE ,OVISON ,NDESCBIT>
-	    ["5"]>
+            ["5"]>
 <ADD-OBJECT <SOBJECT "SIX" "number six" ,OVISON ,NDESCBIT>
-	    ["6"]>
+            ["6"]>
 <ADD-OBJECT <SOBJECT "SEVEN" "number seven" ,OVISON ,NDESCBIT>
-	    ["7"]>
+            ["7"]>
 <ADD-OBJECT <SOBJECT "EIGHT" "number eight" ,OVISON ,NDESCBIT>
-	    ["8"]>
+            ["8"]>
 
 <ROOM "MRANT"
 
@@ -178,7 +178,7 @@ button."
        (<FIND-OBJ "RSWIT">)>
 
 <ADD-OBJECT <AOBJECT "RSWIT" "red switch" MRSWITCH ,OVISON ,NDESCBIT>
-	    ["SWITC" "BUTTO"] ["RED"]>
+            ["SWITC" "BUTTO"] ["RED"]>
 
 <ROOM "MREYE"
        ""
@@ -193,13 +193,13 @@ button."
 <ROOM "TOMB"
        ""
        "Tomb of the Unknown Implementer"
-	%<>
-	<EXIT "WEST" "LLD2" "NORTH" %,CD "ENTER" %,CD>
-	(<FIND-OBJ "TOMB">
-	 <FIND-OBJ "HEADS">
-	 <FIND-OBJ "COKES">
-	 <FIND-OBJ "LISTS">)
-	TOMB-FUNCTION 0 %,RLANDBIT>
+        %<>
+        <EXIT "WEST" "LLD2" "NORTH" %,CD "ENTER" %,CD>
+        (<FIND-OBJ "TOMB">
+         <FIND-OBJ "HEADS">
+         <FIND-OBJ "COKES">
+         <FIND-OBJ "LISTS">)
+        TOMB-FUNCTION 0 %,RLANDBIT>
 
 <ROOM "CRYPT"
        ""
@@ -211,9 +211,9 @@ button."
 
 <ADD-OBJECT
  <OBJECT "TOMB"
-	  ""
-	  "crypt door"
-	  %<> CRYPT-OBJECT () %<> %<+ ,OVISON ,DOORBIT ,NDESCBIT>>
+          ""
+          "crypt door"
+          %<> CRYPT-OBJECT () %<> %<+ ,OVISON ,DOORBIT ,NDESCBIT>>
  ["CRYPT" "GRAVE" "TOMB" "DOOR"] ["CRYPT"]>
 
 <ROOM "TSTRS"
@@ -223,8 +223,8 @@ passage.  Behind you the stairs lead into untouched rock."
        "Top of Stairs"
        T
        <EXIT "NORTH" "MRANT"
-	      "DOWN" "MRANT"
-	      "SOUTH" #NEXIT "The wall is solid rock.">
+              "DOWN" "MRANT"
+              "SOUTH" #NEXIT "The wall is solid rock.">
        ()
        %<> 0>
 
@@ -245,7 +245,7 @@ southern ends."
       <EXIT "NORTH" "NCORR" "SOUTH" "SCORR">>
 
 <SETG OD <DOOR "ODOOR" "SCORR" "CELL" "" MAYBE-DOOR>> ; "south cell door"
-<SETG ODOOR!-FLAG <>>	;"t if door 'exists'"
+<SETG ODOOR!-FLAG <>>   ;"t if door 'exists'"
 
 <SETG WD <DOOR "WDOOR" "BDOOR" "FDOOR">> ; "wooden door, entrance to cell area"
 <SETG CD <DOOR "CDOOR" "NCORR" "CELL">> ; "cell door"
@@ -256,9 +256,9 @@ southern ends."
        "South Corridor"
        T
        <EXIT "WEST" "WCORR"
-	      "EAST" "ECORR"
-	      "NORTH" %,OD
-	      "SOUTH" "BDOOR">
+              "EAST" "ECORR"
+              "NORTH" %,OD
+              "SOUTH" "BDOOR">
        (<FIND-OBJ "ODOOR">)
        SCORR-ROOM>
 
@@ -277,14 +277,14 @@ and at the north end is an east-west corridor."
        (<FIND-OBJ "WDOOR">) FDOOR-FUNCTION>
 
 <ADD-OBJECT <AOBJECT "WDOOR" "wooden door" WOOD-DOOR ,OVISON ,NDESCBIT ,DOORBIT>
-	    ["DOOR"] ["WOODE"]> 
+            ["DOOR"] ["WOODE"]> 
 
 <ROOM "NCORR"
        ""
        "North Corridor"
        T
        <EXIT "EAST" "ECORR" "WEST" "WCORR" "NORTH" "PARAP"
-	      "SOUTH" %,CD "ENTER" %,CD>
+              "SOUTH" %,CD "ENTER" %,CD>
        (<FIND-OBJ "CDOOR">)
        NCORR-ROOM>
 
@@ -293,12 +293,12 @@ and at the north end is an east-west corridor."
        "Parapet"
        T
        <EXIT "SOUTH" "NCORR"
-	      "NORTH" #NEXIT "You would be burned to a crisp in no time.">
+              "NORTH" #NEXIT "You would be burned to a crisp in no time.">
        (<FIND-OBJ "DBUTT"> <FIND-OBJ "DIAL">
-	<FIND-OBJ "ONE"> <FIND-OBJ "TWO">
-	<FIND-OBJ "THREE"> <FIND-OBJ "FOUR">
-	<FIND-OBJ "FIVE"> <FIND-OBJ "SIX">
-	<FIND-OBJ "SEVEN"> <FIND-OBJ "EIGHT">) PARAPET>
+        <FIND-OBJ "ONE"> <FIND-OBJ "TWO">
+        <FIND-OBJ "THREE"> <FIND-OBJ "FOUR">
+        <FIND-OBJ "FIVE"> <FIND-OBJ "SIX">
+        <FIND-OBJ "SEVEN"> <FIND-OBJ "EIGHT">) PARAPET>
 
 <SETG NUMOBJS
      [<FIND-OBJ "ONE"> 1 <FIND-OBJ "TWO"> 2
@@ -307,26 +307,26 @@ and at the north end is an east-west corridor."
       <FIND-OBJ "SEVEN"> 7 <FIND-OBJ "EIGHT"> 8]>
 
 <ADD-OBJECT <AOBJECT "CDOOR" "cell door" CELL-DOOR ,OVISON ,NDESCBIT ,DOORBIT>
-	    ["DOOR"] ["CELL"]>
+            ["DOOR"] ["CELL"]>
 <ADD-OBJECT <AOBJECT "ODOOR" "ornate door" ORNATE-DOOR ,OVISON ,NDESCBIT ,DOORBIT>
-	    ["DOOR"] ["ORNAT"]>
+            ["DOOR"] ["ORNAT"]>
 
 <ROOM "CELL" 
        ""
        "Prison Cell"
        T
        <EXIT "OUT" %,CD
-	      "NORTH" %,CD
-	      "SOUTH" %,OD>
+              "NORTH" %,CD
+              "SOUTH" %,OD>
        (<FIND-OBJ "CDOOR"> <FIND-OBJ "ODOOR">)
        CELL-ROOM 0 %,RLANDBIT %,MASTERBIT>
 
 <SETG FOUT #NEXIT "The door is securely fastened.">
 
 <ADD-OBJECT <AOBJECT "LDOOR" "locked door" LOCKED-DOOR ,OVISON ,NDESCBIT>
-	    ["DOOR"] ["LOCKE"]>
+            ["DOOR"] ["LOCKE"]>
 <ADD-OBJECT <AOBJECT "MDOOR" "locked door" LOCKED-DOOR ,OVISON ,NDESCBIT>
-	    ["DOOR"] ["LOCKE"]>
+            ["DOOR"] ["LOCKE"]>
 
 <ROOM "PCELL"
        ""
@@ -355,5 +355,4 @@ and at the north end is an east-west corridor."
 <SETG MASTER-ACTIONS
       [,TAKE!-WORDS ,PUSH!-WORDS ,TURN!-WORDS ,FOLLO!-WORDS
        ,TURN-TO!-WORDS ,SPIN!-WORDS ,STAY!-WORDS ,KILL!-WORDS]>
-
 

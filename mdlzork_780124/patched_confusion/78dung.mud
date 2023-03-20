@@ -14,44 +14,44 @@
 
 <PSETG MGVALS
       '![TROLL-FLAG!-FLAG
-	 CAGE-SOLVE!-FLAG
-	 BUCKET-TOP!-FLAG
-	 CAROUSEL-FLIP!-FLAG
-	 CAROUSEL-ZOOM!-FLAG
-	 LOW-TIDE!-FLAG
-	 DOME-FLAG!-FLAG
-	 GLACIER-FLAG!-FLAG
-	 ECHO-FLAG!-FLAG
-	 RIDDLE-FLAG!-FLAG
-	 LLD-FLAG!-FLAG
-	 CYCLOPS-FLAG!-FLAG
-	 MAGIC-FLAG!-FLAG
-	 LIGHT-LOAD!-FLAG
-	 SAFE-FLAG!-FLAG
-	 GNOME-FLAG!-FLAG
-	 GNOME-DOOR!-FLAG
-	 MIRROR-MUNG!-FLAG
-	 EGYPT-FLAG!-FLAG
-	 ON-POLE!-FLAG
-	 BLAB!-FLAG
-	 BINF!-FLAG
-	 BTIE!-FLAG
-	 BUOY-FLAG!-FLAG
-	 GRUNLOCK!-FLAG
-	 GATE-FLAG!-FLAG
-	 RAINBOW!-FLAG
-	 CAGE-TOP!-FLAG
-	 EMPTY-HANDED!-FLAG
-	 DEFLATE!-FLAG
-	 LIGHT-SHAFT
-	 PLAYED-TIME
-	 MOVES
-	 BRIEF!-FLAG
-	 THEN
-	 SUPER-BRIEF!-FLAG
-	 RAW-SCORE
-	 GLACIER-MELT!-FLAG
-	 DEATHS!]>
+         CAGE-SOLVE!-FLAG
+         BUCKET-TOP!-FLAG
+         CAROUSEL-FLIP!-FLAG
+         CAROUSEL-ZOOM!-FLAG
+         LOW-TIDE!-FLAG
+         DOME-FLAG!-FLAG
+         GLACIER-FLAG!-FLAG
+         ECHO-FLAG!-FLAG
+         RIDDLE-FLAG!-FLAG
+         LLD-FLAG!-FLAG
+         CYCLOPS-FLAG!-FLAG
+         MAGIC-FLAG!-FLAG
+         LIGHT-LOAD!-FLAG
+         SAFE-FLAG!-FLAG
+         GNOME-FLAG!-FLAG
+         GNOME-DOOR!-FLAG
+         MIRROR-MUNG!-FLAG
+         EGYPT-FLAG!-FLAG
+         ON-POLE!-FLAG
+         BLAB!-FLAG
+         BINF!-FLAG
+         BTIE!-FLAG
+         BUOY-FLAG!-FLAG
+         GRUNLOCK!-FLAG
+         GATE-FLAG!-FLAG
+         RAINBOW!-FLAG
+         CAGE-TOP!-FLAG
+         EMPTY-HANDED!-FLAG
+         DEFLATE!-FLAG
+         LIGHT-SHAFT
+         PLAYED-TIME
+         MOVES
+         BRIEF!-FLAG
+         THEN
+         SUPER-BRIEF!-FLAG
+         RAW-SCORE
+         GLACIER-MELT!-FLAG
+         DEATHS!]>
 
 ; "STARS"
 ; "THIS MUST COME BEFORE ROOMS!"
@@ -62,12 +62,12 @@
 <ADD-STAR <GOBJECT ["#####" "ME" "CRETI" "MYSEL"] "cretin" CRETIN <> ,OVISON ,VILLAIN>>
 
 <ADD-STAR <GOBJECT ["EVERY" "ALL"]
-		   "everything"
-		   VALUABLES&C <>
-		   ,OVISON ,TAKEBIT ,NO-CHECK-BIT ,NDESCBIT>>
+                   "everything"
+                   VALUABLES&C <>
+                   ,OVISON ,TAKEBIT ,NO-CHECK-BIT ,NDESCBIT>>
 <ADD-STAR <GOBJECT ["VALUA" "TREAS"] "valuables"
-		    VALUABLES&C <> ,OVISON ,TAKEBIT ,NO-CHECK-BIT ,NDESCBIT>>
-	   
+                    VALUABLES&C <> ,OVISON ,TAKEBIT ,NO-CHECK-BIT ,NDESCBIT>>
+           
 <ADD-STAR <GOBJECT ["SAILO"] "sailor" <> <> ,OVISON ,NDESCBIT>>
 <ADD-STAR <GOBJECT ["TEETH"] "set of teeth" <> <> ,OVISON ,NDESCBIT>>
 <ADD-STAR <GOBJECT ["WALL" "WALLS"] "wall" <> <> ,OVISON ,NDESCBIT>>
@@ -91,7 +91,7 @@
 <ADD-BUZZ "AND" "BY" "IS" "ONE" "A" "THE" "AN">
 
 <ADD-DIRECTIONS "#!#!#" "NORTH" "SOUTH" "EAST" "WEST" "LAUNC" "LAND"
-	"SE" "SW" "NE" "NW" "UP" "DOWN" "ENTER" "EXIT" "CROSS" "CLIMB">
+        "SE" "SW" "NE" "NW" "UP" "DOWN" "ENTER" "EXIT" "CROSS" "CLIMB">
 
 <DSYNONYM "NORTH" "N">
 <DSYNONYM "SOUTH" "S">
@@ -117,21 +117,21 @@
 "CEVENT DEFINITIONS"
 <OR <LOOKUP "COMPILE" <ROOT>>
     <PROG ()
-	<CEVENT 0 ,CURE-CLOCK <> "CURIN">
+        <CEVENT 0 ,CURE-CLOCK <> "CURIN">
         <CEVENT 0 ,MAINT-ROOM T "MNTIN">
         <CEVENT 0 ,LANTERN T "LNTIN">
-	<CEVENT 0 ,MATCH-FUNCTION T MATIN>
-	<CEVENT 0 ,CANDLES T "CNDIN">
-	<CEVENT 0 ,BALLOON T "BINT">
-	<CEVENT 0 ,BURNUP T "BRNIN">
-	<CEVENT 0 ,FUSE-FUNCTION T "FUSIN">
-	<CEVENT 0 ,LEDGE-MUNG T "LEDIN">
-	<CEVENT 0 ,SAFE-MUNG T "SAFIN">
-	<CEVENT 0 ,VOLGNOME T "VLGIN">
-	<CEVENT 0 ,GNOME-FUNCTION T "GNOIN">
-	<CEVENT 0 ,BUCKET T "BCKIN">
-	<CEVENT 0 ,SPHERE-FUNCTION T "SPHIN">
-	<CEVENT 0 ,END-GAME-HERALD <> "EGHER">>>
+        <CEVENT 0 ,MATCH-FUNCTION T MATIN>
+        <CEVENT 0 ,CANDLES T "CNDIN">
+        <CEVENT 0 ,BALLOON T "BINT">
+        <CEVENT 0 ,BURNUP T "BRNIN">
+        <CEVENT 0 ,FUSE-FUNCTION T "FUSIN">
+        <CEVENT 0 ,LEDGE-MUNG T "LEDIN">
+        <CEVENT 0 ,SAFE-MUNG T "SAFIN">
+        <CEVENT 0 ,VOLGNOME T "VLGIN">
+        <CEVENT 0 ,GNOME-FUNCTION T "GNOIN">
+        <CEVENT 0 ,BUCKET T "BCKIN">
+        <CEVENT 0 ,SPHERE-FUNCTION T "SPHIN">
+        <CEVENT 0 ,END-GAME-HERALD <> "EGHER">>>
 
 
 "MAZE"
@@ -154,7 +154,7 @@ front door."
        "West of House"
        T
        <EXIT "NORTH" "NHOUS" "SOUTH" "SHOUS" "WEST" "FORE1"
-	      "EAST" #NEXIT "The door is locked, and there is evidently no key.">
+              "EAST" #NEXIT "The door is locked, and there is evidently no key.">
        (<FIND-OBJ "FDOOR"> <FIND-OBJ "MAILB">)>
 
 <ROOM "NHOUS"
@@ -163,7 +163,7 @@ and all the windows are barred."
        "North of House"
        T
        <EXIT "WEST" "WHOUS" "EAST" "EHOUS" "NORTH" "FORE3"
-	      "SOUTH" #NEXIT "The windows are all barred.">>
+              "SOUTH" #NEXIT "The windows are all barred.">>
 
 <ROOM "SHOUS"
 "You are facing the south side of a white house. There is no door here,
@@ -171,7 +171,7 @@ and all the windows are barred."
        "South of House"
        T
        <EXIT "WEST" "WHOUS" "EAST" "EHOUS" "SOUTH" "FORE2"
-	      "NORTH" #NEXIT "The windows are all barred.">
+              "NORTH" #NEXIT "The windows are all barred.">
        ()>
 
 <SETG KITCHEN-WINDOW <DOOR "WINDO" "KITCH" "EHOUS">>
@@ -181,8 +181,8 @@ and all the windows are barred."
        "Behind House"
        T
        <EXIT "NORTH" "NHOUS" "SOUTH" "SHOUS" "EAST" "CLEAR"
-	      "WEST" ,KITCHEN-WINDOW
-	      "ENTER" ,KITCHEN-WINDOW>
+              "WEST" ,KITCHEN-WINDOW
+              "ENTER" ,KITCHEN-WINDOW>
        (<FIND-OBJ "WINDO">)
        EAST-HOUSE>
 
@@ -191,124 +191,124 @@ and all the windows are barred."
        "Kitchen"
        T
        <EXIT "EAST" ,KITCHEN-WINDOW "WEST" "LROOM"
-	      "EXIT" ,KITCHEN-WINDOW "UP" "ATTIC"
-	      "DOWN" #NEXIT "Only Santa Claus climbs down chimneys.">
+              "EXIT" ,KITCHEN-WINDOW "UP" "ATTIC"
+              "DOWN" #NEXIT "Only Santa Claus climbs down chimneys.">
        (<FIND-OBJ "WINDO"> <FIND-OBJ "SBAG"> <FIND-OBJ "BOTTL">)
        KITCHEN 10>
 
 <ADD-OBJECT
  <OBJECT "SBAG"
-	  "A brown sack is here."
-	  "brown sack"
-	  "On the table is an elongated brown sack, smelling of hot peppers."
-	  %<> (<FIND-OBJ "GARLI"> <FIND-OBJ "FOOD">)
-	  %<> %<+ ,CONTBIT ,FLAMEBIT ,OVISON ,TAKEBIT> 0 0 3 15>
+          "A brown sack is here."
+          "brown sack"
+          "On the table is an elongated brown sack, smelling of hot peppers."
+          %<> (<FIND-OBJ "GARLI"> <FIND-OBJ "FOOD">)
+          %<> %<+ ,CONTBIT ,FLAMEBIT ,OVISON ,TAKEBIT> 0 0 3 15>
 ["BAG" "SACK"] ["BROWN" "ELONG"]>
 
 <ADD-OBJECT
  <OBJECT "GARLI"
-	  "There is a clove of garlic here."
-	  "clove of garlic"
-	  %<> %<> () <FIND-OBJ "SBAG"> %<+ ,TAKEBIT ,FOODBIT ,OVISON>>
+          "There is a clove of garlic here."
+          "clove of garlic"
+          %<> %<> () <FIND-OBJ "SBAG"> %<+ ,TAKEBIT ,FOODBIT ,OVISON>>
 ["CLOVE"]>
 
 
 <ADD-OBJECT
  <OBJECT "FOOD"
-	  "A hot pepper sandwich is here."
-	  "\.lunch"
-	  %<>
-	  %<> () <FIND-OBJ "SBAG"> %<+ ,FOODBIT ,TAKEBIT ,OVISON>>
+          "A hot pepper sandwich is here."
+          "\.lunch"
+          %<>
+          %<> () <FIND-OBJ "SBAG"> %<+ ,FOODBIT ,TAKEBIT ,OVISON>>
 ["SANDW" "LUNCH" "DINNE"] ["HOT" "PEPPE"]>
 
 <ADD-OBJECT
  <OBJECT "GUNK"
-	  "There is a small piece of vitreous slag here."
-	  "piece of vitreous slag"
-	  %<> GUNK-FUNCTION () %<> %<+ ,TRYTAKEBIT ,TAKEBIT ,OVISON> 0 0 10 0>
+          "There is a small piece of vitreous slag here."
+          "piece of vitreous slag"
+          %<> GUNK-FUNCTION () %<> %<+ ,TRYTAKEBIT ,TAKEBIT ,OVISON> 0 0 10 0>
 ["PIECE" "SLAG"] ["VITRE"]>
 
 <ADD-OBJECT
  <OBJECT "COAL"
-	  "There is a small heap of coal here."
-	  "small pile of coal"
-	  %<> %<> () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 0 0 20 0>
+          "There is a small heap of coal here."
+          "small pile of coal"
+          %<> %<> () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 0 0 20 0>
 ["PILE" "HEAP"] ["SMALL"]>
 
 <ADD-OBJECT
  <OBJECT "JADE"
-	  "There is an exquisite jade figurine here."
-	  "jade figurine"
-	  %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 5 5 10 0>
+          "There is an exquisite jade figurine here."
+          "jade figurine"
+          %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 5 5 10 0>
 ["FIGUR"] ["JADE"]>
 
 <ADD-OBJECT
  <OBJECT "MACHI"
-	  ""
-	  "machine"
-	  %<> MACHINE-FUNCTION () %<> %<+ ,CONTBIT ,OVISON> 0 0 %,BIGFIX 50>
+          ""
+          "machine"
+          %<> MACHINE-FUNCTION () %<> %<+ ,CONTBIT ,OVISON> 0 0 %,BIGFIX 50>
 ["PDP10" "DRYER" "LID"]>
 
 <ADD-OBJECT 
  <OBJECT "DIAMO"
-	  "There is an enormous diamond (perfectly cut) here."
-	  "huge diamond"
-	  %<>
-	  %<> () %<> %<+ ,TAKEBIT ,OVISON> 10 6 5 0>
+          "There is an enormous diamond (perfectly cut) here."
+          "huge diamond"
+          %<>
+          %<> () %<> %<+ ,TAKEBIT ,OVISON> 10 6 5 0>
  [] ["HUGE" "ENORM"]>
 
 <ADD-OBJECT
  <OBJECT "TCASE"
-	  "There is a trophy case here."
-	  "trophy case"
-	  %<> TROPHY-CASE () %<> %<+ ,CONTBIT ,TRANSBIT ,OVISON>
-	  0 0 %,BIGFIX %,BIGFIX>
+          "There is a trophy case here."
+          "trophy case"
+          %<> TROPHY-CASE () %<> %<+ ,CONTBIT ,TRANSBIT ,OVISON>
+          0 0 %,BIGFIX %,BIGFIX>
  ["CASE"] ["TROPH"]>
 
 <ADD-OBJECT 
  <OBJECT "BOTTL"
-	 "A clear glass bottle is here."
-	 "glass bottle"
-	 "A bottle is sitting on the table."
-	 BOTTLE-FUNCTION
-	 (<FIND-OBJ "WATER">)
-	 %<>
-	 %<+ ,CONTBIT ,TRANSBIT ,TAKEBIT ,OVISON> 0 0 5 4>
+         "A clear glass bottle is here."
+         "glass bottle"
+         "A bottle is sitting on the table."
+         BOTTLE-FUNCTION
+         (<FIND-OBJ "WATER">)
+         %<>
+         %<+ ,CONTBIT ,TRANSBIT ,TAKEBIT ,OVISON> 0 0 5 4>
 ["CONTA"] ["CLEAR" "GLASS"]>
 
 <ADD-OBJECT
  <OBJECT "WATER"
-	 "Water"
-	 "quantity of water"
-	 "There is some water here"
-	 WATER-FUNCTION
-	 ()
-	 <FIND-OBJ "BOTTL">
-	 %<+ ,DRINKBIT ,TAKEBIT ,OVISON> 0 0 4 0>
+         "Water"
+         "quantity of water"
+         "There is some water here"
+         WATER-FUNCTION
+         ()
+         <FIND-OBJ "BOTTL">
+         %<+ ,DRINKBIT ,TAKEBIT ,OVISON> 0 0 4 0>
 ["QUANT" "LIQUI" "H2O"]>
 
 <ROOM "ATTIC"
 "You are in the attic.  The only exit is stairs that lead down."
-	"Attic"
-	%<>
-	<EXIT "DOWN" "KITCH">
-	(<FIND-OBJ "BRICK"> <FIND-OBJ "ROPE"> <FIND-OBJ "KNIFE">)>
+        "Attic"
+        %<>
+        <EXIT "DOWN" "KITCH">
+        (<FIND-OBJ "BRICK"> <FIND-OBJ "ROPE"> <FIND-OBJ "KNIFE">)>
 
 <ADD-OBJECT
  <OBJECT "ROPE"
-	  "There is a large coil of rope here."
-	  "rope"
-	  "A large coil of rope is lying in the corner."
-	  ROPE-FUNCTION () %<> %<+ ,TIEBIT ,TAKEBIT ,OVISON> 0 0 10 0>
+          "There is a large coil of rope here."
+          "rope"
+          "A large coil of rope is lying in the corner."
+          ROPE-FUNCTION () %<> %<+ ,TIEBIT ,TAKEBIT ,OVISON> 0 0 10 0>
 ["HEMP" "COIL"] ["LARGE"]>
 
 
 <ADD-OBJECT
  <OBJECT "KNIFE"
-	  "There is a nasty-looking knife lying here."
-	  "knife"
-	  "On a table is a nasty-looking knife."
-	  %<> () %<> %<+ ,TAKEBIT ,OVISON ,WEAPONBIT>>
+          "There is a nasty-looking knife lying here."
+          "knife"
+          "On a table is a nasty-looking knife."
+          %<> () %<> %<+ ,TAKEBIT ,OVISON ,WEAPONBIT>>
 ["BLADE"] ["NASTY"]>
 
 <ADD-MELEE <FIND-OBJ "KNIFE"> ,KNIFE-MELEE>
@@ -318,18 +318,18 @@ and all the windows are barred."
        "Living Room"
        T
        <EXIT "EAST" "KITCH"
-	      "WEST" <CEXIT "MAGIC-FLAG" "BLROO" "The door is nailed shut.">
-	      "DOWN" <DOOR "DOOR" "LROOM" "CELLA">>
+              "WEST" <CEXIT "MAGIC-FLAG" "BLROO" "The door is nailed shut.">
+              "DOWN" <DOOR "DOOR" "LROOM" "CELLA">>
        (<FIND-OBJ "WDOOR"> <FIND-OBJ "DOOR"> <FIND-OBJ "TCASE"> 
-	<FIND-OBJ "LAMP"> <FIND-OBJ "RUG"> <FIND-OBJ "PAPER">
-	<FIND-OBJ "SWORD">)
+        <FIND-OBJ "LAMP"> <FIND-OBJ "RUG"> <FIND-OBJ "PAPER">
+        <FIND-OBJ "SWORD">)
        LIVING-ROOM>
 
 <ADD-OBJECT
  <OBJECT "SWORD"
-	  "There is an elvish sword here."
-	  "sword"
-	  "On hooks above the mantelpiece hangs an elvish sword of great
+          "There is an elvish sword here."
+          "sword"
+          "On hooks above the mantelpiece hangs an elvish sword of great
 antiquity." SWORD () %<> %<+ ,OVISON ,TAKEBIT ,WEAPONBIT> 0 0 30 0>
  ["ORCRI" "GLAMD" "BLADE"] ["ELVIS"]>
 
@@ -337,34 +337,34 @@ antiquity." SWORD () %<> %<+ ,OVISON ,TAKEBIT ,WEAPONBIT> 0 0 30 0>
 
 <ADD-OBJECT
  <OBJECT "LAMP"
-	  "There is a brass lantern (battery-powered) here."
-	  "lamp"
-	  "A battery-powered brass lantern is on the trophy case."
-	  LANTERN () %<> %<+ ,TAKEBIT ,OVISON ,LIGHTBIT> 0 0 15 0>
+          "There is a brass lantern (battery-powered) here."
+          "lamp"
+          "A battery-powered brass lantern is on the trophy case."
+          LANTERN () %<> %<+ ,TAKEBIT ,OVISON ,LIGHTBIT> 0 0 15 0>
 ["LANTE"] ["BRASS"]>
 
 <ADD-OBJECT
   <OBJECT "BLAMP"
-	   "There is a broken brass lantern here."
-	   "broken lamp"
-	   %<>
-	   %<> () %<> %<+ ,TAKEBIT ,OVISON>>
+           "There is a broken brass lantern here."
+           "broken lamp"
+           %<>
+           %<> () %<> %<+ ,TAKEBIT ,OVISON>>
 ["LAMP" "LANTE"] ["BROKE"]>
 
 <ADD-OBJECT
  <OBJECT "RUG"
-	 ""
-	 "carpet"
-	 %<>
-	 RUG () %<> %<+ ,TRYTAKEBIT ,NDESCBIT ,OVISON> 0 0 %,BIGFIX 0>
+         ""
+         "carpet"
+         %<>
+         RUG () %<> %<+ ,TRYTAKEBIT ,NDESCBIT ,OVISON> 0 0 %,BIGFIX 0>
 ["CARPE"] ["ORIEN"]>
 
 <ADD-OBJECT
 <OBJECT "LEAVE"
-	  "There is a pile of leaves on the ground."
-	  "pile of leaves"
-	  %<>
-	  LEAF-PILE () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 0 0 25 0>
+          "There is a pile of leaves on the ground."
+          "pile of leaves"
+          %<>
+          LEAF-PILE () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 0 0 25 0>
 ["LEAF" "PILE"]>
 
 <ROOM "CELLA"
@@ -372,10 +372,10 @@ antiquity." SWORD () %<> %<+ ,OVISON ,TAKEBIT ,WEAPONBIT> 0 0 30 0>
        "Cellar"
        %<>
        <EXIT "EAST" "MTROL" "SOUTH" "CHAS2"
-	      "UP"
-	      <DOOR "DOOR" "LROOM" "CELLA">
-	      "WEST"
-	      #NEXIT "You try to ascend the ramp, but it is impossible, and you slide back down.">
+              "UP"
+              <DOOR "DOOR" "LROOM" "CELLA">
+              "WEST"
+              #NEXIT "You try to ascend the ramp, but it is impossible, and you slide back down.">
        (<FIND-OBJ "DOOR">)
        CELLAR
        25>
@@ -389,9 +389,9 @@ Bloodstains and deep scratches (perhaps made by an axe) mar the
 walls."
        "The Troll Room"
        %<> <EXIT "WEST" "CELLA"
-		  "EAST" <CEXIT "TROLL-FLAG" "CRAW4" %,TCHOMP>
-		  "NORTH" <CEXIT "TROLL-FLAG" "PASS1" %,TCHOMP>
-		  "SOUTH" <CEXIT "TROLL-FLAG" "MAZE1" %,TCHOMP>>
+                  "EAST" <CEXIT "TROLL-FLAG" "CRAW4" %,TCHOMP>
+                  "NORTH" <CEXIT "TROLL-FLAG" "PASS1" %,TCHOMP>
+                  "SOUTH" <CEXIT "TROLL-FLAG" "MAZE1" %,TCHOMP>>
        (<FIND-OBJ "TROLL">)>
 
 <PSETG TROLLDESC
@@ -407,27 +407,27 @@ the room are open.">
 <SETG OPPV <IVECTOR <LENGTH ,VILLAINS> '<>>>
 
 <ADD-DEMON <SETG SWORD-DEMON
-		  <CHTYPE [SWORD-GLOW ,VILLAINS () <1 ,ROOMS> <FIND-OBJ "SWORD"> <>]
-			  HACK>>>
+                  <CHTYPE [SWORD-GLOW ,VILLAINS () <1 ,ROOMS> <FIND-OBJ "SWORD"> <>]
+                          HACK>>>
 
  <OBJECT "TROLL"
-	  %,TROLLDESC
-	  "troll"
-	  %<>
-	  TROLL
-	  (<FIND-OBJ "AXE">) %<> %<+ ,VICBIT ,OVISON ,VILLAIN> 0 0 %,BIGFIX 2>
+          %,TROLLDESC
+          "troll"
+          %<>
+          TROLL
+          (<FIND-OBJ "AXE">) %<> %<+ ,VICBIT ,OVISON ,VILLAIN> 0 0 %,BIGFIX 2>
 
 <ADD-MELEE <FIND-OBJ "TROLL"> ,TROLL-MELEE>
 
 <ADD-DEMON <SETG FIGHT-DEMON
-		 <CHTYPE [FIGHTING ,VILLAINS () <1 ,ROOMS> <FIND-OBJ "TROLL"> <>]
-			 HACK>>>
+                 <CHTYPE [FIGHTING ,VILLAINS () <1 ,ROOMS> <FIND-OBJ "TROLL"> <>]
+                         HACK>>>
 
 <ADD-OBJECT
  <OBJECT "AXE"
-	  "There is a bloody axe here."
-	  "bloody axe"
-	  %<> %<> () %<FIND-OBJ "TROLL"> %<+ ,OVISON ,WEAPONBIT> 0 0 25 0>
+          "There is a bloody axe here."
+          "bloody axe"
+          %<> %<> () %<FIND-OBJ "TROLL"> %<+ ,OVISON ,WEAPONBIT> 0 0 25 0>
  []["BLOOD"]>
 
 <PSETG MAZEDESC "You are in a maze of twisty little passages, all alike.">
@@ -437,15 +437,15 @@ the room are open.">
 <ROOM "MAZE1"
        %,MAZEDESC %,MAZEDESC %<>
        <EXIT "WEST" "MTROL"
-	      "NORTH" "MAZE1"
-	      "SOUTH" "MAZE2"
-	      "EAST" "MAZE4"> ()>
+              "NORTH" "MAZE1"
+              "SOUTH" "MAZE2"
+              "EAST" "MAZE4"> ()>
 
 <ROOM "MAZE2"
        %,MAZEDESC %,MAZEDESC %<>
        <EXIT "SOUTH" "MAZE1"
-	      "NORTH" "MAZE4"
-	      "EAST" "MAZE3"> ()>
+              "NORTH" "MAZE4"
+              "EAST" "MAZE3"> ()>
 
 <ROOM "MAZE3"
        %,MAZEDESC %,MAZEDESC %<>
@@ -463,58 +463,58 @@ the room are open.">
        %,MAZEDESC %,MAZEDESC %<>
        <EXIT "EAST" "DEAD2" "NORTH" "MAZE3" "SW" "MAZE6">
        (<FIND-OBJ "BONES"> <FIND-OBJ "BAGCO"> <FIND-OBJ "KEYS">
-	<FIND-OBJ "BLANT"> <FIND-OBJ "RKNIF">)>
+        <FIND-OBJ "BLANT"> <FIND-OBJ "RKNIF">)>
 
 <ADD-OBJECT
  <OBJECT "RKNIF"
-	  "There is a rusty knife here."
-	  "rusty knife"
-	  "Beside the skeleton is a rusty knife."
-	  RUSTY-KNIFE () %<> %<+ ,OVISON ,TAKEBIT ,WEAPONBIT> 0 0 20 0>
+          "There is a rusty knife here."
+          "rusty knife"
+          "Beside the skeleton is a rusty knife."
+          RUSTY-KNIFE () %<> %<+ ,OVISON ,TAKEBIT ,WEAPONBIT> 0 0 20 0>
  ["KNIFE"] ["RUSTY"]>
 
 <ADD-MELEE <FIND-OBJ "RKNIF"> ,KNIFE-MELEE>
 
 <ADD-OBJECT
  <OBJECT "BLANT"
-	  "There is a burned-out lantern here."
-	  "burned-out lantern"
-	  "The deceased adventurer's useless lantern is here."
-	  %<> () %<> %<+ ,OVISON ,TAKEBIT> 0 0 20 0>
+          "There is a burned-out lantern here."
+          "burned-out lantern"
+          "The deceased adventurer's useless lantern is here."
+          %<> () %<> %<+ ,OVISON ,TAKEBIT> 0 0 20 0>
  ["LANTE" "LAMP"] ["USED" "BURNE" "DEAD" "USELE"]>
 
 <ADD-OBJECT
  <OBJECT "KEYS"
-	 "There is a set of skeleton keys here."
-	 "set of skeleton keys"
-	 %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 10 0>
+         "There is a set of skeleton keys here."
+         "set of skeleton keys"
+         %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 10 0>
 ["SET"]>
 
 <ADD-OBJECT
  <OBJECT "BONES"
 "A skeleton, probably the remains of a luckless adventurer, lies here."
-	  "skeleton" %<> SKELETON () %<> %<+ ,TRYTAKEBIT ,OVISON> 0 0 %,BIGFIX 0>
+          "skeleton" %<> SKELETON () %<> %<+ ,TRYTAKEBIT ,OVISON> 0 0 %,BIGFIX 0>
 ["SKELE" "BODY"]>
 
 <ADD-OBJECT
  <OBJECT "BAGCO"
-	  "An old leather bag, bulging with coins, is here."
-	  "bag of coins"
-	  %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 10 5 15 0>
+          "An old leather bag, bulging with coins, is here."
+          "bag of coins"
+          %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 10 5 15 0>
 ["BAG" "COINS"] ["OLD" "LEATH"]>
 
 <ADD-OBJECT 
  <OBJECT "BAR"
-	  "There is a large platinum bar here."
-	  "platinum bar"
-	  %<> %<> () %<> %<+ ,SACREDBIT ,TAKEBIT ,OVISON> 12 10 20 0>
+          "There is a large platinum bar here."
+          "platinum bar"
+          %<> %<> () %<> %<+ ,SACREDBIT ,TAKEBIT ,OVISON> 12 10 20 0>
 ["PLATI"] ["LARGE"]>
 
 <ADD-OBJECT
  <OBJECT "PEARL"
-	  "There is a pearl necklace here with hundreds of large pearls."
-	  "pearl necklace"
-	  %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 9 5 10 0>
+          "There is a pearl necklace here with hundreds of large pearls."
+          "pearl necklace"
+          %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 9 5 10 0>
 ["NECKL"]>
 
 <ROOM "DEAD2"
@@ -541,7 +541,7 @@ the room are open.">
 <ROOM "MAZE9"
        %,MAZEDESC %,MAZEDESC %<>
        <EXIT "NORTH" "MAZE6" "EAST" "MAZ11" "DOWN" "MAZ10" "SOUTH" "MAZ13"
-	      "WEST" "MAZ12" "NW" "MAZE9"> ()>
+              "WEST" "MAZ12" "NW" "MAZE9"> ()>
 
 <ROOM "MAZ10"
        %,MAZEDESC %,MAZEDESC %<>
@@ -550,14 +550,14 @@ the room are open.">
 <ROOM "MAZ11"
        %,MAZEDESC
        %,MAZEDESC
-	%<>
+        %<>
        <EXIT "NE" "MGRAT" "DOWN" "MAZ10" "NW" "MAZ13" "SW" "MAZ12">>
-	      
+              
 <ROOM "MGRAT"
        ""
        "Grating Room" %<>
        <EXIT "SW" "MAZ11"
-	      "UP" <DOOR "GRATE" "MGRAT" "CLEAR" "The grating is locked.">>
+              "UP" <DOOR "GRATE" "MGRAT" "CLEAR" "The grating is locked.">>
        (<FIND-OBJ "GRATE">) MAZE-11>
 
 <ROOM "MAZ12"
@@ -618,8 +618,8 @@ east, there appears to be sunlight.">
        ""
        "Clearing" T
        <EXIT "SW" "EHOUS" "SE" "FORE5" "NORTH" "CLEAR" "EAST" "CLEAR"
-	      "WEST" "FORE3" "SOUTH" "FORE2"
-	      "DOWN" <DOOR "GRATE" "MGRAT" "CLEAR" "The grating is locked.">>
+              "WEST" "FORE3" "SOUTH" "FORE2"
+              "DOWN" <DOOR "GRATE" "MGRAT" "CLEAR" "The grating is locked.">>
        (<FIND-OBJ "GRATE"> <FIND-OBJ "LEAVE">) CLEARING>
 
 <ROOM "RAVI1"
@@ -646,19 +646,19 @@ passage."
        "Reservoir South"
        %<>
        <EXIT "SOUTH" <CEXIT "EGYPT-FLAG"
-			      "RAVI1"
-			      "The coffin will not fit through this passage."
-			      T
-			      COFFIN-CURE>
-	      "WEST" "STREA"
-	      "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "NORTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "LAUNC" "RESER"
-	      "UP" <CEXIT "EGYPT-FLAG"
-			   "CANY1"
-			   "The stairs are too steep for carrying the coffin."
-			   T
-			   COFFIN-CURE>>
+                              "RAVI1"
+                              "The coffin will not fit through this passage."
+                              T
+                              COFFIN-CURE>
+              "WEST" "STREA"
+              "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "NORTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "LAUNC" "RESER"
+              "UP" <CEXIT "EGYPT-FLAG"
+                           "CANY1"
+                           "The stairs are too steep for carrying the coffin."
+                           T
+                           COFFIN-CURE>>
        ()
        RESERVOIR-SOUTH>
 
@@ -667,8 +667,8 @@ passage."
        "Reservoir"
        %<>
        <EXIT "NORTH" "RESEN" "SOUTH" "RESES"
-	      "UP" "INSTR" "DOWN" #NEXIT "The dam blocks your way."
-	      "LAND" #NEXIT "You must specify direction.">
+              "UP" "INSTR" "DOWN" #NEXIT "The dam blocks your way."
+              "LAND" #NEXIT "You must specify direction.">
        (<FIND-OBJ "TRUNK">)
        RESERVOIR 0 %,RWATERBIT>
 
@@ -677,8 +677,8 @@ passage."
        "Reservoir North"
        %<>
        <EXIT "NORTH" "ATLAN" "LAUNC" "RESER"
-	      "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "SOUTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">>
+              "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "SOUTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">>
        (<FIND-OBJ "PUMP">)
        RESERVOIR-NORTH>
 
@@ -697,8 +697,8 @@ walls.  There is a narrow beach to land on."
        "Stream"
        %<>
        <EXIT "UP" #NEXIT "The way is too narrow."
-	      "LAND" "STREA"
-	      "DOWN" "RESER">
+              "LAND" "STREA"
+              "DOWN" "RESER">
        () %<> 0 %,RWATERBIT>
 
 <ROOM "EGYPT"
@@ -707,9 +707,9 @@ ascending staircase in the room as well as doors, east and south."
        "Egyptian Room"
        %<>
        <EXIT "UP" "ICY" "SOUTH" "LEDG3"
-	      "EAST" <CEXIT "EGYPT-FLAG" "CRAW1"
-			     "The passage is too narrow to accomodate coffins." T
-			     COFFIN-CURE>>
+              "EAST" <CEXIT "EGYPT-FLAG" "CRAW1"
+                             "The passage is too narrow to accomodate coffins." T
+                             COFFIN-CURE>>
        (<FIND-OBJ "COFFI">)>
 
 <ROOM "ICY"
@@ -722,22 +722,22 @@ ascending staircase in the room as well as doors, east and south."
 
 <ADD-OBJECT
  <OBJECT "REFL1"
-	  ""
-	  "mirror"
-	  %<> MIRROR-MIRROR () %<> %<+ ,TRYTAKEBIT ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
+          ""
+          "mirror"
+          %<> MIRROR-MIRROR () %<> %<+ ,TRYTAKEBIT ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
  ["MIRRO"]>
 
 <ADD-OBJECT
  <OBJECT "REFL2"
-	  ""
-	  "mirror"
-	  %<> MIRROR-MIRROR () %<> %<+ ,TRYTAKEBIT ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
+          ""
+          "mirror"
+          %<> MIRROR-MIRROR () %<> %<+ ,TRYTAKEBIT ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
  ["MIRRO"]>
 
 <ADD-OBJECT
  <OBJECT "ICE"
-	  "A mass of ice fills the western half of the room."
-	  "glacier" %<> GLACIER ()  %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
+          "A mass of ice fills the western half of the room."
+          "glacier" %<> GLACIER ()  %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
 ["MASS" "GLACI"]>
 
 <ROOM "RUBYR"
@@ -777,41 +777,41 @@ difficult to hear yourself think."
 
 <ADD-OBJECT
  <OBJECT "RUBY"
-	  "There is a moby ruby lying here."
-	  "ruby"
-	  "On the floor lies a moby ruby."
-	  %<>
-	  ()
-	  %<>
-	  %<+ ,TAKEBIT ,OVISON>
-	  15
-	  8
-	  5
-	  0>
+          "There is a moby ruby lying here."
+          "ruby"
+          "On the floor lies a moby ruby."
+          %<>
+          ()
+          %<>
+          %<+ ,TAKEBIT ,OVISON>
+          15
+          8
+          5
+          0>
  [] ["MOBY"]>
 
 <ADD-OBJECT
  <OBJECT "TRIDE"
-	  "Neptune's own crystal trident is here."
-	  "crystal trident"
-	  "On the shore lies Neptune's own crystal trident."
-	  %<> () %<> %<+ ,TAKEBIT ,OVISON> 4 11 20 0>
+          "Neptune's own crystal trident is here."
+          "crystal trident"
+          "On the shore lies Neptune's own crystal trident."
+          %<> () %<> %<+ ,TAKEBIT ,OVISON> 4 11 20 0>
 ["FORK"] ["CRYST"]>
 
 <ADD-OBJECT
  <OBJECT "COFFI"
 "There is a solid-gold coffin, used for the burial of Ramses II, here."
-	  "gold coffin"
-	  %<> %<> () %<> %<+ ,CONTBIT ,SACREDBIT ,TAKEBIT ,OVISON> 3 7 55 35>
+          "gold coffin"
+          %<> %<> () %<> %<+ ,CONTBIT ,SACREDBIT ,TAKEBIT ,OVISON> 3 7 55 35>
 ["CASKE"] ["GOLD"]>
 
 <ADD-OBJECT
  <OBJECT "TORCH"
-	  "There is an ivory torch here."
-	  "torch"
-	  "Sitting on the pedestal is a flaming torch, made of ivory."
-	  %<> () %<> %<+ ,TOOLBIT ,FLAMEBIT ,LIGHTBIT ,ONBIT ,TAKEBIT ,OVISON>
-	  14 6 20 0>
+          "There is an ivory torch here."
+          "torch"
+          "Sitting on the pedestal is a flaming torch, made of ivory."
+          %<> () %<> %<+ ,TOOLBIT ,FLAMEBIT ,LIGHTBIT ,ONBIT ,TAKEBIT ,OVISON>
+          14 6 20 0>
 [] ["IVORY"]>
 
 <ROOM "MIRR1"
@@ -911,23 +911,23 @@ shaft is a metal framework to which a heavy iron chain is attached."
        "Shaft Room"
        %<>
        <EXIT "DOWN" #NEXIT "You wouldn't fit and would die if you could."
-	      "WEST" "ENTRA" "NORTH" "TUNNE">
+              "WEST" "ENTRA" "NORTH" "TUNNE">
        (<FIND-OBJ "TBASK">)>
 
 <TRO <ADD-OBJECT 
  <OBJECT "TBASK"
-	  "At the end of the chain is a basket."
-	  "basket"
-	  %<>
-	  DUMBWAITER () %<> %<+ ,CONTBIT ,OVISON ,TRANSBIT> 0 0 %,BIGFIX 50>
+          "At the end of the chain is a basket."
+          "basket"
+          %<>
+          DUMBWAITER () %<> %<+ ,CONTBIT ,OVISON ,TRANSBIT> 0 0 %,BIGFIX 50>
 ["CAGE" "DUMBW" "BASKE"]> ,OPENBIT>
 
 <ADD-OBJECT
  <OBJECT "FBASK"
-	  "" 
-	  ""
-	  %<>
-	  DUMBWAITER () %<> %,OVISON 0 0 %,BIGFIX 0>
+          "" 
+          ""
+          %<>
+          DUMBWAITER () %<> %,OVISON 0 0 %,BIGFIX 0>
 ["CAGE" "DUMBW" "BASKE"]>
 
 <ROOM "TUNNE"
@@ -958,9 +958,9 @@ east is a narrow path."
 
 <ADD-OBJECT
  <OBJECT "BRACE"
-	  "There is a sapphire-encrusted bracelet here."
-	  "sapphire bracelet"
-	  %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 5 3 10 0>
+          "There is a sapphire-encrusted bracelet here."
+          "sapphire bracelet"
+          %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 5 3 10 0>
 ["JEWEL"] ["SAPPH"]>
 
 <ROOM "TLADD"
@@ -1042,7 +1042,7 @@ southwest corner of the room into a very narrow passageway."
        "Timber Room"
        %<>
        <EXIT "NORTH" "BLADD"
-	      "SW" <CEXIT "EMPTY-HANDED" "BSHAF" %,NOFIT>> (<FIND-OBJ "OTIMB">) NO-OBJS>
+              "SW" <CEXIT "EMPTY-HANDED" "BSHAF" %,NOFIT>> (<FIND-OBJ "OTIMB">) NO-OBJS>
 
 <ROOM "BSHAF" 
 
@@ -1052,10 +1052,10 @@ passage. In the shaft can be seen a heavy iron chain."
        "Lower Shaft"
        %<>
        <EXIT "EAST" "MACHI"
-	      "OUT" <CEXIT "EMPTY-HANDED" "TIMBE" %,NOFIT>
-	      "NE" <CEXIT "EMPTY-HANDED" "TIMBE" %,NOFIT>
-	      "UP" #NEXIT "Not a chance."
-	      "CLIMB" #NEXIT "The chain is not climbable.">
+              "OUT" <CEXIT "EMPTY-HANDED" "TIMBE" %,NOFIT>
+              "NE" <CEXIT "EMPTY-HANDED" "TIMBE" %,NOFIT>
+              "UP" #NEXIT "Not a chance."
+              "CLIMB" #NEXIT "The chain is not climbable.">
        (<FIND-OBJ "FBASK">) NO-OBJS>
 
 <ROOM "MACHI"
@@ -1072,12 +1072,12 @@ passage. In the shaft can be seen a heavy iron chain."
        "Dome Room"
        %<>
        <EXIT "EAST" "CRAW1"
-	      "DOWN" <CEXIT "DOME-FLAG"
-			     "MTORC"
-			     "You cannot go down without fracturing many bones.">
-	      "CLIMB" <CEXIT "DOME-FLAG"
-			      "MTORC"
-			      "You cannot go down without fracturing many bones.">>
+              "DOWN" <CEXIT "DOME-FLAG"
+                             "MTORC"
+                             "You cannot go down without fracturing many bones.">
+              "CLIMB" <CEXIT "DOME-FLAG"
+                              "MTORC"
+                              "You cannot go down without fracturing many bones.">>
        (<FIND-OBJ "RAILI">)
        DOME-ROOM>
 
@@ -1095,7 +1095,7 @@ There is a hole above, but it provides no opportunities for climbing."
        "North-South Crawlway"
        %<>
        <EXIT "NORTH" "CHAS2" "SOUTH" "STUDI" "EAST" "MTROL"
-	      "UP" #NEXIT "Not even a human fly could get up it."> ()>
+              "UP" #NEXIT "Not even a human fly could get up it."> ()>
 
 <ROOM "CHAS2"
 
@@ -1105,20 +1105,20 @@ passage goes west, and the path you are on continues to the north and
 south."
        "West of Chasm"
        %<> <EXIT "WEST" "CELLA" "NORTH" "CRAW4" "SOUTH" "GALLE"
-		  "DOWN" #NEXIT "The chasm probably leads straight to the infernal regions."> ()>
+                  "DOWN" #NEXIT "The chasm probably leads straight to the infernal regions."> ()>
 
 <ROOM "CAROU"
        ""
        "Round room" %<>
        <EXIT "NORTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" %<> CAROUSEL-EXIT>
-	      "SOUTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" %<> CAROUSEL-EXIT>
-	      "EAST" <CEXIT "CAROUSEL-FLIP" "MGRAI" "" %<> CAROUSEL-EXIT>
-	      "WEST" <CEXIT "CAROUSEL-FLIP" "PASS1" "" %<> CAROUSEL-EXIT>
-	      "NW" <CEXIT "CAROUSEL-FLIP" "CANY1" "" %<> CAROUSEL-EXIT>
-	      "NE" <CEXIT "CAROUSEL-FLIP" "PASS5" "" %<> CAROUSEL-EXIT>
-	      "SE" <CEXIT "CAROUSEL-FLIP" "PASS4" "" %<> CAROUSEL-EXIT>
-	      "SW" <CEXIT "CAROUSEL-FLIP" "MAZE1" "" %<> CAROUSEL-EXIT>
-	      "EXIT" <CEXIT "CAROUSEL-FLIP" "PASS3" "" %<> CAROUSEL-OUT>>
+              "SOUTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" %<> CAROUSEL-EXIT>
+              "EAST" <CEXIT "CAROUSEL-FLIP" "MGRAI" "" %<> CAROUSEL-EXIT>
+              "WEST" <CEXIT "CAROUSEL-FLIP" "PASS1" "" %<> CAROUSEL-EXIT>
+              "NW" <CEXIT "CAROUSEL-FLIP" "CANY1" "" %<> CAROUSEL-EXIT>
+              "NE" <CEXIT "CAROUSEL-FLIP" "PASS5" "" %<> CAROUSEL-EXIT>
+              "SE" <CEXIT "CAROUSEL-FLIP" "PASS4" "" %<> CAROUSEL-EXIT>
+              "SW" <CEXIT "CAROUSEL-FLIP" "MAZE1" "" %<> CAROUSEL-EXIT>
+              "EXIT" <CEXIT "CAROUSEL-FLIP" "PASS3" "" %<> CAROUSEL-OUT>>
        (<FIND-OBJ "IRBOX">) CAROUSEL-ROOM>
 
 <ADD-OBJECT
@@ -1127,16 +1127,16 @@ south."
 
 <ADD-OBJECT
  <OBJECT "IRBOX"
-	  "There is a dented iron box here."
-	  "iron box"
-	  %<> %<> (<FIND-OBJ "STRAD">) %<> %<+ ,TAKEBIT ,CONTBIT> 0 0 40 20>
+          "There is a dented iron box here."
+          "iron box"
+          %<> %<> (<FIND-OBJ "STRAD">) %<> %<+ ,TAKEBIT ,CONTBIT> 0 0 40 20>
  ["BOX"] ["IRON" "DENTE"]>
 
 <ADD-OBJECT
  <OBJECT "STRAD"
-	  "There is a Stradavarius here."
-	  "fancy violin"
-	  %<> %<> () <FIND-OBJ "IRBOX"> %<+ ,OVISON ,TAKEBIT> 10 10 10 0>
+          "There is a Stradavarius here."
+          "fancy violin"
+          %<> %<> () <FIND-OBJ "IRBOX"> %<+ ,OVISON ,TAKEBIT> 10 10 10 0>
  ["VIOLI"] ["FANCY"]>
 
 <ROOM "PASS5"
@@ -1150,7 +1150,7 @@ south."
 path exits to the south and to the east."
        "Chasm"
        %<> <EXIT "SOUTH" "RAVI1" "EAST" "PASS5"
-		  "DOWN" #NEXIT "Are you out of your mind?"> ()>
+                  "DOWN" #NEXIT "Are you out of your mind?"> ()>
 
 <ROOM "CAVE3"
 
@@ -1159,7 +1159,7 @@ the cave narrows to a crack to the west.  The earth is particularly
 damp here."
        "Damp Cave"
        %<> <EXIT "SOUTH" "ECHO" "EAST" "DAM"
-		  "WEST" #NEXIT "It is too narrow for most insects.">
+                  "WEST" #NEXIT "It is too narrow for most insects.">
        ()>
 
 <ROOM "CHAS3"
@@ -1183,8 +1183,8 @@ cave here.  Passages lead off in all directions."
        %<> <EXIT "NORTH" "CAROU" "SE" "RIDDL"> (<FIND-OBJ "ENGRA">)>
 
 <ADD-OBJECT <SOBJECT "ENGRA" "wall with engravings" ,OVISON ,READBIT
-	 ,SACREDBIT>
-	    ["INSCR"] ["OLD" "ANCIE"]>
+         ,SACREDBIT>
+            ["INSCR"] ["OLD" "ANCIE"]>
 
 <PUT <FIND-OBJ "ENGRA"> ,ODESC1 "There are old engravings on the walls here.">
 
@@ -1195,13 +1195,13 @@ To the east is a great door made of stone.  Above the stone, the
 following words are written: 'No man shall enter this room without
 solving this riddle:
   What is tall as a house,
-	  round as a cup, 
-	  and all the king's horses can't draw it up?'"
+          round as a cup, 
+          and all the king's horses can't draw it up?'"
        "Riddle Room"
        %<>
        <EXIT "DOWN" "CAVE4"
-	      "EAST" <CEXIT "RIDDLE-FLAG" "MPEAR"
-			     "Your way is blocked by an invisible force.">>
+              "EAST" <CEXIT "RIDDLE-FLAG" "MPEAR"
+                             "Your way is blocked by an invisible force.">>
        (<FIND-OBJ "SDOOR">)>
 
 <ROOM "MPEAR"
@@ -1213,27 +1213,27 @@ solving this riddle:
        ""
        "Entrance to Hades"
        T <EXIT "EAST"
-		<CEXIT "LLD-FLAG"
-			"LLD2"
-			"Some invisible force prevents you from passing through the gate.">
-		"UP" "CAVE2"
-		"ENTER"
-		<CEXIT "LLD-FLAG"
-			"LLD2"
-			"Some invisible force prevents you from passing through the gate.">>
+                <CEXIT "LLD-FLAG"
+                        "LLD2"
+                        "Some invisible force prevents you from passing through the gate.">
+                "UP" "CAVE2"
+                "ENTER"
+                <CEXIT "LLD-FLAG"
+                        "LLD2"
+                        "Some invisible force prevents you from passing through the gate.">>
        (<FIND-OBJ "CORPS"> <FIND-OBJ "GATES"> <FIND-OBJ "GHOST">) LLD-ROOM>
 
 <ADD-OBJECT
  <OBJECT "GHOST"
-	  ""
-	  "" %<> GHOST-FUNCTION () %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
-["SPIRI" "FIEND"]>	 
+          ""
+          "" %<> GHOST-FUNCTION () %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
+["SPIRI" "FIEND"]>       
 
 <ROOM "LLD2"
        ""
        "Land of the Living Dead"
        T <EXIT "EAST" "TOMB"
-		"EXIT" "LLD1" "WEST" "LLD1"> (<FIND-OBJ "BODIE">) LLD2-ROOM 30>
+                "EXIT" "LLD1" "WEST" "LLD1"> (<FIND-OBJ "BODIE">) LLD2-ROOM 30>
 
 <ROOM "MGRAI"
 "You are standing in a small circular room with a pedestal.  A set of
@@ -1244,8 +1244,8 @@ stairs leads up, and passages leave to the east and west."
 
 <ADD-OBJECT
  <OBJECT "GRAIL"
-	  "There is an extremely valuable (perhaps original) grail here."
-	  "grail" %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON> 2 5 10 5>[]>
+          "There is an extremely valuable (perhaps original) grail here."
+          "grail" %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON> 2 5 10 5>[]>
 
 <ROOM "TEMP1"
 
@@ -1258,7 +1258,7 @@ room is through huge marble pillars."
        (<FIND-OBJ "PRAYE"> <FIND-OBJ "BELL">)>
 
 <ADD-OBJECT <SOBJECT "PRAYE" "prayer" <+ ,READBIT ,SACREDBIT ,OVISON>>
-	    ["INSCR"] ["ANCIE" "OLD"]>
+            ["INSCR"] ["ANCIE" "OLD"]>
 
 <ROOM "TEMP2"
 "You are in the east end of a large temple.  In front of you is what
@@ -1269,34 +1269,34 @@ appears to be an altar."
 
 <ADD-OBJECT
  <OBJECT "TRUNK"
-	  "There is an old trunk here, bulging with assorted jewels."
-	  "trunk with jewels"
-	  "Lying half buried in the mud is an old trunk, bulging with jewels."
-	   %<> () %<> %,TAKEBIT 15 8 35 0>
+          "There is an old trunk here, bulging with assorted jewels."
+          "trunk with jewels"
+          "Lying half buried in the mud is an old trunk, bulging with jewels."
+           %<> () %<> %,TAKEBIT 15 8 35 0>
 ["CHEST"] ["OLD"]>
 
 <ADD-OBJECT
  <OBJECT "BELL"
-	  "There is a small brass bell here."
-	  "bell"
-	  "Lying in a corner of the room is a small brass bell."
-	  %<> () %<> %<+ ,TAKEBIT ,OVISON>>
+          "There is a small brass bell here."
+          "bell"
+          "Lying in a corner of the room is a small brass bell."
+          %<> () %<> %<+ ,TAKEBIT ,OVISON>>
 [] ["SMALL" "BRASS"]>
 
 <ADD-OBJECT
  <OBJECT "BOOK"
-	  "There is a large black book here."
-	  "book"
-	  "On the altar is a large black book, open to page 569."
-	  BLACK-BOOK () %<> %<+ ,CONTBIT ,BURNBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 0>
+          "There is a large black book here."
+          "book"
+          "On the altar is a large black book, open to page 569."
+          BLACK-BOOK () %<> %<+ ,CONTBIT ,BURNBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 0>
 ["PRAYE" "BIBLE" "GOODB"] ["LARGE" "BLACK"]>
 
 <ADD-OBJECT 
  <OBJECT "CANDL"
-	  "There are two candles here."
-	  "pair of candles"
-	  "On the two ends of the altar are burning candles."
-	  CANDLES () %<> %<+ ,FLAMEBIT ,LIGHTBIT ,ONBIT ,TAKEBIT ,OVISON> 0 0 10 0>
+          "There are two candles here."
+          "pair of candles"
+          "On the two ends of the altar are burning candles."
+          CANDLES () %<> %<+ ,FLAMEBIT ,LIGHTBIT ,ONBIT ,TAKEBIT ,OVISON> 0 0 10 0>
 ["PAIR"]>
 
 <ROOM "DAM"
@@ -1312,24 +1312,24 @@ the dam.  There are exits here to the north and east marked
        "Dam Lobby"
        T
        <EXIT "SOUTH" "DAM"
-	      "NORTH" "MAINT"
-	      "EAST" "MAINT">
+              "NORTH" "MAINT"
+              "EAST" "MAINT">
        (<FIND-OBJ "MATCH"> <FIND-OBJ "GUIDE">)>
 
 <ADD-OBJECT
  <OBJECT "GUIDE"
-	  "There are tour guidebooks here."
-	  "tour guidebook"
+          "There are tour guidebooks here."
+          "tour guidebook"
 "Some guidebooks entitled 'Flood Control Dam #3' are on the reception
 desk." %<> () %<> %<+ ,BURNBIT ,TAKEBIT ,READBIT ,OVISON>>
 ["BOOK"] ["TOUR"]>
 
 <ADD-OBJECT
  <OBJECT "PAPER"
-	  ""
-	  "newspaper"
-	  %<> %<> () %<> %<+ ,BURNBIT ,TAKEBIT ,READBIT ,OVISON> 0 0 2 0>
-["NEWSP" "ISSUE" "REPOR" "MAGAZ" "NEWS"]>	  
+          ""
+          "newspaper"
+          %<> %<> () %<> %<+ ,BURNBIT ,TAKEBIT ,READBIT ,OVISON> 0 0 2 0>
+["NEWSP" "ISSUE" "REPOR" "MAGAZ" "NEWS"]>         
 
 <ROOM "MAINT"
 
@@ -1343,63 +1343,63 @@ room are in the west and south ends."
        "Maintenance Room"
        %<> <EXIT "SOUTH" "LOBBY" "WEST" "LOBBY">
        (<FIND-OBJ "LEAK"> <FIND-OBJ "TUBE"> <FIND-OBJ "WRENC">
-	<FIND-OBJ "BLBUT"> <FIND-OBJ "RBUTT"> <FIND-OBJ "BRBUT">
-	<FIND-OBJ "YBUTT"> <FIND-OBJ "SCREW">) MAINT-ROOM>
+        <FIND-OBJ "BLBUT"> <FIND-OBJ "RBUTT"> <FIND-OBJ "BRBUT">
+        <FIND-OBJ "YBUTT"> <FIND-OBJ "SCREW">) MAINT-ROOM>
 
 <ADD-OBJECT
  <OBJECT "MATCH"
-	  "There is a matchbook whose cover says 'Visit Beautiful FCD#3' here."
-	  "matchbook"
-	  %<> MATCH-FUNCTION () %<> %<+ ,TAKEBIT ,OVISON ,READBIT> 0 0 2 0>
+          "There is a matchbook whose cover says 'Visit Beautiful FCD#3' here."
+          "matchbook"
+          %<> MATCH-FUNCTION () %<> %<+ ,TAKEBIT ,OVISON ,READBIT> 0 0 2 0>
 ["FLINT"]>
 
 <ADD-OBJECT
  <OBJECT "ADVER"
-	  "There is a small leaflet here."
-	  "leaflet"
-	  %<> %<> () <FIND-OBJ "MAILB"> %<+ ,BURNBIT ,TAKEBIT ,OVISON ,READBIT>
-	  0 0 2 0>
+          "There is a small leaflet here."
+          "leaflet"
+          %<> %<> () <FIND-OBJ "MAILB"> %<+ ,BURNBIT ,TAKEBIT ,OVISON ,READBIT>
+          0 0 2 0>
 ["PAMPH" "LEAFL" "BOOKL"] ["SMALL"]>
 
 <ADD-OBJECT 
  <OBJECT "MAILB"
-	  "There is a small mailbox here."
-	  "mailbox"
-	  %<> %<> (<FIND-OBJ "ADVER">) %<> %<+ ,CONTBIT ,OVISON> 0 0 %,BIGFIX 10>
+          "There is a small mailbox here."
+          "mailbox"
+          %<> %<> (<FIND-OBJ "ADVER">) %<> %<+ ,CONTBIT ,OVISON> 0 0 %,BIGFIX 10>
  ["BOX"] ["SMALL"]>
 
  <ADD-OBJECT 
  <OBJECT "TUBE"
-	  "There is an object which looks like a tube of toothpaste here."
-	  "tube"
-	  %<> TUBE-FUNCTION (<FIND-OBJ "PUTTY">) %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON>
-	  0 0 10 7>
+          "There is an object which looks like a tube of toothpaste here."
+          "tube"
+          %<> TUBE-FUNCTION (<FIND-OBJ "PUTTY">) %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON>
+          0 0 10 7>
 ["TOOTH"]>
 
 <ADD-OBJECT
  <OBJECT "PUTTY"
-	  "There is some gunk here"
-	  "viscous material"
-	  %<> %<> () <FIND-OBJ "TUBE"> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 6 0>
+          "There is some gunk here"
+          "viscous material"
+          %<> %<> () <FIND-OBJ "TUBE"> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 6 0>
  ["MATER" "GUNK" "GLUE"] ["VISCO"]>
 
 <ADD-OBJECT
  <OBJECT "WRENC"
-	  "There is a wrench here."
-	  "wrench"
-	  %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 10 0>[]>
+          "There is a wrench here."
+          "wrench"
+          %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON> 0 0 10 0>[]>
 
 <ADD-OBJECT 
  <OBJECT "SCREW"
-	  "There is a screwdriver here."
-	  "screwdriver"
-	  %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON>>[]>
+          "There is a screwdriver here."
+          "screwdriver"
+          %<> %<> () %<> %<+ ,TOOLBIT ,TAKEBIT ,OVISON>>[]>
 
 
 <ROOM "CYCLO"
        "" "Cyclops Room"
        %<> <EXIT "WEST" "MAZ15" "NORTH" <CEXIT "MAGIC-FLAG" "BLROO" "The north wall is solid rock.">
-		  "UP" <CEXIT "CYCLOPS-FLAG" "TREAS" "The cyclops doesn't look like he'll let you past.">>
+                  "UP" <CEXIT "CYCLOPS-FLAG" "TREAS" "The cyclops doesn't look like he'll let you past.">>
        (<FIND-OBJ "CYCLO">) CYCLOPS-ROOM>
 
 <ADD-MELEE <FIND-OBJ "CYCLO"> ,CYCLOPS-MELEE>
@@ -1413,8 +1413,8 @@ cyclops sized)."
 
 <ADD-OBJECT
  <OBJECT "CYCLO"
-	  "" "cyclops" %<>
-	  CYCLOPS () %<> %<+ ,VICBIT ,OVISON ,VILLAIN> 0 0 %,BIGFIX 10000>
+          "" "cyclops" %<>
+          CYCLOPS () %<> %<+ ,VICBIT ,OVISON ,VILLAIN> 0 0 %,BIGFIX 10000>
  ["ONE-E" "MONST"]>
 
 <ROOM "TREAS"
@@ -1422,13 +1422,13 @@ cyclops sized)."
 "This is a large room, whose north wall is solid granite.  A number
 of discarded bags, which crumble at your touch, are scattered about
 on the floor."
-	"Treasure Room"
-	%<> <EXIT "DOWN" "CYCLO"> (<FIND-OBJ "CHALI">) TREASURE-ROOM 25>
+        "Treasure Room"
+        %<> <EXIT "DOWN" "CYCLO"> (<FIND-OBJ "CHALI">) TREASURE-ROOM 25>
 
 <ADD-OBJECT
  <OBJECT "CHALI"
-	  "There is a silver chalice, intricately engraved, here."
-	  "chalice" %<> CHALICE () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON> 10 10 10 5>
+          "There is a silver chalice, intricately engraved, here."
+          "chalice" %<> CHALICE () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON> 10 10 10 5>
  ["CUP" "GOBLE"]>
 
 <ROOM "STUDI" 
@@ -1442,12 +1442,12 @@ you might be able to get up it, it seems unlikely you could get back
 down."
        "Studio"
        %<> <EXIT "NORTH" "CRAW4"
-		  "NW" "GALLE"
-		  "UP"
-		  <CEXIT "LIGHT-LOAD"
-			  "KITCH"
-			  "The chimney is too narrow for you and all of your baggage."
-			  %<> CHIMNEY-FUNCTION>>
+                  "NW" "GALLE"
+                  "UP"
+                  <CEXIT "LIGHT-LOAD"
+                          "KITCH"
+                          "The chimney is too narrow for you and all of your baggage."
+                          %<> CHIMNEY-FUNCTION>>
        () %<>>
 
 <ROOM "GALLE"
@@ -1460,17 +1460,17 @@ left through either the north or south exits."
 
 <ADD-OBJECT
  <OBJECT "PAINT"
-	  "A masterpiece by a neglected genius is here."
-	  "painting"
+          "A masterpiece by a neglected genius is here."
+          "painting"
 "Fortunately, there is still one chance for you to be a vandal, for on
 the far wall is a work of unparalleled beauty."
- 	  PAINTING () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 4 7 15 0>
+          PAINTING () %<> %<+ ,BURNBIT ,TAKEBIT ,OVISON> 4 7 15 0>
 ["ART" "CANVA" "MASTE"]>
 
 "LISTS OF CRUFT:  WEAPONS, AND IMMOVABLE OBJECTS"
 
 <ADD-DEMON <SETG ROBBER-DEMON
-		 <CHTYPE [ROBBER () ,ROOMS <1 ,ROOMS> <FIND-OBJ "THIEF"> <>] HACK>>>
+                 <CHTYPE [ROBBER () ,ROOMS <1 ,ROOMS> <FIND-OBJ "THIEF"> <>] HACK>>>
 
 <PSETG ROBBER-C-DESC
 "There is a suspicious-looking individual, holding a bag, leaning
@@ -1482,21 +1482,21 @@ ground.  His bag and stilletto seem to have vanished.">
 
 <ADD-OBJECT
  <OBJECT "THIEF"
-	  %,ROBBER-C-DESC
-	  "thief"
-	  %<>
-	  ROBBER-FUNCTION (<FIND-OBJ "STILL">) %<> %<+ ,VICBIT ,OVISON ,VILLAIN>
-	  0 0 %,BIGFIX 4>
-	["ROBBE" "CROOK" "CRIME" "CRIMI" "BANDI" "GENT" "GENTL"
+          %,ROBBER-C-DESC
+          "thief"
+          %<>
+          ROBBER-FUNCTION (<FIND-OBJ "STILL">) %<> %<+ ,VICBIT ,OVISON ,VILLAIN>
+          0 0 %,BIGFIX 4>
+        ["ROBBE" "CROOK" "CRIME" "CRIMI" "BANDI" "GENT" "GENTL"
  "MAN" "SHADY" "THUG" "BAGMA" "MAFIA"]>
 
 <ADD-MELEE <FIND-OBJ "THIEF"> ,THIEF-MELEE>
 
 <ADD-OBJECT
  <OBJECT "STILL"
-	  "There is a vicious-looking stilletto here."
-	  "stilletto"
-	  %<> %<> () %<FIND-OBJ "THIEF"> %<+ ,OVISON ,WEAPONBIT> 0 0 10 0>
+          "There is a vicious-looking stilletto here."
+          "stilletto"
+          %<> %<> () %<FIND-OBJ "THIEF"> %<+ ,OVISON ,WEAPONBIT> 0 0 10 0>
  [] ["VICIO"]>
 
 <SETG WEAPONS (<FIND-OBJ "STICK"> <FIND-OBJ "KNIFE">)>
@@ -1513,7 +1513,7 @@ ground.  His bag and stilletto seem to have vanished.">
        <FIND-ROOM "EHOUS">)>
 
 <ADD-DESC <FIND-OBJ "BOOK">
-"		COMMANDMENT #12592
+"               COMMANDMENT #12592
 Oh ye who go about saying unto each:   \"Hello sailor\":
 dost thou know the magnitude of thy sin before the gods?
 Yea, verily, thou shalt be ground between two stones.
@@ -1524,8 +1524,8 @@ unto the land of the dead shalt thou be sent at last.
 Surely thou shalt repent of thy cunning.">
 
 <ADD-DESC <FIND-OBJ "GUIDE">
-"\"		   Guide Book to
-		Flood Control Dam #3
+"\"                Guide Book to
+                Flood Control Dam #3
 
   Flood Control Dam #3 (FCD#3) was constructed in year 783 of the
 Great Underground Empire to harness the destructive power of the
@@ -1548,12 +1548,12 @@ processors, and nearly one million dead trees.
 
   We will now point out some of the more interesting features
 of FCD#3 as we conduct you on a guided tour of the facilities:
-	1) You start your tour here in the Dam Lobby.
-	   You will notice on your right that .........">
+        1) You start your tour here in the Dam Lobby.
+           You will notice on your right that .........">
 
 <ADD-DESC <FIND-OBJ "PAPER">
-"		US NEWS & DUNGEON REPORT
-1/24/78  				       Late Dungeon Edition
+"               US NEWS & DUNGEON REPORT
+1/24/78                                        Late Dungeon Edition
 
     When an error is encountered in this version, you will be asked
 for a description of the problem immediately, just as if you had used
@@ -1575,7 +1575,7 @@ it', and so on.
 ">
 
 <ADD-DESC <FIND-OBJ "ADVER">
-"			WELCOME TO DUNGEON
+"                       WELCOME TO DUNGEON
 
     DUNGEON is a game of adventure, danger, and low cunning.  In it
 you will explore some of the most amazing territory ever seen by
@@ -1602,10 +1602,10 @@ commands (most systems).
 ">
 
 <ADD-DESC <FIND-OBJ "MATCH">
-"	        [close cover before striking BKD]
+"               [close cover before striking BKD]
 
-	YOU too can make BIG MONEY in the exciting field of
-		      PAPER SHUFFLING!
+        YOU too can make BIG MONEY in the exciting field of
+                      PAPER SHUFFLING!
 
 Mr. TAA of Muddle, Mass. says: \"Before I took this course I used
 to be a lowly bit twiddler.  Now with what I learned at MIT Tech
@@ -1618,7 +1618,7 @@ future and make really big Zorkmids.\"
 MIT Tech can't promise these fantastic results to everyone.  But when
 you earn your MDL degree from MIT Tech your future will be brighter.
 
-	      Send for our free brochure today.">
+              Send for our free brochure today.">
 
 <ADD-DESC <FIND-OBJ "ENGRA">
 "The engravings were incised in the living rock of the cave wall by
@@ -1648,37 +1648,37 @@ Zorkers were obscure.">
    [] []>
 
 <ADD-OBJECT <AOBJECT "BOLT" "bolt" BOLT-FUNCTION ,TURNBIT ,OVISON ,DOORBIT ,NDESCBIT>
-	    ["BOLT" "NUT"] []>
+            ["BOLT" "NUT"] []>
 
 <ADD-OBJECT
   <AOBJECT "GRATE" "grating" GRATE-FUNCTION ,OVISON ,DOORBIT ,NDESCBIT>
   ["GRATI"] []>
 
 <ADD-OBJECT <AOBJECT "DOOR" ,DOORSTR TRAP-DOOR ,DOORBIT ,NDESCBIT>
-	    ["TRAPD" "TRAP-"] ["TRAP"]>
+            ["TRAPD" "TRAP-"] ["TRAP"]>
 
 <ADD-OBJECT <AOBJECT "WDOOR" ,DOORSTR DDOOR-FUNCTION ,OVISON ,NDESCBIT ,READBIT>
-	    ["DOOR"] ["WOODE"]>
+            ["DOOR"] ["WOODE"]>
 
 <ADD-DESC <FIND-OBJ "WDOOR">
 "The engravings translate to 'This space intentionally left blank'">
 
 <ADD-OBJECT <AOBJECT "FDOOR" ,DOORSTR DDOOR-FUNCTION ,OVISON ,NDESCBIT>
-	    ["DOOR"] ["FRONT"]>
+            ["DOOR"] ["FRONT"]>
 
 <ADD-OBJECT <AOBJECT "SDOOR" ,DOORSTR DDOOR-FUNCTION ,OVISON ,NDESCBIT>
-	    ["DOOR"] ["STONE"]>
+            ["DOOR"] ["STONE"]>
 
 <ADD-OBJECT <AOBJECT "MSWIT" "switch" MSWITCH-FUNCTION ,OVISON ,NDESCBIT ,TURNBIT>
-	    ["SWITC"]>
+            ["SWITC"]>
 
 ; "ASSORTED GARBAGE"
 
 <ADD-OBJECT <SOBJECT "HPOLE" "head on a pole" ,OVISON> ["HEAD"]>
 <ADD-OBJECT <SOBJECT "CORPS" "corpses" ,OVISON> [] ["MANGL"]>
 <ADD-OBJECT <AOBJECT "BODIE" "pile of bodies" BODY-FUNCTION
-		     ,OVISON ,NDESCBIT ,TRYTAKEBIT>
-	    ["BODY" "CORPS"]>
+                     ,OVISON ,NDESCBIT ,TRYTAKEBIT>
+            ["BODY" "CORPS"]>
 
 <ADD-OBJECT <SOBJECT "DAM" "dam" ,OVISON ,NDESCBIT> ["GATE" "GATES" "FCD"]>
 <ADD-OBJECT <SOBJECT "RAILI" "railing" ,OVISON ,NDESCBIT> ["RAIL"]>
@@ -1687,19 +1687,19 @@ Zorkers were obscure.">
 <ADD-OBJECT <AOBJECT "LEAK" "leak" LEAK-FUNCTION ,OVISON ,NDESCBIT> ["DRIP" "HOLE"]>
 
 <ADD-OBJECT <AOBJECT "RBUTT" ,BUTSTR DBUTTONS ,OVISON ,NDESCBIT>
-	    ["BUTTO" "SWITC"]
-	    ["RED"]>
+            ["BUTTO" "SWITC"]
+            ["RED"]>
 <ADD-OBJECT <AOBJECT "YBUTT" ,BUTSTR DBUTTONS ,OVISON ,NDESCBIT>
-	    ["BUTTO" "SWITC"]
-	    ["YELLO"]>
+            ["BUTTO" "SWITC"]
+            ["YELLO"]>
 
 <ADD-OBJECT <AOBJECT "BLBUT" ,BUTSTR DBUTTONS ,OVISON ,NDESCBIT>
-	    ["BUTTO" "SWITC"]
-	    ["BLUE"]>
+            ["BUTTO" "SWITC"]
+            ["BLUE"]>
 
 <ADD-OBJECT <AOBJECT "BRBUT" ,BUTSTR DBUTTONS ,OVISON ,NDESCBIT>
-	    ["BUTTO" "SWITC"]
-	    ["BROWN"]>
+            ["BUTTO" "SWITC"]
+            ["BROWN"]>
 
 <ADD-OBJECT <AOBJECT "BAT" "bat" FLY-ME ,OVISON ,NDESCBIT ,TRYTAKEBIT> ["VAMPI"][]>
 
@@ -1728,7 +1728,7 @@ flows quietly here.  There is a landing on the west shore."
        %,RIVERDESC
        %<>
        <EXIT "UP" %,CURRENT "WEST" "DOCK" "LAND" "DOCK" "DOWN" "RIVR2"
-	      "EAST" %,CLIFFS>
+              "EAST" %,CLIFFS>
        () %<> 0 %,RWATERBIT>
 
 <ROOM "RIVR2"
@@ -1747,7 +1747,7 @@ may be suitable.  In the distance a faint rumbling can be heard."
        %,RIVERDESC
        %<>
        <EXIT "UP" %,CURRENT "DOWN" "RIVR4" "EAST" "WCLF1" "WEST" "RCAVE"
-	      "LAND" #NEXIT "You must specify which direction here.">
+              "LAND" #NEXIT "You must specify which direction here.">
        () %<> 0 %,RWATERBIT>
 
 <PSETG NARROW "The path is too narrow.">
@@ -1778,7 +1778,7 @@ area of beach can also be seen below the Cliffs."
        %,RIVERDESC
        %<>
        <EXIT "UP" %,CURRENT "DOWN" "RIVR5" "EAST" "WCLF2" "WEST" "BEACH"
-	      "LAND" #NEXIT "Specify the direction to land.">
+              "LAND" #NEXIT "Specify the direction to land.">
        (<FIND-OBJ "BUOY">)
        RIVR4-ROOM 0 %,RWATERBIT>
 
@@ -1801,7 +1801,7 @@ quickly turning around a sharp corner."
        "Shore"
        %<>
        <EXIT "LAUNC" "RIVR5" "NORTH" "BEACH"
-	      "SOUTH" "FALLS">
+              "SOUTH" "FALLS">
        () %<> 0>
 
 <ROOM "BEACH"
@@ -1841,7 +1841,7 @@ barrel is the word 'Geronimo!'."
        "Aragain Falls"
        %<>
        <EXIT "EAST" <CEXIT "RAINBOW" "RAINB"> "DOWN" "FCHMP" "NORTH" "FANTE"
-	      "ENTER" "BARRE" "UP" <CEXIT "RAINBOW" "RAINB">>
+              "ENTER" "BARRE" "UP" <CEXIT "RAINBOW" "RAINB">>
        (<FIND-OBJ "RAINB"> <FIND-OBJ "BARRE">) FALLS-ROOM>
 
 <ROOM "RAINB"
@@ -1901,17 +1901,17 @@ around.  It is possible to climb down into the canyon from here."
 
 <ADD-OBJECT
  <OBJECT "POT"
-	  "There is a pot of gold here."
-	  "pot filled with gold"
-	  "At the end of the rainbow is a pot of gold."
-	  %<> () %<> %,TAKEBIT 10 10 15 0>
+          "There is a pot of gold here."
+          "pot filled with gold"
+          "At the end of the rainbow is a pot of gold."
+          %<> () %<> %,TAKEBIT 10 10 15 0>
 [] ["GOLD"]>
 
 <ADD-OBJECT
  <OBJECT "STATU"
-	  "There is a beautiful statue here."
-	  "statue"
-	  %<> %<> () %<> %,TAKEBIT 10 13 8 0>[
+          "There is a beautiful statue here."
+          "statue"
+          %<> %<> () %<> %,TAKEBIT 10 13 8 0>[
  "SCULP" "ROCK"]>
 
 <ADD-OBJECT
@@ -1919,45 +1919,45 @@ around.  It is possible to climb down into the canyon from here."
 
 "There is a folded pile of plastic here which has a small valve
 attached." "plastic inflatable boat" %<> IBOAT-FUNCTION ()
-	  %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 20 0>[
+          %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 20 0>[
  "BOAT" "PLAST" "PILE"]>
 
 <ADD-OBJECT
  <OBJECT "DBOAT"
-	  "There is a pile of plastic here with a large hole in it."
-	  "plastic boat (with hole)"
-	  %<> DBOAT-FUNCTION () %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 20 0>[
+          "There is a pile of plastic here with a large hole in it."
+          "plastic boat (with hole)"
+          %<> DBOAT-FUNCTION () %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 20 0>[
  "BOAT" "PLAST" "PILE"]>
 
 <ADD-OBJECT 
  <OBJECT "PUMP"
-	  "There is a small pump here."
-	  "hand-held air pump"
-	  %<> %<> () %<> %<+ ,TOOLBIT ,OVISON ,TAKEBIT>>[
+          "There is a small pump here."
+          "hand-held air pump"
+          %<> %<> () %<> %<+ ,TOOLBIT ,OVISON ,TAKEBIT>>[
  "AIR-P" "AIRPU"] ["SMALL"]>
 
 <ADD-OBJECT
  <OBJECT "RBOAT"
-	  "There is an inflated boat here."
-	  "magic boat"
-	  %<>
-	  RBOAT-FUNCTION (<FIND-OBJ "LABEL">) %<> 
-	  %<+ ,VEHBIT ,BURNBIT ,OVISON ,TAKEBIT>
-	  0 0 20 100>
+          "There is an inflated boat here."
+          "magic boat"
+          %<>
+          RBOAT-FUNCTION (<FIND-OBJ "LABEL">) %<> 
+          %<+ ,VEHBIT ,BURNBIT ,OVISON ,TAKEBIT>
+          0 0 20 100>
 ["BOAT"] ["MAGIC" "PLAST" "SEAWO"]>
 <TRO <FIND-OBJ "RBOAT"> ,OPENBIT>
 <PUT <FIND-OBJ "RBOAT"> ,ORAND ,RWATERBIT>
 
 <ADD-OBJECT
  <OBJECT "LABEL"
-	  "There is a tan label here."
-	  "tan label"
-	  %<> %<> () <FIND-OBJ "RBOAT"> %<+ ,BURNBIT ,OVISON ,READBIT ,TAKEBIT>
-	  0 0 2 0>
+          "There is a tan label here."
+          "tan label"
+          %<> %<> () <FIND-OBJ "RBOAT"> %<+ ,BURNBIT ,OVISON ,READBIT ,TAKEBIT>
+          0 0 2 0>
 ["FINEP"] ["TAN"]>
 
 <ADD-DESC <FIND-OBJ "LABEL">
-"	  !!!! 	FROBOZZ MAGIC BOAT COMPANY  !!!!
+"         !!!!  FROBOZZ MAGIC BOAT COMPANY  !!!!
 
 Hello, Sailor!
 
@@ -1976,46 +1976,46 @@ workmanship for a period of 76 milliseconds from date of purchase or
 until first used, whichever comes first.
 
 Warning:
-   This boat is made of plastic.		Good Luck!
+   This boat is made of plastic.                Good Luck!
 ">
 
 <ADD-OBJECT
  <OBJECT "STICK"
-	  "There is a broken sharp stick here."
-	  "broken sharp stick"
-	  "A sharp stick, which appears to have been broken at one end, is here."
-	  STICK-FUNCTION () %<> %<+ ,OVISON ,TAKEBIT> 0 0 3 0>
+          "There is a broken sharp stick here."
+          "broken sharp stick"
+          "A sharp stick, which appears to have been broken at one end, is here."
+          STICK-FUNCTION () %<> %<+ ,OVISON ,TAKEBIT> 0 0 3 0>
 [] ["SHARP" "BROKE"]>
 
 <SOBJECT "BARRE" "barrel" ,OVISON>
 
 <ADD-OBJECT
  <OBJECT "BUOY"
-	  "There is a red buoy here (probably a warning)."
-	  "red buoy"
-	  %<> %<> (<FIND-OBJ "EMERA">) %<> %<+ ,CONTBIT ,FINDMEBIT ,OVISON ,TAKEBIT>
-	  0 0 10 20>
+          "There is a red buoy here (probably a warning)."
+          "red buoy"
+          %<> %<> (<FIND-OBJ "EMERA">) %<> %<+ ,CONTBIT ,FINDMEBIT ,OVISON ,TAKEBIT>
+          0 0 10 20>
 []["RED"]>
 
 <ADD-OBJECT
  <OBJECT "EMERA"
-	  "There is an emerald here."
-	  "large emerald"
-	  %<> %<> () <FIND-OBJ "BUOY"> %<+ ,OVISON ,TAKEBIT> 5 10 5 0>
+          "There is an emerald here."
+          "large emerald"
+          %<> %<> () <FIND-OBJ "BUOY"> %<+ ,OVISON ,TAKEBIT> 5 10 5 0>
  [] ["LARGE"]>
 
 <ADD-OBJECT
  <OBJECT "SHOVE"
-	  "There is a large shovel here."
-	  "shovel"
-	  %<> %<> () %<> %<+ ,TOOLBIT ,OVISON ,TAKEBIT> 0 0 15 0>
+          "There is a large shovel here."
+          "shovel"
+          %<> %<> () %<> %<+ ,TOOLBIT ,OVISON ,TAKEBIT> 0 0 15 0>
  [] ["LARGE"]>
 
 <ADD-OBJECT
  <OBJECT "GUANO"
-	  "There is a hunk of bat guano here."
-	  "hunk of bat guano"
-	  %<> %<> () %<> %<+ ,OVISON ,TAKEBIT> 0 0 20 0>
+          "There is a hunk of bat guano here."
+          "hunk of bat guano"
+          %<> %<> () %<> %<+ ,OVISON ,TAKEBIT> 0 0 20 0>
  ["CRAP" "SHIT" "HUNK"]>
 
 <ROOM "VLBOT"
@@ -2066,7 +2066,7 @@ floor below and the rim above. There is an exit here to the south."
        "Narrow Ledge"
        %<>
        <EXIT "DOWN" #NEXIT "I wouldn't jump from here."
-	      "LAUNC" "VAIR2" "WEST" %,CXGNOME "SOUTH" "LIBRA">
+              "LAUNC" "VAIR2" "WEST" %,CXGNOME "SOUTH" "LIBRA">
        (<FIND-OBJ "HOOK1"> <FIND-OBJ "ZORKM">)>
 
 <ROOM "LIBRA"
@@ -2077,7 +2077,7 @@ to pieces by unfriendly gnomes.  To the north is an exit."
        %<>
        <EXIT "NORTH" "LEDG2" "OUT" "LEDG2">
        (<FIND-OBJ "BLBK"> <FIND-OBJ "GRBK"> <FIND-OBJ "PUBK">
-	<FIND-OBJ "WHBK">)>
+        <FIND-OBJ "WHBK">)>
 
 <ROOM "LEDG3"
 "You are on a ledge in the middle of a large volcano.  Below you
@@ -2088,15 +2088,15 @@ those on the other side.  The exit from this room is to the east."
        "Volcano View"
        %<>
        <EXIT "DOWN" #NEXIT "I wouldn't try that."
-	      "CROSS" #NEXIT "It is impossible to cross this distance."
-	      "EAST" "EGYPT">>
+              "CROSS" #NEXIT "It is impossible to cross this distance."
+              "EAST" "EGYPT">>
 
 <ROOM "LEDG4"
        ""
        "Wide Ledge"
        %<>
        <EXIT "DOWN" #NEXIT "It's a long way down."
-	      "LAUNC" "VAIR4" "WEST" %,CXGNOME "SOUTH" "SAFE">
+              "LAUNC" "VAIR4" "WEST" %,CXGNOME "SOUTH" "SAFE">
        (<FIND-OBJ "HOOK2">)
        LEDGE-FUNCTION>
 
@@ -2120,156 +2120,156 @@ There are exits here to the west and the south."
 "There is a very large and extremely heavy wicker basket with a cloth
 bag here. Inside the basket is a metal receptacle of some kind. 
 Attached to the basket on the outside is a piece of wire."
-	  "basket"
-	  %<>
-	  BALLOON (<FIND-OBJ "CBAG"> <FIND-OBJ "BROPE"> <FIND-OBJ "RECEP">)
-	  %<> %<+ ,VEHBIT ,OVISON> 0 0 70 100>
+          "basket"
+          %<>
+          BALLOON (<FIND-OBJ "CBAG"> <FIND-OBJ "BROPE"> <FIND-OBJ "RECEP">)
+          %<> %<+ ,VEHBIT ,OVISON> 0 0 70 100>
  ["BASKE"] ["WICKE"]>
 <TRO <FIND-OBJ "BALLO"> ,OPENBIT>
 <PUT <FIND-OBJ "BALLO"> ,ORAND ,RAIRBIT>
 
  <OBJECT "RECEP"
-	  ""
-	  "receptacle"
-	  %<> %<> () <FIND-OBJ "BALLO"> %<+ ,CONTBIT ,OVISON ,SEARCHBIT> 0 0 %,BIGFIX 6>
+          ""
+          "receptacle"
+          %<> %<> () <FIND-OBJ "BALLO"> %<+ ,CONTBIT ,OVISON ,SEARCHBIT> 0 0 %,BIGFIX 6>
 
 <ADD-OBJECT
  <OBJECT "CBAG"
-	  ""
-	  "cloth bag"
-	  %<> %<> () <FIND-OBJ "BALLO"> %,OVISON 0 0 %,BIGFIX 0>
+          ""
+          "cloth bag"
+          %<> %<> () <FIND-OBJ "BALLO"> %,OVISON 0 0 %,BIGFIX 0>
  ["BAG"] ["CLOTH"]>
 
 <ADD-OBJECT
  <OBJECT "BROPE"
-	  "" "braided wire" %<> WIRE-FUNCTION ()
-	  <FIND-OBJ "BALLO"> %<+ ,TIEBIT ,OVISON> 0 0 %,BIGFIX 0>
+          "" "braided wire" %<> WIRE-FUNCTION ()
+          <FIND-OBJ "BALLO"> %<+ ,TIEBIT ,OVISON> 0 0 %,BIGFIX 0>
  ["WIRE"] ["BRAID"]>
 
  <ADD-OBJECT
  <OBJECT "HOOK1"
-	  "There is a small hook attached to the rock here."
-	  "hook"
-	  %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 0>
+          "There is a small hook attached to the rock here."
+          "hook"
+          %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 0>
  ["HOOK"] ["SMALL"]>
 
 <ADD-OBJECT
  <OBJECT "HOOK2"
-	  "There is a small hook attached to the rock here."
-	  "hook"
-	  %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 0>
+          "There is a small hook attached to the rock here."
+          "hook"
+          %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 0>
  ["HOOK"] ["SMALL"]>
 
 <ADD-OBJECT
  <OBJECT "ZORKM"
-	  "There is an engraved zorkmid coin here."
-	  "priceless zorkmid"
-	  "On the floor is a gold zorkmid coin (a valuable collector's item)."
-	  %<> () %<> %<+ ,READBIT ,OVISON ,TAKEBIT> 10 12 10 0>
+          "There is an engraved zorkmid coin here."
+          "priceless zorkmid"
+          "On the floor is a gold zorkmid coin (a valuable collector's item)."
+          %<> () %<> %<+ ,READBIT ,OVISON ,TAKEBIT> 10 12 10 0>
  ["COIN"] ["GOLD"]>
 
 <ADD-DESC <FIND-OBJ "ZORKM">
-	  "
-	       --------------------------
-	      /      Gold Zorkmid	 \\
-	     /  T e n   T h o u s a n d   \\
-	    /        Z O R K M I D S	   \\
-	   /				    \\
-	  /        ||||||||||||||||||	     \\
-	 /        !||||		 ||||!	      \\
-	|	   |||   ^^  ^^   |||	       |
-	|	   |||	 OO  OO   |||	       |
-	| In Frobs  |||	   <<    |||  We Trust |
-	|	     || (______) ||	       |
-	|	      |          |	       |
-	|	      |__________|	       |
-	 \\				      /
-	  \\    -- Lord Dimwit Flathead --    /
-	   \\    -- Beloved of Zorkers --    /
-	    \\				   /
-	     \\	     * 722 G.U.E. *       /
-	      \\				 /
-	       --------------------------
+          "
+               --------------------------
+              /      Gold Zorkmid        \\
+             /  T e n   T h o u s a n d   \\
+            /        Z O R K M I D S       \\
+           /                                \\
+          /        ||||||||||||||||||        \\
+         /        !||||          ||||!        \\
+        |          |||   ^^  ^^   |||          |
+        |          |||   OO  OO   |||          |
+        | In Frobs  |||    <<    |||  We Trust |
+        |            || (______) ||            |
+        |             |          |             |
+        |             |__________|             |
+         \\                                    /
+          \\    -- Lord Dimwit Flathead --    /
+           \\    -- Beloved of Zorkers --    /
+            \\                              /
+             \\       * 722 G.U.E. *       /
+              \\                          /
+               --------------------------
 ">
 
 
 <ADD-OBJECT 
  <OBJECT "SAFE"
-	  ""
-	  "box"
-	  %<> SAFE-FUNCTION (<FIND-OBJ "CROWN"> <FIND-OBJ "CARD">) %<>
-	  %<+ ,CONTBIT ,OVISON>
-	  0 0 %,BIGFIX 15>
+          ""
+          "box"
+          %<> SAFE-FUNCTION (<FIND-OBJ "CROWN"> <FIND-OBJ "CARD">) %<>
+          %<+ ,CONTBIT ,OVISON>
+          0 0 %,BIGFIX 15>
  ["BOX"]>
 
 <ADD-OBJECT
  <OBJECT "CARD"
-	  "There is a card with writing on it here."
-	  "card"
-	  %<> %<> () <FIND-OBJ "SAFE">
-	  %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 1 0>
+          "There is a card with writing on it here."
+          "card"
+          %<> %<> () <FIND-OBJ "SAFE">
+          %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 1 0>
  ["NOTE"]>
 
 <ADD-DESC <FIND-OBJ "CARD">
-	  "
+          "
 Warning:
     This room was constructed over very weak rock strata.  Detonation
 of explosives in this room is strictly prohibited!
-			Frobozz Magic Cave Company
-			per M. Agrippa, foreman
+                        Frobozz Magic Cave Company
+                        per M. Agrippa, foreman
 ">
 
 <ADD-OBJECT
  <OBJECT "SSLOT"
-	  ""
-	  "hole"
-	  %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 10>
+          ""
+          "hole"
+          %<> %<> () %<> %,OVISON 0 0 %,BIGFIX 10>
  ["SLOT" "HOLE"]>
 
 <TRO <FIND-OBJ "SSLOT"> ,OPENBIT>
 
 <ADD-OBJECT
  <OBJECT "CROWN"
-	  "Lord Dimwit's crown is here."
-	  "crown"
-	  "The excessively gaudy crown of Lord Dimwit Flathead is here."
-	  %<> () <FIND-OBJ "SAFE"> %<+ ,OVISON ,TAKEBIT> 15 10 10 0>
+          "Lord Dimwit's crown is here."
+          "crown"
+          "The excessively gaudy crown of Lord Dimwit Flathead is here."
+          %<> () <FIND-OBJ "SAFE"> %<+ ,OVISON ,TAKEBIT> 15 10 10 0>
  [] ["GAUDY"]>
 
 <ADD-OBJECT 
  <OBJECT "BRICK"
-	  "There is a square brick here which feels like clay."
-	  "brick"
-	  %<> %<> () %<> %<+ ,BURNBIT ,SEARCHBIT ,OVISON ,TAKEBIT> 0 0 9 2>
+          "There is a square brick here which feels like clay."
+          "brick"
+          %<> %<> () %<> %<+ ,BURNBIT ,SEARCHBIT ,OVISON ,TAKEBIT> 0 0 9 2>
  ["BRICK"] ["SQUAR" "CLAY"]>
 
 <TRO <FIND-OBJ "BRICK"> ,OPENBIT>
 
 <ADD-OBJECT
  <OBJECT "FUSE"
-	  "There is a coil of thin shiny wire here."
-	  "wire coil"
-	  %<> FUSE-FUNCTION () %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 1 0>
+          "There is a coil of thin shiny wire here."
+          "wire coil"
+          %<> FUSE-FUNCTION () %<> %<+ ,BURNBIT ,OVISON ,TAKEBIT> 0 0 1 0>
  ["COIL" "WIRE"] ["SHINY" "THIN"]>
 
 
 <ADD-OBJECT
  <OBJECT "GNOME"
-	  "There is a nervous Volcano Gnome here."
-	  "Volcano Gnome"
-	  %<> GNOME-FUNCTION () %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
+          "There is a nervous Volcano Gnome here."
+          "Volcano Gnome"
+          %<> GNOME-FUNCTION () %<> %<+ ,VICBIT ,OVISON> 0 0 %,BIGFIX 0>
  ["TROLL"]>
 
 <ADD-OBJECT
  <OBJECT "BLABE"
-	  "There is a blue label here."
-	  "blue label" %<> %<> () %<>
-	  %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 1 0>
+          "There is a blue label here."
+          "blue label" %<> %<> () %<>
+          %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 1 0>
  ["LABEL"] ["BLUE"]>
 
 <ADD-DESC <FIND-OBJ "BLABE">
-	  "
-	  !!!!  FROBOZZ MAGIC BALLOON COMPANY !!!!
+          "
+          !!!!  FROBOZZ MAGIC BALLOON COMPANY !!!!
 
 Hello, Aviator!
 
@@ -2283,43 +2283,43 @@ Warranty:
    
    No warranty is expressed or implied.  You're on your own, sport!
 
-					Good Luck.
+                                        Good Luck.
 ">
 
 <ADD-OBJECT 
  <OBJECT "DBALL"
-	  "There is a balloon here, broken into pieces."
-	  "broken balloon"
-	  %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 0 0 40 0>
+          "There is a balloon here, broken into pieces."
+          "broken balloon"
+          %<> %<> () %<> %<+ ,TAKEBIT ,OVISON> 0 0 40 0>
  ["BALLO" "BASKE"] ["BROKE"]>
 
 <ADD-OBJECT
  <OBJECT "BLBK"
-	  "There is a blue book here."
-	  "blue book"
-	  %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
+          "There is a blue book here."
+          "blue book"
+          %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
  ["BOOK"] ["BLUE"]>
 
 <ADD-OBJECT
  <OBJECT "GRBK"
-	  "There is a green book here."
-	  "green book"
-	  %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
+          "There is a green book here."
+          "green book"
+          %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
  ["BOOK"] ["GREEN"]>
 
 <ADD-OBJECT
  <OBJECT "PUBK"
-	  "There is a purple book here."
-	  "purple book"
-	  %<> %<> (<FIND-OBJ "STAMP">) %<> %<+ ,TAKEBIT ,OVISON ,READBIT ,CONTBIT>
-	  0 0 10 2>
+          "There is a purple book here."
+          "purple book"
+          %<> %<> (<FIND-OBJ "STAMP">) %<> %<+ ,TAKEBIT ,OVISON ,READBIT ,CONTBIT>
+          0 0 10 2>
  ["BOOK"] ["PURPL"]>
 
 <ADD-OBJECT
  <OBJECT "WHBK"
-	  "There is a white book here."
-	  "white book"
-	  %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
+          "There is a white book here."
+          "white book"
+          %<> %<> () %<> %<+ ,CONTBIT ,TAKEBIT ,OVISON ,READBIT> 0 0 10 2>
  ["BOOK"] ["WHITE"]>
 
 <PSETG GREEK-TO-ME 
@@ -2330,31 +2330,31 @@ Warranty:
 <ADD-DESC <FIND-OBJ "PUBK"> ,GREEK-TO-ME>
 <ADD-DESC <FIND-OBJ "WHBK"> ,GREEK-TO-ME>
 
- <OBJECT "STAMP"	
-	  "There is a Flathead Commemorative stamp here."
-	  "stamp"
-	  %<> %<> () <FIND-OBJ "PUBK"> %<+ ,TAKEBIT ,READBIT ,BURNBIT ,OVISON>
-	  4 10 1 0>
+ <OBJECT "STAMP"        
+          "There is a Flathead Commemorative stamp here."
+          "stamp"
+          %<> %<> () <FIND-OBJ "PUBK"> %<+ ,TAKEBIT ,READBIT ,BURNBIT ,OVISON>
+          4 10 1 0>
 
 <ADD-DESC <FIND-OBJ "STAMP">
-	  "
+          "
 ---v----v----v----v----v----v----v----v---
-|					 |
-|	   ||||||||||	     LORD	 |
->         !||||	     |	    DIMWIT	 <
-|	  ||||    ---|	   FLATHEAD	 |
-|	  |||C	   CC \\  		 |
->	   ||||	      _\\		 <
-|	    ||| (____|			 |
-|	     ||      |			 |
->	      |______|	     Our	 <
-|		/   \\	  Excessive	 |
-|	       /     \\	    Leader	 |
->	      |	      |			 <
-|	      |       |			 |
-|					 |
->    G.U.E. POSTAGE	   3 Zorkmids    <
-|					 |
+|                                        |
+|          ||||||||||        LORD        |
+>         !||||      |      DIMWIT       <
+|         ||||    ---|     FLATHEAD      |
+|         |||C     CC \\                  |
+>          ||||       _\\                 <
+|           ||| (____|                   |
+|            ||      |                   |
+>             |______|       Our         <
+|               /   \\     Excessive      |
+|              /     \\      Leader       |
+>             |       |                  <
+|             |       |                  |
+|                                        |
+>    G.U.E. POSTAGE        3 Zorkmids    <
+|                                        |
 ---^----^----^----^----^----^----^----^---
 ">
 
@@ -2366,7 +2366,7 @@ Warranty:
 
 <PUT <FIND-OBJ "CANDL"> ,ORAND <>>
 
-<PUT <FIND-OBJ "MATCH"> ,ORAND 5>		; "NUMBER OF MATCHES"
+<PUT <FIND-OBJ "MATCH"> ,ORAND 5>               ; "NUMBER OF MATCHES"
 
 <PSETG INDENTSTR <REST <ISTRING 8 !\ > 8>>
 
@@ -2374,11 +2374,11 @@ Warranty:
 "You are in the Tomb of the Unknown Implementer.
 A hollow voice says:  \"That's not a bug, it's a feature!\""
        "Tomb of the Unknown Implementer"
-	%<> <EXIT "WEST" "LLD2"> (<FIND-OBJ "TOMB">
-				    <FIND-OBJ "HEADS">
-				    <FIND-OBJ "COKES">
-				    <FIND-OBJ "LISTS">)
-	%<> 0>
+        %<> <EXIT "WEST" "LLD2"> (<FIND-OBJ "TOMB">
+                                    <FIND-OBJ "HEADS">
+                                    <FIND-OBJ "COKES">
+                                    <FIND-OBJ "LISTS">)
+        %<> 0>
 
 <ADD-OBJECT
  <OBJECT "TOMB"
@@ -2387,10 +2387,10 @@ is made of the finest marble, and apparently large enough for four
 headless corpses.  The crypt is closed. Above the entrance is the
 cryptic inscription:
 
-		     \"Feel Free.\"
+                     \"Feel Free.\"
 "
-	  "tomb" %<>
-	  HEAD-FUNCTION () %<> %<+ ,TRYTAKEBIT ,READBIT ,OVISON>>
+          "tomb" %<>
+          HEAD-FUNCTION () %<> %<+ ,TRYTAKEBIT ,READBIT ,OVISON>>
  ["CRYPT" "GRAVE"]["MARBL"]>
 
 <ADD-DESC <FIND-OBJ "TOMB">
@@ -2399,37 +2399,37 @@ Keeper of the Dungeon for amazing untastefulness.">
 
 <ADD-OBJECT
  <OBJECT "HEADS"
-	  "There are four heads here, mounted securely on poles."
-	  "set of poled heads" %<>
-	  HEAD-FUNCTION
-	  () %<> %<+ ,TRYTAKEBIT ,SACREDBIT ,OVISON>>
+          "There are four heads here, mounted securely on poles."
+          "set of poled heads" %<>
+          HEAD-FUNCTION
+          () %<> %<+ ,TRYTAKEBIT ,SACREDBIT ,OVISON>>
  ["HEAD" "POLE" "POLES" "PDL" "BKD" "TAA" "MARC" "IMPLE" "LOSER"]>
 
 <ADD-OBJECT
  <OBJECT "COKES"
 "Many empty Coke bottles are here.  Alas, they can't hold water."
-	  "bunch of Coke bottles"
+          "bunch of Coke bottles"
 "There is a large pile of empty Coke bottles here, evidently produced
 by the implementers during their long struggle to win totally."
-	  COKE-BOTTLES
-	  () %<> %<+ ,OVISON ,TAKEBIT> 0 0 15>
+          COKE-BOTTLES
+          () %<> %<+ ,OVISON ,TAKEBIT> 0 0 15>
  ["BOTTL"] ["COKE"]>
 
 <ADD-OBJECT
  <OBJECT "LISTS"
 "There is an enormous stack of line-printer paper here.  It is barely
 readable."
-	  "stack of listings"
+          "stack of listings"
 "There is a gigantic pile of line-printer output here.  Although the
 paper once contained useful information, almost nothing can be
 distinguished now."
-	  %<> () %<> %<+ ,READBIT ,BURNBIT ,OVISON ,TAKEBIT> 0 0 70>
+          %<> () %<> %<+ ,READBIT ,BURNBIT ,OVISON ,TAKEBIT> 0 0 70>
  ["PAPER" "LIST" "PRINT" "LISTI" "STACK"]>
 
 <ADD-DESC <FIND-OBJ "LISTS">
-	  "<DEFINE FEEL-FREE (LOSER)
-		   <TELL \"FEEL FREE, CHOMPER!\">>
-			...
+          "<DEFINE FEEL-FREE (LOSER)
+                   <TELL \"FEEL FREE, CHOMPER!\">>
+                        ...
 The rest is, alas, unintelligible (as were the implementers).">
 
 <ADD-OBJECT
@@ -2498,7 +2498,7 @@ possess."
        "Low Room"
        %<>
        <EXIT "NORTH" %,MAGCMACH "SOUTH" %,MAGCMACH "WEST" %,MAGCMACH "NE" %,MAGCMACH
-	      "NW" %,MAGALICE "SW" %,MAGALICE "SE" %,MAGALICE "EAST" %,MAGCMACH>
+              "NW" %,MAGALICE "SW" %,MAGALICE "SE" %,MAGALICE "EAST" %,MAGCMACH>
        (<FIND-OBJ "RBTLB"> <FIND-OBJ "ROBOT">) MAGNET-ROOM>
 
 <ROOM "CMACH"
@@ -2512,10 +2512,10 @@ possess."
 <ROOM "CAGER"
 "You are in a dingy closet adjacent to the machine room.  On one wall
 is a small sticker which says
-		Protected by
-		  FROBOZZ
-	     Magic Alarm Company
-	      (Hello, footpad!)
+                Protected by
+                  FROBOZZ
+             Magic Alarm Company
+              (Hello, footpad!)
 "
        "Dingy Closet"
        %<>
@@ -2531,23 +2531,23 @@ is a small sticker which says
 
 <ADD-OBJECT
  <OBJECT "CAGE"
-	  "There is a mangled cage here."
-	  "mangled cage"
-	  %<> %<> () %<> %<+ ,OVISON ,NDESCBIT> 0 0 60 0>
+          "There is a mangled cage here."
+          "mangled cage"
+          %<> %<> () %<> %<+ ,OVISON ,NDESCBIT> 0 0 60 0>
  [] []>
 
 <ADD-OBJECT 
  <OBJECT "RCAGE"
-	  "There is an iron cage in the middle of the room."
-	  "iron cage"
-	  %<> %<> () %<> %,OVISON 0 0 0 0>
+          "There is an iron cage in the middle of the room."
+          "iron cage"
+          %<> %<> () %<> %,OVISON 0 0 0 0>
  ["CAGE"] ["IRON"]>
 
 <ADD-OBJECT 
  <OBJECT "SPHER"
-	  "There is a beautiful crystal sphere here."
-	  "crystal sphere"
-	  %<> SPHERE-FUNCTION () %<> %<+ ,TRYTAKEBIT ,SACREDBIT ,OVISON> 6 6 10 0>
+          "There is a beautiful crystal sphere here."
+          "crystal sphere"
+          %<> SPHERE-FUNCTION () %<> %<+ ,TRYTAKEBIT ,SACREDBIT ,OVISON> 6 6 10 0>
  ["BALL"] ["CRYST" "GLASS"]>
 
 <ADD-OBJECT <AOBJECT "SQBUT" ,BUTSTR BUTTONS ,OVISON ,NDESCBIT> ["BUTTO"] ["SQUAR"]>
@@ -2576,28 +2576,28 @@ some etchings on the walls.  There is a passageway to the west."
 
 <PSETG EWALLS ["ETCHI" "WALLS" "WALL"]>
 <ADD-OBJECT <SOBJECT "ETCH1"
-		     "wall with etchings"
-		     ,FINDMEBIT ,OVISON ,NDESCBIT ,READBIT> ,EWALLS>
+                     "wall with etchings"
+                     ,FINDMEBIT ,OVISON ,NDESCBIT ,READBIT> ,EWALLS>
 <ADD-OBJECT <SOBJECT "ETCH2"
-		     "wall with etchings"
-		     ,FINDMEBIT ,OVISON ,NDESCBIT ,READBIT> ,EWALLS>
+                     "wall with etchings"
+                     ,FINDMEBIT ,OVISON ,NDESCBIT ,READBIT> ,EWALLS>
 
 <ADD-DESC <FIND-OBJ "ETCH2">
-"		        o  b  o
-		    r 		  z
-		 f   M  A  G  I  C   z
-		 c    W  E   L  L    y
-		    o		  n
-		        m  p  a
+"                       o  b  o
+                    r             z
+                 f   M  A  G  I  C   z
+                 c    W  E   L  L    y
+                    o             n
+                        m  p  a
 ">
 
 <ADD-DESC <FIND-OBJ "ETCH1">
-"		        o  b  o
-		      		  
-		        A  G  I  
-		         E   L  
-		    		  
-		        m  p  a
+"                       o  b  o
+                                  
+                        A  G  I  
+                         E   L  
+                                  
+                        m  p  a
 ">
 
 <ROOM "ALICE"
@@ -2610,9 +2610,9 @@ There are passageways leading away to the west and the northwest."
        "Tea Room"
        %<>
        <EXIT "EAST" #NEXIT "Only a mouse could get in there."
-	      "WEST" "TWELL" "NW" "MAGNE">
+              "WEST" "TWELL" "NW" "MAGNE">
        (<FIND-OBJ "ATABL"> <FIND-OBJ "ECAKE"> <FIND-OBJ "ORICE">
-	<FIND-OBJ "RDICE"> <FIND-OBJ "BLICE">)>
+        <FIND-OBJ "RDICE"> <FIND-OBJ "BLICE">)>
 
 <PSETG SMDROP #NEXIT "There is a chasm too large to jump across.">
 
@@ -2642,22 +2642,22 @@ falling.  The only exit to this room is to the west."
  <OBJECT "FLASK"
 "A stoppered glass flask with a skull-and-crossbones marking is here.
 The flask is filled with some clear liquid."
-	  "glass flask filled with liquid"
-	  %<> FLASK-FUNCTION () %<> %<+ ,TRANSBIT ,OVISON ,TAKEBIT> 0 0 10 5>
+          "glass flask filled with liquid"
+          %<> FLASK-FUNCTION () %<> %<+ ,TRANSBIT ,OVISON ,TAKEBIT> 0 0 10 5>
  [] ["GLASS"]>
 
 <ADD-OBJECT
  <OBJECT "POOL"
-	  "The leak has submerged the depressed area in a pool of sewage."
-	  "pool of sewage"
-	  %<> %<> () %<> %<+ ,OVISON ,VICBIT> 0 0 0 0>
+          "The leak has submerged the depressed area in a pool of sewage."
+          "pool of sewage"
+          %<> %<> () %<> %<+ ,OVISON ,VICBIT> 0 0 0 0>
  ["SEWAG"] ["LARGE"]>
 
 <ADD-OBJECT 
  <OBJECT "SAFFR"
-	  "There is a tin of rare spices here."
-	  "tin of spices"
-	  %<> %<> () %<> %,TAKEBIT 5 5 8 0>
+          "There is a tin of rare spices here."
+          "tin of spices"
+          %<> %<> () %<> %,TAKEBIT 5 5 8 0>
  ["TIN" "SPICE"] ["RARE"]>
 
 <ADD-OBJECT <SOBJECT "ATABL" "large oblong table" ,OVISON> [] ["LARGE" "OBLON"]>
@@ -2667,60 +2667,60 @@ The flask is filled with some clear liquid."
 <ADD-OBJECT
  <OBJECT "BUCKE"
 "There is a wooden bucket here, 3 feet in diameter and 3 feet high."
-	  "wooden bucket"
-	  %<> BUCKET () %<> %<+ ,VEHBIT ,OVISON> 0 0 100 100>
+          "wooden bucket"
+          %<> BUCKET () %<> %<+ ,VEHBIT ,OVISON> 0 0 100 100>
  [] ["WOODE"]>
 <PUT <TRO <FIND-OBJ "BUCKE"> ,OPENBIT> ,ORAND ,RBUCKBIT>
 
 <ADD-OBJECT
  <OBJECT "ECAKE"
  "There is a piece of cake here with the words 'Eat Me' on it."
- 	  "piece of 'Eat Me' cake"
-	  %<> EATME-FUNCTION () %<> %<+ ,OVISON ,TAKEBIT ,FOODBIT> 0 0 10 0>
+          "piece of 'Eat Me' cake"
+          %<> EATME-FUNCTION () %<> %<+ ,OVISON ,TAKEBIT ,FOODBIT> 0 0 10 0>
  ["CAKE"] ["EATME" "EAT-M"]>
 
 <ADD-OBJECT
  <OBJECT "ORICE"
  "There is a piece of cake with orange icing here."
- 	  "piece of cake with orange icing"
-	  %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
+          "piece of cake with orange icing"
+          %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
  ["CAKE" "ICING"] ["ORANG"]>
 
 <ADD-OBJECT
  <OBJECT "RDICE"
  "There is a piece of cake with red icing here."
- 	  "piece of cake with red icing"
-	  %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
+          "piece of cake with red icing"
+          %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
  ["CAKE" "ICING"] ["RED"]>
 
 <ADD-OBJECT
  <OBJECT "BLICE"
  "There is a piece of cake with blue (ecch) icing here."
- 	  "piece of cake with blue icing"
-	  %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
+          "piece of cake with blue icing"
+          %<> CAKE-FUNCTION () %<> %<+ ,READBIT ,OVISON ,TAKEBIT ,FOODBIT> 0 0 4 0>
  ["CAKE" "ICING"] ["BLUE" "ECCH"]>
 
 <ADD-OBJECT
  <OBJECT "ROBOT"
-	  "There is a robot here."
-	  "robot"
-	  %<> ROBOT-FUNCTION () %<> %<+ ,SACREDBIT ,VICBIT ,OVISON ,ACTORBIT> 0 0 0 0>
+          "There is a robot here."
+          "robot"
+          %<> ROBOT-FUNCTION () %<> %<+ ,SACREDBIT ,VICBIT ,OVISON ,ACTORBIT> 0 0 0 0>
  ["R2D2" "C3PO" "ROBBY"]>
 
 <PUT <FIND-OBJ "ROBOT">
      ,ORAND
      <ADD-ACTOR 
-	<CHTYPE [<FIND-ROOM "MAGNE"> () 0 <> <FIND-OBJ "ROBOT"> ROBOT-ACTOR 3 T 0] ADV>>>
+        <CHTYPE [<FIND-ROOM "MAGNE"> () 0 <> <FIND-OBJ "ROBOT"> ROBOT-ACTOR 3 T 0] ADV>>>
 
 <ADD-OBJECT
  <OBJECT "RBTLB"
-	  "There is a green piece of paper here."
-	  "green piece of paper"
-	  %<>  %<> () %<> %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 3 0>
+          "There is a green piece of paper here."
+          "green piece of paper"
+          %<>  %<> () %<> %<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT> 0 0 3 0>
  ["PAPER"] ["GREEN"]>
 
 <ADD-DESC <FIND-OBJ "RBTLB">
-"	  !!!! 	FROBOZZ MAGIC ROBOT COMPANY  !!!!
+"         !!!!  FROBOZZ MAGIC ROBOT COMPANY  !!!!
 
 Hello, Master!
    
@@ -2729,32 +2729,32 @@ simple household functions.
 
 Instructions for use:
    To activate me, use the following formula:
-	>TELL ROBOT '<something to do>' <cr>
+        >TELL ROBOT '<something to do>' <cr>
    The quotation marks are required!
        
 Warranty:
    No warranty is expressed or implied.
-				
-					At your service!
+                                
+                                        At your service!
 " >
 
 
 
 ;"funny verbs"
 
-<SADD-ACTION "C-INT" TIME>	;"funny verb for clock ints"
+<SADD-ACTION "C-INT" TIME>      ;"funny verb for clock ints"
 
-<SADD-ACTION "DEAD!" TIME>	;"funny verb for killing villains"
+<SADD-ACTION "DEAD!" TIME>      ;"funny verb for killing villains"
 
-<SADD-ACTION "FIRST?" TIME>	;"funny verb for surprise by villains"
+<SADD-ACTION "FIRST?" TIME>     ;"funny verb for surprise by villains"
 
-<SADD-ACTION "HACK?" TIME>	;"funny verb for villain fight decisions"
+<SADD-ACTION "HACK?" TIME>      ;"funny verb for villain fight decisions"
 
-<SADD-ACTION "IN!" TIME>	;"villain regains consciousness"
+<SADD-ACTION "IN!" TIME>        ;"villain regains consciousness"
 
-<SADD-ACTION "OUT!" TIME>	;"villain loses consciousness"
+<SADD-ACTION "OUT!" TIME>       ;"villain loses consciousness"
 
-<SADD-ACTION "WALK-IN" TIME>	;"funny verb for room actions when entering"
+<SADD-ACTION "WALK-IN" TIME>    ;"funny verb for room actions when entering"
 
 ;"ZORK game commands"
 
@@ -2797,9 +2797,9 @@ Warranty:
 ;"real verbs"
 
 <ADD-ACTION "ATTAC"
-	    "Attack"
-	    [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE)
-	     ["ATTAC" ATTACKER]]>
+            "Attack"
+            [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE)
+             ["ATTAC" ATTACKER]]>
 <VSYNONYM "ATTAC" "FIGHT" "HURT" "INJUR" "HIT">
 
 <SADD-ACTION "BACK" BACKER>
@@ -2807,27 +2807,27 @@ Warranty:
 <SADD-ACTION "BLAST" BLAST>
 
 <ADD-ACTION "BOARD"
-	    "Board"
-	    [(,VEHBIT ROBJS) ["BOARD" BOARD]]>
+            "Board"
+            [(,VEHBIT ROBJS) ["BOARD" BOARD]]>
 
 <ADD-ACTION "BRUSH"
-	    "Brush"
-	    [(-1 AOBJS ROBJS) ["BRUSH" BRUSH] DRIVER]
-	    [(-1 AOBJS ROBJS) "WITH" OBJ ["BRUSH" BRUSH]]>
+            "Brush"
+            [(-1 AOBJS ROBJS) ["BRUSH" BRUSH] DRIVER]
+            [(-1 AOBJS ROBJS) "WITH" OBJ ["BRUSH" BRUSH]]>
 <VSYNONYM "BRUSH" "CLEAN">
 
 <ADD-ACTION "BURN"
-	    "Burn"
-	    [(,BURNBIT AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS ROBJS HAVE)
-			["BURN" BURNER]]>
+            "Burn"
+            [(,BURNBIT AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS ROBJS HAVE)
+                        ["BURN" BURNER]]>
 <VSYNONYM "BURN" "INCIN" "IGNIT">
 
 <SADD-ACTION "CHOMP" CHOMP>
 <VSYNONYM "CHOMP" "LOSE" "BARF">
 
 <ADD-ACTION "CLOSE"
-	    "Close"
-	    [(<+ ,DOORBIT ,CONTBIT> AOBJS ROBJS) ["CLOSE" CLOSER]]>
+            "Close"
+            [(<+ ,DOORBIT ,CONTBIT> AOBJS ROBJS) ["CLOSE" CLOSER]]>
 <VSYNONYM "CLOSE">
 
 <SADD-ACTION "CURSE" CURSES>
@@ -2838,29 +2838,29 @@ Warranty:
 <SADD-ACTION "DIAGN" DIAGNOSE>
 
 <ADD-ACTION "DIG"
-	    "Dig"
-	    ["WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER]]>
+            "Dig"
+            ["WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER]]>
 
 <ADD-ACTION "DISEM"
-	    "Disembark from"
-	    [(,VEHBIT ROBJS) ["DISEM" UNBOARD]]>
+            "Disembark from"
+            [(,VEHBIT ROBJS) ["DISEM" UNBOARD]]>
 
 <ADD-ACTION "DRINK"
-	    "Drink"
-	    [(,DRINKBIT AOBJS ROBJS) ["DRINK" EAT]]>
+            "Drink"
+            [(,DRINKBIT AOBJS ROBJS) ["DRINK" EAT]]>
 <VSYNONYM "DRINK" "IMBIB" "SWALL">
 
 <ADD-ACTION "DROP"
-	    "Drop"
-	    [(-1 AOBJS) ["DROP" DROPPER] DRIVER]
-	    [(-1 AOBJS) "IN" OBJ ["DROP" DROPPER]]>
+            "Drop"
+            [(-1 AOBJS) ["DROP" DROPPER] DRIVER]
+            [(-1 AOBJS) "IN" OBJ ["DROP" DROPPER]]>
 <VSYNONYM "DROP" "RELEA">
 
 <SADD-ACTION "DUNGE" DUNGEON>
 
 <ADD-ACTION "EAT"
-	    "Eat"
-	    [(,FOODBIT AOBJS ROBJS TAKE) ["EAT" EAT]]>
+            "Eat"
+            [(,FOODBIT AOBJS ROBJS TAKE) ["EAT" EAT]]>
 <VSYNONYM "EAT" "CONSU" "GOBBL" "MUNCH" "TASTE">
 
 <1ADD-ACTION "EXAMI" "Examine" ROOM-INFO>
@@ -2870,8 +2870,8 @@ Warranty:
 <VSYNONYM "EXORC" "XORCI">
 
 <ADD-ACTION "EXTIN"
-	    "Turn off"
-	    [(,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-OFF" LAMP-OFF]]>
+            "Turn off"
+            [(,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-OFF" LAMP-OFF]]>
 <VSYNONYM "EXTIN" "DOUSE">
 
 <1ADD-ACTION "FILL" "Fill" FILL>
@@ -2884,28 +2884,28 @@ Warranty:
 <SADD-ACTION "GERON" GERONIMO>
 
 <ADD-ACTION "GIVE"
-	    "Give"
-	    [OBJ "TO" (,VICBIT ROBJS) ["GIVE" DROPPER] DRIVER]
-	    [(,VICBIT ROBJS) OBJ ["GIVE" DROPPER] FLIP]>
+            "Give"
+            [OBJ "TO" (,VICBIT ROBJS) ["GIVE" DROPPER] DRIVER]
+            [(,VICBIT ROBJS) OBJ ["GIVE" DROPPER] FLIP]>
 <VSYNONYM "GIVE" "HAND" "DONAT">
 
 <1ADD-ACTION "GRANI" "Granite" GRANITE>
 
 <ADD-ACTION "HELLO"
-	    "Hello"
-	    [["HELLO" HELLO] DRIVER]
-	    [OBJ ["HELLO" HELLO]]>
+            "Hello"
+            [["HELLO" HELLO] DRIVER]
+            [OBJ ["HELLO" HELLO]]>
 <VSYNONYM "HELLO" "HI">
 
 <ADD-ACTION "BLOW"
-	    "Blow"
-	    ["UP" OBJ "WITH" (,TOOLBIT ROBJS AOBJS) ["INFLA" INFLATER] DRIVER]
-	    ["UP" OBJ ["BLAST" BLAST]]
-	    ["INTO" OBJ ["BLOW-IN" BREATHE]]>
+            "Blow"
+            ["UP" OBJ "WITH" (,TOOLBIT ROBJS AOBJS) ["INFLA" INFLATER] DRIVER]
+            ["UP" OBJ ["BLAST" BLAST]]
+            ["INTO" OBJ ["BLOW-IN" BREATHE]]>
 
 <ADD-ACTION "INFLA"
-	    "Inflate"
-	    [OBJ "WITH" (,TOOLBIT ROBJS AOBJS) ["INFLA" INFLATER]]>
+            "Inflate"
+            [OBJ "WITH" (,TOOLBIT ROBJS AOBJS) ["INFLA" INFLATER]]>
 
 <SADD-ACTION "INVEN" INVENT>
 <VSYNONYM "INVEN" "LIST">
@@ -2914,94 +2914,94 @@ Warranty:
 <VSYNONYM "JARGON" "FOO" "BLETCH">
 
 <ADD-ACTION "JUMP"
-	    "Jump"
-	    [["JUMP" LEAPER]]
-	    ["OVER" OBJ ["JUMP" LEAPER]]>
+            "Jump"
+            [["JUMP" LEAPER]]
+            ["OVER" OBJ ["JUMP" LEAPER]]>
 <VSYNONYM "JUMP" "LEAP" "VAULT">
 
 <1ADD-ACTION "KICK" "Kick" KICKER>
 <VSYNONYM "KICK" "BITE" "TAUNT">
 
 <ADD-ACTION "KILL"
-	    "Kill"
-	    [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["KILL" KILLER]]>
+            "Kill"
+            [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["KILL" KILLER]]>
 <VSYNONYM "KILL" "MURDE" "SLAY" "DISPA" "STAB">
 
 <ADD-ACTION "KNOCK"
-	    "Knock"
-	    ["AT" OBJ ["KNOCK" KNOCK] DRIVER]
-	    ["ON" OBJ ["KNOCK" KNOCK]]
-	    ["DOWN" (,VICBIT = ROBJS) ["ATTAC" ATTACKER]]>
+            "Knock"
+            ["AT" OBJ ["KNOCK" KNOCK] DRIVER]
+            ["ON" OBJ ["KNOCK" KNOCK]]
+            ["DOWN" (,VICBIT = ROBJS) ["ATTAC" ATTACKER]]>
 <VSYNONYM "KNOCK" "RAP">
 
 <ADD-ACTION "LIGHT"
-	    "Light"
-	    [(,LIGHTBIT AOBJS ROBJS TAKE) ["LIGHT" LAMP-ON] DRIVER]
-	    [(,LIGHTBIT AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS TAKE)
-					     ["BURN" BURNER]]>
+            "Light"
+            [(,LIGHTBIT AOBJS ROBJS TAKE) ["LIGHT" LAMP-ON] DRIVER]
+            [(,LIGHTBIT AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS TAKE)
+                                             ["BURN" BURNER]]>
 
 <ADD-ACTION "LOCK"
-	    "Lock"
-	    [(-1 ROBJS) ["LOCK" LOCKER]]>
+            "Lock"
+            [(-1 ROBJS) ["LOCK" LOCKER]]>
 
 <ADD-ACTION "LOOK"
-	    "Look"
-	    [["LOOK" ROOM-DESC]]
-	    ["AT" OBJ ["LOOK-AT" ROOM-DESC]]
-	    ["UNDER" OBJ ["LOOK-UNDER" LOOK-UNDER]]>
+            "Look"
+            [["LOOK" ROOM-DESC]]
+            ["AT" OBJ ["LOOK-AT" ROOM-DESC]]
+            ["UNDER" OBJ ["LOOK-UNDER" LOOK-UNDER]]>
 <VSYNONYM "LOOK" "L" "STARE" "GAZE">
 
 <1ADD-ACTION "LOWER" "Lower" R/L>
 
 <ADD-ACTION "MELT"
-	    "Melt"
-	    [OBJ "WITH" (,FLAMEBIT AOBJS ROBJS) ["MELT" MELTER]]>
+            "Melt"
+            [OBJ "WITH" (,FLAMEBIT AOBJS ROBJS) ["MELT" MELTER]]>
 <VSYNONYM "MELT" "LIQUI">
 
 <ADD-ACTION "MOVE" "Move" [(-1 ROBJS) ["MOVE" MOVE]]>
 <VSYNONYM "MOVE">
 
 <ADD-ACTION "PULL"
-	    "Pull"
-	    [(-1 ROBJS) ["MOVE" MOVE] DRIVER]
-	    ["ON" (-1 ROBJS) ["MOVE" MOVE]]>
+            "Pull"
+            [(-1 ROBJS) ["MOVE" MOVE] DRIVER]
+            ["ON" (-1 ROBJS) ["MOVE" MOVE]]>
 <SYNONYM "PULL" "TUG">
 
 <SADD-ACTION "MUMBL" MUMBLER>
 <VSYNONYM "MUMBL" "SIGH">
 
 <ADD-ACTION "MUNG"
-	    "Mung"
-	    [(-1 ROBJS AOBJS) ["MUNG" MUNGER] DRIVER]
-	    [(-1 ROBJS AOBJS) "WITH" (-1 AOBJS TAKE) ["MUNG" MUNGER]]>
+            "Mung"
+            [(-1 ROBJS AOBJS) ["MUNG" MUNGER] DRIVER]
+            [(-1 ROBJS AOBJS) "WITH" (-1 AOBJS TAKE) ["MUNG" MUNGER]]>
 <VSYNONYM "MUNG" "HACK" "FROB" "DAMAG">
 
 <SADD-ACTION "ODYSS" SINBAD>
 <VSYNONYM "ODYSS" "ULYSS">
 
 <ADD-ACTION "OPEN"
-	    "Open"
-	    [(<+ ,DOORBIT ,CONTBIT> AOBJS ROBJS) ["OPEN" OPENER]]>
+            "Open"
+            [(<+ ,DOORBIT ,CONTBIT> AOBJS ROBJS) ["OPEN" OPENER]]>
 <VSYNONYM "OPEN">
 
 <ADD-ACTION "PICK"
-	    "Pick"
-	    ["UP" OBJ ["TAKE" TAKE]]>
+            "Pick"
+            ["UP" OBJ ["TAKE" TAKE]]>
 
 <ADD-ACTION "PLUG"
-	    "Plug"
-	    [OBJ "WITH" OBJ ["PLUG" PLUGGER]]>
+            "Plug"
+            [OBJ "WITH" OBJ ["PLUG" PLUGGER]]>
 <VSYNONYM "PLUG" "GLUE" "PATCH">
 
 <ADD-ACTION "POKE"
-	    "Poke"
-	    [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["POKE" MUNGER]]>
+            "Poke"
+            [(,VILLAIN ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["POKE" MUNGER]]>
 <VSYNONYM "POKE" "JAB" "BREAK">
 
 <ADD-ACTION "POUR"
-	    "Pour"
-	    [(-1 AOBJS) ["POUR" DROPPER] DRIVER]
-	    [(-1 AOBJS) "IN" OBJ ["POUR" DROPPER]]>
+            "Pour"
+            [(-1 AOBJS) ["POUR" DROPPER] DRIVER]
+            [(-1 AOBJS) "IN" OBJ ["POUR" DROPPER]]>
 <VSYNONYM "POUR" "SPILL">
 
 <SADD-ACTION "PRAY" PRAYER>
@@ -3010,21 +3010,21 @@ Warranty:
 <VSYNONYM "PUSH" "PRESS">
 
 <ADD-ACTION "PUT"
-	    "Put"
-	    [OBJ "IN" OBJ ["PUT" PUTTER] DRIVER]
-	    ["DOWN" OBJ ["DROP" DROPPER]]> 
+            "Put"
+            [OBJ "IN" OBJ ["PUT" PUTTER] DRIVER]
+            ["DOWN" OBJ ["DROP" DROPPER]]> 
 <VSYNONYM "PUT" "STUFF" "PLACE" "INSER">
 
 <ADD-ACTION "RAISE"
-	    "Raise"
-	    [OBJ ["RAISE" R/L] DRIVER]
-	    ["UP" OBJ ["RAISE" R/L]]>
+            "Raise"
+            [OBJ ["RAISE" R/L] DRIVER]
+            ["UP" OBJ ["RAISE" R/L]]>
 <VSYNONYM "RAISE" "LIFT">
 
 <ADD-ACTION "READ"
-	    "Read"
-	    [(,READBIT AOBJS ROBJS TRY) ["READ" READER] DRIVER]
-	    [(,READBIT AOBJS ROBJS TRY) "WITH" OBJ ["READ" READER]]>
+            "Read"
+            [(,READBIT AOBJS ROBJS TRY) ["READ" READER] DRIVER]
+            [(,READBIT AOBJS ROBJS TRY) "WITH" OBJ ["READ" READER]]>
 <VSYNONYM "READ" "SKIM" "SCAN">
 
 <SADD-ACTION "REPEN" REPENT>
@@ -3039,58 +3039,58 @@ Warranty:
 <VSYNONYM "SKIP" "HOP">
 
 <ADD-ACTION "STRIK"
-	    "Strike"
-	    [(,VICBIT = ROBJS)
-	     "WITH"
-	     (,WEAPONBIT AOBJS ROBJS HAVE)
-	     ["ATTAC" ATTACKER]]
-	    [(,VICBIT = ROBJS) ["ATTAC" ATTACKER] DRIVER]
-	    [(-1 ROBJS AOBJS) ["LIGHT" LAMP-ON]]>
+            "Strike"
+            [(,VICBIT = ROBJS)
+             "WITH"
+             (,WEAPONBIT AOBJS ROBJS HAVE)
+             ["ATTAC" ATTACKER]]
+            [(,VICBIT = ROBJS) ["ATTAC" ATTACKER] DRIVER]
+            [(-1 ROBJS AOBJS) ["LIGHT" LAMP-ON]]>
 
 <SADD-ACTION "SWIM" SWIMMER>
 <VSYNONYM "SWIM" "BATHE" "WADE">
 
 <ADD-ACTION "SWING"
-	    "Swing"
-	    [(,WEAPONBIT AOBJS HAVE) "AT" (,VILLAIN ROBJS) ["SWING" SWINGER]]>
+            "Swing"
+            [(,WEAPONBIT AOBJS HAVE) "AT" (,VILLAIN ROBJS) ["SWING" SWINGER]]>
 <VSYNONYM "SWING" "THRUS">
 
 <ADD-ACTION "TAKE" "Take" [(-1 ROBJS AOBJS) ["TAKE" TAKE]]>
 <VSYNONYM "TAKE" "GET" "HOLD" "CARRY">
 
 <ADD-ACTION "TELL"
-	    "Tell"
-	    [(,ACTORBIT ROBJS) ["TELL" COMMAND]]>
+            "Tell"
+            [(,ACTORBIT ROBJS) ["TELL" COMMAND]]>
 <VSYNONYM "TELL" "COMMA" "REQUE">
 
 <SADD-ACTION "TEMPL" TREAS>
 
 <ADD-ACTION "THROW"
-	    "Throw"
-	    [(-1 AOBJS HAVE) "AT" (,VICBIT ROBJS) ["THROW" DROPPER]]>
+            "Throw"
+            [(-1 AOBJS HAVE) "AT" (,VICBIT ROBJS) ["THROW" DROPPER]]>
 <VSYNONYM "THROW" "HURL" "CHUCK">
 
 <ADD-ACTION "TIE"
-	    "Tie"
-	    [OBJ "TO" OBJ ["TIE" TIE]]
-	    ["UP" (,VICBIT ROBJS) "WITH" (,TOOLBIT ROBJS AOBJS HAVE) ["TIE-UP" TIE-UP]]>
+            "Tie"
+            [OBJ "TO" OBJ ["TIE" TIE]]
+            ["UP" (,VICBIT ROBJS) "WITH" (,TOOLBIT ROBJS AOBJS HAVE) ["TIE-UP" TIE-UP]]>
 <VSYNONYM "TIE" "KNOT" "FASTE">
 
 <SADD-ACTION "TREAS" TREAS>
 
 <ADD-ACTION "TURN"
-	    "Turn"
-	    [(,TURNBIT AOBJS ROBJS)
-	     "WITH"
-	     (,TOOLBIT ROBJS AOBJS HAVE)
-	     ["TURN" TURNER]
-	     DRIVER]
-	    ["ON" (,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-ON" LAMP-ON]]
-	    ["OFF" (,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-OFF" LAMP-OFF]]
-	    [(,TURNBIT AOBJS ROBJS)
-	     "TO"
-	     (-1 ROBJS)
-	     ["TURN-TO" TURNTO]]>
+            "Turn"
+            [(,TURNBIT AOBJS ROBJS)
+             "WITH"
+             (,TOOLBIT ROBJS AOBJS HAVE)
+             ["TURN" TURNER]
+             DRIVER]
+            ["ON" (,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-ON" LAMP-ON]]
+            ["OFF" (,LIGHTBIT AOBJS ROBJS TAKE) ["TURN-OFF" LAMP-OFF]]
+            [(,TURNBIT AOBJS ROBJS)
+             "TO"
+             (-1 ROBJS)
+             ["TURN-TO" TURNTO]]>
 
 <VSYNONYM "TURN" "SET">
 
@@ -3099,8 +3099,8 @@ Warranty:
 <OR <GASSIGNED? TURNTO> <SETG TURNTO ,TIME>>
 
 <ADD-ACTION "UNLOC"
-	    "Unlock"
-	    [(-1 ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["UNLOC" UNLOCKER]]>
+            "Unlock"
+            [(-1 ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["UNLOC" UNLOCKER]]>
 
 <1ADD-ACTION "UNTIE" "Untie" UNTIE>
 <VSYNONYM "UNTIE" "RELEA" "FREE">
@@ -3108,9 +3108,9 @@ Warranty:
 <SADD-ACTION "WAIT" WAIT>
 
 <ADD-ACTION "WAKE"
-	    "Wake"
-	    [(,VICBIT ROBJS) ["WAKE" ALARM] DRIVER]
-	    ["UP" (,VICBIT ROBJS) ["WAKE" ALARM]]>
+            "Wake"
+            [(,VICBIT ROBJS) ["WAKE" ALARM] DRIVER]
+            ["UP" (,VICBIT ROBJS) ["WAKE" ALARM]]>
 <VSYNONYM "WAKE" "AWAKE" "SURPR" "START">
 
 <1ADD-ACTION "WALK" "Walk" WALK>
@@ -3137,8 +3137,8 @@ Warranty:
 
 <SETG PLAYER 
       <ADD-ACTOR <CHTYPE [,WHOUS!-ROOMS
-			  () 0 <> <FIND-OBJ "#####"> <> 0 T 0]
-			 ADV>>>
+                          () 0 <> <FIND-OBJ "#####"> <> 0 T 0]
+                         ADV>>>
 
 
 ; "BUNCH VERBS"
@@ -3148,3 +3148,4 @@ Warranty:
 ; "CRETIN"
 
 <SETG VILLAINBIT ,VILLAIN>
+

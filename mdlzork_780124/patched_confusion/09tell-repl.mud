@@ -3,7 +3,7 @@
 <DEFINE PSTRING (INSTR "AUX" (BP 36) (OBJ #PSTRING 0))
    <MAPF <> 
       <FUNCTION (CH) 
-	     <COND (<G? <SET BP <- .BP 7>> 0>
+             <COND (<G? <SET BP <- .BP 7>> 0>
             <SET OBJ <CHTYPE <PUTBITS .OBJ <BITS 7 .BP> <ASCII .CH>> PSTRING>>)
             (T <MAPLEAVE .OBJ>)
          >
@@ -15,18 +15,18 @@
 <DEFINE STRINGP (OBJ "AUX" (BP 36) C) 
    <MAPF ,STRING
     <FUNCTION () 
-	    <COND (<G? <SET BP <- .BP 7>> 0>
-		   <COND (<N==? <SET C <CHTYPE <GETBITS .OBJ <BITS 7 .BP>> FIX>>
-				0>
-			  <MAPRET <ASCII .C>>) 
+            <COND (<G? <SET BP <- .BP 7>> 0>
+                   <COND (<N==? <SET C <CHTYPE <GETBITS .OBJ <BITS 7 .BP>> FIX>>
+                                0>
+                          <MAPRET <ASCII .C>>) 
                  (T <MAPRET>)>)
-		  (T <MAPSTOP>)>>>>
+                  (T <MAPSTOP>)>>>>
 
 
 ;"F1 upper 18 bits are length to print (from S1?), if not zero"
-<DEFINE	TELL(S1 "OPTIONAL" (F1 ,POST-CRLF) S2 S3 "AUX" L)
+<DEFINE TELL(S1 "OPTIONAL" (F1 ,POST-CRLF) S2 S3 "AUX" L)
    #DECL ("VALUE" ATOM <PRIMTYPE STRING> "OPTIONAL" FIX
-		  <OR STRING FALSE> <OR STRING FALSE>)
+                  <OR STRING FALSE> <OR STRING FALSE>)
    <AND <NOT <0? <CHTYPE <ANDB .F1 ,PRE-CRLF> FIX>>> <CRLF>>
    <SET L <CHTYPE <GETBITS .F1 <BITS 18 18>> FIX>>
    <AND <0? .L> <SET L <LENGTH .S1>>>
@@ -126,7 +126,7 @@ are never both set (no lowercase or a few other symbols)"
 
 ;" Dispatch -- runs a thing, possibly with an argument"
 <DEFINE DISPATCH (NO "OPT" OV) 
-	<COND (<TYPE? .NO FUNCTION SUBR>
+        <COND (<TYPE? .NO FUNCTION SUBR>
                <COND (<AND <ASSIGNED? OV> .OV> <APPLY .NO .OV>)
                      (ELSE <APPLY .NO >)
                >)
@@ -136,3 +136,4 @@ are never both set (no lowercase or a few other symbols)"
 
 <AND <NOT <GASSIGNED? NULL>> <SETG NULL <INSERT <ATOM ""> <ROOT>>>> ;",NULL is an atom with a name containing a single rubout in real MDL.  Here it's a totally empty atom (which probably isn't legal in real mdl) "
 ""
+

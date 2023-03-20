@@ -2,11 +2,11 @@
 
 <ADD-QUESTION 
 "Beside the Temple, to which room is it possible to go from the Altar?"
-	["FORES"]>
+        ["FORES"]>
 
 <ADD-QUESTION
 "What object is of use in determining the function of the iced cakes?"
-	[<FIND-OBJ "FLASK">]>
+        [<FIND-OBJ "FLASK">]>
 
 <ADD-QUESTION
 "What can be done to the Mirror that is useful?" ["RUB" "CARES" "TOUCH" "FONDL"]>

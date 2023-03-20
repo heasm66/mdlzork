@@ -7,8 +7,8 @@
 <SET REDEFINE T>
 
 <DEFINE DO-SAVE ("AUX" MSG)
-	<SET MSG <SAVE "<SAVEFILE>ZORK.SAVE">>
-	<TELL "Saving.">>
+        <SET MSG <SAVE "<SAVEFILE>ZORK.SAVE">>
+        <TELL "Saving.">>
 
 <DEFINE DO-RESTORE () <TELL "Restored."> <RESTORE "<SAVEFILE>ZORK.SAVE">>
 
@@ -33,8 +33,8 @@
 <PSETG NULL-SYN ![!]>
 
 <DEFINE START-ZORK ()
-	<COND (<G? ,MUDDLE 100> <SETG TENEX? <GETSYS>>)
-		(<APPLY ,IPC-OFF>
-		 <APPLY ,IPC-ON <UNAME> "ZORK">)>
-	<SET BH <ON "BLOCKED" ,BLO 100>>
-	<START "WHOUS" ,VERS>>
+        <COND (<G? ,MUDDLE 100> <SETG TENEX? <GETSYS>>)
+              (<APPLY ,IPC-OFF>
+               <APPLY ,IPC-ON <UNAME> "ZORK">)>
+        <SET BH <ON "BLOCKED" ,BLO 100>>
+        <START "WHOUS" ,VERS>>

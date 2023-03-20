@@ -695,7 +695,7 @@ void mdl_print_nonstructured_to_chan(mdl_value_t *chan, const mdl_value_t *a, in
 #ifdef MDL32
                 sprintf(buf, "*%011o*", a->v.w);
 #else
-                sprintf(buf, "*%022llo*", a->v.w);
+                sprintf(buf, "*%022llo*", (long long unsigned) a->v.w);
 #endif
                 mdl_print_string_to_chan(chan,buf, strlen(buf), 0, true, true);
                 break;

@@ -716,7 +716,7 @@ on the state of briefness."
 			<FUNCTION (Y) 
 				  #DECL ((Y) OBJECT)
 				  <COND (<AND .AV <==? .Y .WINOBJ>>)
-					(<AND <TRNN .Y ,OVISON>
+					(<AND <TRNN .Y ,OVISON> <OR <TRNN .Y ,TOUCHBIT> <EMPTY? <ODESCO .Y>>>
 					      <DESCRIBABLE? .Y>
 					      <NOT <EMPTY? <ODESC2 .Y>>>>
 					 <TELL .INDENT ,POST-CRLF " A " <ODESC2 .Y>>)>

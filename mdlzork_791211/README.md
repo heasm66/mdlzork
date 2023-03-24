@@ -42,7 +42,12 @@ Changed line 1177 in act3.mud to (issue #37):
 	
 Changed typo in dung.mud:
 	Line 503: of  unfriendly rocks --> of unfriendly rocks
-	
+
+Change line 705 in rooms.mud from (issue #40):
+	(<AND <TRNN .Y ,OVISON> 
+to:
+	(<AND <TRNN .Y ,OVISON> <OR <TRNN .Y ,TOUCHBIT> <EMPTY? <ODESCO .Y>>>
+
 Differences between the 1979 and 1981 version
 =============================================
 

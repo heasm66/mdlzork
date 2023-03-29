@@ -4,7 +4,7 @@
 "Device definitions for save and restore"
 <COND (<L? ,MUDDLE 100>
        <PSETG DEVICE-TABLE '["A" "AI" "D" "DM" "C" "ML" "H" "AI" "L" "AI"
-			    "M" "ML" "N" "MC" "P" "ML" "U" "MC" "Z" "ML"]>)>
+                            "M" "ML" "N" "MC" "P" "ML" "U" "MC" "Z" "ML"]>)>
 
 ; "SUBTITLE POBLIST DEFINITIONS AND PARSER STRUCTURES"
 
@@ -44,18 +44,18 @@
 
 <SETG LEXV 
       <PROG ((FOO ,LEXSIZE))
-	    <MAPF ,VECTOR
-		  <FUNCTION ()
-			    <AND <0? <SET FOO <- .FOO 1>>> <MAPSTOP>>
-			    <MAPRET <REST <ISTRING 5> 5> ,1STR 0>>>>>
+            <MAPF ,VECTOR
+                  <FUNCTION ()
+                            <AND <0? <SET FOO <- .FOO 1>>> <MAPSTOP>>
+                            <MAPRET <REST <ISTRING 5> 5> ,1STR 0>>>>>
 
 <SETG LEXV1
       <PROG ((FOO ,LEXSIZE))
-	    <MAPF ,VECTOR
-		  <FUNCTION ()
-			    <AND <0? <SET FOO <- .FOO 1>>> <MAPSTOP>>
-			    <MAPRET <REST <ISTRING 5> 5> ,1STR 0>>>>>
-			    
+            <MAPF ,VECTOR
+                  <FUNCTION ()
+                            <AND <0? <SET FOO <- .FOO 1>>> <MAPSTOP>>
+                            <MAPRET <REST <ISTRING 5> 5> ,1STR 0>>>>>
+                            
 
 <SETG UNKNOWN-LEXV ,LEXV>
 
@@ -74,7 +74,7 @@ very life from your body.  There hangs from his belt a veritable
 arsenal of deadly weapons: sword, mace, ball and chain, dagger,
 lance, and trident. He speaks with a commanding voice:
 
-		     \"YOU SHALL NOT PASS \"
+                     \"YOU SHALL NOT PASS \"
 
 As he grabs you by the neck all grows dim about you.">
 
@@ -86,7 +86,7 @@ very balance of the System itself!\"  With a sinister chuckle, he
 raises his oaken staff, taps you on the head, and fades into the
 gloom.  In his place appears a tastefully lettered sign reading:
 
-			DUNGEON CLOSED
+                        DUNGEON CLOSED
 
 At that instant, you disappear, and all your belongings clatter to
 the ground.
@@ -106,10 +106,10 @@ laughter fading in the distance.">
 Unfortunately, as the wraith fades, in his place appears a tastefully
 lettered sign reading:
 
-	      \"Soon to be Constructed on this Site
-		  A Complete Modern Zork Endgame
-		    Designed and Built by the
-		  Frobozz Magic Dungeon Company\"
+              \"Soon to be Constructed on this Site
+                  A Complete Modern Zork Endgame
+                    Designed and Built by the
+                  Frobozz Magic Dungeon Company\"
 
 ">
 
@@ -119,24 +119,24 @@ FLAG-NAMES
 
 <PSETG FLAG-NAMES
       <UVECTOR TROLL-FLAG
-	       LOW-TIDE
-	       DOME-FLAG
-	       GLACIER-FLAG
-	       ECHO-FLAG
-	       RIDDLE-FLAG
-	       LLD-FLAG
-	       CYCLOPS-FLAG
-	       MAGIC-FLAG
-	       RAINBOW
-	       GNOME-DOOR
-	       CAROUSEL-FLIP
-	       CAGE-SOLVE
-	       BANK-SOLVE
-	       EGG-SOLVE
-	       SING-SONG
-	       CPSOLVE
-	       PALAN-SOLVE
-	       SLIDE-SOLVE>>
+               LOW-TIDE
+               DOME-FLAG
+               GLACIER-FLAG
+               ECHO-FLAG
+               RIDDLE-FLAG
+               LLD-FLAG
+               CYCLOPS-FLAG
+               MAGIC-FLAG
+               RAINBOW
+               GNOME-DOOR
+               CAROUSEL-FLIP
+               CAGE-SOLVE
+               BANK-SOLVE
+               EGG-SOLVE
+               SING-SONG
+               CPSOLVE
+               PALAN-SOLVE
+               SLIDE-SOLVE>>
 
 <ENDBLOCK>
 
@@ -295,11 +295,11 @@ there is a passageway leading west.">
 
 <PSETG YUKS
       '["A valiant attempt."
-	"You can't be serious."
-	"Not a prayer."
-	"Not likely."
-	"An interesting idea..."
-	"What a concept!"]>
+        "You can't be serious."
+        "Not a prayer."
+        "Not likely."
+        "An interesting idea..."
+        "What a concept!"]>
 
 <PSETG RUSTY-KNIFE-STR
 "As the knife approaches its victim, your mind is submerged by an
@@ -328,7 +328,7 @@ wooden railing which circles the dome.">
 
 <PSETG HELLGATE
 "You are outside a large gateway, on which is inscribed 
-	\"Abandon every hope, all ye who enter here.\"  
+        \"Abandon every hope, all ye who enter here.\"  
 The gate is open; through it you can see a desolation, with a pile of
 mangled corpses in one corner.  Thousands of voices, lamenting some
 hideous fate, can be heard.">
@@ -374,13 +374,13 @@ at the end of a long pole.">
 <PSETG BRO1
        "The mailing label on this glossy brochure from MIT Tech reads:
 
-		">
+                ">
 
 <PSETG BRO2
        
 "
-		c/o Local Dungeon Master
-		White House, GUE
+                c/o Local Dungeon Master
+                White House, GUE
 
 From the Introduction:
 
@@ -393,54 +393,54 @@ as the student may register for Reeling and Writhing, Mystery
 Stretching and Fainting in Coils).  Advanced students are expected to
 learn Laughing and Grief.
 
-				William Barton Flathead, Founder
+                                William Barton Flathead, Founder
 
 (The brochure continues in this vein for a few hundred more pages.)">
 
 <PSETG DROWNINGS
       '["up to your ankles."
-	"up to your shin."
-	"up to your knees."
-	"up to your hips."
-	"up to your waist."
-	"up to your chest."
-	"up to your neck."
-	"over your head."
-	"high in your lungs."]>
+        "up to your shin."
+        "up to your knees."
+        "up to your hips."
+        "up to your waist."
+        "up to your chest."
+        "up to your neck."
+        "over your head."
+        "high in your lungs."]>
 
 <PSETG CYCLOMAD
       '["The cyclops seems somewhat agitated."
-	"The cyclops appears to be getting more agitated."
-	"The cyclops is moving about the room, looking for something."
-	
+        "The cyclops appears to be getting more agitated."
+        "The cyclops is moving about the room, looking for something."
+        
 "The cyclops was looking for salt and pepper.  I think he is gathering
 condiments for his upcoming snack."
-	"The cyclops is moving toward you in an unfriendly manner."
-	"You have two choices: 1. Leave  2. Become dinner."]>
+        "The cyclops is moving toward you in an unfriendly manner."
+        "You have two choices: 1. Leave  2. Become dinner."]>
 
 <PSETG HELLOS
       '["Hello."
-	"Good day."
-	"Nice weather we've been having lately."
-	"Goodbye."]>
+        "Good day."
+        "Nice weather we've been having lately."
+        "Goodbye."]>
 
 <PSETG WHEEEEE
       '["Very good.  Now you can go to the second grade."
-	"Have you tried hopping around the dungeon, too?"
-	"Are you enjoying yourself?"
-	"Wheeeeeeeeee!!!!!"
-	"Do you expect me to applaud?"]>
+        "Have you tried hopping around the dungeon, too?"
+        "Are you enjoying yourself?"
+        "Wheeeeeeeeee!!!!!"
+        "Do you expect me to applaud?"]>
 
 <PSETG JUMPLOSS
       '["You should have looked before you leaped."
-	"I'm afraid that leap was a bit much for your weak frame."
-	"In the movies, your life would be passing in front of your eyes."
-	"Geronimo....."]>
+        "I'm afraid that leap was a bit much for your weak frame."
+        "In the movies, your life would be passing in front of your eyes."
+        "Geronimo....."]>
 
 <PSETG DUMMY
       '["Look around."
-	"You think it isn't?"
-	"I think you've already done that."]>
+        "You think it isn't?"
+        "I think you've already done that."]>
 
 <PSETG OFFENDED 
   '["Such language in a high-class establishment like this!"
@@ -469,14 +469,14 @@ condiments for his upcoming snack."
 
 <PSETG BAT-DROPS
       '["MINE1"
-	"MINE2"
-	"MINE3"
-	"MINE4"
-	"MINE5"
-	"MINE6"
-	"MINE7"
-	"TLADD"
-	"BLADD"]>
+        "MINE2"
+        "MINE3"
+        "MINE4"
+        "MINE5"
+        "MINE6"
+        "MINE7"
+        "TLADD"
+        "BLADD"]>
 
 <PSETG MACHINE-DESC
 "This is a large room which seems to be air-conditioned.  In one
@@ -586,7 +586,7 @@ sounds of the machines. Along one wall of the room are three buttons
 which are, respectively, round, triangular, and square.  Naturally,
 above these buttons are instructions written in EBCDIC.  A large sign
 in English above all the buttons says
-		'DANGER -- HIGH VOLTAGE '.
+                'DANGER -- HIGH VOLTAGE '.
 There are exits to the west and the south.">
 
 <PSETG SPINDIZZY
@@ -660,10 +660,10 @@ The architecture of this region is getting complex, so that further
 descriptions will be diagrams of the immediate vicinity in a 3x3
 grid. The walls here are rock, but of two different types - sandstone
 and marble. The following notations will be used:
-			..  = current position (middle of grid)
-		        MM  = marble wall
-		        SS  = sandstone wall
-		        ??  = unknown (blocked by walls)">
+                        ..  = current position (middle of grid)
+                        MM  = marble wall
+                        SS  = sandstone wall
+                        ??  = unknown (blocked by walls)">
 
 <PSETG GIGO
 "The item vanishes into the slot.  A moment later, a previously 
@@ -709,10 +709,10 @@ is made of the finest marble, and apparently large enough for four
 headless corpses.  The crypt is ">
 
 <PSETG TOMB-DESC2
-					 " Above the entrance is the
+                                         " Above the entrance is the
 cryptic inscription:
 
-		     \"Feel Free.\"
+                     \"Feel Free.\"
 ">
 
 <PSETG CRYPT-DESC
@@ -730,9 +730,9 @@ and says, \"You are now ready to face the ultimate challenge of
 Zork.  Should you wish to do this somewhat more quickly in the
 future, you will be given a magic phrase which will at any time
 transport you by magic to this point.  To select the phrase, say
-	INCANT \"<word>\"
+        INCANT \"<word>\"
 and you will be told your own magic phrase to use by saying
-	INCANT \"... <phrase> ...\"
+        INCANT \"... <phrase> ...\"
 Good luck, and choose wisely!\"
 ">
 
@@ -773,8 +773,8 @@ they manage to dispatch you effortlessly.">
 
 <PSETG DIRVEC
       <MAPF ,VECTOR
-	    <FUNCTION (X Y)
-		      <MAPRET <CHTYPE <PSTRING .X> DIRECTION> .Y>>
+            <FUNCTION (X Y)
+                      <MAPRET <CHTYPE <PSTRING .X> DIRECTION> .Y>>
             ["NORTH" "NE" "EAST" "SE" "SOUTH" "SW" "WEST" "NW"]
             [0 45 90 135 180 225 270 315]>>
 
@@ -820,13 +820,13 @@ T-bar are pointing ">
 
 <PSETG LONGDIRS
       '["north"
-	"northeast"
-	"east"
-	"southeast"
-	"south"
-	"southwest"
-	"west"
-	"northwest"]>
+        "northeast"
+        "east"
+        "southeast"
+        "south"
+        "southwest"
+        "west"
+        "northwest"]>
 
 <PSETG NUMS '["one" "two" "three" "four" "five" "six" "seven" "eight"]>
 
@@ -903,225 +903,225 @@ mist and disappears, a sardonic grin on his face.
 
 <PSETG SWORD-MELEE
       '![![["Your swing misses the " D " by an inch."]
-	   ["A mighty blow, but it misses the " D " by a mile."]
-	   ["You charge, but the " D " jumps nimbly aside."]
-	   ["Clang! Crash! The " D " parries."]
-	   ["A good stroke, but it's too slow, the " D " dodges."]!]
-	 ![["Your sword crashes down, knocking the " D " into dreamland."]
-	   ["The " D " is battered into unconsciousness."]
-	   ["A furious exchange, and the " D " is knocked out!"]!]
-	 ![["It's curtains for the " D " as your sword removes his head."]
-	   ["The fatal blow strikes the " D " square in the heart:  He dies."]
-	   ["The " D " takes a final blow and slumps to the floor dead."]!]
-	 ![["The " D " is struck on the arm, blood begins to trickle down."]
-	   ["Your sword pinks the " D " on the wrist, but it's not serious."]
-	   ["Your stroke lands, but it was only the flat of the blade."]
-	   ["The blow lands, making a shallow gash in the " D "'s arm!"]!]
-	 ![["The " D " receives a deep gash in his side."]
-	   ["A savage blow on the thigh!  The " D " is stunned but can still fight!"]
-	   ["Slash!  Your blow lands!  That one hit an artery, it could be serious!"]!]
-	 ![["The " D " is staggered, and drops to his knees."]
-	   ["The " D " is momentarily disoriented and can't fight back."]
-	   ["The force of your blow knocks the " D " back, stunned."]!]
-	 ![["The " D "'s weapon is knocked to the floor, leaving him unarmed."]!]!]>
+           ["A mighty blow, but it misses the " D " by a mile."]
+           ["You charge, but the " D " jumps nimbly aside."]
+           ["Clang! Crash! The " D " parries."]
+           ["A good stroke, but it's too slow, the " D " dodges."]!]
+         ![["Your sword crashes down, knocking the " D " into dreamland."]
+           ["The " D " is battered into unconsciousness."]
+           ["A furious exchange, and the " D " is knocked out!"]!]
+         ![["It's curtains for the " D " as your sword removes his head."]
+           ["The fatal blow strikes the " D " square in the heart:  He dies."]
+           ["The " D " takes a final blow and slumps to the floor dead."]!]
+         ![["The " D " is struck on the arm, blood begins to trickle down."]
+           ["Your sword pinks the " D " on the wrist, but it's not serious."]
+           ["Your stroke lands, but it was only the flat of the blade."]
+           ["The blow lands, making a shallow gash in the " D "'s arm!"]!]
+         ![["The " D " receives a deep gash in his side."]
+           ["A savage blow on the thigh!  The " D " is stunned but can still fight!"]
+           ["Slash!  Your blow lands!  That one hit an artery, it could be serious!"]!]
+         ![["The " D " is staggered, and drops to his knees."]
+           ["The " D " is momentarily disoriented and can't fight back."]
+           ["The force of your blow knocks the " D " back, stunned."]!]
+         ![["The " D "'s weapon is knocked to the floor, leaving him unarmed."]!]!]>
 
 <PSETG KNIFE-MELEE
       '![![["Your stab misses the " D " by an inch."]
-	   ["A good slash, but it misses the " D " by a mile."]
-	   ["You charge, but the " D " jumps nimbly aside."]
-	   ["A quick stroke, but the " D " is on guard."]
-	   ["A good stroke, but it's too slow, the " D " dodges."]!]
-	 ![["The haft of your knife knocks out the " D "."]
-	   ["The " D " drops to the floor, unconscious."]
-	   ["The " D " is knocked out!"]!]
-	 ![["The end for the " D " as your knife severs his jugular."]
-	   ["The fatal thrust strikes the " D " square in the heart:  He dies."]
-	   ["The " D " takes a final blow and slumps to the floor dead."]!]
-	 ![["The " D " is slashed on the arm, blood begins to trickle down."]
-	   ["Your knife point pinks the " D " on the wrist, but it's not serious."]
-	   ["Your stroke lands, but it was only the flat of the blade."]
-	   ["The blow lands, making a shallow gash in the " D "'s arm!"]!]
-	 ![["The " D " receives a deep gash in his side."]
-	   ["A savage cut on the leg stuns the " D ", but he can still fight!"]
-	   ["Slash!  Your stroke connects!  The " D " could be in serious trouble!"]!]
-	 ![["The " D " drops to his knees, staggered."]
-	   ["The " D " is confused and can't fight back."]
-	   ["The quickness of your thrust knocks the " D " back, stunned."]!]
-	 ![["The " D " is disarmed by a subtle feint past his guard."]!]!]>
+           ["A good slash, but it misses the " D " by a mile."]
+           ["You charge, but the " D " jumps nimbly aside."]
+           ["A quick stroke, but the " D " is on guard."]
+           ["A good stroke, but it's too slow, the " D " dodges."]!]
+         ![["The haft of your knife knocks out the " D "."]
+           ["The " D " drops to the floor, unconscious."]
+           ["The " D " is knocked out!"]!]
+         ![["The end for the " D " as your knife severs his jugular."]
+           ["The fatal thrust strikes the " D " square in the heart:  He dies."]
+           ["The " D " takes a final blow and slumps to the floor dead."]!]
+         ![["The " D " is slashed on the arm, blood begins to trickle down."]
+           ["Your knife point pinks the " D " on the wrist, but it's not serious."]
+           ["Your stroke lands, but it was only the flat of the blade."]
+           ["The blow lands, making a shallow gash in the " D "'s arm!"]!]
+         ![["The " D " receives a deep gash in his side."]
+           ["A savage cut on the leg stuns the " D ", but he can still fight!"]
+           ["Slash!  Your stroke connects!  The " D " could be in serious trouble!"]!]
+         ![["The " D " drops to his knees, staggered."]
+           ["The " D " is confused and can't fight back."]
+           ["The quickness of your thrust knocks the " D " back, stunned."]!]
+         ![["The " D " is disarmed by a subtle feint past his guard."]!]!]>
 
 <PSETG CYCLOPS-MELEE
       '![![["The Cyclops misses, but the backwash almost knocks you over."]
-	   ["The Cyclops rushes you, but runs into the wall."]
-	   ["The Cyclops trips over his feet trying to get at you."]
-	   ["The Cyclops unleashes a roundhouse punch, but you have time to dodge."]!]
-	 ![["The Cyclops knocks you unconscious."]
-	   ["The Cyclops sends you crashing to the floor, unconscious."]!]
-	 ![["The Cyclops raises his arms and crushes your skull."]
-	   ["The Cyclops has just essentially ripped you to shreds."]
-	   ["The Cyclops decks you.  In fact, you are dead."]
-	   ["The Cyclops breaks your neck with a massive smash."]!]
-	 ![["A quick punch, but it was only a glancing blow."]
-	   ["The Cyclops grabs but you twist free, leaving part of your cloak."]
-	   ["A glancing blow from the Cyclops' fist."]
-	   ["The Cyclops chops at you with the side of his hand, and it connects,
+           ["The Cyclops rushes you, but runs into the wall."]
+           ["The Cyclops trips over his feet trying to get at you."]
+           ["The Cyclops unleashes a roundhouse punch, but you have time to dodge."]!]
+         ![["The Cyclops knocks you unconscious."]
+           ["The Cyclops sends you crashing to the floor, unconscious."]!]
+         ![["The Cyclops raises his arms and crushes your skull."]
+           ["The Cyclops has just essentially ripped you to shreds."]
+           ["The Cyclops decks you.  In fact, you are dead."]
+           ["The Cyclops breaks your neck with a massive smash."]!]
+         ![["A quick punch, but it was only a glancing blow."]
+           ["The Cyclops grabs but you twist free, leaving part of your cloak."]
+           ["A glancing blow from the Cyclops' fist."]
+           ["The Cyclops chops at you with the side of his hand, and it connects,
 but not solidly."]!]
-	 ![["The Cyclops gets a good grip and breaks your arm."]
-	   ["The monster smashes his huge fist into your chest, breaking several
+         ![["The Cyclops gets a good grip and breaks your arm."]
+           ["The monster smashes his huge fist into your chest, breaking several
 ribs."]
-	   ["The Cyclops almost knocks the wind out of you with a quick punch."]
-	   ["A flying drop kick breaks your jaw."]
-	   ["The Cyclops breaks your leg with a staggering blow."]!]
-	 ![["The Cyclops knocks you silly, and you reel back."]
-	   ["The Cyclops lands a punch that knocks the wind out of you."]
-	   ["Heedless of your weapons, the Cyclops tosses you against the rock
+           ["The Cyclops almost knocks the wind out of you with a quick punch."]
+           ["A flying drop kick breaks your jaw."]
+           ["The Cyclops breaks your leg with a staggering blow."]!]
+         ![["The Cyclops knocks you silly, and you reel back."]
+           ["The Cyclops lands a punch that knocks the wind out of you."]
+           ["Heedless of your weapons, the Cyclops tosses you against the rock
 wall of the room."]
-	   ["The Cyclops grabs you, and almost strangles you before you wiggle
+           ["The Cyclops grabs you, and almost strangles you before you wiggle
 free, breathless."]!]
-	 ![["The Cyclops grabs you by the arm, and you drop your " W "."]
-	   ["The Cyclops kicks your " W " out of your hand."]
-	   ["The Cyclops grabs your " W ", tastes it, and throws it to the
+         ![["The Cyclops grabs you by the arm, and you drop your " W "."]
+           ["The Cyclops kicks your " W " out of your hand."]
+           ["The Cyclops grabs your " W ", tastes it, and throws it to the
 ground in disgust."]
-	   ["The monster grabs you on the wrist, squeezes, and you drop your
+           ["The monster grabs you on the wrist, squeezes, and you drop your
 " W " in pain."]!]
-	 ![["The Cyclops is so excited by his success that he neglects to kill
+         ![["The Cyclops is so excited by his success that he neglects to kill
 you."]
-	   ["The Cyclops, momentarily overcome by remorse, holds back."]
-	   ["The Cyclops seems unable to decide whether to broil or stew his
+           ["The Cyclops, momentarily overcome by remorse, holds back."]
+           ["The Cyclops seems unable to decide whether to broil or stew his
 dinner."]]
-	 ![["The Cyclops, no sportsman, dispatches his unconscious victim."]]!]>
+         ![["The Cyclops, no sportsman, dispatches his unconscious victim."]]!]>
 
 <PSETG TROLL-MELEE
       '![![["The troll swings his axe, but it misses."]
-	   ["The troll's axe barely misses your ear."]
-	   ["The axe sweeps past as you jump aside."]
-	   ["The axe crashes against the rock, throwing sparks!"]!]
-	 ![["The flat of the troll's axe hits you delicately on the head, knocking
+           ["The troll's axe barely misses your ear."]
+           ["The axe sweeps past as you jump aside."]
+           ["The axe crashes against the rock, throwing sparks!"]!]
+         ![["The flat of the troll's axe hits you delicately on the head, knocking
 you out."]!]
-	 ![["The troll lands a killing blow.  You are dead."]
-	   ["The troll neatly removes your head."]
-	   ["The troll's axe stroke cleaves you from the nave to the chops."]
-	   ["The troll's axe removes your head."]!]
-	 ![["The axe gets you right in the side.  Ouch!"]
-	   ["The flat of the troll's axe skins across your forearm."]
-	   ["The troll's swing almost knocks you over as you barely parry
+         ![["The troll lands a killing blow.  You are dead."]
+           ["The troll neatly removes your head."]
+           ["The troll's axe stroke cleaves you from the nave to the chops."]
+           ["The troll's axe removes your head."]!]
+         ![["The axe gets you right in the side.  Ouch!"]
+           ["The flat of the troll's axe skins across your forearm."]
+           ["The troll's swing almost knocks you over as you barely parry
 in time."]
-	   ["The troll swings his axe, and it nicks your arm as you dodge."]!]
-	 ![["The troll charges, and his axe slashes you on your " W " arm."]
-	   ["An axe stroke makes a deep wound in your leg."]
-	   ["The troll's axe swings down, gashing your shoulder."]
-	   ["The troll sees a hole in your defense, and a lightning stroke
+           ["The troll swings his axe, and it nicks your arm as you dodge."]!]
+         ![["The troll charges, and his axe slashes you on your " W " arm."]
+           ["An axe stroke makes a deep wound in your leg."]
+           ["The troll's axe swings down, gashing your shoulder."]
+           ["The troll sees a hole in your defense, and a lightning stroke
 opens a wound in your left side."]!]
-	 ![["The troll hits you with a glancing blow, and you are momentarily
+         ![["The troll hits you with a glancing blow, and you are momentarily
 stunned."]
-	   ["The troll swings; the blade turns on your armor but crashes
+           ["The troll swings; the blade turns on your armor but crashes
 broadside into your head."]
-	   ["You stagger back under a hail of axe strokes."]
-	   ["The troll's mighty blow drops you to your knees."]!]
-	 ![["The axe hits your " W " and knocks it spinning."]
-	   ["The troll swings, you parry, but the force of his blow disarms you."]
-	   ["The axe knocks your " W " out of your hand.  It falls to the floor."]
-	   ["Your " W " is knocked out of your hands, but you parried the blow."]!]
-	 ![["The troll strikes at your unconscious form, but misses in his rage."]
-	   ["The troll hesitates, fingering his axe."]
-	   ["The troll scratches his head ruminatively:  Might you be magically
+           ["You stagger back under a hail of axe strokes."]
+           ["The troll's mighty blow drops you to your knees."]!]
+         ![["The axe hits your " W " and knocks it spinning."]
+           ["The troll swings, you parry, but the force of his blow disarms you."]
+           ["The axe knocks your " W " out of your hand.  It falls to the floor."]
+           ["Your " W " is knocked out of your hands, but you parried the blow."]!]
+         ![["The troll strikes at your unconscious form, but misses in his rage."]
+           ["The troll hesitates, fingering his axe."]
+           ["The troll scratches his head ruminatively:  Might you be magically
 protected, he wonders?"]
-	   ["The troll seems afraid to approach your crumpled form."]]
-	 ![["Conquering his fears, the troll puts you to death."]]!]>
+           ["The troll seems afraid to approach your crumpled form."]]
+         ![["Conquering his fears, the troll puts you to death."]]!]>
 
 <PSETG THIEF-MELEE
       '![![["The thief stabs nonchalantly with his stiletto and misses."]
-	   ["You dodge as the thief comes in low."]
-	   ["You parry a lightning thrust, and the thief salutes you with
+           ["You dodge as the thief comes in low."]
+           ["You parry a lightning thrust, and the thief salutes you with
 a grim nod."]
-	   ["The thief tries to sneak past your guard, but you twist away."]!]
-	 ![["Shifting in the midst of a thrust, the thief knocks you unconscious
+           ["The thief tries to sneak past your guard, but you twist away."]!]
+         ![["Shifting in the midst of a thrust, the thief knocks you unconscious
 with the haft of his stiletto."]
-	   ["The thief knocks you out."]!]
-	 ![["Finishing you off, a lightning throw right to the heart."]
-	   ["The stiletto severs your jugular.  It looks like the end."]
-	   ["The thief comes in from the side, feints, and inserts the blade
+           ["The thief knocks you out."]!]
+         ![["Finishing you off, a lightning throw right to the heart."]
+           ["The stiletto severs your jugular.  It looks like the end."]
+           ["The thief comes in from the side, feints, and inserts the blade
 into your ribs."]
-	   ["The thief bows formally, raises his stiletto, and with a wry grin,
+           ["The thief bows formally, raises his stiletto, and with a wry grin,
 ends the battle and your life."]!]
-	 ![["A quick thrust pinks your left arm, and blood starts to
+         ![["A quick thrust pinks your left arm, and blood starts to
 trickle down."]
-	   ["The thief draws blood, raking his stiletto across your arm."]
-	   ["The stiletto flashes faster than you can follow, and blood wells
+           ["The thief draws blood, raking his stiletto across your arm."]
+           ["The stiletto flashes faster than you can follow, and blood wells
 from your leg."]
-	   ["The thief slowly approaches, strikes like a snake, and leaves
+           ["The thief slowly approaches, strikes like a snake, and leaves
 you wounded."]!]
-	 ![["The thief strikes like a snake!  The resulting wound is serious."]
-	   ["The thief stabs a deep cut in your upper arm."]
-	   ["The stiletto touches your forehead, and the blood obscures your
+         ![["The thief strikes like a snake!  The resulting wound is serious."]
+           ["The thief stabs a deep cut in your upper arm."]
+           ["The stiletto touches your forehead, and the blood obscures your
 vision."]
-	   ["The thief strikes at your wrist, and suddenly your grip is slippery
+           ["The thief strikes at your wrist, and suddenly your grip is slippery
 with blood."]]
-	 ![["The butt of his stiletto cracks you on the skull, and you stagger
+         ![["The butt of his stiletto cracks you on the skull, and you stagger
 back."]
-	   ["You are forced back, and trip over your own feet, falling heavily
+           ["You are forced back, and trip over your own feet, falling heavily
 to the floor."]
-	   ["The thief rams the haft of his blade into your stomach, leaving
+           ["The thief rams the haft of his blade into your stomach, leaving
 you out of breath."]
-	   ["The thief attacks, and you fall back desperately."]!]
-	 ![["A long, theatrical slash.  You catch it on your " W ", but the
+           ["The thief attacks, and you fall back desperately."]!]
+         ![["A long, theatrical slash.  You catch it on your " W ", but the
 thief twists his knife, and the " W " goes flying."]
-	   ["The thief neatly flips your " W " out of your hands, and it drops
+           ["The thief neatly flips your " W " out of your hands, and it drops
 to the floor."]
-	   ["You parry a low thrust, and your " W " slips out of your hand."]
-	   ["Avoiding the thief's stiletto, you stumble to the floor, dropping
+           ["You parry a low thrust, and your " W " slips out of your hand."]
+           ["Avoiding the thief's stiletto, you stumble to the floor, dropping
 your " W "."]!]
-	 ![["The thief, a man of good breeding, refrains from attacking a helpless
+         ![["The thief, a man of good breeding, refrains from attacking a helpless
 opponent."]
-	   ["The thief amuses himself by searching your pockets."]
-	   ["The thief entertains himself by rifling your pack."]]
-	 ![["The thief, noticing you begin to stir, reluctantly finishes you off."]
-	   ["The thief, forgetting his essentially genteel upbringing, cuts your
+           ["The thief amuses himself by searching your pockets."]
+           ["The thief entertains himself by rifling your pack."]]
+         ![["The thief, noticing you begin to stir, reluctantly finishes you off."]
+           ["The thief, forgetting his essentially genteel upbringing, cuts your
 throat."]
-	   ["The thief, who is essentially a pragmatist, dispatches you as a
+           ["The thief, who is essentially a pragmatist, dispatches you as a
 threat to his livelihood."]]!]>
 
 <PSETG DEF1
        <UVECTOR
-	  ,MISSED ,MISSED ,MISSED ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,UNCONSCIOUS ,UNCONSCIOUS
-	  ,KILLED ,KILLED ,KILLED ,KILLED ,KILLED>>
+          ,MISSED ,MISSED ,MISSED ,MISSED
+          ,STAGGER ,STAGGER
+          ,UNCONSCIOUS ,UNCONSCIOUS
+          ,KILLED ,KILLED ,KILLED ,KILLED ,KILLED>>
 
 <PSETG DEF2A
        <UVECTOR
-	  ,MISSED ,MISSED ,MISSED ,MISSED ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,LIGHT-WOUND ,LIGHT-WOUND
-	  ,UNCONSCIOUS>>
+          ,MISSED ,MISSED ,MISSED ,MISSED ,MISSED
+          ,STAGGER ,STAGGER
+          ,LIGHT-WOUND ,LIGHT-WOUND
+          ,UNCONSCIOUS>>
 
 <PSETG DEF2B
        <UVECTOR
-	  ,MISSED ,MISSED ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
-	  ,UNCONSCIOUS
-	  ,KILLED ,KILLED ,KILLED>>
+          ,MISSED ,MISSED ,MISSED
+          ,STAGGER ,STAGGER
+          ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
+          ,UNCONSCIOUS
+          ,KILLED ,KILLED ,KILLED>>
 
 <PSETG DEF3A
        <UVECTOR
-	  ,MISSED ,MISSED ,MISSED ,MISSED ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,LIGHT-WOUND ,LIGHT-WOUND
-	  ,SERIOUS-WOUND ,SERIOUS-WOUND>>
+          ,MISSED ,MISSED ,MISSED ,MISSED ,MISSED
+          ,STAGGER ,STAGGER
+          ,LIGHT-WOUND ,LIGHT-WOUND
+          ,SERIOUS-WOUND ,SERIOUS-WOUND>>
 
 <PSETG DEF3B
        <UVECTOR
-	  ,MISSED ,MISSED ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
-	  ,SERIOUS-WOUND ,SERIOUS-WOUND ,SERIOUS-WOUND>>
+          ,MISSED ,MISSED ,MISSED
+          ,STAGGER ,STAGGER
+          ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
+          ,SERIOUS-WOUND ,SERIOUS-WOUND ,SERIOUS-WOUND>>
 
 <PSETG DEF3C
        <UVECTOR
-	  ,MISSED
-	  ,STAGGER ,STAGGER
-	  ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
-	  ,SERIOUS-WOUND ,SERIOUS-WOUND ,SERIOUS-WOUND>>
+          ,MISSED
+          ,STAGGER ,STAGGER
+          ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND ,LIGHT-WOUND
+          ,SERIOUS-WOUND ,SERIOUS-WOUND ,SERIOUS-WOUND>>
 
 <PSETG DEF1-RES <UVECTOR ,DEF1 <REST ,DEF1> <REST ,DEF1 2>>>
 
@@ -1145,88 +1145,88 @@ threat to his livelihood."]]!]>
 
 <PSETG MGVALS
       '![TROLL-FLAG!-FLAG
-	 CAGE-SOLVE!-FLAG
-	 BUCKET-TOP!-FLAG
-	 CAROUSEL-FLIP!-FLAG
-	 CAROUSEL-ZOOM!-FLAG
-	 LOW-TIDE!-FLAG
-	 DOME-FLAG!-FLAG
-	 GLACIER-FLAG!-FLAG
-	 ECHO-FLAG!-FLAG
-	 RIDDLE-FLAG!-FLAG
-	 LLD-FLAG!-FLAG
-	 CYCLOPS-FLAG!-FLAG
-	 MAGIC-FLAG!-FLAG
-	 LIGHT-LOAD!-FLAG
-	 SAFE-FLAG!-FLAG
-	 GNOME-FLAG!-FLAG
-	 GNOME-DOOR!-FLAG
-	 MIRROR-MUNG!-FLAG
-	 EGYPT-FLAG!-FLAG
-	 ON-POLE!-FLAG
-	 BLAB!-FLAG
-	 BINF!-FLAG
-	 BTIE!-FLAG
-	 BUOY-FLAG!-FLAG
-	 GRUNLOCK!-FLAG
-	 GATE-FLAG!-FLAG
-	 RAINBOW!-FLAG
-	 CAGE-TOP!-FLAG
-	 EMPTY-HANDED!-FLAG
-	 DEFLATE!-FLAG
-	 LIGHT-SHAFT
-	 PLAYED-TIME
-	 MOVES
-	 BRIEF!-FLAG
-	 THEN
-	 SUPER-BRIEF!-FLAG
-	 RAW-SCORE
-	 GLACIER-MELT!-FLAG
-	 DEATHS
-	 GRATE-REVEALED!-FLAG
-	 WATER-LEVEL!-FLAG
-	 CYCLOWRATH!-FLAG
-	 RUG-MOVED!-FLAG
-	 LEAVES-GONE!-FLAG
-	 END-GAME!-FLAG
-	 EG-SCORE
-	 BEACH-DIG!-FLAG
-	 ZGNOME-FLAG!-FLAG
-	 SING-SONG!-FLAG
-	 CPHERE
-	 CPPUSH!-FLAG
-	 CPOUT!-FLAG
-	 CPSOLVE!-FLAG
-	 XB!-FLAG
-	 XC!-FLAG
-	 MUD!-FLAG
-	 PUNLOCK!-FLAG
-	 PTOUCH!-FLAG
-	 BRFLAG1!-FLAG
-	 BRFLAG2!-FLAG
-	 THIEF-ENGROSSED!-FLAG
-	 ]>
+         CAGE-SOLVE!-FLAG
+         BUCKET-TOP!-FLAG
+         CAROUSEL-FLIP!-FLAG
+         CAROUSEL-ZOOM!-FLAG
+         LOW-TIDE!-FLAG
+         DOME-FLAG!-FLAG
+         GLACIER-FLAG!-FLAG
+         ECHO-FLAG!-FLAG
+         RIDDLE-FLAG!-FLAG
+         LLD-FLAG!-FLAG
+         CYCLOPS-FLAG!-FLAG
+         MAGIC-FLAG!-FLAG
+         LIGHT-LOAD!-FLAG
+         SAFE-FLAG!-FLAG
+         GNOME-FLAG!-FLAG
+         GNOME-DOOR!-FLAG
+         MIRROR-MUNG!-FLAG
+         EGYPT-FLAG!-FLAG
+         ON-POLE!-FLAG
+         BLAB!-FLAG
+         BINF!-FLAG
+         BTIE!-FLAG
+         BUOY-FLAG!-FLAG
+         GRUNLOCK!-FLAG
+         GATE-FLAG!-FLAG
+         RAINBOW!-FLAG
+         CAGE-TOP!-FLAG
+         EMPTY-HANDED!-FLAG
+         DEFLATE!-FLAG
+         LIGHT-SHAFT
+         PLAYED-TIME
+         MOVES
+         BRIEF!-FLAG
+         THEN
+         SUPER-BRIEF!-FLAG
+         RAW-SCORE
+         GLACIER-MELT!-FLAG
+         DEATHS
+         GRATE-REVEALED!-FLAG
+         WATER-LEVEL!-FLAG
+         CYCLOWRATH!-FLAG
+         RUG-MOVED!-FLAG
+         LEAVES-GONE!-FLAG
+         END-GAME!-FLAG
+         EG-SCORE
+         BEACH-DIG!-FLAG
+         ZGNOME-FLAG!-FLAG
+         SING-SONG!-FLAG
+         CPHERE
+         CPPUSH!-FLAG
+         CPOUT!-FLAG
+         CPSOLVE!-FLAG
+         XB!-FLAG
+         XC!-FLAG
+         MUD!-FLAG
+         PUNLOCK!-FLAG
+         PTOUCH!-FLAG
+         BRFLAG1!-FLAG
+         BRFLAG2!-FLAG
+         THIEF-ENGROSSED!-FLAG
+         ]>
 
 
 ; "SUBTITLE ACTORS"
 
 <ADD-ACTOR 
      <SETG MASTER
-	   <CHTYPE [<GET-ROOM "BDOOR"> () 0 <>
-		    <GET-OBJ "MASTE"> MASTER-ACTOR 3 0]
-		   ADV>>>
+           <CHTYPE [<GET-ROOM "BDOOR"> () 0 <>
+                    <GET-OBJ "MASTE"> MASTER-ACTOR 3 0]
+                   ADV>>>
 
 <ADD-ACTOR
      <SETG PLAYER
-	   <CHTYPE [<GET-ROOM "WHOUS">
-		    () 0 <> <GET-OBJ "#####"> DEAD-FUNCTION 0 0]
-		   ADV>>>
+           <CHTYPE [<GET-ROOM "WHOUS">
+                    () 0 <> <GET-OBJ "#####"> DEAD-FUNCTION 0 0]
+                   ADV>>>
 
 <ADD-ACTOR 
      <SETG ROBOT
-	   <CHTYPE [<GET-ROOM "MAGNE"> () 0 <>
-		    <GET-OBJ "ROBOT"> ROBOT-ACTOR 3 0]
-		   ADV>>>
+           <CHTYPE [<GET-ROOM "MAGNE"> () 0 <>
+                    <GET-OBJ "ROBOT"> ROBOT-ACTOR 3 0]
+                   ADV>>>
 
 
 
@@ -1240,287 +1240,287 @@ threat to his livelihood."]]!]>
 
 <SETG IT-OBJECT
       <GOBJECT <>
-	       ["IT" "THAT" "THIS" "HIM"]
-	       []
-	       "random object"
-	       <+ ,OVISON ,NDESCBIT>>>
+               ["IT" "THAT" "THIS" "HIM"]
+               []
+               "random object"
+               <+ ,OVISON ,NDESCBIT>>>
 
 <GOBJECT <>
-	 ["GBROC" "BROCH" "MAIL"]
-	 ["FREE"]
-	 "free brochure"
-	 <+ ,OVISON>
-	 BROCHURE>
+         ["GBROC" "BROCH" "MAIL"]
+         ["FREE"]
+         "free brochure"
+         <+ ,OVISON>
+         BROCHURE>
 
 <GOBJECT <>
-	 ["#####" "ME" "CRETI" "MYSEL" "SELF"]
-	 []
-	 "cretin"
-	 <+ ,OVISON ,VILLAIN>
-	 CRETIN
-	 ()
-	 (OGLOBAL 0
-	  OACTOR ,PLAYER)>
+         ["#####" "ME" "CRETI" "MYSEL" "SELF"]
+         []
+         "cretin"
+         <+ ,OVISON ,VILLAIN>
+         CRETIN
+         ()
+         (OGLOBAL 0
+          OACTOR ,PLAYER)>
 
 <GOBJECT <>
-	 ["WISH" "BLESS"]
-	 []
-	 "wish"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["WISH" "BLESS"]
+         []
+         "wish"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT <>
-	 ["EVERY" "ALL"]
-	 []
-	 "everything"
-	 <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
-	 VALUABLES&C>
+         ["EVERY" "ALL"]
+         []
+         "everything"
+         <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
+         VALUABLES&C>
 
 <GOBJECT <>
-	 ["POSSE"]
-	 []
-	 "possessions"
-	 <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
-	 VALUABLES&C>
+         ["POSSE"]
+         []
+         "possessions"
+         <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
+         VALUABLES&C>
 
 <GOBJECT <>
-	 ["VALUA" "TREAS"]
-	 []
-	 "valuables"
-	 <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
-	 VALUABLES&C>
+         ["VALUA" "TREAS"]
+         []
+         "valuables"
+         <+ ,OVISON ,TAKEBIT ,NDESCBIT ,NO-CHECK-BIT ,BUNCHBIT>
+         VALUABLES&C>
 
 <GOBJECT <>
-	 ["SAILO"]
-	 []
-	 "sailor"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["SAILO"]
+         []
+         "sailor"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT <>
-	 ["TEETH"]
-	 []
-	 "set of teeth"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["TEETH"]
+         []
+         "set of teeth"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT <>
-	 ["WALL" "WALLS"]
-	 []
-	 "wall"
-	 <+ ,OVISON>
-	 WALL-FUNCTION>
+         ["WALL" "WALLS"]
+         []
+         "wall"
+         <+ ,OVISON>
+         WALL-FUNCTION>
 
 <GOBJECT <>
-	 ["GWALL" "WALL"]
-	 ["GRANI"]
-	 "granite wall"
-	 <+ ,OVISON>
-	 GRANITE>
+         ["GWALL" "WALL"]
+         ["GRANI"]
+         "granite wall"
+         <+ ,OVISON>
+         GRANITE>
 
 <GOBJECT <>
-	["GROUN" "EARTH" "SAND"]
-	[]
-	"ground"
-	<+ ,OVISON ,DIGBIT>
-	GROUND-FUNCTION>
+        ["GROUN" "EARTH" "SAND"]
+        []
+        "ground"
+        <+ ,OVISON ,DIGBIT>
+        GROUND-FUNCTION>
 
 <GOBJECT <>
-	 ["GRUE"]
-	 []
-	 "lurking grue"
-	 <+ ,OVISON>
-	 GRUE-FUNCTION>
+         ["GRUE"]
+         []
+         "lurking grue"
+         <+ ,OVISON>
+         GRUE-FUNCTION>
 
 <GOBJECT <>
-	 ["HANDS" "HAND"]
-	 ["BARE"]
-	 "pair of hands"
-	 <+ ,OVISON ,NDESCBIT ,TOOLBIT>>
+         ["HANDS" "HAND"]
+         ["BARE"]
+         "pair of hands"
+         <+ ,OVISON ,NDESCBIT ,TOOLBIT>>
 
 <GOBJECT <>
-	 ["LUNGS" "AIR"]
-	 []
-	 "breath"
-	 <+ ,OVISON ,NDESCBIT ,TOOLBIT>>
+         ["LUNGS" "AIR"]
+         []
+         "breath"
+         <+ ,OVISON ,NDESCBIT ,TOOLBIT>>
 
 <GOBJECT <>
-	 ["AVIAT" "FLYER"]
-	 []
-	 "flyer"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["AVIAT" "FLYER"]
+         []
+         "flyer"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT <>
-	 ["EXCEP" "BUT"]
-	 []
-	 "moby lossage"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["EXCEP" "BUT"]
+         []
+         "moby lossage"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT WELLBIT
-	 ["WELL"]
-	 ["MAGIC"]
-	 "well"
-	 <+ ,OVISON ,NDESCBIT>
-	 WELL-FUNCTION>
+         ["WELL"]
+         ["MAGIC"]
+         "well"
+         <+ ,OVISON ,NDESCBIT>
+         WELL-FUNCTION>
 
 <GOBJECT ROPEBIT
-	 ["SROPE" "ROPE" "PIECE"]
-	 []
-	 "piece of rope"
-	 <+ ,OVISON ,CLIMBBIT ,NO-CHECK-BIT>
-	 SLIDE-ROPE>
+         ["SROPE" "ROPE" "PIECE"]
+         []
+         "piece of rope"
+         <+ ,OVISON ,CLIMBBIT ,NO-CHECK-BIT>
+         SLIDE-ROPE>
 
 <GOBJECT SLIDEBIT
-	 ["SLIDE" "CHUTE"]
-	 []
-	 "chute"
-	 ,OVISON
-	 SLIDE-FUNCTION>
+         ["SLIDE" "CHUTE"]
+         []
+         "chute"
+         ,OVISON
+         SLIDE-FUNCTION>
 
 <GOBJECT CPWALL
-	 ["CPEWL" "WALL"]
-	 ["EAST" "EASTE"]
-	 "eastern wall"
-	 ,OVISON
-	 CPWALL-OBJECT>
+         ["CPEWL" "WALL"]
+         ["EAST" "EASTE"]
+         "eastern wall"
+         ,OVISON
+         CPWALL-OBJECT>
 
 <GOBJECT CPWALL
-	 ["CPWWL" "WALL"]
-	 ["WEST" "WESTE"]
-	 "western wall"
-	 ,OVISON
-	 CPWALL-OBJECT>
+         ["CPWWL" "WALL"]
+         ["WEST" "WESTE"]
+         "western wall"
+         ,OVISON
+         CPWALL-OBJECT>
 
 <GOBJECT CPWALL
-	 ["CPSWL" "WALL"]
-	 ["SOUTH"]
-	 "southern wall"
-	 ,OVISON
-	 CPWALL-OBJECT>
+         ["CPSWL" "WALL"]
+         ["SOUTH"]
+         "southern wall"
+         ,OVISON
+         CPWALL-OBJECT>
 
 <GOBJECT CPWALL
-	 ["CPNWL" "WALL"]
-	 ["NORTH"]
-	 "northern wall"
-	 ,OVISON
-	 CPWALL-OBJECT>
+         ["CPNWL" "WALL"]
+         ["NORTH"]
+         "northern wall"
+         ,OVISON
+         CPWALL-OBJECT>
 
 <GOBJECT CPLADDER
-	 ["CPLAD" "LADDE"]
-	 []
-	 "ladder"
-	 ,OVISON
-	 CPLADDER-OBJECT>
+         ["CPLAD" "LADDE"]
+         []
+         "ladder"
+         ,OVISON
+         CPLADDER-OBJECT>
 
 <GOBJECT BIRDBIT
-	 ["BIRD" "SONGB"]
-	 ["SONG"]
-	 "bird"
-	 <+ ,OVISON ,NDESCBIT>
-	 BIRD-OBJECT>
+         ["BIRD" "SONGB"]
+         ["SONG"]
+         "bird"
+         <+ ,OVISON ,NDESCBIT>
+         BIRD-OBJECT>
 
 <GOBJECT HOUSEBIT
-	 ["HOUSE"]
-	 ["WHITE"]
-	 "white house"
-	 <+ ,OVISON ,NDESCBIT>
-	 HOUSE-FUNCTION>
+         ["HOUSE"]
+         ["WHITE"]
+         "white house"
+         <+ ,OVISON ,NDESCBIT>
+         HOUSE-FUNCTION>
 
 <GOBJECT TREEBIT
-	 ["TREE"]
-	 []
-	 "tree"
-	 <+ ,OVISON ,NDESCBIT>>
+         ["TREE"]
+         []
+         "tree"
+         <+ ,OVISON ,NDESCBIT>>
 
 <GOBJECT GUARDBIT
-	 ["GUARD"]
-	 []
-	 "Guardian of Zork"
-	 <+ ,OVISON ,VICBIT ,VILLAIN>
-	 GUARDIANS>
+         ["GUARD"]
+         []
+         "Guardian of Zork"
+         <+ ,OVISON ,VICBIT ,VILLAIN>
+         GUARDIANS>
 
 <GOBJECT ROSEBIT
-	 ["ROSE" "COMPA"]
-	 []
-	 "compass rose"
-	 <+ ,OVISON>>
+         ["ROSE" "COMPA"]
+         []
+         "compass rose"
+         <+ ,OVISON>>
 
 <GOBJECT MASTERBIT
-	 ["MASTE" "KEEPE" "DUNGE"]
-	 ["DUNGE"]
-	 "dungeon master"
-	 <+ ,OVISON ,VICBIT ,ACTORBIT>
-	 MASTER-FUNCTION
-	 ()
-	 (ODESC1 "The dungeon master is quietly leaning on his staff here."
-	  OACTOR ,MASTER
-	  OGLOBAL 0)>
+         ["MASTE" "KEEPE" "DUNGE"]
+         ["DUNGE"]
+         "dungeon master"
+         <+ ,OVISON ,VICBIT ,ACTORBIT>
+         MASTER-FUNCTION
+         ()
+         (ODESC1 "The dungeon master is quietly leaning on his staff here."
+          OACTOR ,MASTER
+          OGLOBAL 0)>
 
 <GOBJECT MIRRORBIT
-	 ["MIRRO" "STRUC"]
-	 []
-	 "mirror"
-	 <+ ,OVISON>
-	 MIRROR-FUNCTION>
+         ["MIRRO" "STRUC"]
+         []
+         "mirror"
+         <+ ,OVISON>
+         MIRROR-FUNCTION>
 
 <GOBJECT PANELBIT
-	 ["PANEL"]
-	 []
-	 "panel"
-	 <+ ,OVISON>
-	 PANEL-FUNCTION>
+         ["PANEL"]
+         []
+         "panel"
+         <+ ,OVISON>
+         PANEL-FUNCTION>
 
 <GOBJECT CHANBIT
-	 ["CHANN"]
-	 []
-	 "stone channel"
-	 <+ ,OVISON>>
+         ["CHANN"]
+         []
+         "stone channel"
+         <+ ,OVISON>>
 
 <GOBJECT WALL-ESWBIT
-	 ["WEAST" "WALL"]
-	 ["EAST" "EASTE"]
-	 "eastern wall"
-	 <+ ,OVISON ,NDESCBIT>
-	 SCOLWALL>
+         ["WEAST" "WALL"]
+         ["EAST" "EASTE"]
+         "eastern wall"
+         <+ ,OVISON ,NDESCBIT>
+         SCOLWALL>
 
 <GOBJECT WALL-ESWBIT
-	 ["WSOUT" "WALL"]
-	 ["SOUTH"]
-	 "southern wall"
-	 <+ ,OVISON ,NDESCBIT>
-	 SCOLWALL>
+         ["WSOUT" "WALL"]
+         ["SOUTH"]
+         "southern wall"
+         <+ ,OVISON ,NDESCBIT>
+         SCOLWALL>
 
 <GOBJECT WALL-ESWBIT
-	 ["WWEST" "WALL"]
-	 ["WEST" "WESTE"]
-	 "western wall"
-	 <+ ,OVISON ,NDESCBIT>
-	 SCOLWALL>
+         ["WWEST" "WALL"]
+         ["WEST" "WESTE"]
+         "western wall"
+         <+ ,OVISON ,NDESCBIT>
+         SCOLWALL>
 
 <GOBJECT WALL-NBIT
-	 ["WNORT" "WALL"]
-	 ["NORTH"]
-	 "northern wall"
-	 <+ ,OVISON ,NDESCBIT>
-	 SCOLWALL>
+         ["WNORT" "WALL"]
+         ["NORTH"]
+         "northern wall"
+         <+ ,OVISON ,NDESCBIT>
+         SCOLWALL>
 
 <GOBJECT RGWATER
-	 ["GWATE" "WATER" "QUANT" "LIQUI" "H2O"]
-	 []
-	 "water"
-	 <+ ,DRINKBIT ,OVISON>
-	 WATER-FUNCTION>
+         ["GWATE" "WATER" "QUANT" "LIQUI" "H2O"]
+         []
+         "water"
+         <+ ,DRINKBIT ,OVISON>
+         WATER-FUNCTION>
 
 <GOBJECT DWINDOW
-	 ["DWIND" "WINDO"]
-	 []
-	 "window"
-	 ,OVISON
-	 <>>
+         ["DWIND" "WINDO"]
+         []
+         "window"
+         ,OVISON
+         <>>
 
 
 
 ; "SUBTITLE DIRECTIONS"
 
 <ADD-DIRECTIONS "#!#!#" "NORTH" "SOUTH" "EAST" "WEST" "LAUNC" "LAND"
-	"SE" "SW" "NE" "NW" "UP" "DOWN" "ENTER" "EXIT" "CROSS">
+        "SE" "SW" "NE" "NW" "UP" "DOWN" "ENTER" "EXIT" "CROSS">
 
 <DSYNONYM "NORTH" "N">
 <DSYNONYM "SOUTH" "S">
@@ -1538,31 +1538,31 @@ threat to his livelihood."]]!]>
 
 <OR <LOOKUP "COMPILE" <ROOT>>
     <PROG ()
-	<CEVENT 0 BROCHURE T "BROIN">
-	<CEVENT 0 CYCLOPS T "CYCIN" T>
-	<CEVENT 0 SLIDE-CINT <> "SLDIN" T>
-	<CEVENT 0 XB-CINT <> "XBIN" T>
-	<CEVENT 0 XC-CINT <> "XCIN" T>
-	<CEVENT 0 XBH-CINT <> "XBHIN" T>
-	<CEVENT 0 FOREST-ROOM <> "FORIN">
-	<CEVENT 0 CURE-CLOCK <> "CURIN">
+        <CEVENT 0 BROCHURE T "BROIN">
+        <CEVENT 0 CYCLOPS T "CYCIN" T>
+        <CEVENT 0 SLIDE-CINT <> "SLDIN" T>
+        <CEVENT 0 XB-CINT <> "XBIN" T>
+        <CEVENT 0 XC-CINT <> "XCIN" T>
+        <CEVENT 0 XBH-CINT <> "XBHIN" T>
+        <CEVENT 0 FOREST-ROOM <> "FORIN">
+        <CEVENT 0 CURE-CLOCK <> "CURIN">
         <CEVENT 0 MAINT-ROOM T "MNTIN">
         <CEVENT 0 LANTERN T "LNTIN">
-	<CEVENT 0 MATCH-FUNCTION T MATIN>
-	<CEVENT 0 CANDLES T "CNDIN">
-	<CEVENT 0 BALLOON T "BINT">
-	<CEVENT 0 BURNUP T "BRNIN" T>
-	<CEVENT 0 FUSE-FUNCTION T "FUSIN" T>
-	<CEVENT 0 LEDGE-MUNG T "LEDIN" T>
-	<CEVENT 0 SAFE-MUNG T "SAFIN" T>
-	<CEVENT 0 VOLGNOME T "VLGIN">
-	<CEVENT 0 GNOME-FUNCTION T "GNOIN">
-	<CEVENT 0 BUCKET T "BCKIN">
-	<CEVENT 0 SPHERE-FUNCTION T "SPHIN">
-	<CEVENT 0 SCOL-CLOCK T "SCLIN">
-	<CEVENT 0 END-GAME-HERALD <> "EGHER">
-	<CEVENT 0 ZGNOME-INIT T "ZGNIN">
-	<CEVENT 0 ZGNOME-FUNCTION T "ZGLIN">>>
+        <CEVENT 0 MATCH-FUNCTION T MATIN>
+        <CEVENT 0 CANDLES T "CNDIN">
+        <CEVENT 0 BALLOON T "BINT">
+        <CEVENT 0 BURNUP T "BRNIN" T>
+        <CEVENT 0 FUSE-FUNCTION T "FUSIN" T>
+        <CEVENT 0 LEDGE-MUNG T "LEDIN" T>
+        <CEVENT 0 SAFE-MUNG T "SAFIN" T>
+        <CEVENT 0 VOLGNOME T "VLGIN">
+        <CEVENT 0 GNOME-FUNCTION T "GNOIN">
+        <CEVENT 0 BUCKET T "BCKIN">
+        <CEVENT 0 SPHERE-FUNCTION T "SPHIN">
+        <CEVENT 0 SCOL-CLOCK T "SCLIN">
+        <CEVENT 0 END-GAME-HERALD <> "EGHER">
+        <CEVENT 0 ZGNOME-INIT T "ZGNIN">
+        <CEVENT 0 ZGNOME-FUNCTION T "ZGLIN">>>
 
 
 ; "SUBTITLE ROOMS"
@@ -1585,7 +1585,7 @@ threat to his livelihood."]]!]>
 "This is an open field west of a white house, with a boarded front door."
        "West of House"
        <EXIT "NORTH" "NHOUS" "SOUTH" "SHOUS" "WEST" "FORE1"
-	      "EAST" #NEXIT "The door is locked, and there is evidently no key.">
+              "EAST" #NEXIT "The door is locked, and there is evidently no key.">
        (<GET-OBJ "FDOOR"> <GET-OBJ "MAILB"> <GET-OBJ "MAT">)
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1596,7 +1596,7 @@ threat to his livelihood."]]!]>
 and all the windows are barred."
        "North of House"
        <EXIT "WEST" "WHOUS" "EAST" "EHOUS" "NORTH" "FORE3"
-	      "SOUTH" #NEXIT "The windows are all barred.">
+              "SOUTH" #NEXIT "The windows are all barred.">
        ()
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1607,7 +1607,7 @@ and all the windows are barred."
 and all the windows are barred."
        "South of House"
        <EXIT "WEST" "WHOUS" "EAST" "EHOUS" "SOUTH" "FORE2"
-	      "NORTH" #NEXIT "The windows are all barred.">
+              "NORTH" #NEXIT "The windows are all barred.">
        ()
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1619,8 +1619,8 @@ and all the windows are barred."
        ""
        "Behind House"
        <EXIT "NORTH" "NHOUS" "SOUTH" "SHOUS" "EAST" "CLEAR"
-	      "WEST" ,KITCHEN-WINDOW
-	      "ENTER" ,KITCHEN-WINDOW>
+              "WEST" ,KITCHEN-WINDOW
+              "ENTER" ,KITCHEN-WINDOW>
        (<GET-OBJ "WINDO">)
        EAST-HOUSE
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1630,8 +1630,8 @@ and all the windows are barred."
        ""
        "Kitchen"
        <EXIT "EAST" ,KITCHEN-WINDOW "WEST" "LROOM"
-	      "EXIT" ,KITCHEN-WINDOW "UP" "ATTIC"
-	      "DOWN" #NEXIT "Only Santa Claus climbs down chimneys.">
+              "EXIT" ,KITCHEN-WINDOW "UP" "ATTIC"
+              "DOWN" #NEXIT "Only Santa Claus climbs down chimneys.">
        (<GET-OBJ "WINDO"> <GET-OBJ "SBAG"> <GET-OBJ "BOTTL">)
        KITCHEN
        <+ ,RLANDBIT ,RLIGHTBIT ,RHOUSEBIT ,RSACREDBIT>
@@ -1639,21 +1639,21 @@ and all the windows are barred."
 
 <ROOM "ATTIC"
 "This is the attic.  The only exit is stairs that lead down."
-	"Attic"
-	<EXIT "DOWN" "KITCH">
-	(<GET-OBJ "BRICK"> <GET-OBJ "ROPE"> <GET-OBJ "KNIFE">)
-	<>
-	<+ ,RLANDBIT ,RHOUSEBIT>>
+        "Attic"
+        <EXIT "DOWN" "KITCH">
+        (<GET-OBJ "BRICK"> <GET-OBJ "ROPE"> <GET-OBJ "KNIFE">)
+        <>
+        <+ ,RLANDBIT ,RHOUSEBIT>>
 
 <ROOM "LROOM"
        ""
        "Living Room"
        <EXIT "EAST" "KITCH"
-	      "WEST" <CEXIT "MAGIC-FLAG" "BLROO" "The door is nailed shut.">
-	      "DOWN" <DOOR "DOOR" "LROOM" "CELLA">>
+              "WEST" <CEXIT "MAGIC-FLAG" "BLROO" "The door is nailed shut.">
+              "DOWN" <DOOR "DOOR" "LROOM" "CELLA">>
        (<GET-OBJ "WDOOR"> <GET-OBJ "DOOR"> <GET-OBJ "TCASE"> 
-	<GET-OBJ "LAMP"> <GET-OBJ "RUG"> <GET-OBJ "PAPER">
-	<GET-OBJ "SWORD">)
+        <GET-OBJ "LAMP"> <GET-OBJ "RUG"> <GET-OBJ "PAPER">
+        <GET-OBJ "SWORD">)
        LIVING-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RHOUSEBIT ,RSACREDBIT>>
 
@@ -1679,7 +1679,7 @@ particularly large tree with some low branches stands here.">
        ,STFORE
        ,FOREST
        <EXIT "UP" ,NOTREE
-	     "NORTH" "FORE1" "EAST" "FORE3" "SOUTH" "FORE2" "WEST" "FORE1">
+             "NORTH" "FORE1" "EAST" "FORE3" "SOUTH" "FORE2" "WEST" "FORE1">
        ()
        FOREST-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1689,7 +1689,7 @@ particularly large tree with some low branches stands here.">
        ,FORDES
        ,FOREST
        <EXIT "UP" ,NOTREE
-	     "NORTH" "SHOUS" "EAST" "CLEAR" "SOUTH" "FORE4" "WEST" "FORE1">
+             "NORTH" "SHOUS" "EAST" "CLEAR" "SOUTH" "FORE4" "WEST" "FORE1">
        ()
        FOREST-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1699,7 +1699,7 @@ particularly large tree with some low branches stands here.">
        ,FORTREE
        ,FOREST
        <EXIT "UP" "TREE"  
-	     "NORTH" "FORE2" "EAST" "CLEAR" "SOUTH" "CLEAR" "WEST" "NHOUS">
+             "NORTH" "FORE2" "EAST" "CLEAR" "SOUTH" "CLEAR" "WEST" "NHOUS">
        (<GET-OBJ "FTREE">)
        FOREST-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1709,7 +1709,7 @@ particularly large tree with some low branches stands here.">
       ""
       "Up a Tree"
       <EXIT "DOWN" "FORE3"
-	    "UP" #NEXIT "You cannot climb any higher.">
+            "UP" #NEXIT "You cannot climb any higher.">
       (<GET-OBJ "NEST"> <GET-OBJ "TTREE">)
       TREE-ROOM
       <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT>
@@ -1720,7 +1720,7 @@ particularly large tree with some low branches stands here.">
 to the east, where a small clearing may be seen through the trees."
        ,FOREST
        <EXIT "UP" ,NOTREE
-	     "EAST" "CLTOP" "NORTH" "FORE5" "SOUTH" "FORE4" "WEST" "FORE2">
+             "EAST" "CLTOP" "NORTH" "FORE5" "SOUTH" "FORE4" "WEST" "FORE2">
        ()
        FOREST-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1730,7 +1730,7 @@ to the east, where a small clearing may be seen through the trees."
        ,STFORE
        ,FOREST
        <EXIT "UP" ,NOTREE
-	     "NORTH" "FORE5" "SE" "CLTOP" "SOUTH" "FORE4" "WEST" "FORE2">
+             "NORTH" "FORE5" "SE" "CLTOP" "SOUTH" "FORE4" "WEST" "FORE2">
        ()
        FOREST-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1740,8 +1740,8 @@ to the east, where a small clearing may be seen through the trees."
        ""
        "Clearing"
        <EXIT "SW" "EHOUS" "SE" "FORE5" "NORTH" "CLEAR" "EAST" "CLEAR"
-	      "WEST" "FORE3" "SOUTH" "FORE2"
-	      "DOWN" <DOOR "GRATE" "MGRAT" "CLEAR" "You can't go through the closed grating.">>
+              "WEST" "FORE3" "SOUTH" "FORE2"
+              "DOWN" <DOOR "GRATE" "MGRAT" "CLEAR" "You can't go through the closed grating.">>
        (<GET-OBJ "GRATE"> <GET-OBJ "LEAVE">)
        CLEARING
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
@@ -1755,10 +1755,10 @@ to the east, where a small clearing may be seen through the trees."
        ""
        "Cellar"
        <EXIT "EAST" "MTROL" "SOUTH" "CHAS2"
-	      "UP"
-	      <DOOR "DOOR" "LROOM" "CELLA">
-	      "WEST"
-	      #NEXIT "You try to ascend the ramp, but it is impossible, and you slide back down.">
+              "UP"
+              <DOOR "DOOR" "LROOM" "CELLA">
+              "WEST"
+              #NEXIT "You try to ascend the ramp, but it is impossible, and you slide back down.">
        (<GET-OBJ "DOOR">)
        CELLAR
        ,RLANDBIT
@@ -1773,9 +1773,9 @@ Bloodstains and deep scratches (perhaps made by an axe) mar the
 walls."
        "The Troll Room"
        <EXIT "WEST" "CELLA"
-		  "EAST" <CEXIT "TROLL-FLAG" "CRAW4" ,TCHOMP>
-		  "NORTH" <CEXIT "TROLL-FLAG" "PASS1" ,TCHOMP>
-		  "SOUTH" <CEXIT "TROLL-FLAG" "MAZE1" ,TCHOMP>>
+                  "EAST" <CEXIT "TROLL-FLAG" "CRAW4" ,TCHOMP>
+                  "NORTH" <CEXIT "TROLL-FLAG" "PASS1" ,TCHOMP>
+                  "SOUTH" <CEXIT "TROLL-FLAG" "MAZE1" ,TCHOMP>>
        (<GET-OBJ "TROLL">)>
 
 <ROOM "STUDI" 
@@ -1789,12 +1789,12 @@ you might be able to get up it, it seems unlikely you could get back
 down."
        "Studio"
        <EXIT "NORTH" "CRAW4"
-		  "NW" "GALLE"
-		  "UP"
-		  <CEXIT "LIGHT-LOAD"
-			  "KITCH"
-			  "The chimney is too narrow for you and all of your baggage."
-			  <> CHIMNEY-FUNCTION>>>
+                  "NW" "GALLE"
+                  "UP"
+                  <CEXIT "LIGHT-LOAD"
+                          "KITCH"
+                          "The chimney is too narrow for you and all of your baggage."
+                          <> CHIMNEY-FUNCTION>>>
 
 <ROOM "GALLE"
 "This is an art gallery.  Most of the paintings which were here
@@ -1816,15 +1816,15 @@ left through either the north, south, or west exits."
 <ROOM "MAZE1"
        ,MAZEDESC ,SMAZEDESC
        <EXIT "WEST" "MTROL"
-	      "NORTH" "MAZE1"
-	      "SOUTH" "MAZE2"
-	      "EAST" "MAZE4">>
+              "NORTH" "MAZE1"
+              "SOUTH" "MAZE2"
+              "EAST" "MAZE4">>
 
 <ROOM "MAZE2"
        ,MAZEDESC ,SMAZEDESC
        <EXIT "SOUTH" "MAZE1"
-	      "NORTH" "MAZE4"
-	      "EAST" "MAZE3">>
+              "NORTH" "MAZE4"
+              "EAST" "MAZE3">>
 
 <ROOM "MAZE3"
        ,MAZEDESC ,SMAZEDESC
@@ -1842,7 +1842,7 @@ left through either the north, south, or west exits."
        ,MAZEDESC ,SMAZEDESC
        <EXIT "EAST" "DEAD2" "NORTH" "MAZE3" "SW" "MAZE6">
        (<GET-OBJ "BONES"> <GET-OBJ "BAGCO"> <GET-OBJ "KEYS">
-	<GET-OBJ "BLANT"> <GET-OBJ "RKNIF">)>
+        <GET-OBJ "BLANT"> <GET-OBJ "RKNIF">)>
 
 <ROOM "DEAD2"
        ,DEADEND ,SDEADEND
@@ -1867,7 +1867,7 @@ left through either the north, south, or west exits."
 <ROOM "MAZE9"
        ,MAZEDESC ,SMAZEDESC
        <EXIT "NORTH" "MAZE6" "EAST" "MAZ11" "DOWN" "MAZ10" "SOUTH" "MAZ13"
-	      "WEST" "MAZ12" "NW" "MAZE9">>
+              "WEST" "MAZ12" "NW" "MAZE9">>
 
 <ROOM "MAZ10"
        ,MAZEDESC ,SMAZEDESC
@@ -1877,7 +1877,7 @@ left through either the north, south, or west exits."
        ,MAZEDESC
        ,SMAZEDESC
        <EXIT "NE" "MGRAT" "DOWN" "MAZ10" "NW" "MAZ13" "SW" "MAZ12">>
-	      
+              
 <ROOM "MGRAT"
        ""
        "Grating Room"
@@ -1912,7 +1912,7 @@ left through either the north, south, or west exits."
 <ROOM "CYCLO"
        "" "Cyclops Room"
        <EXIT "WEST" "MAZ15" "NORTH" <CEXIT "MAGIC-FLAG" "BLROO" "The north wall is solid rock.">
-		  "UP" <CEXIT "CYCLOPS-FLAG" "TREAS" "The cyclops doesn't look like he'll let you past.">>
+                  "UP" <CEXIT "CYCLOPS-FLAG" "TREAS" "The cyclops doesn't look like he'll let you past.">>
        (<GET-OBJ "CYCLO">)
        CYCLOPS-ROOM>
 
@@ -1933,12 +1933,12 @@ cyclops sized)."
 of discarded bags, which crumble at your touch, are scattered about
 on the floor.  There is an exit down and what appears to be a newly
 created passage to the east."
-	"Treasure Room"
-	<EXIT "DOWN" "CYCLO" "EAST" "CPANT">
-	(<GET-OBJ "CHALI">)
-	TREASURE-ROOM
-	,RLANDBIT
-	(RVAL 25)>
+        "Treasure Room"
+        <EXIT "DOWN" "CYCLO" "EAST" "CPANT">
+        (<GET-OBJ "CHALI">)
+        TREASURE-ROOM
+        ,RLANDBIT
+        (RVAL 25)>
 
 
 
@@ -1951,11 +1951,11 @@ Some stone steps are at the south of the ravine and a steep staircase
 descends."
        "Deep Ravine"
        <EXIT "SOUTH" "PASS1" "DOWN"
-	     <CEXIT "EGYPT-FLAG"
-		    "RESES"
-		    "The stairs are to steep for you with your burden."
-		    T
-		    COFFIN-CURE> "EAST" "CHAS1" "WEST" "CRAW1">>
+             <CEXIT "EGYPT-FLAG"
+                    "RESES"
+                    "The stairs are to steep for you with your burden."
+                    T
+                    COFFIN-CURE> "EAST" "CHAS1" "WEST" "CRAW1">>
 
 <ROOM "CRAW1"
 
@@ -1965,27 +1965,27 @@ Passages can be seen in the east, west, and northwest corners of the
 passage."
        "Rocky Crawl"
        <EXIT "WEST" "RAVI1" "EAST" "DOME" "NW"
-	     <CEXIT "EGYPT-FLAG" "EGYPT"
-		    "The passage is too narrow to accommodate coffins."
-		    T COFFIN-CURE>>>
+             <CEXIT "EGYPT-FLAG" "EGYPT"
+                    "The passage is too narrow to accommodate coffins."
+                    T COFFIN-CURE>>>
 
 <ROOM "RESES"
        ""
        "Reservoir South"
        <EXIT "SOUTH" <CEXIT "EGYPT-FLAG"
-			      "RAVI1"
-			      "The coffin will not fit through this passage."
-			      T
-			      COFFIN-CURE>
-	      "WEST" "STREA"
-	      "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "NORTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "LAUNC" "RESER"
-	      "UP" <CEXIT "EGYPT-FLAG"
-			   "CANY1"
-			   "The stairs are too steep for carrying the coffin."
-			   T
-			   COFFIN-CURE>>
+                              "RAVI1"
+                              "The coffin will not fit through this passage."
+                              T
+                              COFFIN-CURE>
+              "WEST" "STREA"
+              "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "NORTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "LAUNC" "RESER"
+              "UP" <CEXIT "EGYPT-FLAG"
+                           "CANY1"
+                           "The stairs are too steep for carrying the coffin."
+                           T
+                           COFFIN-CURE>>
        ()
        RESERVOIR-SOUTH
        ,RLANDBIT
@@ -1995,8 +1995,8 @@ passage."
        ""
        "Reservoir"
        <EXIT "NORTH" "RESEN" "SOUTH" "RESES"
-	      "UP" "INSTR" "DOWN" #NEXIT "The dam blocks your way."
-	      "LAND" #NEXIT "You must specify direction.">
+              "UP" "INSTR" "DOWN" #NEXIT "The dam blocks your way."
+              "LAND" #NEXIT "You must specify direction.">
        (<GET-OBJ "TRUNK">)
        RESERVOIR
        <+ ,RWATERBIT ,RNWALLBIT>
@@ -2006,8 +2006,8 @@ passage."
        ""
        "Reservoir North"
        <EXIT "NORTH" "ATLAN" "LAUNC" "RESER"
-	      "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
-	      "SOUTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">>
+              "CROSS" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">
+              "SOUTH" <CEXIT "LOW-TIDE" "RESER" "You are not equipped for swimming.">>
        (<GET-OBJ "PUMP">)
        RESERVOIR-NORTH
        ,RLANDBIT
@@ -2029,8 +2029,8 @@ to navigate and the downstream route is invisible due to twisting
 walls.  There is a narrow beach to land on."
        "Stream"
        <EXIT "UP" #NEXIT "The way is too narrow."
-	      "LAND" "STREA"
-	      "DOWN" "RESER">
+              "LAND" "STREA"
+              "DOWN" "RESER">
        ()
        <>
        <+ ,RWATERBIT ,RNWALLBIT>
@@ -2041,9 +2041,9 @@ walls.  There is a narrow beach to land on."
 ascending staircase in the room as well as doors, east and south."
        "Egyptian Room"
        <EXIT "UP" "ICY" "SOUTH" "LEDG3"
-	      "EAST" <CEXIT "EGYPT-FLAG" "CRAW1"
-			     "The passage is too narrow to accommodate coffins." T
-			     COFFIN-CURE>>
+              "EAST" <CEXIT "EGYPT-FLAG" "CRAW1"
+                             "The passage is too narrow to accommodate coffins." T
+                             COFFIN-CURE>>
        (<GET-OBJ "COFFI">)>
 
 <ROOM "ICY"
@@ -2073,10 +2073,10 @@ to the east, south, and northwest.  You can hear the sound of
 flowing water below."
        "Deep Canyon"
        <EXIT "NW" <CEXIT "EGYPT-FLAG"
-			 "RESES"
-			 "The passage is too steep for carrying the coffin."
-			 T
-			 COFFIN-CURE> "EAST" "DAM" "SOUTH" "CAROU">>
+                         "RESES"
+                         "The passage is too steep for carrying the coffin."
+                         T
+                         COFFIN-CURE> "EAST" "DAM" "SOUTH" "CAROU">>
 
 
 
@@ -2173,7 +2173,7 @@ the north are exits from this room.  Constructed over the top of the
 shaft is a metal framework to which a heavy iron chain is attached."
        "Shaft Room"
        <EXIT "DOWN" #NEXIT "You wouldn't fit and would die if you could."
-	      "WEST" "ENTRA" "NORTH" "TUNNE">
+              "WEST" "ENTRA" "NORTH" "TUNNE">
        (<GET-OBJ "TBASK">)>
 
 <ROOM "TUNNE"
@@ -2230,7 +2230,7 @@ timbers.  A wide passage comes from the north and turns at the
 southwest corner of the room into a very narrow passageway."
        "Timber Room"
        <EXIT "NORTH" "BLADD"
-	      "SW" <SETG DARK-ROOM <CEXIT "EMPTY-HANDED" "BSHAF" ,NOFIT>>>
+              "SW" <SETG DARK-ROOM <CEXIT "EMPTY-HANDED" "BSHAF" ,NOFIT>>>
        (<GET-OBJ "OTIMB">)
        NO-OBJS
        <+ ,RLANDBIT ,RSACREDBIT>>
@@ -2242,9 +2242,9 @@ shaft. To the east is a passageway and to the northeast a very narrow
 passage. In the shaft can be seen a heavy iron chain."
        "Lower Shaft"
        <EXIT "EAST" "MACHI"
-	      "OUT" <CEXIT "EMPTY-HANDED" "TIMBE" ,NOFIT>
-	      "NE" <CEXIT "EMPTY-HANDED" "TIMBE" ,NOFIT>
-	      "UP" #NEXIT "The chain is not climbable.">
+              "OUT" <CEXIT "EMPTY-HANDED" "TIMBE" ,NOFIT>
+              "NE" <CEXIT "EMPTY-HANDED" "TIMBE" ,NOFIT>
+              "UP" #NEXIT "The chain is not climbable.">
        (<GET-OBJ "FBASK">)
        NO-OBJS
        <+ ,RLANDBIT ,RSACREDBIT>>
@@ -2315,9 +2315,9 @@ passage. In the shaft can be seen a heavy iron chain."
        ""
        "Dome Room"
        <EXIT "EAST" "CRAW1"
-	      "DOWN" <CEXIT "DOME-FLAG"
-			     "MTORC"
-			     "You cannot go down without fracturing many bones.">>
+              "DOWN" <CEXIT "DOME-FLAG"
+                             "MTORC"
+                             "You cannot go down without fracturing many bones.">>
        (<GET-OBJ "RAILI">)
        DOME-ROOM>
 
@@ -2333,7 +2333,7 @@ passage. In the shaft can be seen a heavy iron chain."
 There is a hole above, but it provides no opportunities for climbing."
        "North-South Crawlway"
        <EXIT "NORTH" "CHAS2" "SOUTH" "STUDI" "EAST" "MTROL"
-	      "UP" #NEXIT "Not even a human fly could get up it.">>
+              "UP" #NEXIT "Not even a human fly could get up it.">>
 
 <ROOM "CHAS2"
 
@@ -2343,7 +2343,7 @@ passage goes west, and the path you are on continues to the north and
 south."
        "West of Chasm"
        <EXIT "WEST" "CELLA" "NORTH" "CRAW4" "SOUTH" "GALLE"
-		  "DOWN" #NEXIT "The chasm probably leads straight to the infernal regions.">>
+                  "DOWN" #NEXIT "The chasm probably leads straight to the infernal regions.">>
 
 <ROOM "PASS1"
 "This is a narrow east-west passageway.  There is a narrow stairway
@@ -2359,14 +2359,14 @@ leading down at the north end of the room."
        ""
        "Round room"
        <EXIT "NORTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" <> CAROUSEL-EXIT>
-	      "SOUTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" <> CAROUSEL-EXIT>
-	      "EAST" <CEXIT "CAROUSEL-FLIP" "MGRAI" "" <> CAROUSEL-EXIT>
-	      "WEST" <CEXIT "CAROUSEL-FLIP" "PASS1" "" <> CAROUSEL-EXIT>
-	      "NW" <CEXIT "CAROUSEL-FLIP" "CANY1" "" <> CAROUSEL-EXIT>
-	      "NE" <CEXIT "CAROUSEL-FLIP" "PASS5" "" <> CAROUSEL-EXIT>
-	      "SE" <CEXIT "CAROUSEL-FLIP" "PASS4" "" <> CAROUSEL-EXIT>
-	      "SW" <CEXIT "CAROUSEL-FLIP" "MAZE1" "" <> CAROUSEL-EXIT>
-	      "EXIT" <CEXIT "CAROUSEL-FLIP" "PASS3" "" <> CAROUSEL-OUT>>
+              "SOUTH" <CEXIT "CAROUSEL-FLIP" "CAVE4" "" <> CAROUSEL-EXIT>
+              "EAST" <CEXIT "CAROUSEL-FLIP" "MGRAI" "" <> CAROUSEL-EXIT>
+              "WEST" <CEXIT "CAROUSEL-FLIP" "PASS1" "" <> CAROUSEL-EXIT>
+              "NW" <CEXIT "CAROUSEL-FLIP" "CANY1" "" <> CAROUSEL-EXIT>
+              "NE" <CEXIT "CAROUSEL-FLIP" "PASS5" "" <> CAROUSEL-EXIT>
+              "SE" <CEXIT "CAROUSEL-FLIP" "PASS4" "" <> CAROUSEL-EXIT>
+              "SW" <CEXIT "CAROUSEL-FLIP" "MAZE1" "" <> CAROUSEL-EXIT>
+              "EXIT" <CEXIT "CAROUSEL-FLIP" "PASS3" "" <> CAROUSEL-OUT>>
        (<GET-OBJ "IRBOX">)
        CAROUSEL-ROOM>
 
@@ -2380,7 +2380,7 @@ leading down at the north end of the room."
 path exits to the south and to the east."
        "Chasm"
        <EXIT "SOUTH" "RAVI1" "EAST" "PASS5"
-		  "DOWN" #NEXIT "Are you out of your mind?">>
+                  "DOWN" #NEXIT "Are you out of your mind?">>
 
 <ROOM "CAVE3"
 
@@ -2389,7 +2389,7 @@ the cave narrows to a crack to the west.  The earth is particularly
 damp here."
        "Damp Cave"
        <EXIT "SOUTH" "ECHO" "EAST" "DAM"
-		  "WEST" #NEXIT "It is too narrow for most insects.">>
+                  "WEST" #NEXIT "It is too narrow for most insects.">>
 
 <ROOM "CHAS3"
 "A chasm, evidently produced by an ancient river, runs through the
@@ -2421,14 +2421,14 @@ following words are written: 'No man shall enter this room without
 solving this riddle:
 
   What is tall as a house,
-	  round as a cup, 
-	  and all the king's horses can't draw it up?'
+          round as a cup, 
+          and all the king's horses can't draw it up?'
 
 (Reply via 'ANSWER \"answer\"')"
        "Riddle Room"
        <EXIT "DOWN" "CAVE4"
-	      "EAST" <CEXIT "RIDDLE-FLAG" "MPEAR"
-			     "Your way is blocked by an invisible force.">>
+              "EAST" <CEXIT "RIDDLE-FLAG" "MPEAR"
+                             "Your way is blocked by an invisible force.">>
        (<GET-OBJ "SDOOR">)>
 
 <ROOM "MPEAR"
@@ -2441,14 +2441,14 @@ solving this riddle:
        ""
        "Entrance to Hades"
        <EXIT "EAST"
-		<CEXIT "LLD-FLAG"
-			"LLD2"
-			"Some invisible force prevents you from passing through the gate.">
-		"UP" "CAVE2"
-		"ENTER"
-		<CEXIT "LLD-FLAG"
-			"LLD2"
-			"Some invisible force prevents you from passing through the gate.">>
+                <CEXIT "LLD-FLAG"
+                        "LLD2"
+                        "Some invisible force prevents you from passing through the gate.">
+                "UP" "CAVE2"
+                "ENTER"
+                <CEXIT "LLD-FLAG"
+                        "LLD2"
+                        "Some invisible force prevents you from passing through the gate.">>
        (<GET-OBJ "CORPS"> <GET-OBJ "GATES"> <GET-OBJ "GHOST">)
        LLD-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT>>
@@ -2457,7 +2457,7 @@ solving this riddle:
        ""
        "Land of the Living Dead"
        <EXIT "EAST" "TOMB"
-		"EXIT" "LLD1" "WEST" "LLD1">
+                "EXIT" "LLD1" "WEST" "LLD1">
        (<GET-OBJ "BODIE">)
        LLD2-ROOM
        <+ ,RLANDBIT ,RLIGHTBIT>
@@ -2510,8 +2510,8 @@ the dam.  There are exits here to the north and east marked
 'Private', though the doors are open, and an exit to the south."
        "Dam Lobby"
        <EXIT "SOUTH" "DAM"
-	      "NORTH" "MAINT"
-	      "EAST" "MAINT">
+              "NORTH" "MAINT"
+              "EAST" "MAINT">
        (<GET-OBJ "MATCH"> <GET-OBJ "GUIDE">)
        <>
        <+ ,RLANDBIT ,RLIGHTBIT>>
@@ -2528,8 +2528,8 @@ room are in the west and south ends."
        "Maintenance Room"
        <EXIT "SOUTH" "LOBBY" "WEST" "LOBBY">
        (<GET-OBJ "LEAK"> <GET-OBJ "TUBE"> <GET-OBJ "WRENC">
-	<GET-OBJ "BLBUT"> <GET-OBJ "RBUTT"> <GET-OBJ "BRBUT">
-	<GET-OBJ "YBUTT"> <GET-OBJ "SCREW"> <GET-OBJ "TCHST">)
+        <GET-OBJ "BLBUT"> <GET-OBJ "RBUTT"> <GET-OBJ "BRBUT">
+        <GET-OBJ "YBUTT"> <GET-OBJ "SCREW"> <GET-OBJ "TCHST">)
        MAINT-ROOM
        ,RLANDBIT>
 
@@ -2563,7 +2563,7 @@ way downstream."
 flows quietly here.  There is a landing on the west shore."
        ,RIVERDESC
        <EXIT "UP" ,CURRENT "WEST" "DOCK" "LAND" "DOCK" "DOWN" "RIVR2"
-	      "EAST" ,CLIFFS>
+              "EAST" ,CLIFFS>
        ()
        <>
        <+ ,RWATERBIT ,RNWALLBIT ,RSACREDBIT>
@@ -2584,7 +2584,7 @@ the east below the cliffs and there is some shore on the west which
 may be suitable.  In the distance a faint rumbling can be heard."
        ,RIVERDESC
        <EXIT "UP" ,CURRENT "DOWN" "RIVR4" "EAST" "WCLF1" "WEST" "RCAVE"
-	      "LAND" #NEXIT "You must specify which direction here.">
+              "LAND" #NEXIT "You must specify which direction here.">
        () <> <+ ,RWATERBIT ,RNWALLBIT ,RSACREDBIT>
        (RGLOBAL ,RGWATER)>
 
@@ -2613,7 +2613,7 @@ that of rushing water.  On the west shore is a sandy beach.  A small
 area of beach can also be seen below the Cliffs."
        ,RIVERDESC
        <EXIT "UP" ,CURRENT "DOWN" "RIVR5" "EAST" "WCLF2" "WEST" "BEACH"
-	      "LAND" #NEXIT "Specify the direction to land.">
+              "LAND" #NEXIT "Specify the direction to land.">
        (<GET-OBJ "BUOY">)
        RIVR4-ROOM
        <+ ,RWATERBIT ,RNWALLBIT ,RSACREDBIT>
@@ -2638,7 +2638,7 @@ treacherous.  A path travels from north to south here, the south end
 quickly turning around a sharp corner."
        "Shore"
        <EXIT "LAUNC" "RIVR5" "NORTH" "BEACH"
-	      "SOUTH" "FALLS">
+              "SOUTH" "FALLS">
        ()
        <>
        <+ ,RNWALLBIT ,RLANDBIT ,RSACREDBIT>
@@ -2672,8 +2672,8 @@ to the northwest.  The shore is very rocky here."
        ""
        "Aragain Falls"
        <EXIT "EAST" <CEXIT "RAINBOW" "RAINB"> 
-	     "DOWN" #NEXIT "It's a long way..." "NORTH" "FANTE"
-	       "UP" <CEXIT "RAINBOW" "RAINB">>
+             "DOWN" #NEXIT "It's a long way..." "NORTH" "FANTE"
+               "UP" <CEXIT "RAINBOW" "RAINB">>
        (<GET-OBJ "RAINB"> <GET-OBJ "BARRE">)
        FALLS-ROOM
        <+ ,RNWALLBIT ,RLANDBIT ,RSACREDBIT>
@@ -2699,7 +2699,7 @@ from above. A rainbow crosses over the falls to the west and a narrow
 path continues to the southeast."
        "End of Rainbow"
        <EXIT "UP" ,CRAIN "NW" ,CRAIN "WEST" ,CRAIN "SE" "CLBOT"
-	     "LAUNC" #NEXIT "The sharp rocks endanger your boat.">
+             "LAUNC" #NEXIT "The sharp rocks endanger your boat.">
        (<GET-OBJ "RAINB"> <GET-OBJ "POT">)
        <>
        <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT>
@@ -2804,7 +2804,7 @@ volcano.  This ledge appears to be about in the middle between the
 floor below and the rim above. There is an exit here to the south."
        "Narrow Ledge"
        <EXIT "DOWN" #NEXIT "I wouldn't jump from here."
-	      "LAUNC" "VAIR2" "WEST" ,CXGNOME "SOUTH" "LIBRA">
+              "LAUNC" "VAIR2" "WEST" ,CXGNOME "SOUTH" "LIBRA">
        (<GET-OBJ "HOOK1"> <GET-OBJ "COIN">)>
 
 <ROOM "LIBRA"
@@ -2814,7 +2814,7 @@ to pieces by unfriendly gnomes.  To the north is an exit."
        "Library"
        <EXIT "NORTH" "LEDG2" "OUT" "LEDG2">
        (<GET-OBJ "BLBK"> <GET-OBJ "GRBK"> <GET-OBJ "PUBK">
-	<GET-OBJ "WHBK">)>
+        <GET-OBJ "WHBK">)>
 
 <ROOM "LEDG3"
 "You are on a ledge in the middle of a large volcano.  Below you
@@ -2824,14 +2824,14 @@ it appears that this ledge is intermediate in elevation between
 those on the other side.  The exit from this room is to the east."
        "Volcano View"
        <EXIT "DOWN" #NEXIT "I wouldn't try that."
-	      "CROSS" #NEXIT "It is impossible to cross this distance."
-	      "EAST" "EGYPT">>
+              "CROSS" #NEXIT "It is impossible to cross this distance."
+              "EAST" "EGYPT">>
 
 <ROOM "LEDG4"
        ""
        "Wide Ledge"
        <EXIT "DOWN" #NEXIT "It's a long way down."
-	      "LAUNC" "VAIR4" "WEST" ,CXGNOME "SOUTH" "SAFE">
+              "LAUNC" "VAIR4" "WEST" ,CXGNOME "SOUTH" "SAFE">
        (<GET-OBJ "HOOK2">)
        LEDGE-FUNCTION>
 
@@ -2865,8 +2865,8 @@ There are exits here to the west and the south."
        ""
        "Low Room"
        <EXIT "NORTH" ,MAGCMACH "SOUTH" ,MAGCMACH "WEST" ,MAGCMACH "NE" ,MAGCMACH
-	      "NW" ,MAGALICE "SW" ,MAGALICE "SE" ,MAGALICE "EAST" ,MAGCMACH
-	      "OUT" ,MAGALICE>
+              "NW" ,MAGALICE "SW" ,MAGALICE "SE" ,MAGALICE "EAST" ,MAGCMACH
+              "OUT" ,MAGALICE>
        (<GET-OBJ "RBTLB"> <GET-OBJ "ROBOT">)
        MAGNET-ROOM>
 
@@ -2880,10 +2880,10 @@ There are exits here to the west and the south."
 <ROOM "CAGER"
 "This is a dingy closet adjacent to the machine room.  On one wall
 is a small sticker which says
-		Protected by
-		  FROBOZZ
-	     Magic Alarm Company
-	      (Hello, footpad!)
+                Protected by
+                  FROBOZZ
+             Magic Alarm Company
+              (Hello, footpad!)
 "
        "Dingy Closet"
        <EXIT "NORTH" "CMACH">
@@ -2908,7 +2908,7 @@ entrance to a room on the east, but it can be crossed easily."
        <>
        <+ ,RLANDBIT ,RBUCKBIT>
        (RVAL 10
-	RGLOBAL ,WELLBIT)>
+        RGLOBAL ,WELLBIT)>
 
 <ROOM "BWELL"
        
@@ -2931,9 +2931,9 @@ corner of the room is a small hole (no more than four inches high).
 There are passageways leading away to the west and the northwest."
        "Tea Room"
        <EXIT "EAST" #NEXIT "Only a mouse could get in there."
-	      "WEST" "TWELL" "NW" "MAGNE">
+              "WEST" "TWELL" "NW" "MAGNE">
        (<GET-OBJ "ATABL"> <GET-OBJ "ECAKE"> <GET-OBJ "ORICE">
-	<GET-OBJ "RDICE"> <GET-OBJ "BLICE">)>
+        <GET-OBJ "RDICE"> <GET-OBJ "BLICE">)>
 
 <PSETG SMDROP #NEXIT "There is a chasm too large to jump across.">
 
@@ -2996,7 +2996,7 @@ the room, which say
       
 "This is a room used by holders of safety deposit boxes to view
 their contents.  On the north side of the room is a sign which says 
-	
+        
    REMAIN HERE WHILE THE BANK OFFICER RETRIEVES YOUR DEPOSIT BOX
     WHEN YOU ARE FINISHED, LEAVE THE BOX, AND EXIT TO THE SOUTH  
      AN ADVANCED PROTECTIVE DEVICE PREVENTS ALL CUSTOMERS FROM
@@ -3059,13 +3059,13 @@ room is a large stone cube, about 10 feet on a side.  Engraved on
 the side of the cube is some lettering."
       "Safety Depository"
       <EXIT "NORTH"
-	    #NEXIT #NEXIT "There is a curtain of light there."
-	    "WEST"
-	    <CEXIT "FROBOZZ" "BKTW" ,BKALARM <> BKLEAVEW>
-	    "EAST"
-	    <CEXIT "FROBOZZ" "BKTE" ,BKALARM <> BKLEAVEE>
-	    "SOUTH"
-	    "BKEXE">
+            #NEXIT #NEXIT "There is a curtain of light there."
+            "WEST"
+            <CEXIT "FROBOZZ" "BKTW" ,BKALARM <> BKLEAVEW>
+            "EAST"
+            <CEXIT "FROBOZZ" "BKTE" ,BKALARM <> BKLEAVEE>
+            "SOUTH"
+            "BKEXE">
       (<GET-OBJ "VAULT"> <GET-OBJ "SCOL">)
       BKBOX-ROOM
       <+ ,RLANDBIT ,RLIGHTBIT>
@@ -3119,69 +3119,69 @@ The lone exit is to the north."
 
 <SETG CPUVEC
       <UVECTOR 1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       0
-	       -1
-	       0
-	       0
-	       -1
-	       0
-	       1
-	       1
-	       -1
-	       0
-	       1
-	       0
-	       -2
-	       0
-	       1
-	       1
-	       0
-	       0
-	       0
-	       0
-	       1
-	       0
-	       1
-	       1
-	       -3
-	       0
-	       0
-	       -1
-	       -1
-	       0
-	       1
-	       1
-	       0
-	       0
-	       -1
-	       0
-	       0
-	       0
-	       1
-	       1
-	       1
-	       1
-	       0
-	       0
-	       0
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1
-	       1>>
+               1
+               1
+               1
+               1
+               1
+               1
+               1
+               1
+               0
+               -1
+               0
+               0
+               -1
+               0
+               1
+               1
+               -1
+               0
+               1
+               0
+               -2
+               0
+               1
+               1
+               0
+               0
+               0
+               0
+               1
+               0
+               1
+               1
+               -3
+               0
+               0
+               -1
+               -1
+               0
+               1
+               1
+               0
+               0
+               -1
+               0
+               0
+               0
+               1
+               1
+               1
+               1
+               0
+               0
+               0
+               1
+               1
+               1
+               1
+               1
+               1
+               1
+               1
+               1
+               1>>
 
 ;" 0 is no wall
     1 is fixed wall
@@ -3223,7 +3223,7 @@ feet below.  It doesn't seem likely you could climb back up.  There
 are exits to the west and south."
       "Small Square Room"
       <EXIT "SOUTH" "CPOUT" "WEST" "TREAS"
-	    "DOWN" <CEXIT "FROBOZZ" "FCHMP" "" <> CPENTER>>
+            "DOWN" <CEXIT "FROBOZZ" "FCHMP" "" <> CPENTER>>
       (<GET-OBJ "WARNI">)
       <>
       <+ ,RLANDBIT ,RLIGHTBIT>>
@@ -3239,23 +3239,23 @@ are exits to the west and south."
       ""
       "Room in a Puzzle"
       <EXIT "NORTH"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "SOUTH"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "EAST"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "WEST"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "NE"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "NW"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "SE"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "UP"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
-	    "SW"
-	    <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>>
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "SOUTH"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "EAST"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "WEST"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "NE"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "NW"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "SE"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "UP"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>
+            "SW"
+            <CEXIT "FROBOZZ" "FCHMP" "" <> CPEXIT>>
       ()
       CP-ROOM
       <+ ,RLANDBIT ,RLIGHTBIT>
@@ -3285,7 +3285,7 @@ are exits to the west and south."
       ""
       "Tiny Room"
       <EXIT "NORTH" ,PALANDOOR "ENTER" ,PALANDOOR "#!#!#" ,PALANWIND
-	    "EAST" "MTORC">
+            "EAST" "MTORC">
       (<GET-OBJ "PDOOR"> <GET-OBJ "PWIND"> <GET-OBJ "PLID1"> <GET-OBJ "PKH1">)
       PRM-ROOM>
 
@@ -3293,7 +3293,7 @@ are exits to the west and south."
       ""
       "Slide Room"
       <EXIT "EAST" "PASS3" "NORTH" "ENTRA"
-	    "DOWN" <CEXIT "FROBOZZ" "CAVE4" "" <> SLIDE-EXIT>>
+            "DOWN" <CEXIT "FROBOZZ" "CAVE4" "" <> SLIDE-EXIT>>
       ()
       SLIDE-ROOM
       ,RLANDBIT
@@ -3371,7 +3371,7 @@ is a very narrow crack in the north wall."
 <ROOM "MRD"
        "" "Hallway"
        <EXIT "NORTH" "FDOOR" "NE" "FDOOR" "NW" "FDOOR"
-	      "SOUTH" ,MR-G "SE" ,MR-G "SW" ,MR-G>
+              "SOUTH" ,MR-G "SE" ,MR-G "SW" ,MR-G>
        ()
        MRDF
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3388,7 +3388,7 @@ is a very narrow crack in the north wall."
 <ROOM "MRC"
        "" "Hallway"
        <EXIT "NORTH" ,MR-G "NW" ,MR-G "NE" ,MR-G
-	      "ENTER" ,MIREX "SOUTH" ,MR-B "SW" ,MR-B "SE" ,MR-B>
+              "ENTER" ,MIREX "SOUTH" ,MR-B "SW" ,MR-B "SE" ,MR-B>
        ()
        MRCF
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3397,7 +3397,7 @@ is a very narrow crack in the north wall."
 <ROOM "MRB"
        "" "Hallway"
        <EXIT "NORTH" ,MR-C "NW" ,MR-C "NE" ,MR-C
-	      "ENTER" ,MIREX "SOUTH" ,MR-A "SW" ,MR-A "SE" ,MR-A>
+              "ENTER" ,MIREX "SOUTH" ,MR-A "SW" ,MR-A "SE" ,MR-A>
        ()
        MRBF
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3406,7 +3406,7 @@ is a very narrow crack in the north wall."
 <ROOM "MRA"
        "" "Hallway"
        <EXIT "NORTH" ,MR-B "NW" ,MR-B "NE" ,MR-B
-	      "ENTER" ,MIREX "SOUTH" "MREYE">
+              "ENTER" ,MIREX "SOUTH" "MREYE">
        ()
        MRAF
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3495,17 +3495,17 @@ is a very narrow crack in the north wall."
 <ROOM "INMIR"
        "" "Inside Mirror"
        <EXIT "NORTH" ,MOUT "SOUTH" ,MOUT "EAST" ,MOUT "WEST" ,MOUT
-	      "NE" ,MOUT "NW" ,MOUT "SE" ,MOUT "SW" ,MOUT "EXIT" ,MOUT>
+              "NE" ,MOUT "NW" ,MOUT "SE" ,MOUT "SW" ,MOUT "EXIT" ,MOUT>
        (<GET-OBJ "YLWAL"> <GET-OBJ "WHWAL">
-	<GET-OBJ "RDWAL"> <GET-OBJ "BLWAL">
-	<GET-OBJ "OAKND"> <GET-OBJ "PINND">
-	<GET-OBJ "WDBAR"> <GET-OBJ "LPOLE">
-	<GET-OBJ "SPOLE"> <GET-OBJ "TBAR">
-	<GET-OBJ "ARROW">)
+        <GET-OBJ "RDWAL"> <GET-OBJ "BLWAL">
+        <GET-OBJ "OAKND"> <GET-OBJ "PINND">
+        <GET-OBJ "WDBAR"> <GET-OBJ "LPOLE">
+        <GET-OBJ "SPOLE"> <GET-OBJ "TBAR">
+        <GET-OBJ "ARROW">)
        MAGIC-MIRROR
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
        (RVAL 15
-	RGLOBAL <+ ,ROSEBIT ,CHANBIT ,GUARDBIT>)>
+        RGLOBAL <+ ,ROSEBIT ,CHANBIT ,GUARDBIT>)>
 
 <ROOM "MRANT"
 
@@ -3531,12 +3531,12 @@ button."
 <ROOM "TOMB"
        ""
        "Tomb of the Unknown Implementer"
-	<EXIT "WEST" "LLD2" "NORTH" ,CD "ENTER" ,CD>
-	(<GET-OBJ "TOMB">
-	 <GET-OBJ "HEADS">
-	 <GET-OBJ "COKES">
-	 <GET-OBJ "LISTS">)
-	TOMB-FUNCTION>
+        <EXIT "WEST" "LLD2" "NORTH" ,CD "ENTER" ,CD>
+        (<GET-OBJ "TOMB">
+         <GET-OBJ "HEADS">
+         <GET-OBJ "COKES">
+         <GET-OBJ "LISTS">)
+        TOMB-FUNCTION>
 
 <ROOM "CRYPT"
        ""
@@ -3553,8 +3553,8 @@ a passage below.  Dim light, as from torches, can be seen in the
 passage.  Behind you the stairs lead into untouched rock."
        "Top of Stairs"
        <EXIT "NORTH" "MRANT"
-	      "DOWN" "MRANT"
-	      "SOUTH" #NEXIT "The wall is solid rock.">
+              "DOWN" "MRANT"
+              "SOUTH" #NEXIT "The wall is solid rock.">
        ()
        <>
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3585,9 +3585,9 @@ southern ends."
        ""
        "South Corridor"
        <EXIT "WEST" "WCORR"
-	      "EAST" "ECORR"
-	      "NORTH" ,OD
-	      "SOUTH" "BDOOR">
+              "EAST" "ECORR"
+              "NORTH" ,OD
+              "SOUTH" "BDOOR">
        (<GET-OBJ "ODOOR">)
        SCORR-ROOM <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>>
 
@@ -3596,7 +3596,7 @@ southern ends."
        "Narrow Corridor"
        <EXIT "NORTH" "SCORR" "SOUTH" ,WD>
        (<GET-OBJ "MASTE">
-	<GET-OBJ "QDOOR">)
+        <GET-OBJ "QDOOR">)
        BDOOR-FUNCTION
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
        (RVAL 20)>
@@ -3614,7 +3614,7 @@ southern ends."
        ""
        "North Corridor"
        <EXIT "EAST" "ECORR" "WEST" "WCORR" "NORTH" "PARAP"
-	      "SOUTH" ,CD "ENTER" ,CD>
+              "SOUTH" ,CD "ENTER" ,CD>
        (<GET-OBJ "CDOOR">)
        NCORR-ROOM
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3624,12 +3624,12 @@ southern ends."
        ""
        "Parapet"
        <EXIT "SOUTH" "NCORR"
-	      "NORTH" #NEXIT "You would be burned to a crisp in no time.">
+              "NORTH" #NEXIT "You would be burned to a crisp in no time.">
        (<GET-OBJ "DBUTT"> <GET-OBJ "DIAL">
-	<GET-OBJ "ONE"> <GET-OBJ "TWO">
-	<GET-OBJ "THREE"> <GET-OBJ "FOUR">
-	<GET-OBJ "FIVE"> <GET-OBJ "SIX">
-	<GET-OBJ "SEVEN"> <GET-OBJ "EIGHT">)
+        <GET-OBJ "ONE"> <GET-OBJ "TWO">
+        <GET-OBJ "THREE"> <GET-OBJ "FOUR">
+        <GET-OBJ "FIVE"> <GET-OBJ "SIX">
+        <GET-OBJ "SEVEN"> <GET-OBJ "EIGHT">)
        PARAPET
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
        (RGLOBAL ,MASTERBIT)>
@@ -3644,8 +3644,8 @@ southern ends."
        ""
        "Prison Cell"
        <EXIT "EXIT" ,CD
-	      "NORTH" ,CD
-	      "SOUTH" ,OD>
+              "NORTH" ,CD
+              "SOUTH" ,OD>
        (<GET-OBJ "CDOOR"> <GET-OBJ "ODOOR">)
        CELL-ROOM
        <+ ,RENDGAME ,RLANDBIT ,RLIGHTBIT>
@@ -3700,7 +3700,7 @@ the Frobozz Magic Boat Co., etc."
 
 ; "SUBTITLE END GAME GOODIES"
 
-<SETG CELLS <IUVECTOR 8 '()>>		;"contents of cells"
+<SETG CELLS <IUVECTOR 8 '()>>           ;"contents of cells"
 
 <SETG COBJS (<GET-OBJ "CDOOR"> <GET-OBJ "ODOOR">)>
 
@@ -3708,11 +3708,11 @@ the Frobozz Magic Boat Co., etc."
 
 <SETG POBJS (<GET-OBJ "LDOOR">)>
 
-<SETG NORTHEND <GET-ROOM "MRD">>	;"northern limit of mirror"
+<SETG NORTHEND <GET-ROOM "MRD">>        ;"northern limit of mirror"
 
 <SETG STARTROOM <SETG MLOC <GET-ROOM "MRB">>> ;"where mirror begins"
 
-<SETG SOUTHEND <GET-ROOM "MRA">>	;"southern limit of mirror"
+<SETG SOUTHEND <GET-ROOM "MRA">>        ;"southern limit of mirror"
 
 
 
@@ -3728,21 +3728,21 @@ the Frobozz Magic Boat Co., etc."
 
 L;"funny verbs"
 
-<SADD-ACTION "C-INT" TIME>	;"funny verb for clock ints"
+<SADD-ACTION "C-INT" TIME>      ;"funny verb for clock ints"
 
-<SADD-ACTION "DEAD!" TIME>	;"funny verb for killing villains"
+<SADD-ACTION "DEAD!" TIME>      ;"funny verb for killing villains"
 
-<SADD-ACTION "1ST?" TIME>	;"funny verb for surprise by villains"
+<SADD-ACTION "1ST?" TIME>       ;"funny verb for surprise by villains"
 
-<SADD-ACTION "FGHT?" TIME>	;"funny verb for deciding whether to fight"
+<SADD-ACTION "FGHT?" TIME>      ;"funny verb for deciding whether to fight"
 
-<SADD-ACTION "HACK?" TIME>	;"funny verb for villain fight decisions"
+<SADD-ACTION "HACK?" TIME>      ;"funny verb for villain fight decisions"
 
-<SADD-ACTION "IN!" TIME>	;"villain regains consciousness"
+<SADD-ACTION "IN!" TIME>        ;"villain regains consciousness"
 
-<SADD-ACTION "OUT!" TIME>	;"villain loses consciousness"
+<SADD-ACTION "OUT!" TIME>       ;"villain loses consciousness"
 
-<SADD-ACTION "GO-IN" TIME>	;"funny verb for room actions when entering"
+<SADD-ACTION "GO-IN" TIME>      ;"funny verb for room actions when entering"
 
 ;"ZORK game commands"
 
@@ -3793,9 +3793,9 @@ L;"funny verbs"
 <VSYNONYM "ANSWE" "RESPO">
 
 <ADD-ACTION "ATTAC"
-	    "Attack"
-	    [(,VILLAIN ROBJS REACH) "WITH" (,WEAPONBIT AOBJS HAVE)
-	     ["ATTAC" ATTACKER]]>
+            "Attack"
+            [(,VILLAIN ROBJS REACH) "WITH" (,WEAPONBIT AOBJS HAVE)
+             ["ATTAC" ATTACKER]]>
 <VSYNONYM "ATTAC" "FIGHT" "HURT" "INJUR" "HIT">
 
 <SADD-ACTION "BACK" BACKER>
@@ -3803,33 +3803,33 @@ L;"funny verbs"
 <SADD-ACTION "BLAST" BLAST>
 
 <ADD-ACTION "BOARD"
-	    "Board"
-	    [(,VEHBIT ROBJS REACH) ["BOARD" BOARD]]>
+            "Board"
+            [(,VEHBIT ROBJS REACH) ["BOARD" BOARD]]>
 
 <ADD-ACTION "BRUSH"
-	    "Brush"
-	    [(-1 AOBJS ROBJS REACH) ["BRUSH" BRUSH] DRIVER]
-	    [(-1 AOBJS ROBJS REACH) "WITH" OBJ ["BRUSH" BRUSH]]>
+            "Brush"
+            [(-1 AOBJS ROBJS REACH) ["BRUSH" BRUSH] DRIVER]
+            [(-1 AOBJS ROBJS REACH) "WITH" OBJ ["BRUSH" BRUSH]]>
 <VSYNONYM "BRUSH" "CLEAN">
 
 <ADD-ACTION "BURN"
-	    "Burn"
-	    [(,BURNBIT AOBJS ROBJS REACH) "WITH" (,FLAMEBIT AOBJS ROBJS HAVE)
-			["BURN" BURNER]]>
+            "Burn"
+            [(,BURNBIT AOBJS ROBJS REACH) "WITH" (,FLAMEBIT AOBJS ROBJS HAVE)
+                        ["BURN" BURNER]]>
 <VSYNONYM "BURN" "INCIN" "IGNIT">
 
 <SADD-ACTION "CHOMP" CHOMP>
 <VSYNONYM "CHOMP" "LOSE" "BARF">
 
 <ADD-ACTION "CLIMB"
-	    "Climb"
-	    ["UP" (,CLIMBBIT ROBJS) ["CLUP" CLIMB-UP]]
-	    ["DOWN" (,CLIMBBIT ROBJS) ["CLDN" CLIMB-DOWN]]
-	    [(,CLIMBBIT ROBJS) ["CLUDG" CLIMB-FOO]]>
+            "Climb"
+            ["UP" (,CLIMBBIT ROBJS) ["CLUP" CLIMB-UP]]
+            ["DOWN" (,CLIMBBIT ROBJS) ["CLDN" CLIMB-DOWN]]
+            [(,CLIMBBIT ROBJS) ["CLUDG" CLIMB-FOO]]>
 
 <ADD-ACTION "CLOSE"
-	    "Close"
-	    [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS) ["CLOSE" CLOSER]]>
+            "Close"
+            [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS) ["CLOSE" CLOSER]]>
 <VSYNONYM "CLOSE">
 
 <1ADD-ACTION "COUNT" "Count" COUNT>
@@ -3843,37 +3843,37 @@ L;"funny verbs"
 <SADD-ACTION "DIAGN" DIAGNOSE>
 
 <ADD-ACTION "DIG"
-	    "Dig"
-	    [(,DIGBIT ROBJS) "WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER] DRIVER]
-	    ["INTO" (,DIGBIT ROBJS) "WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER]]>
+            "Dig"
+            [(,DIGBIT ROBJS) "WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER] DRIVER]
+            ["INTO" (,DIGBIT ROBJS) "WITH" (,TOOLBIT AOBJS HAVE) ["DIG" DIGGER]]>
 
 <ADD-ACTION "DISEM"
-	    "Disembark from"
-	    [(,VEHBIT ROBJS) ["DISEM" UNBOARD]]>
+            "Disembark from"
+            [(,VEHBIT ROBJS) ["DISEM" UNBOARD]]>
 
 <SADD-ACTION "DOC" DOC>
 
 <ADD-ACTION "DRINK"
-	    "Drink"
-	    [(,DRINKBIT AOBJS ROBJS REACH) ["DRINK" EAT]]>
+            "Drink"
+            [(,DRINKBIT AOBJS ROBJS REACH) ["DRINK" EAT]]>
 <VSYNONYM "DRINK" "IMBIB" "SWALL">
 
 <ADD-ACTION "DROP"
-	    "Drop"
-	    [(-1 AOBJS REACH) ["DROP" DROPPER] DRIVER]
-	    [(-1 AOBJS REACH) "DOWN" OBJ ["PUT" PUTTER]]
-	    [(-1 AOBJS REACH) "IN" OBJ ["PUT" PUTTER]]>
+            "Drop"
+            [(-1 AOBJS REACH) ["DROP" DROPPER] DRIVER]
+            [(-1 AOBJS REACH) "DOWN" OBJ ["PUT" PUTTER]]
+            [(-1 AOBJS REACH) "IN" OBJ ["PUT" PUTTER]]>
 <VSYNONYM "DROP" "RELEA">
 
 <ADD-ACTION "EAT"
-	    "Eat"
-	    [(,FOODBIT AOBJS ROBJS REACH TAKE) ["EAT" EAT]]>
+            "Eat"
+            [(,FOODBIT AOBJS ROBJS REACH TAKE) ["EAT" EAT]]>
 <VSYNONYM "EAT" "CONSU" "GOBBL" "MUNCH" "TASTE">
 
 <ADD-ACTION "ENTER"
-	    "Enter"
-	    [["ENTER" ENTER]]
-	    [OBJ ["GTHRO" THROUGH]]>
+            "Enter"
+            [["ENTER" ENTER]]
+            [OBJ ["GTHRO" THROUGH]]>
 
 <1NRADD-ACTION "EXAMI" "Examine" ROOM-INFO>
 <VSYNONYM "EXAMI" "DESCR" "WHAT" "WHATS" "WHAT'">
@@ -3882,16 +3882,16 @@ L;"funny verbs"
 <VSYNONYM "EXORC" "XORCI">
 
 <ADD-ACTION "EXTIN"
-	    "Turn off"
-	    [(,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNOF" LAMP-OFF]]>
+            "Turn off"
+            [(,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNOF" LAMP-OFF]]>
 <VSYNONYM "EXTIN" "DOUSE">
 
 <ADD-ACTION "FILL" "Fill"
-	    [(,CONTBIT REACH AOBJS ROBJS)
-	     "WITH" OBJ
-	     ["FILL" FILL]]
-	    [(,CONTBIT REACH AOBJS ROBJS)
-	     ["FILL" FILL]]>
+            [(,CONTBIT REACH AOBJS ROBJS)
+             "WITH" OBJ
+             ["FILL" FILL]]
+            [(,CONTBIT REACH AOBJS ROBJS)
+             ["FILL" FILL]]>
 
 <1NRADD-ACTION "FIND" "Find" FIND>
 <VSYNONYM "FIND" "WHERE" "SEEK" "SEE">
@@ -3903,28 +3903,28 @@ L;"funny verbs"
 <SADD-ACTION "GERON" GERONIMO>
 
 <ADD-ACTION "GIVE"
-	    "Give"
-	    [OBJ "TO" (,VICBIT REACH ROBJS) ["GIVE" DROPPER] DRIVER]
-	    [(,VICBIT REACH ROBJS) OBJ ["GIVE" DROPPER] FLIP]>
+            "Give"
+            [OBJ "TO" (,VICBIT REACH ROBJS) ["GIVE" DROPPER] DRIVER]
+            [(,VICBIT REACH ROBJS) OBJ ["GIVE" DROPPER] FLIP]>
 <VSYNONYM "GIVE" "HAND" "DONAT">
 
 <ADD-ACTION "HELLO"
-	    "Hello"
-	    [["HELLO" HELLO] DRIVER]
-	    [OBJ ["HELLO" HELLO]]>
+            "Hello"
+            [["HELLO" HELLO] DRIVER]
+            [OBJ ["HELLO" HELLO]]>
 <VSYNONYM "HELLO" "HI">
 
 <ADD-ACTION "BLOW"
-	    "Blow"
-	    ["UP" OBJ "WITH" (,TOOLBIT REACH ROBJS AOBJS) ["INFLA" INFLATER] DRIVER]
-	    ["UP" OBJ ["BLAST" BLAST]]
-	    ["INTO" OBJ ["BLOIN" BREATHE]]>
+            "Blow"
+            ["UP" OBJ "WITH" (,TOOLBIT REACH ROBJS AOBJS) ["INFLA" INFLATER] DRIVER]
+            ["UP" OBJ ["BLAST" BLAST]]
+            ["INTO" OBJ ["BLOIN" BREATHE]]>
 
 <SADD-ACTION "INCAN" INCANT>
 
 <ADD-ACTION "INFLA"
-	    "Inflate"
-	    [OBJ "WITH" (,TOOLBIT REACH ROBJS AOBJS) ["INFLA" INFLATER]]>
+            "Inflate"
+            [OBJ "WITH" (,TOOLBIT REACH ROBJS AOBJS) ["INFLA" INFLATER]]>
 
 <SADD-ACTION "INVEN" INVENT>
 <VSYNONYM "INVEN" "LIST" "I">
@@ -3933,50 +3933,50 @@ L;"funny verbs"
 <VSYNONYM "FOO" "BAR" "BLETC">
 
 <ADD-ACTION "JUMP"
-	    "Jump"
-	    [["JUMP" LEAPER]]
-	    ["OVER" OBJ ["JUMP" LEAPER]]>
+            "Jump"
+            [["JUMP" LEAPER]]
+            ["OVER" OBJ ["JUMP" LEAPER]]>
 <VSYNONYM "JUMP" "LEAP">
 
 <1ADD-ACTION "KICK" "Taunt" KICKER>
 <VSYNONYM "KICK" "BITE" "TAUNT">
 
 <ADD-ACTION "KILL"
-	    "Kill"
-	    [(,VILLAIN ROBJS REACH) "WITH" (,WEAPONBIT AOBJS HAVE) ["KILL" KILLER]]>
+            "Kill"
+            [(,VILLAIN ROBJS REACH) "WITH" (,WEAPONBIT AOBJS HAVE) ["KILL" KILLER]]>
 <VSYNONYM "KILL" "MURDE" "SLAY" "DISPA" "STAB">
 
 <ADD-ACTION "KNOCK"
-	    "Knock"
-	    ["AT" OBJ ["KNOCK" KNOCK] DRIVER]
-	    ["ON" OBJ ["KNOCK" KNOCK]]
-	    ["DOWN" (,VICBIT = REACH ROBJS) ["ATTAC" ATTACKER]]>
+            "Knock"
+            ["AT" OBJ ["KNOCK" KNOCK] DRIVER]
+            ["ON" OBJ ["KNOCK" KNOCK]]
+            ["DOWN" (,VICBIT = REACH ROBJS) ["ATTAC" ATTACKER]]>
 <VSYNONYM "KNOCK" "RAP">
 
 <ADD-ACTION "LEAVE"
-	    "Enter"
-	    [["LEAVE" LEAVE]]
-	    [OBJ ["DROP" DROPPER]]>
+            "Enter"
+            [["LEAVE" LEAVE]]
+            [OBJ ["DROP" DROPPER]]>
 
 <ADD-ACTION "LIGHT"
-	    "Light"
-	    [(,LIGHTBIT REACH AOBJS ROBJS TAKE) ["LIGHT" LAMP-ON] DRIVER]
-	    [(,LIGHTBIT REACH AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS TAKE)
-					     ["BURN" BURNER]]>
+            "Light"
+            [(,LIGHTBIT REACH AOBJS ROBJS TAKE) ["LIGHT" LAMP-ON] DRIVER]
+            [(,LIGHTBIT REACH AOBJS ROBJS) "WITH" (,FLAMEBIT AOBJS TAKE)
+                                             ["BURN" BURNER]]>
 
 <ADD-ACTION "LOCK"
-	    "Lock"
-	    [(-1 ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["LOCK" LOCKER]]>
+            "Lock"
+            [(-1 ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["LOCK" LOCKER]]>
 
 <ADD-ACTION "LOOK"
-	    "Look"
-	    [["LOOK" ROOM-DESC]]
-	    ["AT" NROBJ ["LKAT" ROOM-DESC]]
-	    ["THROU" NROBJ ["LKIN" LOOK-INSIDE]]
-	    ["UNDER" OBJ ["LKUND" LOOK-UNDER]]
-	    ["IN" NROBJ ["LKIN" LOOK-INSIDE]]
-	    ["AT" NROBJ "WITH" OBJ ["READ" READER]]
-	    ["AT" NROBJ "THROU" OBJ ["READ" READER]]>
+            "Look"
+            [["LOOK" ROOM-DESC]]
+            ["AT" NROBJ ["LKAT" ROOM-DESC]]
+            ["THROU" NROBJ ["LKIN" LOOK-INSIDE]]
+            ["UNDER" OBJ ["LKUND" LOOK-UNDER]]
+            ["IN" NROBJ ["LKIN" LOOK-INSIDE]]
+            ["AT" NROBJ "WITH" OBJ ["READ" READER]]
+            ["AT" NROBJ "THROU" OBJ ["READ" READER]]>
 <VSYNONYM "LOOK" "L" "STARE" "GAZE">
 
 <1ADD-ACTION "LOWER" "Lower" R/L>
@@ -3985,8 +3985,8 @@ L;"funny verbs"
 <VSYNONYM "MAKE" "BUILD">
 
 <ADD-ACTION "MELT"
-	    "Melt"
-	    [OBJ "WITH" (,FLAMEBIT REACH AOBJS ROBJS) ["MELT" MELTER]]>
+            "Melt"
+            [OBJ "WITH" (,FLAMEBIT REACH AOBJS ROBJS) ["MELT" MELTER]]>
 <VSYNONYM "MELT" "LIQUI">
 
 <ADD-ACTION "MOVE" "Move" [(-1 ROBJS) ["MOVE" MOVE]]>
@@ -3997,104 +3997,104 @@ L;"funny verbs"
 <SADD-ACTION "OBJEC" ROOM-OBJ>
 
 <ADD-ACTION "PULL"
-	    "Pull"
-	    [(-1 REACH ROBJS) ["MOVE" MOVE] DRIVER]
-	    ["ON" (-1 REACH ROBJS) ["MOVE" MOVE]]>
+            "Pull"
+            [(-1 REACH ROBJS) ["MOVE" MOVE] DRIVER]
+            ["ON" (-1 REACH ROBJS) ["MOVE" MOVE]]>
 <SYNONYM "PULL" "TUG">
 
 <SADD-ACTION "MUMBL" MUMBLER>
 <VSYNONYM "MUMBL" "SIGH">
 
 <ADD-ACTION "DESTR"
-	    "Destroy"
-	    [(-1 REACH ROBJS AOBJS) ["MUNG" MUNGER] DRIVER]
-	    [(-1 REACH ROBJS AOBJS) "WITH" (-1 AOBJS TAKE) ["MUNG" MUNGER]]>
+            "Destroy"
+            [(-1 REACH ROBJS AOBJS) ["MUNG" MUNGER] DRIVER]
+            [(-1 REACH ROBJS AOBJS) "WITH" (-1 AOBJS TAKE) ["MUNG" MUNGER]]>
 <VSYNONYM "DESTR" "MUNG" "DAMAG">
 
 <SADD-ACTION "ODYSS" SINBAD>
 <VSYNONYM "ODYSS" "ULYSS">
 
 <ADD-ACTION "LUBRI"
-	    "Lubricate"
-	    [OBJ "WITH" (-1 AOBJS REACH) ["OIL" OIL]]>
+            "Lubricate"
+            [OBJ "WITH" (-1 AOBJS REACH) ["OIL" OIL]]>
 <VSYNONYM "LUBRI" "OIL" "GREAS">
 
 <1ADD-ACTION "OOPS" "Oops" OOPS>
 
 <ADD-ACTION "OPEN"
-	    "Open"
-	    [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS) ["OPEN" OPENER] DRIVER]
-	    [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS)
-	     "WITH" (<+ ,WEAPONBIT ,TOOLBIT> ROBJS AOBJS HAVE) ["OPEN" OPENER]]>
+            "Open"
+            [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS) ["OPEN" OPENER] DRIVER]
+            [(<+ ,DOORBIT ,CONTBIT> REACH AOBJS ROBJS)
+             "WITH" (<+ ,WEAPONBIT ,TOOLBIT> ROBJS AOBJS HAVE) ["OPEN" OPENER]]>
 <VSYNONYM "OPEN">
 
 <ADD-ACTION "PICK"
-	    "Pick"
-	    ["UP" (<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) ["TAKE" TAKE]]>
+            "Pick"
+            ["UP" (<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) ["TAKE" TAKE]]>
 
 <ADD-ACTION "PLAY"
-	    "Play"
-	    [OBJ ["PLAY" PLAY] DRIVER]
-	    [OBJ "WITH" (,TOOLBIT AOBJS ROBJS REACH TAKE) ["PLAY" PLAY]]>
-	     
+            "Play"
+            [OBJ ["PLAY" PLAY] DRIVER]
+            [OBJ "WITH" (,TOOLBIT AOBJS ROBJS REACH TAKE) ["PLAY" PLAY]]>
+             
 <ADD-ACTION "PLUG"
-	    "Plug"
-	    [OBJ "WITH" OBJ ["PLUG" PLUGGER]]>
+            "Plug"
+            [OBJ "WITH" OBJ ["PLUG" PLUGGER]]>
 <VSYNONYM "PLUG" "GLUE" "PATCH">
 
 <SADD-ACTION "PLUGH" ADVENT>
 <VSYNONYM "PLUGH" "XYZZY">
 
 <ADD-ACTION "POKE"
-	    "Poke"
-	    [(,VILLAIN REACH ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["POKE" MUNGER]]>
+            "Poke"
+            [(,VILLAIN REACH ROBJS) "WITH" (,WEAPONBIT AOBJS HAVE) ["POKE" MUNGER]]>
 <VSYNONYM "POKE" "JAB" "BREAK" "BLIND">
 
 <ADD-ACTION "POUR"
-	    "Pour"
-	    [(-1 AOBJS REACH) ["POUR" DROPPER] DRIVER]
-	    [(-1 AOBJS REACH) "IN" OBJ ["POUR" DROPPER]]
-	    [(-1 AOBJS REACH) "ON" OBJ ["PORON" POUR-ON]]>
+            "Pour"
+            [(-1 AOBJS REACH) ["POUR" DROPPER] DRIVER]
+            [(-1 AOBJS REACH) "IN" OBJ ["POUR" DROPPER]]
+            [(-1 AOBJS REACH) "ON" OBJ ["PORON" POUR-ON]]>
 <VSYNONYM "POUR" "SPILL">
 
 <SADD-ACTION "PRAY" PRAYER>
 
 <ADD-ACTION "PUMP"
-	    "Pump"
-	    ["UP" OBJ ["PMPUP" PUMPER]]>
+            "Pump"
+            ["UP" OBJ ["PMPUP" PUMPER]]>
 
 <ADD-ACTION "PUSH"
-	    "Push"
-	    [OBJ ["PUSH" PUSHER]]
-	    ["ON" OBJ ["PUSH" PUSHER]]
-	    [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]>
+            "Push"
+            [OBJ ["PUSH" PUSHER]]
+            ["ON" OBJ ["PUSH" PUSHER]]
+            [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]>
 <VSYNONYM "PUSH" "PRESS">
 
 <ADD-ACTION "PUT"
-	    "Put"
-	    [OBJ "IN" OBJ ["PUT" PUTTER] DRIVER]
-	    ["DOWN" OBJ ["DROP" DROPPER]]
-	    [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]> 
+            "Put"
+            [OBJ "IN" OBJ ["PUT" PUTTER] DRIVER]
+            ["DOWN" OBJ ["DROP" DROPPER]]
+            [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]> 
 <VSYNONYM "PUT" "STUFF" "PLACE" "INSER">
 
 <ADD-ACTION "RAISE"
-	    "Raise"
-	    [OBJ ["RAISE" R/L] DRIVER]
-	    ["UP" OBJ ["RAISE" R/L]]>
+            "Raise"
+            [OBJ ["RAISE" R/L] DRIVER]
+            ["UP" OBJ ["RAISE" R/L]]>
 <VSYNONYM "RAISE" "LIFT">
 
 <ADD-ACTION "READ"
-	    "Read"
-	    [(,READBIT REACH AOBJS ROBJS TRY) ["READ" READER] DRIVER]
-	    [(,READBIT REACH AOBJS ROBJS TRY) "WITH" OBJ ["READ" READER]]
-	    [(,READBIT REACH AOBJS ROBJS TRY) "THROU" OBJ ["READ" READER]]>
+            "Read"
+            [(,READBIT REACH AOBJS ROBJS TRY) ["READ" READER] DRIVER]
+            [(,READBIT REACH AOBJS ROBJS TRY) "WITH" OBJ ["READ" READER]]
+            [(,READBIT REACH AOBJS ROBJS TRY) "THROU" OBJ ["READ" READER]]>
 <VSYNONYM "READ" "SKIM">
 
 <SADD-ACTION "REPEN" REPENT>
 
 <ADD-ACTION "RING" "Ring"
-	    [OBJ ["RING" RING] DRIVER]
-	    [OBJ "WITH" OBJ ["RING" READ]]>
+            [OBJ ["RING" RING] DRIVER]
+            [OBJ "WITH" OBJ ["RING" READ]]>
 <VSYNONYM "RING" "PEAL">
 
 <SADD-ACTION "ROOM" ROOM-ROOM>
@@ -4103,12 +4103,12 @@ L;"funny verbs"
 <VSYNONYM "RUB" "CARES" "TOUCH" "FEEL" "FONDL">
 
 <ADD-ACTION "SEND" "Send"
-	    ["FOR" OBJ ["SEND" SENDER]]>
+            ["FOR" OBJ ["SEND" SENDER]]>
 
 <1ADD-ACTION "SHAKE" "Shake" SHAKER>
 
 <ADD-ACTION "SLIDE" "Slide"
-	    [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]>
+            [OBJ "UNDER" OBJ ["PTUND" PUT-UNDER]]>
 
 <SADD-ACTION "SKIP" SKIPPER>
 <VSYNONYM "SKIP" "HOP">
@@ -4121,34 +4121,34 @@ L;"funny verbs"
 <SADD-ACTION "STAY" STAY>
 
 <ADD-ACTION "STRIK"
-	    "Strike"
-	    [(,VICBIT = REACH ROBJS)
-	     "WITH"
-	     (,WEAPONBIT AOBJS ROBJS HAVE)
-	     ["ATTAC" ATTACKER]]
-	    [(,VICBIT = REACH ROBJS) ["ATTAC" ATTACKER] DRIVER]
-	    [(-1 REACH ROBJS AOBJS TRY) ["LIGHT" LAMP-ON]]>
+            "Strike"
+            [(,VICBIT = REACH ROBJS)
+             "WITH"
+             (,WEAPONBIT AOBJS ROBJS HAVE)
+             ["ATTAC" ATTACKER]]
+            [(,VICBIT = REACH ROBJS) ["ATTAC" ATTACKER] DRIVER]
+            [(-1 REACH ROBJS AOBJS TRY) ["LIGHT" LAMP-ON]]>
 
 <SADD-ACTION "SWIM" SWIMMER>
 <VSYNONYM "SWIM" "BATHE" "WADE">
 
 <ADD-ACTION "SWING"
-	    "Swing"
-	    [(,WEAPONBIT AOBJS HAVE) "AT" (,VILLAIN REACH ROBJS) ["SWING" SWINGER]]>
+            "Swing"
+            [(,WEAPONBIT AOBJS HAVE) "AT" (,VILLAIN REACH ROBJS) ["SWING" SWINGER]]>
 <VSYNONYM "SWING" "THRUS">
 
 <ADD-ACTION "TAKE"
-	    "Take"
-	    [(<+ ,TRYTAKEBIT ,TAKEBIT> REACH ROBJS AOBJS) ["TAKE" TAKE] DRIVER]
-	    ["IN" (,VEHBIT ROBJS REACH) ["BOARD" BOARD]]
-	    ["OUT" (,VEHBIT ROBJS REACH) ["DISEM" UNBOARD]]
-	    [(<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) "OUT" OBJ ["TAKE" TAKE]]
-	    [(<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) "FROM" OBJ ["TAKE" TAKE]]>
+            "Take"
+            [(<+ ,TRYTAKEBIT ,TAKEBIT> REACH ROBJS AOBJS) ["TAKE" TAKE] DRIVER]
+            ["IN" (,VEHBIT ROBJS REACH) ["BOARD" BOARD]]
+            ["OUT" (,VEHBIT ROBJS REACH) ["DISEM" UNBOARD]]
+            [(<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) "OUT" OBJ ["TAKE" TAKE]]
+            [(<+ ,TAKEBIT ,TRYTAKEBIT> REACH ROBJS AOBJS) "FROM" OBJ ["TAKE" TAKE]]>
 <VSYNONYM "TAKE" "REMOV" "GET" "HOLD" "CARRY">
 
 <ADD-ACTION "TELL"
-	    "Tell"
-	    [(,ACTORBIT ROBJS) ["TELL" COMMAND]]>
+            "Tell"
+            [(,ACTORBIT ROBJS) ["TELL" COMMAND]]>
 <VSYNONYM "TELL" "COMMA" "REQUE">
 
 <SADD-ACTION "TEMPL" TREAS>
@@ -4157,33 +4157,33 @@ L;"funny verbs"
 <VSYNONYM "GTHRO" "THROU" "INTO">
 
 <ADD-ACTION "THROW"
-	    "Throw"
-	    [(-1 AOBJS HAVE) "AT" (,VICBIT REACH ROBJS) ["THROW" DROPPER] DRIVER]
-	    [(-1 AOBJS HAVE) "THROU" (,VICBIT REACH ROBJS) ["THROW" DROPPER]]
-	    [(-1 AOBJS HAVE) "IN" OBJ ["PUT" PUTTER]]>
+            "Throw"
+            [(-1 AOBJS HAVE) "AT" (,VICBIT REACH ROBJS) ["THROW" DROPPER] DRIVER]
+            [(-1 AOBJS HAVE) "THROU" (,VICBIT REACH ROBJS) ["THROW" DROPPER]]
+            [(-1 AOBJS HAVE) "IN" OBJ ["PUT" PUTTER]]>
 <VSYNONYM "THROW" "HURL" "CHUCK">
 
 <ADD-ACTION "TIE"
-	    "Tie"
-	    [OBJ "TO" OBJ ["TIE" TIE]]
-	    ["UP" (,VICBIT REACH ROBJS) "WITH" (,TOOLBIT REACH ROBJS AOBJS HAVE) ["TIEUP" TIE-UP]]>
+            "Tie"
+            [OBJ "TO" OBJ ["TIE" TIE]]
+            ["UP" (,VICBIT REACH ROBJS) "WITH" (,TOOLBIT REACH ROBJS AOBJS HAVE) ["TIEUP" TIE-UP]]>
 <VSYNONYM "TIE" "FASTE">
 
 <SADD-ACTION "TREAS" TREAS>
 
 <ADD-ACTION "TURN"
-	    "Turn"
-	    [(,TURNBIT REACH AOBJS ROBJS)
-	     "WITH"
-	     (,TOOLBIT ROBJS AOBJS HAVE)
-	     ["TURN" TURNER]
-	     DRIVER]
-	    ["ON" (,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNON" LAMP-ON]]
-	    ["OFF" (,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNOF" LAMP-OFF]]
-	    [(,TURNBIT REACH AOBJS ROBJS)
-	     "TO"
-	     (-1 ROBJS)
-	     ["TRNTO" TURNTO]]>
+            "Turn"
+            [(,TURNBIT REACH AOBJS ROBJS)
+             "WITH"
+             (,TOOLBIT ROBJS AOBJS HAVE)
+             ["TURN" TURNER]
+             DRIVER]
+            ["ON" (,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNON" LAMP-ON]]
+            ["OFF" (,LIGHTBIT REACH AOBJS ROBJS TAKE) ["TRNOF" LAMP-OFF]]
+            [(,TURNBIT REACH AOBJS ROBJS)
+             "TO"
+             (-1 ROBJS)
+             ["TRNTO" TURNTO]]>
 
 <VSYNONYM "TURN" "SET">
 
@@ -4192,28 +4192,28 @@ L;"funny verbs"
 <OR <GASSIGNED? TURNTO> <SETG TURNTO ,TIME>>
 
 <ADD-ACTION "UNLOC"
-	    "Unlock"
-	    [(-1 REACH ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["UNLOC" UNLOCKER]]>
+            "Unlock"
+            [(-1 REACH ROBJS) "WITH" (,TOOLBIT AOBJS ROBJS TAKE) ["UNLOC" UNLOCKER]]>
 
 <ADD-ACTION "UNTIE"
-	    "Untie"
-	    [(,TIEBIT REACH ROBJS AOBJS) ["UNTIE" UNTIE] DRIVER]
-	    [(,TIEBIT REACH ROBJS AOBJS) "FROM" OBJ ["UTFRM" UNTIE-FROM]]>
+            "Untie"
+            [(,TIEBIT REACH ROBJS AOBJS) ["UNTIE" UNTIE] DRIVER]
+            [(,TIEBIT REACH ROBJS AOBJS) "FROM" OBJ ["UTFRM" UNTIE-FROM]]>
 <VSYNONYM "UNTIE" "RELEA" "FREE">
 
 <SADD-ACTION "WAIT" WAIT>
 
 <ADD-ACTION "WAKE"
-	    "Wake"
-	    [(,VICBIT ROBJS) ["WAKE" ALARM] DRIVER]
-	    ["UP" (,VICBIT ROBJS) ["WAKE" ALARM]]>
+            "Wake"
+            [(,VICBIT ROBJS) ["WAKE" ALARM] DRIVER]
+            ["UP" (,VICBIT ROBJS) ["WAKE" ALARM]]>
 <VSYNONYM "WAKE" "AWAKE" "SURPR" "START">
 
 <ADD-ACTION "WALK"
-	    "Walk"
-	    [OBJ ["WALK" WALK]]
-	    ["IN" OBJ ["GTHRO" THROUGH]]
-	    ["THROU" OBJ ["GTHRO" THROUGH]]>
+            "Walk"
+            [OBJ ["WALK" WALK]]
+            ["IN" OBJ ["GTHRO" THROUGH]]
+            ["THROU" OBJ ["GTHRO" THROUGH]]>
 <VSYNONYM "WALK" "GO" "RUN" "PROCE">
 
 <ADD-ACTION "WAVE" "Wave" [(-1 AOBJS) ["WAVE" WAVER]]>
@@ -4225,9 +4225,9 @@ L;"funny verbs"
 <SADD-ACTION "WISH" WISHER>
 
 <ADD-ACTION "WIND"
-	    "Wind"
-	    [OBJ ["WIND" WIND]]
-	    ["UP" OBJ ["WIND" WIND]]>
+            "Wind"
+            [OBJ ["WIND" WIND]]
+            ["UP" OBJ ["WIND" WIND]]>
 
 <SADD-ACTION "YELL" YELL>
 <VSYNONYM "YELL" "SCREA" "SHOUT">
@@ -4244,13 +4244,13 @@ L;"funny verbs"
 
 <PSETG ROBOT-ACTIONS 
    <MAPF ,UVECTOR
-	 ,FIND-VERB
-	 ["WALK" "TAKE" "DROP" "PUT" "JUMP" "PUSH" "THROW" "TURN"]>>
+         ,FIND-VERB
+         ["WALK" "TAKE" "DROP" "PUT" "JUMP" "PUSH" "THROW" "TURN"]>>
 
 <PSETG MASTER-ACTIONS
    <MAPF ,UVECTOR
-	 ,FIND-VERB
-	 ["TAKE" "DROP" "PUT" "THROW" "PUSH" "TURN" "TRNTO" "SPIN"
+         ,FIND-VERB
+         ["TAKE" "DROP" "PUT" "THROW" "PUSH" "TURN" "TRNTO" "SPIN"
           "FOLLO" "STAY" "OPEN" "CLOSE" "KILL"]>>
 
 
@@ -4260,158 +4260,158 @@ L;"funny verbs"
 ;"this object is here only so Restore of old Save files will work"
 
 <OBJECT ["BUTTO"]
-	[]
-	""
-	0>
+        []
+        ""
+        0>
 
 <OBJECT ["!!!!!"]
-	[]
-	""
-	0>
+        []
+        ""
+        0>
 
 <OBJECT ["GHOST" "SPIRI" "FIEND"]
-	[]
-	"number of ghosts"
-	<+ ,OVISON ,VICBIT>
-	GHOST-FUNCTION>
+        []
+        "number of ghosts"
+        <+ ,OVISON ,VICBIT>
+        GHOST-FUNCTION>
 
 <OBJECT ["GATES" "GATE"]
-	[]
-	"gates"
-	0>
+        []
+        "gates"
+        0>
 
 <OBJECT ["FBASK" "CAGE" "DUMBW" "BASKE"]
-	["LOWER"]
-	"lowered basket"
-	<+ ,OVISON>
-	DUMBWAITER>
+        ["LOWER"]
+        "lowered basket"
+        <+ ,OVISON>
+        DUMBWAITER>
 
 <OBJECT ["FOOD" "SANDW" "LUNCH" "DINNE"]
-	["HOT" "PEPPE"]
-	"lunch"
-	<+ ,OVISON ,TAKEBIT ,FOODBIT>
-	<>
-	()
-	(ODESC1 "A hot pepper sandwich is here.")>
+        ["HOT" "PEPPE"]
+        "lunch"
+        <+ ,OVISON ,TAKEBIT ,FOODBIT>
+        <>
+        ()
+        (ODESC1 "A hot pepper sandwich is here.")>
 
 <OBJECT ["TBAR" "T-BAR" "BAR"]
-	["T"]
-	"T-bar"
-	<+ ,OVISON ,NDESCBIT>>
+        ["T"]
+        "T-bar"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["GNOME" "TROLL"]
-	["VOLCA"]
-	"Volcano Gnome"
-	<+ ,OVISON ,VICBIT>
-	GNOME-FUNCTION
-	()
-	(ODESC1 "There is a nervous Volcano Gnome here.")>
+        ["VOLCA"]
+        "Volcano Gnome"
+        <+ ,OVISON ,VICBIT>
+        GNOME-FUNCTION
+        ()
+        (ODESC1 "There is a nervous Volcano Gnome here.")>
 
 <OBJECT ["BAGCO" "BAG" "COINS"]
-	["OLD" "LEATH"]
-	"bag of coins"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "An old leather bag, bulging with coins, is here."
-	 OSIZE 15
-	 OFVAL 10
-	 OTVAL 5)>
+        ["OLD" "LEATH"]
+        "bag of coins"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "An old leather bag, bulging with coins, is here."
+         OSIZE 15
+         OFVAL 10
+         OTVAL 5)>
 
 <OBJECT ["BARRE"]
-	["WOODE" "MAN-S"]
-	"wooden barrel"
-	<+ ,OVISON ,VEHBIT ,OPENBIT ,BURNBIT>
-	BARREL
-	()
-	(ODESC1
+        ["WOODE" "MAN-S"]
+        "wooden barrel"
+        <+ ,OVISON ,VEHBIT ,OPENBIT ,BURNBIT>
+        BARREL
+        ()
+        (ODESC1
 "There is a man-sized barrel here which you might be able to enter."
-	 OCAPAC 100
-	 OSIZE 70)>
+         OCAPAC 100
+         OSIZE 70)>
 
 <OBJECT ["BALLO" "BASKE"]
-	["WICKE"]
-	"basket"
-	<+ ,OVISON ,VEHBIT ,OPENBIT>
-	BALLOON
-	(<GET-OBJ "CBAG"> <GET-OBJ "BROPE"> <GET-OBJ "RECEP">)
-	(ODESC1 
+        ["WICKE"]
+        "basket"
+        <+ ,OVISON ,VEHBIT ,OPENBIT>
+        BALLOON
+        (<GET-OBJ "CBAG"> <GET-OBJ "BROPE"> <GET-OBJ "RECEP">)
+        (ODESC1 
 "There is a very large and extremely heavy wicker basket with a cloth
 bag here. Inside the basket is a metal receptacle of some kind. 
 Attached to the basket on the outside is a piece of wire." 
-	 OCAPAC 100
-	 OSIZE 70
-	 OVTYPE ,RAIRBIT)>
+         OCAPAC 100
+         OSIZE 70
+         OVTYPE ,RAIRBIT)>
 
 <OBJECT ["TBASK" "CAGE" "DUMBW" "BASKE"]
-	[]
-	"basket"
-	<+ ,OVISON ,TRANSBIT ,CONTBIT ,OPENBIT>
-	DUMBWAITER
-	()
-	(ODESC1 "At the end of the chain is a basket."
-	 OCAPAC 50)>
+        []
+        "basket"
+        <+ ,OVISON ,TRANSBIT ,CONTBIT ,OPENBIT>
+        DUMBWAITER
+        ()
+        (ODESC1 "At the end of the chain is a basket."
+         OCAPAC 50)>
 
 <OBJECT ["BAT" "VAMPI"]
-	["VAMPI"]
-	"bat"
-	<+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
-	FLY-ME>
+        ["VAMPI"]
+        "bat"
+        <+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
+        FLY-ME>
 
 <OBJECT ["BELL"]
-	["SMALL" "BRASS"]
-	"bell"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESCO "Lying in a corner of the room is a small brass bell."
-	 ODESC1 "There is a small brass bell here.")>
+        ["SMALL" "BRASS"]
+        "bell"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "Lying in a corner of the room is a small brass bell."
+         ODESC1 "There is a small brass bell here.")>
 
 <OBJECT ["HBELL" "BELL"]
-	["BRASS" "HOT" "RED"]
-	"red hot brass bell"
-	<+ ,OVISON ,TRYTAKEBIT>
-	HBELL-FUNCTION
-	()
-	(ODESC1 "On the ground is a red hot bell.")>
+        ["BRASS" "HOT" "RED"]
+        "red hot brass bell"
+        <+ ,OVISON ,TRYTAKEBIT>
+        HBELL-FUNCTION
+        ()
+        (ODESC1 "On the ground is a red hot bell.")>
 
 <OBJECT ["BLWAL" "WALL" "PANEL"]
-	["BLACK"]
-	"black panel"
-	<+ ,OVISON ,NDESCBIT>
-	MPANELS>
+        ["BLACK"]
+        "black panel"
+        <+ ,OVISON ,NDESCBIT>
+        MPANELS>
 
 <OBJECT ["AXE"]
-	["BLOOD"]
-	"bloody axe"
-	<+ ,OVISON ,WEAPONBIT>
-	AXE-FUNCTION
-	()
-	(ODESC1 "There is a bloody axe here."
-	 OSIZE 25)>
+        ["BLOOD"]
+        "bloody axe"
+        <+ ,OVISON ,WEAPONBIT>
+        AXE-FUNCTION
+        ()
+        (ODESC1 "There is a bloody axe here."
+         OSIZE 25)>
 
 <OBJECT ["BLBK" "BOOK"]
-	["BLUE"]
-	"blue book"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a blue book here."
-	 OCAPAC 2
-	 OSIZE 10
-	 OREAD ,GREEK-TO-ME)>
+        ["BLUE"]
+        "blue book"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a blue book here."
+         OCAPAC 2
+         OSIZE 10
+         OREAD ,GREEK-TO-ME)>
 
 <OBJECT ["BLABE" "LABEL"]
-	["BLUE"]
-	"blue label"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a blue label here."
-	 OSIZE 1
-	 OREAD 
+        ["BLUE"]
+        "blue label"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a blue label here."
+         OSIZE 1
+         OREAD 
 "
-	  !!!!  FROBOZZ MAGIC BALLOON COMPANY !!!!
+          !!!!  FROBOZZ MAGIC BALLOON COMPANY !!!!
 
 Hello, Aviator!
 
@@ -4425,26 +4425,26 @@ Warranty:
    
    No warranty is expressed or implied.  You're on your own, sport!
 
-					Good Luck.
+                                        Good Luck.
 " )>
 
 <OBJECT ["BOLT" "BOLT" "NUT"]
-	["METAL"]
-	"bolt"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT ,TURNBIT>
-	BOLT-FUNCTION>
+        ["METAL"]
+        "bolt"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT ,TURNBIT>
+        BOLT-FUNCTION>
 
 <OBJECT ["BOOK" "PRAYE" "BIBLE" "GOODB"]
-	["LARGE" "BLACK"]
-	"book"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
-	BLACK-BOOK
-	()
-	(ODESCO "On the altar is a large black book, open to page 569."
-	 ODESC1 "There is a large black book here."
-	 OSIZE 10
-	 OREAD 
-"		COMMANDMENT #12592
+        ["LARGE" "BLACK"]
+        "book"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
+        BLACK-BOOK
+        ()
+        (ODESCO "On the altar is a large black book, open to page 569."
+         ODESC1 "There is a large black book here."
+         OSIZE 10
+         OREAD 
+"               COMMANDMENT #12592
 Oh ye who go about saying unto each:   \"Hello sailor\":
 dost thou know the magnitude of thy sin before the gods?
 Yea, verily, thou shalt be ground between two stones.
@@ -4455,400 +4455,400 @@ unto the land of the dead shalt thou be sent at last.
 Surely thou shalt repent of thy cunning." )>
 
 <OBJECT ["SAFE" "BOX"]
-	["STEEL"]
-	"box"
-	<+ ,OVISON ,CONTBIT>
-	SAFE-FUNCTION
-	(<GET-OBJ "CROWN"> <GET-OBJ "CARD">)
-	(OCAPAC 15)>
+        ["STEEL"]
+        "box"
+        <+ ,OVISON ,CONTBIT>
+        SAFE-FUNCTION
+        (<GET-OBJ "CROWN"> <GET-OBJ "CARD">)
+        (OCAPAC 15)>
 
 <OBJECT ["BROPE" "WIRE"]
-	["BRAID"]
-	"braided wire"
-	<+ ,OVISON ,TIEBIT>
-	WIRE-FUNCTION>
+        ["BRAID"]
+        "braided wire"
+        <+ ,OVISON ,TIEBIT>
+        WIRE-FUNCTION>
 
 <OBJECT ["BRICK" "BRICK"]
-	["SQUAR" "CLAY"]
-	"brick"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT ,SEARCHBIT ,OPENBIT>
-	BRICK-FUNCTION
-	()
-	(ODESC1 "There is a square brick here which feels like clay."
-	 OCAPAC 2
-	 OSIZE 9)>
+        ["SQUAR" "CLAY"]
+        "brick"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT ,SEARCHBIT ,OPENBIT>
+        BRICK-FUNCTION
+        ()
+        (ODESC1 "There is a square brick here which feels like clay."
+         OCAPAC 2
+         OSIZE 9)>
 
 <OBJECT ["DBALL" "BALLO" "BASKE"]
-	["BROKE"]
-	"broken balloon"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a balloon here, broken into pieces."
-	 OSIZE 40)>
+        ["BROKE"]
+        "broken balloon"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a balloon here, broken into pieces."
+         OSIZE 40)>
 
 <OBJECT ["BLAMP" "LAMP" "LANTE"]
-	["BROKE" "BRASS"]
-	"broken lamp"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a broken brass lantern here.")>
+        ["BROKE" "BRASS"]
+        "broken lamp"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a broken brass lantern here.")>
 
 <OBJECT ["STICK"]
-	["SHARP" "BROKE"]
-	"broken sharp stick"
-	<+ ,OVISON ,TAKEBIT>
-	STICK-FUNCTION
-	()
-	(ODESCO 
+        ["SHARP" "BROKE"]
+        "broken sharp stick"
+        <+ ,OVISON ,TAKEBIT>
+        STICK-FUNCTION
+        ()
+        (ODESCO 
 "A sharp stick, which appears to have been broken at one end, is here."
-	 ODESC1 "There is a broken sharp stick here."
-	 OSIZE 3)>
+         ODESC1 "There is a broken sharp stick here."
+         OSIZE 3)>
 
 <SETG TIMBER-UNTIED "There is a wooden timber on the ground here.">
 <SETG TIMBER-TIED "The coil of rope is tied to the wooden timber.">
 
 <OBJECT ["OTIMB" "TIMBE" "PILE"]
-	["WOODE" "BROKE"]
-	"broken timber"
-	<+ ,OVISON ,TAKEBIT>
-	TIMBERS
-	()
-	(ODESC1 ,TIMBER-UNTIED
-	 OSIZE 50)>
+        ["WOODE" "BROKE"]
+        "broken timber"
+        <+ ,OVISON ,TAKEBIT>
+        TIMBERS
+        ()
+        (ODESC1 ,TIMBER-UNTIED
+         OSIZE 50)>
 
 <OBJECT ["ODOOR" "DOOR"]
-	["BRONZ"]
-	"bronze door"
-	<+ ,DOORBIT ,NDESCBIT>
-	BRONZE-DOOR>
+        ["BRONZ"]
+        "bronze door"
+        <+ ,DOORBIT ,NDESCBIT>
+        BRONZE-DOOR>
 
 <OBJECT ["SBAG" "BAG" "SACK"]
-	["BROWN" "ELONG"]
-	"brown sack"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT ,BURNBIT>
-	<>
-	(<GET-OBJ "GARLI"> <GET-OBJ "FOOD">)
-	(ODESCO 
+        ["BROWN" "ELONG"]
+        "brown sack"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT ,BURNBIT>
+        <>
+        (<GET-OBJ "GARLI"> <GET-OBJ "FOOD">)
+        (ODESCO 
 "On the table is an elongated brown sack, smelling of hot peppers."
-	 ODESC1 "A brown sack is here."
-	 OCAPAC 15
-	 OSIZE 3)>
+         ODESC1 "A brown sack is here."
+         OCAPAC 15
+         OSIZE 3)>
 
 <OBJECT ["BUBBL"]
-	["GREEN" "PLAST"]
-	"green bubble"
-	<+ ,OVISON ,NDESCBIT>>
+        ["GREEN" "PLAST"]
+        "green bubble"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["COKES" "BOTTL" "BUNCH"]
-	["COKE"]
-	"bunch of Coke bottles"
-	<+ ,OVISON ,TAKEBIT>
-	COKE-BOTTLES
-	()
-	(ODESCO 
+        ["COKE"]
+        "bunch of Coke bottles"
+        <+ ,OVISON ,TAKEBIT>
+        COKE-BOTTLES
+        ()
+        (ODESCO 
 "There is a large pile of empty Coke bottles here, evidently produced
 by the implementers during their long struggle to win totally." 
-	 ODESC1 
+         ODESC1 
 "Many empty Coke bottles are here.  Alas, they can't hold water."
-	 OSIZE 15)>
+         OSIZE 15)>
 
 <OBJECT ["BLANT" "LANTE" "LAMP"]
-	["USED" "BURNE" "DEAD" "USELE"]
-	"burned-out lantern"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESCO "The deceased adventurer's useless lantern is here."
-	 ODESC1 "There is a burned-out lantern here."
-	 OSIZE 20)>
+        ["USED" "BURNE" "DEAD" "USELE"]
+        "burned-out lantern"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "The deceased adventurer's useless lantern is here."
+         ODESC1 "There is a burned-out lantern here."
+         OSIZE 20)>
 
 <OBJECT ["YBUTT" "BUTTO" "SWITC"]
-	["YELLO"]
-	"yellow button"
-	<+ ,OVISON ,NDESCBIT>
-	DBUTTONS>
+        ["YELLO"]
+        "yellow button"
+        <+ ,OVISON ,NDESCBIT>
+        DBUTTONS>
 
 <OBJECT ["BRBUT" "BUTTO" "SWITC"]
-	["BROWN"]
-	"brown button"
-	<+ ,OVISON ,NDESCBIT>
-	DBUTTONS>
+        ["BROWN"]
+        "brown button"
+        <+ ,OVISON ,NDESCBIT>
+        DBUTTONS>
 
 <OBJECT ["RBUTT" "BUTTO" "SWITC"]
-	["RED"]
-	"red button"
-	<+ ,OVISON ,NDESCBIT>
-	DBUTTONS>
+        ["RED"]
+        "red button"
+        <+ ,OVISON ,NDESCBIT>
+        DBUTTONS>
 
 <OBJECT ["BLBUT" "BUTTO" "SWITC"]
-	["BLUE"]
-	"blue button"
-	<+ ,OVISON ,NDESCBIT>
-	DBUTTONS>
+        ["BLUE"]
+        "blue button"
+        <+ ,OVISON ,NDESCBIT>
+        DBUTTONS>
 
 <OBJECT ["RNBUT" "BUTTO"]
-	["ROUND"]
-	"round button"
-	<+ ,OVISON ,NDESCBIT>
-	BUTTONS>
+        ["ROUND"]
+        "round button"
+        <+ ,OVISON ,NDESCBIT>
+        BUTTONS>
 
 <OBJECT ["SQBUT" "BUTTO"]
-	["SQUAR"]
-	"square button"
-	<+ ,OVISON ,NDESCBIT>
-	BUTTONS>
+        ["SQUAR"]
+        "square button"
+        <+ ,OVISON ,NDESCBIT>
+        BUTTONS>
 
 <OBJECT ["TRBUT" "BUTTO"]
-	["TRIAN"]
-	"triangular button"
-	<+ ,OVISON ,NDESCBIT>
-	BUTTONS>
+        ["TRIAN"]
+        "triangular button"
+        <+ ,OVISON ,NDESCBIT>
+        BUTTONS>
 
 <OBJECT ["CARD" "NOTE"]
-	["PLAIN"]
-	"card"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a card with writing on it here."
-	 OSIZE 1
-	 OREAD 
+        ["PLAIN"]
+        "card"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a card with writing on it here."
+         OSIZE 1
+         OREAD 
 "
 Warning:
     This room was constructed over very weak rock strata.  Detonation
 of explosives in this room is strictly prohibited!
-			Frobozz Magic Cave Company
-			per M. Agrippa, foreman
+                        Frobozz Magic Cave Company
+                        per M. Agrippa, foreman
 " )>
 
 <OBJECT ["RUG" "CARPE"]
-	["ORIEN"]
-	"carpet"
-	<+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
-	RUG>
+        ["ORIEN"]
+        "carpet"
+        <+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
+        RUG>
 
 <OBJECT ["CDOOR" "DOOR"]
-	["WOOD" "WOODE" "CELL"]
-	"cell door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	CELL-DOOR>
+        ["WOOD" "WOODE" "CELL"]
+        "cell door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        CELL-DOOR>
 
 <OBJECT ["CHALI" "CUP" "GOBLE" "SILVE"]
-	["SILVE"]
-	"chalice"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT>
-	CHALICE
-	()
-	(ODESC1 "There is a silver chalice, intricately engraved, here."
-	 OCAPAC 5
-	 OSIZE 10
-	 OFVAL 10
-	 OTVAL 10)>
+        ["SILVE"]
+        "chalice"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT>
+        CHALICE
+        ()
+        (ODESC1 "There is a silver chalice, intricately engraved, here."
+         OCAPAC 5
+         OSIZE 10
+         OFVAL 10
+         OTVAL 10)>
 
 <OBJECT ["CBAG" "BAG"]
-	["CLOTH"]
-	"cloth bag"
-	<+ ,OVISON>
-	BCONTENTS>
+        ["CLOTH"]
+        "cloth bag"
+        <+ ,OVISON>
+        BCONTENTS>
 
 <OBJECT ["GARLI" "CLOVE"]
-	[]
-	"clove of garlic"
-	<+ ,OVISON ,TAKEBIT ,FOODBIT>
-	<>
-	()
-	(ODESC1 "There is a clove of garlic here.")>
+        []
+        "clove of garlic"
+        <+ ,OVISON ,TAKEBIT ,FOODBIT>
+        <>
+        ()
+        (ODESC1 "There is a clove of garlic here.")>
 
 <OBJECT ["ARROW" "POINT"]
-	["COMPA"]
-	"compass arrow"
-	<+ ,OVISON ,NDESCBIT>>
+        ["COMPA"]
+        "compass arrow"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["CROWN"]
-	["GAUDY"]
-	"crown"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESCO "The excessively gaudy crown of Lord Dimwit Flathead is here."
-	 ODESC1 "Lord Dimwit's crown is here."
-	 OSIZE 10
-	 OFVAL 15
-	 OTVAL 10)>
+        ["GAUDY"]
+        "crown"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "The excessively gaudy crown of Lord Dimwit Flathead is here."
+         ODESC1 "Lord Dimwit's crown is here."
+         OSIZE 10
+         OFVAL 15
+         OTVAL 10)>
 
 <OBJECT ["TOMB" "CRYPT" "GRAVE" "TOMB" "DOOR"]
-	["MARBL"]
-	"crypt door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	CRYPT-OBJECT
-	()
-	(OREAD 
+        ["MARBL"]
+        "crypt door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        CRYPT-OBJECT
+        ()
+        (OREAD 
 "Here lie the implementers, whose heads were placed on poles by the
 Keeper of the Dungeon for amazing untastefulness." )>
 
 <OBJECT ["SPHER" "BALL" "PALAN" "STONE"]
-	["CRYST" "SEEIN" "GLASS" "WHITE"]
-	"white crystal sphere"
-	<+ ,OVISON ,SACREDBIT ,TRYTAKEBIT>
-	SPHERE-FUNCTION
-	()
-	(ODESC1 "There is a beautiful white crystal sphere here."
-	 OSIZE 10
-	 OFVAL 6
-	 OTVAL 6)>
+        ["CRYST" "SEEIN" "GLASS" "WHITE"]
+        "white crystal sphere"
+        <+ ,OVISON ,SACREDBIT ,TRYTAKEBIT>
+        SPHERE-FUNCTION
+        ()
+        (ODESC1 "There is a beautiful white crystal sphere here."
+         OSIZE 10
+         OFVAL 6
+         OTVAL 6)>
 
 <OBJECT ["TRIDE" "FORK"]
-	["CRYST"]
-	"crystal trident"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESCO "On the shore lies Poseidon's own crystal trident."
-	 ODESC1 "Poseidon's own crystal trident is here."
-	 OSIZE 20
-	 OFVAL 4
-	 OTVAL 11)>
+        ["CRYST"]
+        "crystal trident"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "On the shore lies Poseidon's own crystal trident."
+         ODESC1 "Poseidon's own crystal trident is here."
+         OSIZE 20
+         OFVAL 4
+         OTVAL 11)>
 
 <OBJECT ["CYCLO" "ONE-E" "MONST"]
-	[]
-	"cyclops"
-	<+ ,OVISON ,VICBIT ,VILLAIN>
-	CYCLOPS
-	()
-	(OSTRENGTH 10000
-	 OFMSGS ,CYCLOPS-MELEE)>
+        []
+        "cyclops"
+        <+ ,OVISON ,VICBIT ,VILLAIN>
+        CYCLOPS
+        ()
+        (OSTRENGTH 10000
+         OFMSGS ,CYCLOPS-MELEE)>
 
 <OBJECT ["DAM" "GATE" "GATES" "FCD"]
-	[]
-	"dam"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "dam"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["WDOOR" "DOOR"]
-	["WOODE" "WEST" "WESTE"]
-	"wooden door"
-	<+ ,OVISON ,READBIT ,DOORBIT ,NDESCBIT>
-	DDOOR-FUNCTION
-	()
-	(OREAD 
+        ["WOODE" "WEST" "WESTE"]
+        "wooden door"
+        <+ ,OVISON ,READBIT ,DOORBIT ,NDESCBIT>
+        DDOOR-FUNCTION
+        ()
+        (OREAD 
 "The engravings translate to 'This space intentionally left blank'")>
 
 <OBJECT ["DOOR" "TRAPD" "TRAP-"]
-	["TRAP"]
-	"trap door"
-	<+ ,DOORBIT ,NDESCBIT>
-	TRAP-DOOR>
+        ["TRAP"]
+        "trap door"
+        <+ ,DOORBIT ,NDESCBIT>
+        TRAP-DOOR>
 
 <OBJECT ["SDOOR" "DOOR"]
-	["STONE"]
-	"stone door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	DDOOR-FUNCTION>
+        ["STONE"]
+        "stone door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        DDOOR-FUNCTION>
 
 <OBJECT ["FDOOR" "DOOR"]
-	["FRONT"]
-	"door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	DDOOR-FUNCTION>
+        ["FRONT"]
+        "door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        DDOOR-FUNCTION>
 
 
 
 <OBJECT ["STRAD" "VIOLI"]
-	["FANCY"]
-	"fancy violin"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a Stradivarius here."
-	 OSIZE 10
-	 OFVAL 10
-	 OTVAL 10)>
+        ["FANCY"]
+        "fancy violin"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a Stradivarius here."
+         OSIZE 10
+         OFVAL 10
+         OTVAL 10)>
 
 <OBJECT ["ICE" "MASS" "GLACI"]
-	[]
-	"glacier"
-	<+ ,OVISON ,VICBIT>
-	GLACIER
-	()
-	(ODESC1 "A mass of ice fills the western half of the room.")>
+        []
+        "glacier"
+        <+ ,OVISON ,VICBIT>
+        GLACIER
+        ()
+        (ODESC1 "A mass of ice fills the western half of the room.")>
 
 <OBJECT ["BOTTL" "CONTA"]
-	["CLEAR" "GLASS"]
-	"glass bottle"
-	<+ ,OVISON ,TAKEBIT ,TRANSBIT ,CONTBIT>
-	BOTTLE-FUNCTION
-	(<GET-OBJ "WATER">)
-	(ODESCO "A bottle is sitting on the table."
-	 ODESC1 "A clear glass bottle is here."
-	 OCAPAC 4)>
+        ["CLEAR" "GLASS"]
+        "glass bottle"
+        <+ ,OVISON ,TAKEBIT ,TRANSBIT ,CONTBIT>
+        BOTTLE-FUNCTION
+        (<GET-OBJ "WATER">)
+        (ODESCO "A bottle is sitting on the table."
+         ODESC1 "A clear glass bottle is here."
+         OCAPAC 4)>
 
 <OBJECT ["FLASK"]
-	["GLASS"]
-	"glass flask filled with liquid"
-	<+ ,OVISON ,TAKEBIT ,TRANSBIT>
-	FLASK-FUNCTION
-	()
-	(ODESC1 
+        ["GLASS"]
+        "glass flask filled with liquid"
+        <+ ,OVISON ,TAKEBIT ,TRANSBIT>
+        FLASK-FUNCTION
+        ()
+        (ODESC1 
 "A stoppered glass flask with a skull-and-crossbones marking is here.
 The flask is filled with some clear liquid." 
-	 OCAPAC 5
-	 OSIZE 10)>
+         OCAPAC 5
+         OSIZE 10)>
 
 <SETG COFFIN-UNTIED "The solid-gold coffin used for the burial of Ramses II is here.">
 <SETG COFFIN-TIED "The coil of rope is tied to Ramses II's gold coffin.">
 
 <OBJECT ["COFFI" "CASKE"]
-	["GOLD"]
-	"gold coffin"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT ,SACREDBIT>
-	TIMBERS
-	()
-	(ODESC1 ,COFFIN-UNTIED
-	 OCAPAC 35
-	 OSIZE 55
-	 OFVAL 3
-	 OTVAL 7)>
+        ["GOLD"]
+        "gold coffin"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT ,SACREDBIT>
+        TIMBERS
+        ()
+        (ODESC1 ,COFFIN-UNTIED
+         OCAPAC 35
+         OSIZE 55
+         OFVAL 3
+         OTVAL 7)>
 
 <OBJECT ["GRAIL"]
-	["HOLY"]
-	"grail"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT>
-	<>
-	()
-	(ODESC1 "There is an extremely valuable (perhaps original) grail here."
-	 OCAPAC 5
-	 OSIZE 10
-	 OFVAL 2
-	 OTVAL 5)>
+        ["HOLY"]
+        "grail"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT>
+        <>
+        ()
+        (ODESC1 "There is an extremely valuable (perhaps original) grail here."
+         OCAPAC 5
+         OSIZE 10
+         OFVAL 2
+         OTVAL 5)>
 
 <OBJECT ["GRATE" "GRATI"]
-	[]
-	"grating"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	GRATE-FUNCTION>
+        []
+        "grating"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        GRATE-FUNCTION>
 
 <OBJECT ["GRBK" "BOOK"]
-	["GREEN"]
-	"green book"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a green book here."
-	 OCAPAC 2
-	 OSIZE 10
-	 OREAD ,GREEK-TO-ME)>
+        ["GREEN"]
+        "green book"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a green book here."
+         OCAPAC 2
+         OSIZE 10
+         OREAD ,GREEK-TO-ME)>
 
 <OBJECT ["RBTLB" "PAPER" "PIECE"]
-	["GREEN"]
-	"green piece of paper"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a green piece of paper here."
-	 OSIZE 3
-	 OREAD 
-"	  !!!! 	FROBOZZ MAGIC ROBOT COMPANY  !!!!
+        ["GREEN"]
+        "green piece of paper"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a green piece of paper here."
+         OSIZE 3
+         OREAD 
+"         !!!!  FROBOZZ MAGIC ROBOT COMPANY  !!!!
 
 Hello, Master!
    
@@ -4857,144 +4857,144 @@ simple household functions.
 
 Instructions for use:
    To activate me, use the following formula:
-	>TELL ROBOT '<something to do>' <cr>
+        >TELL ROBOT '<something to do>' <cr>
    The quotation marks are required!
        
 Warranty:
    No warranty is expressed or implied.
-				
-					At your service!
+                                
+                                        At your service!
 " )>
 
 <OBJECT ["PUMP" "AIR-P" "AIRPU"]
-	["SMALL" "HAND-"]
-	"hand-held air pump"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is a small pump here.")>
+        ["SMALL" "HAND-"]
+        "hand-held air pump"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is a small pump here.")>
 
 <OBJECT ["HPOLE" "HEAD"]
-	[]
-	"head on a pole"
-	<+ ,OVISON>>
+        []
+        "head on a pole"
+        <+ ,OVISON>>
 
 <OBJECT ["SSLOT" "SLOT" "HOLE"]
-	[]
-	"hole"
-	<+ ,OVISON ,OPENBIT>
-	<>
-	()
-	(OCAPAC 10)>
+        []
+        "hole"
+        <+ ,OVISON ,OPENBIT>
+        <>
+        ()
+        (OCAPAC 10)>
 
 <OBJECT ["HOOK2" "HOOK"]
-	["SMALL"]
-	"hook"
-	<+ ,OVISON>
-	<>
-	()
-	(ODESC1 ,HOOK-DESC)>
+        ["SMALL"]
+        "hook"
+        <+ ,OVISON>
+        <>
+        ()
+        (ODESC1 ,HOOK-DESC)>
 
 <OBJECT ["HOOK1" "HOOK"]
-	["SMALL"]
-	"hook"
-	<+ ,OVISON>
-	<>
-	()
-	(ODESC1 ,HOOK-DESC)>
+        ["SMALL"]
+        "hook"
+        <+ ,OVISON>
+        <>
+        ()
+        (ODESC1 ,HOOK-DESC)>
 
 <OBJECT ["DIAMO"]
-	["HUGE" "ENORM"]
-	"huge diamond"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is an enormous diamond (perfectly cut) here."
-	 OFVAL 10
-	 OTVAL 6)>
+        ["HUGE" "ENORM"]
+        "huge diamond"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is an enormous diamond (perfectly cut) here."
+         OFVAL 10
+         OTVAL 6)>
 
 <OBJECT ["GUANO" "CRAP" "SHIT" "HUNK"]
-	[]
-	"hunk of bat guano"
-	<+ ,OVISON ,TAKEBIT ,DIGBIT>
-	GUANO-FUNCTION
-	()
-	(ODESC1 "There is a hunk of bat guano here."
-	 OSIZE 20)>
+        []
+        "hunk of bat guano"
+        <+ ,OVISON ,TAKEBIT ,DIGBIT>
+        GUANO-FUNCTION
+        ()
+        (ODESC1 "There is a hunk of bat guano here."
+         OSIZE 20)>
 
 <OBJECT ["JADE" "FIGUR"]
-	["JADE"]
-	"jade figurine"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is an exquisite jade figurine here."
-	 OSIZE 10
-	 OFVAL 5
-	 OTVAL 5)>
+        ["JADE"]
+        "jade figurine"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is an exquisite jade figurine here."
+         OSIZE 10
+         OFVAL 5
+         OTVAL 5)>
 
 <OBJECT ["KNIFE" "BLADE"]
-	["NASTY" "UNRUS" "PLAIN"]
-	"knife"
-	<+ ,OVISON ,TAKEBIT ,WEAPONBIT>
-	<>
-	()
-	(ODESCO "On a table is a nasty-looking knife."
-	 ODESC1 "There is a nasty-looking knife lying here."
-	 OFMSGS ,KNIFE-MELEE)>
+        ["NASTY" "UNRUS" "PLAIN"]
+        "knife"
+        <+ ,OVISON ,TAKEBIT ,WEAPONBIT>
+        <>
+        ()
+        (ODESCO "On a table is a nasty-looking knife."
+         ODESC1 "There is a nasty-looking knife lying here."
+         OFMSGS ,KNIFE-MELEE)>
 
 <OBJECT ["LAMP" "LANTE" "LIGHT"]
-	["BRASS"]
-	"lamp"
-	<+ ,OVISON ,TAKEBIT ,LIGHTBIT>
-	LANTERN
-	()
-	(ODESCO "A battery-powered brass lantern is on the trophy case."
-	 ODESC1 "There is a brass lantern (battery-powered) here."
-	 OSIZE 15
-	 OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,LNTIN 350>>])>
+        ["BRASS"]
+        "lamp"
+        <+ ,OVISON ,TAKEBIT ,LIGHTBIT>
+        LANTERN
+        ()
+        (ODESCO "A battery-powered brass lantern is on the trophy case."
+         ODESC1 "There is a brass lantern (battery-powered) here."
+         OSIZE 15
+         OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,LNTIN 350>>])>
 
 <OBJECT ["DBUTT" "BUTTO"]
-	["LARGE"]
-	"large button"
-	<+ ,OVISON ,NDESCBIT>
-	DIALBUTTON>
+        ["LARGE"]
+        "large button"
+        <+ ,OVISON ,NDESCBIT>
+        DIALBUTTON>
 
 <OBJECT ["LCASE" "CASE"]
-	["LARGE"]
-	"large case"
-	<+ ,OVISON ,TRANSBIT>
-	<>
-	()
-	(ODESC1 
+        ["LARGE"]
+        "large case"
+        <+ ,OVISON ,TRANSBIT>
+        <>
+        ()
+        (ODESC1 
 "There is a large case here, containing objects which you used to
 possess.")>
 
 <OBJECT ["EMERA"]
-	["LARGE"]
-	"large emerald"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is an emerald here."
-	 OFVAL 5
-	 OTVAL 10)>
+        ["LARGE"]
+        "large emerald"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is an emerald here."
+         OFVAL 5
+         OTVAL 10)>
 
 <OBJECT ["ATABL" "TABLE"]
-	["LARGE" "OBLON"]
-	"large oblong table"
-	<+ ,OVISON>>
+        ["LARGE" "OBLON"]
+        "large oblong table"
+        <+ ,OVISON>>
 
 <OBJECT ["ADVER" "PAMPH" "LEAFL" "BOOKL" "MAIL"]
-	["SMALL"]
-	"leaflet"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a small leaflet here."
-	 OSIZE 2
-	 OREAD 
-"			WELCOME TO ZORK
+        ["SMALL"]
+        "leaflet"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a small leaflet here."
+         OSIZE 2
+         OREAD 
+"                       WELCOME TO ZORK
 
     ZORK is a game of adventure, danger, and low cunning.  In it you
 will explore some of the most amazing territory ever seen by mortal
@@ -5020,99 +5020,99 @@ commands (most systems).
     Direct inquiries, comments, etc. by Net mail to ZORK@MIT-DMS.
 
     (c) Copyright 1978,1979 Massachusetts Institute of Technology.  
-		       All rights reserved.
+                       All rights reserved.
 " )>
 
 <SETG BUNCH-OBJ
 <OBJECT ["*BUN*"]
-	[]
-	""
-	<+ ,OVISON ,BUNCHBIT>
-	<>
-	()
-	(OBVERB <>)>>
+        []
+        ""
+        <+ ,OVISON ,BUNCHBIT>
+        <>
+        ()
+        (OBVERB <>)>>
 
 <OBJECT ["LEAK" "DRIP" "HOLE"]
-	[]
-	"leak"
-	<+ ,NDESCBIT>
-	LEAK-FUNCTION>
+        []
+        "leak"
+        <+ ,NDESCBIT>
+        LEAK-FUNCTION>
 
 <OBJECT ["MDOOR" "DOOR"]
-	["LOCKE" "WOOD" "WOODE" "CELL"]
-	"locked door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	LOCKED-DOOR>
+        ["LOCKE" "WOOD" "WOODE" "CELL"]
+        "locked door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        LOCKED-DOOR>
 
 <OBJECT ["LDOOR" "DOOR"]
-	["LOCKE" "WOOD" "WOODE" "CELL"]
-	"locked door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	LOCKED-DOOR>
+        ["LOCKE" "WOOD" "WOODE" "CELL"]
+        "locked door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        LOCKED-DOOR>
 
 <OBJECT ["LPOLE" "POLE" "POST"]
-	["LONG" "CENTE"]
-	"long pole"
-	<+ ,OVISON ,NDESCBIT>>
+        ["LONG" "CENTE"]
+        "long pole"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["MACHI" "PDP10" "DRYER" "LID"]
-	[]
-	"machine"
-	<+ ,OVISON ,CONTBIT>
-	MACHINE-FUNCTION
-	()
-	(OCAPAC 50)>
+        []
+        "machine"
+        <+ ,OVISON ,CONTBIT>
+        MACHINE-FUNCTION
+        ()
+        (OCAPAC 50)>
 
 <OBJECT ["RBOAT" "BOAT"]
-	["MAGIC" "PLAST" "SEAWO"]
-	"magic boat"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT ,VEHBIT ,OPENBIT>
-	RBOAT-FUNCTION
-	(<GET-OBJ "LABEL">)
-	(ODESC1 "There is an inflated boat here."
-	 OCAPAC 100
-	 OSIZE 20
-	 OVTYPE ,RWATERBIT)>
+        ["MAGIC" "PLAST" "SEAWO"]
+        "magic boat"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT ,VEHBIT ,OPENBIT>
+        RBOAT-FUNCTION
+        (<GET-OBJ "LABEL">)
+        (ODESC1 "There is an inflated boat here."
+         OCAPAC 100
+         OSIZE 20
+         OVTYPE ,RWATERBIT)>
 
 <OBJECT ["OAKND" "WALL" "PANEL"]
-	["MAHOG"]
-	"mahogany wall"
-	<+ ,OVISON ,NDESCBIT>
-	MENDS>
+        ["MAHOG"]
+        "mahogany wall"
+        <+ ,OVISON ,NDESCBIT>
+        MENDS>
 
 <OBJECT ["MAILB" "BOX"]
-	["SMALL"]
-	"mailbox"
-	<+ ,OVISON ,CONTBIT>
-	<>
-	(<GET-OBJ "ADVER">)
-	(ODESC1 "There is a small mailbox here."
-	 OCAPAC 10)>
+        ["SMALL"]
+        "mailbox"
+        <+ ,OVISON ,CONTBIT>
+        <>
+        (<GET-OBJ "ADVER">)
+        (ODESC1 "There is a small mailbox here."
+         OCAPAC 10)>
 
 <OBJECT ["CAGE"]
-	["MANGL" "STEEL"]
-	"steel cage"
-	<+ ,OVISON ,NDESCBIT>
-	<>
-	()
-	(ODESC1 "There is a mangled steel cage here."
-	 OSIZE 60)>
+        ["MANGL" "STEEL"]
+        "steel cage"
+        <+ ,OVISON ,NDESCBIT>
+        <>
+        ()
+        (ODESC1 "There is a mangled steel cage here."
+         OSIZE 60)>
 
 <OBJECT ["MATCH" "FLINT"]
-	[]
-	"matchbook"
-	<+ ,OVISON ,READBIT ,TAKEBIT>
-	MATCH-FUNCTION
-	()
-	(ODESC1 
+        []
+        "matchbook"
+        <+ ,OVISON ,READBIT ,TAKEBIT>
+        MATCH-FUNCTION
+        ()
+        (ODESC1 
 "There is a matchbook whose cover says 'Visit Beautiful FCD#3' here."
-	 OSIZE 2
-	 OMATCH 5
-	 OREAD 
-"	        [close cover before striking BKD]
+         OSIZE 2
+         OMATCH 5
+         OREAD 
+"               [close cover before striking BKD]
 
-	YOU too can make BIG MONEY in the exciting field of
-		      PAPER SHUFFLING!
+        YOU too can make BIG MONEY in the exciting field of
+                      PAPER SHUFFLING!
 
 Mr. TAA of Muddle, Mass. says: \"Before I took this course I used
 to be a lowly bit twiddler.  Now with what I learned at MIT Tech
@@ -5125,250 +5125,250 @@ future and make really big Zorkmids.\"
 MIT Tech can't promise these fantastic results to everyone.  But when
 you earn your MDL degree from MIT Tech your future will be brighter.
 
-	      Send for our free brochure today." )>
+              Send for our free brochure today." )>
 
 <OBJECT ["REFL2" "MIRRO"]
-	[]
-	"mirror"
-	<+ ,OVISON ,VICBIT ,TRYTAKEBIT>
-	MIRROR-MIRROR>
+        []
+        "mirror"
+        <+ ,OVISON ,VICBIT ,TRYTAKEBIT>
+        MIRROR-MIRROR>
 
 <OBJECT ["REFL1" "MIRRO"]
-	[]
-	"mirror"
-	<+ ,OVISON ,VICBIT ,TRYTAKEBIT>
-	MIRROR-MIRROR>
+        []
+        "mirror"
+        <+ ,OVISON ,VICBIT ,TRYTAKEBIT>
+        MIRROR-MIRROR>
 
 <OBJECT ["PAPER" "NEWSP" "ISSUE" "REPOR" "MAGAZ" "NEWS"]
-	[]
-	"newspaper"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 
+        []
+        "newspaper"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 
 "There is an issue of US NEWS & DUNGEON REPORT dated 3/17/79 here."
-	 OSIZE 2
-	 OREAD 
-"		US NEWS & DUNGEON REPORT
-12/11/79  				       Late G.U.E. Edition
-	     Send correspondence to ZORK@DM
+         OSIZE 2
+         OREAD 
+"               US NEWS & DUNGEON REPORT
+12/11/79                                       Late G.U.E. Edition
+             Send correspondence to ZORK@DM
 
 Many bugs have been fixed in this version.  There are probably no
 other changes.
 ")>
 
 <OBJECT ["EIGHT" "8"]
-	[]
-	"number eight"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number eight"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["FIVE" "5"]
-	[]
-	"number five"
-	<+ ,OVISON ,NDESCBIT>
-	TAKE-FIVE>
+        []
+        "number five"
+        <+ ,OVISON ,NDESCBIT>
+        TAKE-FIVE>
 
 <OBJECT ["FOUR" "4"]
-	[]
-	"number four"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number four"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["ONE" "1"]
-	[]
-	"number one"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number one"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["SEVEN" "7"]
-	[]
-	"number seven"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number seven"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["SIX" "6"]
-	[]
-	"number six"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number six"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["THREE" "3"]
-	[]
-	"number three"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number three"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["TWO" "2"]
-	[]
-	"number two"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "number two"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["PAINT" "ART" "CANVA" "MASTE" "PICTU" "WORK"]
-	[]
-	"painting"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	PAINTING
-	()
-	(ODESCO 
+        []
+        "painting"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        PAINTING
+        ()
+        (ODESCO 
 "Fortunately, there is still one chance for you to be a vandal, for on
 the far wall is a work of unparalleled beauty." 
-	 ODESC1 "A masterpiece by a neglected genius is here."
-	 OSIZE 15
-	 OFVAL 4
-	 OTVAL 7)>
+         ODESC1 "A masterpiece by a neglected genius is here."
+         OSIZE 15
+         OFVAL 4
+         OTVAL 7)>
 
 <OBJECT ["CANDL" "PAIR"]
-	[]
-	"pair of candles"
-	<+ ,OVISON ,TAKEBIT ,LIGHTBIT ,FLAMEBIT ,ONBIT>
-	CANDLES
-	()
-	(ODESCO "On the two ends of the altar are burning candles."
-	 ODESC1 "There are two candles here."
-	 OSIZE 10
-	 OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,CNDIN 50>>])>
+        []
+        "pair of candles"
+        <+ ,OVISON ,TAKEBIT ,LIGHTBIT ,FLAMEBIT ,ONBIT>
+        CANDLES
+        ()
+        (ODESCO "On the two ends of the altar are burning candles."
+         ODESC1 "There are two candles here."
+         OSIZE 10
+         OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,CNDIN 50>>])>
 
 <OBJECT ["PEARL" "NECKL"]
-	["PEARL"]
-	"pearl necklace"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a pearl necklace here with hundreds of large pearls."
-	 OSIZE 10
-	 OFVAL 9
-	 OTVAL 5)>
+        ["PEARL"]
+        "pearl necklace"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a pearl necklace here with hundreds of large pearls."
+         OSIZE 10
+         OFVAL 9
+         OTVAL 5)>
 
 <OBJECT ["ECAKE" "CAKE"]
-	["EATME" "EAT-M"]
-	"piece of 'Eat-Me' cake"
-	<+ ,OVISON ,TAKEBIT ,FOODBIT>
-	EATME-FUNCTION
-	()
-	(ODESC1 "There is a piece of cake here with the words 'Eat-Me' on it."
-	 OSIZE 10)>
+        ["EATME" "EAT-M"]
+        "piece of 'Eat-Me' cake"
+        <+ ,OVISON ,TAKEBIT ,FOODBIT>
+        EATME-FUNCTION
+        ()
+        (ODESC1 "There is a piece of cake here with the words 'Eat-Me' on it."
+         OSIZE 10)>
 
 <OBJECT ["BLICE" "CAKE" "ICING"]
-	["BLUE" "ECCH"]
-	"piece of cake with blue icing"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
-	CAKE-FUNCTION
-	()
-	(ODESC1 "There is a piece of cake with blue (ecch) icing here."
-	 OSIZE 4)>
+        ["BLUE" "ECCH"]
+        "piece of cake with blue icing"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
+        CAKE-FUNCTION
+        ()
+        (ODESC1 "There is a piece of cake with blue (ecch) icing here."
+         OSIZE 4)>
 
 <OBJECT ["ORICE" "CAKE" "ICING"]
-	["ORANG"]
-	"piece of cake with orange icing"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
-	CAKE-FUNCTION
-	()
-	(ODESC1 "There is a piece of cake with orange icing here."
-	 OSIZE 4)>
+        ["ORANG"]
+        "piece of cake with orange icing"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
+        CAKE-FUNCTION
+        ()
+        (ODESC1 "There is a piece of cake with orange icing here."
+         OSIZE 4)>
 
 <OBJECT ["RDICE" "CAKE" "ICING"]
-	["RED"]
-	"piece of cake with red icing"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
-	CAKE-FUNCTION
-	()
-	(ODESC1 "There is a piece of cake with red icing here."
-	 OSIZE 4)>
+        ["RED"]
+        "piece of cake with red icing"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,FOODBIT>
+        CAKE-FUNCTION
+        ()
+        (ODESC1 "There is a piece of cake with red icing here."
+         OSIZE 4)>
 
 <OBJECT ["GUNK" "PIECE" "SLAG"]
-	["VITRE"]
-	"piece of vitreous slag"
-	<+ ,OVISON ,TAKEBIT ,TRYTAKEBIT>
-	GUNK-FUNCTION
-	()
-	(ODESC1 "There is a small piece of vitreous slag here."
-	 OSIZE 10)>
+        ["VITRE"]
+        "piece of vitreous slag"
+        <+ ,OVISON ,TAKEBIT ,TRYTAKEBIT>
+        GUNK-FUNCTION
+        ()
+        (ODESC1 "There is a small piece of vitreous slag here."
+         OSIZE 10)>
 
 <OBJECT ["BODIE" "BODY" "CORPS" "PILE"]
-	[]
-	"pile of bodies"
-	<+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
-	BODY-FUNCTION>
+        []
+        "pile of bodies"
+        <+ ,OVISON ,NDESCBIT ,TRYTAKEBIT>
+        BODY-FUNCTION>
 
 <OBJECT ["CORPS" "PILE"]
-	["MANGL"]
-	"pile of corpses"
-	<+ ,OVISON>>
+        ["MANGL"]
+        "pile of corpses"
+        <+ ,OVISON>>
 
 <OBJECT ["LEAVE" "LEAF" "PILE"]
-	[]
-	"pile of leaves"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	LEAF-PILE
-	()
-	(ODESC1 "There is a pile of leaves on the ground."
-	 OSIZE 25)>
+        []
+        "pile of leaves"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        LEAF-PILE
+        ()
+        (ODESC1 "There is a pile of leaves on the ground."
+         OSIZE 25)>
 
 <OBJECT ["PINND" "WALL" "PANEL" "DOOR"]
-	["PINE"]
-	"pine wall"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	MENDS>
+        ["PINE"]
+        "pine wall"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        MENDS>
 
 <OBJECT ["DBOAT" "BOAT" "PILE" "PLAST"]
-	["PLAST"]
-	"plastic boat (with hole)"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	DBOAT-FUNCTION
-	()
-	(ODESC1 "There is a pile of plastic here with a large hole in it."
-	 OSIZE 20)>
+        ["PLAST"]
+        "plastic boat (with hole)"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        DBOAT-FUNCTION
+        ()
+        (ODESC1 "There is a pile of plastic here with a large hole in it."
+         OSIZE 20)>
 
 <OBJECT ["IBOAT" "BOAT" "PILE" "PLAST"]
-	["PLAST"]
-	"pile of plastic"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	IBOAT-FUNCTION
-	()
-	(ODESC1 
+        ["PLAST"]
+        "pile of plastic"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        IBOAT-FUNCTION
+        ()
+        (ODESC1 
 "There is a folded pile of plastic here which has a small valve
 attached." 
-	 OSIZE 20)>
+         OSIZE 20)>
 
 <OBJECT ["BAR" "PLATI"]
-	["PLATI" "LARGE"]
-	"platinum bar"
-	<+ ,OVISON ,TAKEBIT ,SACREDBIT>
-	<>
-	()
-	(ODESC1 "There is a large platinum bar here."
-	 OSIZE 20
-	 OFVAL 12
-	 OTVAL 10)>
+        ["PLATI" "LARGE"]
+        "platinum bar"
+        <+ ,OVISON ,TAKEBIT ,SACREDBIT>
+        <>
+        ()
+        (ODESC1 "There is a large platinum bar here."
+         OSIZE 20
+         OFVAL 12
+         OTVAL 10)>
 
 <OBJECT ["PLEAK" "LEAK"]
-	["LARGE"]
-	"leak"
-	<+ ,OVISON ,NDESCBIT>
-	PLEAK>
+        ["LARGE"]
+        "leak"
+        <+ ,OVISON ,NDESCBIT>
+        PLEAK>
 
 <OBJECT ["POOL" "SEWAG" "GOOP"]
-	["LARGE" "BROWN"]
-	"pool of sewage"
-	<+ ,OVISON ,VICBIT>
-	<>
-	()
-	(ODESC1 "The leak has submerged the depressed area in a pool of sewage.")>
+        ["LARGE" "BROWN"]
+        "pool of sewage"
+        <+ ,OVISON ,VICBIT>
+        <>
+        ()
+        (ODESC1 "The leak has submerged the depressed area in a pool of sewage.")>
 
 <OBJECT ["POT" "GOLD"]
-	["GOLD"]
-	"pot of gold"
-	<+ ,TAKEBIT>
-	<>
-	()
-	(ODESCO "At the end of the rainbow is a pot of gold."
-	 ODESC1 "There is a pot of gold here."
-	 OSIZE 15
-	 OFVAL 10
-	 OTVAL 10)>
+        ["GOLD"]
+        "pot of gold"
+        <+ ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "At the end of the rainbow is a pot of gold."
+         ODESC1 "There is a pot of gold here."
+         OSIZE 15
+         OFVAL 10
+         OTVAL 10)>
 
 <OBJECT ["PRAYE" "INSCR"]
-	["ANCIE" "OLD"]
-	"prayer"
-	<+ ,OVISON ,READBIT ,SACREDBIT>
-	<>
-	()
-	(OREAD 
+        ["ANCIE" "OLD"]
+        "prayer"
+        <+ ,OVISON ,READBIT ,SACREDBIT>
+        <>
+        ()
+        (OREAD 
 "The prayer is inscribed in an ancient script which is hardly
 remembered these days, much less understood.  What little of it can
 be made out seems to be a philippic against small insects,
@@ -5378,352 +5378,352 @@ dead.  All evidence indicates that the beliefs of the ancient
 Zorkers were obscure." )>
 
 <OBJECT ["COIN" "ZORKM" "GOLD"]
-	["GOLD" "PRICE"]
-	"priceless zorkmid"
-	<+ ,OVISON ,READBIT ,TAKEBIT>
-	<>
-	()
-	(ODESCO 
+        ["GOLD" "PRICE"]
+        "priceless zorkmid"
+        <+ ,OVISON ,READBIT ,TAKEBIT>
+        <>
+        ()
+        (ODESCO 
 "On the floor is a gold zorkmid coin (a valuable collector's item)."
-	 ODESC1 "There is an engraved zorkmid coin here."
-	 OSIZE 10
-	 OFVAL 10
-	 OTVAL 12
-	 OREAD 
+         ODESC1 "There is an engraved zorkmid coin here."
+         OSIZE 10
+         OFVAL 10
+         OTVAL 12
+         OREAD 
 "
-	       --------------------------
-	      /      Gold Zorkmid	 \\
-	     /  T e n   T h o u s a n d   \\
-	    /        Z O R K M I D S	   \\
-	   /				    \\
-	  /        ||||||||||||||||||	     \\
-	 /        !||||		 ||||!	      \\
-	|	   |||   ^^  ^^   |||	       |
-	|	   |||	 OO  OO   |||	       |
-	| In Frobs  |||	   <<    |||  We Trust |
-	|	     || (______) ||	       |
-	|	      |          |	       |
-	|	      |__________|	       |
-	 \\				      /
-	  \\    -- Lord Dimwit Flathead --    /
-	   \\    -- Beloved of Zorkers --    /
-	    \\				   /
-	     \\	     * 722 G.U.E. *       /
-	      \\				 /
-	       --------------------------
+               --------------------------
+              /      Gold Zorkmid        \\
+             /  T e n   T h o u s a n d   \\
+            /        Z O R K M I D S       \\
+           /                                \\
+          /        ||||||||||||||||||        \\
+         /        !||||          ||||!        \\
+        |          |||   ^^  ^^   |||          |
+        |          |||   OO  OO   |||          |
+        | In Frobs  |||    <<    |||  We Trust |
+        |            || (______) ||            |
+        |             |          |             |
+        |             |__________|             |
+         \\                                    /
+          \\    -- Lord Dimwit Flathead --    /
+           \\    -- Beloved of Zorkers --    /
+            \\                              /
+             \\       * 722 G.U.E. *       /
+              \\                          /
+               --------------------------
 " )>
 
 <OBJECT ["PUBK" "BOOK"]
-	["PURPL"]
-	"purple book"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
-	<>
-	(<GET-OBJ "STAMP">)
-	(ODESC1 "There is a purple book here."
-	 OCAPAC 2
-	 OSIZE 10
-	 OREAD ,GREEK-TO-ME)>
+        ["PURPL"]
+        "purple book"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
+        <>
+        (<GET-OBJ "STAMP">)
+        (ODESC1 "There is a purple book here."
+         OCAPAC 2
+         OSIZE 10
+         OREAD ,GREEK-TO-ME)>
 
 <OBJECT ["WATER" "QUANT" "LIQUI" "H2O"]
-	[]
-	"quantity of water"
-	<+ ,OVISON ,TAKEBIT ,DRINKBIT>
-	WATER-FUNCTION
-	()
-	(ODESC1 "There is some water here"
-	 OSIZE 4)>
+        []
+        "quantity of water"
+        <+ ,OVISON ,TAKEBIT ,DRINKBIT>
+        WATER-FUNCTION
+        ()
+        (ODESC1 "There is some water here"
+         OSIZE 4)>
 
 <OBJECT ["RAILI" "RAIL"]
-	["WOODE"]
-	"wooden railing"
-	<+ ,OVISON ,NDESCBIT>>
+        ["WOODE"]
+        "wooden railing"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["RAINB"]
-	[]
-	"rainbow"
-	<+ ,OVISON ,NDESCBIT>>
+        []
+        "rainbow"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["RECEP"]
-	["METAL"]
-	"receptacle"
-	<+ ,OVISON ,CONTBIT ,SEARCHBIT>
-	BCONTENTS
-	()
-	(OCAPAC 6)>
+        ["METAL"]
+        "receptacle"
+        <+ ,OVISON ,CONTBIT ,SEARCHBIT>
+        BCONTENTS
+        ()
+        (OCAPAC 6)>
 
 <OBJECT ["RBEAM" "BEAM" "LIGHT"]
-	["RED"]
-	"red beam of light"
-	<+ ,OVISON ,NDESCBIT ,OPENBIT>
-	BEAM-FUNCTION
-	()
-	(OCAPAC 1000)>
+        ["RED"]
+        "red beam of light"
+        <+ ,OVISON ,NDESCBIT ,OPENBIT>
+        BEAM-FUNCTION
+        ()
+        (OCAPAC 1000)>
 
 <OBJECT ["BUOY"]
-	["RED"]
-	"red buoy"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT ,FINDMEBIT>
-	<>
-	(<GET-OBJ "EMERA">)
-	(ODESC1 "There is a red buoy here (probably a warning)."
-	 OCAPAC 20
-	 OSIZE 10)>
+        ["RED"]
+        "red buoy"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT ,FINDMEBIT>
+        <>
+        (<GET-OBJ "EMERA">)
+        (ODESC1 "There is a red buoy here (probably a warning)."
+         OCAPAC 20
+         OSIZE 10)>
 
 <OBJECT ["RSWIT" "SWITC" "BUTTO"]
-	["RED"]
-	"red button"
-	<+ ,OVISON ,NDESCBIT>
-	MRSWITCH>
+        ["RED"]
+        "red button"
+        <+ ,OVISON ,NDESCBIT>
+        MRSWITCH>
 
 <OBJECT ["RDWAL" "WALL" "PANEL"]
-	["RED"]
-	"red panel"
-	<+ ,OVISON ,NDESCBIT>
-	MPANELS>
+        ["RED"]
+        "red panel"
+        <+ ,OVISON ,NDESCBIT>
+        MPANELS>
 
 <OBJECT ["ROBOT" "R2D2" "C3PO" "ROBBY"]
-	[]
-	"robot"
-	<+ ,OVISON ,VICBIT ,SACREDBIT ,ACTORBIT>
-	ROBOT-FUNCTION
-	()
-	(ODESC1 "There is a robot here."
-	 OACTOR ,ROBOT)>
+        []
+        "robot"
+        <+ ,OVISON ,VICBIT ,SACREDBIT ,ACTORBIT>
+        ROBOT-FUNCTION
+        ()
+        (ODESC1 "There is a robot here."
+         OACTOR ,ROBOT)>
 
 <OBJECT ["ROPE" "HEMP" "COIL"]
-	["LARGE"]
-	"rope"
-	<+ ,OVISON ,TAKEBIT ,TIEBIT>
-	ROPE-FUNCTION
-	()
-	(ODESCO "A large coil of rope is lying in the corner."
-	 ODESC1 "There is a large coil of rope here."
-	 OSIZE 10)>
+        ["LARGE"]
+        "rope"
+        <+ ,OVISON ,TAKEBIT ,TIEBIT>
+        ROPE-FUNCTION
+        ()
+        (ODESCO "A large coil of rope is lying in the corner."
+         ODESC1 "There is a large coil of rope here."
+         OSIZE 10)>
 
 <OBJECT ["RUBY"]
-	["MOBY"]
-	"ruby"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESCO "On the floor lies a moby ruby."
-	 ODESC1 "There is a moby ruby lying here."
-	 OFVAL 15
-	 OTVAL 8)>
+        ["MOBY"]
+        "ruby"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESCO "On the floor lies a moby ruby."
+         ODESC1 "There is a moby ruby lying here."
+         OFVAL 15
+         OTVAL 8)>
 
 <OBJECT ["RKNIF" "KNIFE"]
-	["RUSTY"]
-	"rusty knife"
-	<+ ,OVISON ,TAKEBIT ,WEAPONBIT>
-	RUSTY-KNIFE
-	()
-	(ODESCO "Beside the skeleton is a rusty knife."
-	 ODESC1 "There is a rusty knife here."
-	 OSIZE 20
-	 OFMSGS ,KNIFE-MELEE)>
+        ["RUSTY"]
+        "rusty knife"
+        <+ ,OVISON ,TAKEBIT ,WEAPONBIT>
+        RUSTY-KNIFE
+        ()
+        (ODESCO "Beside the skeleton is a rusty knife."
+         ODESC1 "There is a rusty knife here."
+         OSIZE 20
+         OFMSGS ,KNIFE-MELEE)>
 
 <OBJECT ["SAND" "BEACH"]
-	["SANDY"]
-	"sandy beach"
-	<+ ,OVISON ,DIGBIT>
-	SAND-FUNCTION>
+        ["SANDY"]
+        "sandy beach"
+        <+ ,OVISON ,DIGBIT>
+        SAND-FUNCTION>
 
 <OBJECT ["BRACE" "JEWEL" "SAPPH"]
-	["SAPPH"]
-	"sapphire bracelet"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a sapphire-encrusted bracelet here."
-	 OSIZE 10
-	 OFVAL 5
-	 OTVAL 3)>
+        ["SAPPH"]
+        "sapphire bracelet"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a sapphire-encrusted bracelet here."
+         OSIZE 10
+         OFVAL 5
+         OTVAL 3)>
 
 <OBJECT ["SCREW"]
-	[]
-	"screwdriver"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is a screwdriver here.")>
+        []
+        "screwdriver"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is a screwdriver here.")>
 
 <OBJECT ["HEADS" "HEAD" "POLE" "POLES" "PDL" "BKD" "TAA" "MARC" "IMPLE" "LOSER"]
 
-	[]
-	"set of poled heads"
-	<+ ,OVISON ,SACREDBIT ,TRYTAKEBIT>
-	HEAD-FUNCTION
-	()
-	(ODESC1 "There are four heads here, mounted securely on poles.")>
+        []
+        "set of poled heads"
+        <+ ,OVISON ,SACREDBIT ,TRYTAKEBIT>
+        HEAD-FUNCTION
+        ()
+        (ODESC1 "There are four heads here, mounted securely on poles.")>
 
 <OBJECT ["KEYS" "SET" "KEY"]
-	[]
-	"set of skeleton keys"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is a set of skeleton keys here."
-	 OSIZE 10)>
+        []
+        "set of skeleton keys"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is a set of skeleton keys here."
+         OSIZE 10)>
 
 <OBJECT ["SPOLE" "POLE" "POST" "HANDG" "GRIP"]
-	["SHORT" "SMALL"]
-	"short pole"
-	<+ ,OVISON ,NDESCBIT>
-	SHORT-POLE>
+        ["SHORT" "SMALL"]
+        "short pole"
+        <+ ,OVISON ,NDESCBIT>
+        SHORT-POLE>
 
 <OBJECT ["SHOVE"]
-	["LARGE"]
-	"shovel"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is a large shovel here."
-	 OSIZE 15)>
+        ["LARGE"]
+        "shovel"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is a large shovel here."
+         OSIZE 15)>
 
 <OBJECT ["BONES" "SKELE" "BODY"]
-	[]
-	"skeleton"
-	<+ ,OVISON ,TRYTAKEBIT>
-	SKELETON
-	()
-	(ODESC1 
+        []
+        "skeleton"
+        <+ ,OVISON ,TRYTAKEBIT>
+        SKELETON
+        ()
+        (ODESC1 
 "A skeleton, probably the remains of a luckless adventurer, lies here.")>
 
 <OBJECT ["COAL" "PILE" "HEAP"]
-	["SMALL"]
-	"small pile of coal"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a small heap of coal here."
-	 OSIZE 20)>
+        ["SMALL"]
+        "small pile of coal"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a small heap of coal here."
+         OSIZE 20)>
 
 <OBJECT ["LISTS" "PAPER" "LIST" "PRINT" "LISTI" "STACK" "OUTPU"]
-	["GIGAN" "LINE-"]
-	"stack of listings"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESCO 
+        ["GIGAN" "LINE-"]
+        "stack of listings"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESCO 
 "There is a gigantic pile of line-printer output here.  Although the
 paper once contained useful information, almost nothing can be
 distinguished now." 
-	 ODESC1 
+         ODESC1 
 "There is an enormous stack of line-printer paper here.  It is barely
 readable." 
-	 OSIZE 70
-	 OREAD 
+         OSIZE 70
+         OREAD 
 "<DEFINE FEEL-FREE (LOSER)
-		   <TELL \"FEEL FREE, CHOMPER!\">>
-			...
+                   <TELL \"FEEL FREE, CHOMPER!\">>
+                        ...
 The rest is, alas, unintelligible (as were the implementers)." )>
 
 <OBJECT ["STAMP"]
-	["FLATH"]
-	"Flathead stamp"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a Flathead stamp here."
-	 OSIZE 1
-	 OFVAL 4
-	 OTVAL 10
-	 OREAD 
+        ["FLATH"]
+        "Flathead stamp"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a Flathead stamp here."
+         OSIZE 1
+         OFVAL 4
+         OTVAL 10
+         OREAD 
 "
 ---v----v----v----v----v----v----v----v---
-|					 |
-|	   ||||||||||	     LORD	 |
->         !||||	     |	    DIMWIT	 <
-|	  ||||    ---|	   FLATHEAD	 |
-|	  |||C	   CC \\  		 |
->	   ||||	      _\\		 <
-|	    ||| (____|			 |
-|	     ||      |			 |
->	      |______|	     Our	 <
-|		/   \\	  Excessive	 |
-|	       /     \\	    Leader	 |
->	      |	      |			 <
-|	      |       |			 |
-|					 |
->    G.U.E. POSTAGE	   3 Zorkmids    <
-|					 |
+|                                        |
+|          ||||||||||        LORD        |
+>         !||||      |      DIMWIT       <
+|         ||||    ---|     FLATHEAD      |
+|         |||C     CC \\                  |
+>          ||||       _\\                 <
+|           ||| (____|                   |
+|            ||      |                   |
+>             |______|       Our         <
+|               /   \\     Excessive      |
+|              /     \\      Leader       |
+>             |       |                  <
+|             |       |                  |
+|                                        |
+>    G.U.E. POSTAGE        3 Zorkmids    <
+|                                        |
 ---^----^----^----^----^----^----^----^---
 " )>
 
 <OBJECT ["STATU" "SCULP" "ROCK"]
-	["BEAUT"]
-	"statue"
-	<+ ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a beautiful statue here."
-	 OSIZE 8
-	 OFVAL 10
-	 OTVAL 13)>
+        ["BEAUT"]
+        "statue"
+        <+ ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a beautiful statue here."
+         OSIZE 8
+         OFVAL 10
+         OTVAL 13)>
 
 <OBJECT ["IRBOX" "BOX"]
-	["STEEL" "DENTE"]
-	"steel box"
-	<+ ,TAKEBIT ,CONTBIT>
-	<>
-	(<GET-OBJ "STRAD">)
-	(ODESC1 "There is a dented steel box here."
-	 OCAPAC 20
-	 OSIZE 40)>
+        ["STEEL" "DENTE"]
+        "steel box"
+        <+ ,TAKEBIT ,CONTBIT>
+        <>
+        (<GET-OBJ "STRAD">)
+        (ODESC1 "There is a dented steel box here."
+         OCAPAC 20
+         OSIZE 40)>
 
 <OBJECT ["RCAGE" "CAGE"]
-	["STEEL"]
-	"steel cage"
-	<+ ,OVISON>
-	<>
-	()
-	(ODESC1 "There is a steel cage in the middle of the room.")>
+        ["STEEL"]
+        "steel cage"
+        <+ ,OVISON>
+        <>
+        ()
+        (ODESC1 "There is a steel cage in the middle of the room.")>
 
 <OBJECT ["STILL"]
-	["VICIO"]
-	"stiletto"
-	<+ ,OVISON ,WEAPONBIT>
-	<>
-	()
-	(ODESC1 "There is a vicious-looking stiletto here."
-	 OSIZE 10)>
+        ["VICIO"]
+        "stiletto"
+        <+ ,OVISON ,WEAPONBIT>
+        <>
+        ()
+        (ODESC1 "There is a vicious-looking stiletto here."
+         OSIZE 10)>
 
 <OBJECT ["DIAL" "SUNDI"]
-	["SUN"]
-	"sundial"
-	<+ ,OVISON ,NDESCBIT ,TURNBIT>
-	DIAL>
+        ["SUN"]
+        "sundial"
+        <+ ,OVISON ,NDESCBIT ,TURNBIT>
+        DIAL>
 
 <OBJECT ["MSWIT" "SWITC"]
-	[]
-	"switch"
-	<+ ,OVISON ,NDESCBIT ,TURNBIT>
-	MSWITCH-FUNCTION>
+        []
+        "switch"
+        <+ ,OVISON ,NDESCBIT ,TURNBIT>
+        MSWITCH-FUNCTION>
 
 <OBJECT ["SWORD" "ORCRI" "GLAMD" "BLADE"]
-	["ELVIS"]
-	"sword"
-	<+ ,OVISON ,TAKEBIT ,WEAPONBIT>
-	SWORD
-	()
-	(ODESCO 
+        ["ELVIS"]
+        "sword"
+        <+ ,OVISON ,TAKEBIT ,WEAPONBIT>
+        SWORD
+        ()
+        (ODESCO 
 "On hooks above the mantelpiece hangs an elvish sword of great
 antiquity." 
-	 ODESC1 "There is an elvish sword here."
-	 OSIZE 30
-	 OFMSGS ,SWORD-MELEE
-	 OTVAL 0)>
+         ODESC1 "There is an elvish sword here."
+         OSIZE 30
+         OFMSGS ,SWORD-MELEE
+         OTVAL 0)>
 
 <OBJECT ["LABEL" "FINEP" "PRINT"]
-	["TAN" "FINE"]
-	"tan label"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a tan label here."
-	 OSIZE 2
-	 OREAD 
-"	  !!!! 	FROBOZZ MAGIC BOAT COMPANY  !!!!
+        ["TAN" "FINE"]
+        "tan label"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a tan label here."
+         OSIZE 2
+         OREAD 
+"         !!!!  FROBOZZ MAGIC BOAT COMPANY  !!!!
 
 Hello, Sailor!
 
@@ -5742,57 +5742,57 @@ workmanship for a period of 76 milliseconds from date of purchase or
 until first used, whichever comes first.
 
 Warning:
-   This boat is made of plastic.		Good Luck!
+   This boat is made of plastic.                Good Luck!
 " )>
 
 <OBJECT ["THIEF" "ROBBE" "CROOK" "CRIMI" "BANDI" "GENT" "GENTL" "MAN" "INDIV"]
-	["SHADY" "SUSPI"]
-	"thief"
-	<+ ,OVISON ,VICBIT ,VILLAIN>
-	ROBBER-FUNCTION
-	(<GET-OBJ "STILL">)
-	(ODESC1 
+        ["SHADY" "SUSPI"]
+        "thief"
+        <+ ,OVISON ,VICBIT ,VILLAIN>
+        ROBBER-FUNCTION
+        (<GET-OBJ "STILL">)
+        (ODESC1 
 "There is a suspicious-looking individual, holding a bag, leaning
 against one wall.  He is armed with a vicious-looking stiletto." 
-	 OSTRENGTH 5
-	 OFMSGS ,THIEF-MELEE)>
+         OSTRENGTH 5
+         OFMSGS ,THIEF-MELEE)>
 
 <OBJECT ["SAFFR" "TIN" "SPICE"]
-	["RARE"]
-	"tin of spices"
-	<+ ,TAKEBIT>
-	<>
-	()
-	(ODESC1 "There is a tin of rare spices here."
-	 OSIZE 8
-	 OFVAL 5
-	 OTVAL 5)>
+        ["RARE"]
+        "tin of spices"
+        <+ ,TAKEBIT>
+        <>
+        ()
+        (ODESC1 "There is a tin of rare spices here."
+         OSIZE 8
+         OFVAL 5
+         OTVAL 5)>
 
 <OBJECT ["TORCH" "IVORY"]
-	["IVORY"]
-	"torch"
-	<+ ,OVISON ,TAKEBIT ,LIGHTBIT ,FLAMEBIT ,TOOLBIT ,ONBIT>
-	TORCH-OBJECT
-	()
-	(ODESCO "Sitting on the pedestal is a flaming torch, made of ivory."
-	 ODESC1 "There is an ivory torch here."
-	 OSIZE 20
-	 OFVAL 14
-	 OTVAL 6)>
+        ["IVORY"]
+        "torch"
+        <+ ,OVISON ,TAKEBIT ,LIGHTBIT ,FLAMEBIT ,TOOLBIT ,ONBIT>
+        TORCH-OBJECT
+        ()
+        (ODESCO "Sitting on the pedestal is a flaming torch, made of ivory."
+         ODESC1 "There is an ivory torch here."
+         OSIZE 20
+         OFVAL 14
+         OTVAL 6)>
 
 <OBJECT ["GUIDE" "BOOK"]
-	["TOUR"]
-	"tour guidebook"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESCO 
+        ["TOUR"]
+        "tour guidebook"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESCO 
 "Some guidebooks entitled 'Flood Control Dam #3' are on the reception
 desk." 
-	 ODESC1 "There are tour guidebooks here."
-	 OREAD 
-"\"		   Guide Book to
-		Flood Control Dam #3
+         ODESC1 "There are tour guidebooks here."
+         OREAD 
+"\"                Guide Book to
+                Flood Control Dam #3
 
   Flood Control Dam #3 (FCD#3) was constructed in year 783 of the
 Great Underground Empire to harness the destructive power of the
@@ -5815,73 +5815,73 @@ processors, and nearly one million dead trees.
 
   We will now point out some of the more interesting features
 of FCD#3 as we conduct you on a guided tour of the facilities:
-	1) You start your tour here in the Dam Lobby.
-	   You will notice on your right that ........." )>
+        1) You start your tour here in the Dam Lobby.
+           You will notice on your right that ........." )>
 
 <OBJECT ["TROLL"]
-	["NASTY"]
-	"troll"
-	<+ ,OVISON ,VICBIT ,VILLAIN>
-	TROLL
-	(<GET-OBJ "AXE">)
-	(ODESC1 
+        ["NASTY"]
+        "troll"
+        <+ ,OVISON ,VICBIT ,VILLAIN>
+        TROLL
+        (<GET-OBJ "AXE">)
+        (ODESC1 
 "A nasty-looking troll, brandishing a bloody axe, blocks all passages
 out of the room." 
-	 OSTRENGTH 2
-	 OFMSGS ,TROLL-MELEE)>
+         OSTRENGTH 2
+         OFMSGS ,TROLL-MELEE)>
 
 <OBJECT ["TCASE" "CASE"]
-	["TROPH"]
-	"trophy case"
-	<+ ,OVISON ,TRANSBIT ,CONTBIT>
-	TROPHY-CASE
-	()
-	(ODESC1 "There is a trophy case here."
-	 OCAPAC ,BIGFIX)>
+        ["TROPH"]
+        "trophy case"
+        <+ ,OVISON ,TRANSBIT ,CONTBIT>
+        TROPHY-CASE
+        ()
+        (ODESC1 "There is a trophy case here."
+         OCAPAC ,BIGFIX)>
 
 <OBJECT ["TRUNK" "CHEST" "JEWEL"]
-	["OLD"]
-	"trunk of jewels"
-	<+ ,TAKEBIT>
-	<>
-	()
-	(ODESCO 
+        ["OLD"]
+        "trunk of jewels"
+        <+ ,TAKEBIT>
+        <>
+        ()
+        (ODESCO 
 "Lying half buried in the mud is an old trunk, bulging with jewels."
-	 ODESC1 "There is an old trunk here, bulging with assorted jewels."
-	 OSIZE 35
-	 OFVAL 15
-	 OTVAL 8)>
+         ODESC1 "There is an old trunk here, bulging with assorted jewels."
+         OSIZE 35
+         OFVAL 15
+         OTVAL 8)>
 
 <OBJECT ["TUBE" "TOOTH"]
-	[]
-	"tube"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT ,READBIT>
-	TUBE-FUNCTION
-	(<GET-OBJ "PUTTY">)
-	(ODESC1 "There is an object which looks like a tube of toothpaste here."
-	 OCAPAC 7
-	 OSIZE 10
-	 OREAD
+        []
+        "tube"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT ,READBIT>
+        TUBE-FUNCTION
+        (<GET-OBJ "PUTTY">)
+        (ODESC1 "There is an object which looks like a tube of toothpaste here."
+         OCAPAC 7
+         OSIZE 10
+         OREAD
 "---> Frobozz Magic Gunk Company <---
-	  All-Purpose Gunk")>
+          All-Purpose Gunk")>
 
 <OBJECT ["PUTTY" "MATER" "GUNK" "GLUE"]
-	["VISCO"]
-	"viscous material"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is some gunk here"
-	 OSIZE 6)>
+        ["VISCO"]
+        "viscous material"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is some gunk here"
+         OSIZE 6)>
 
 <OBJECT ["ENGRA" "INSCR"]
-	["OLD" "ANCIE"]
-	"wall with engravings"
-	<+ ,OVISON ,READBIT ,SACREDBIT>
-	<>
-	()
-	(ODESC1 "There are old engravings on the walls here."
-	 OREAD 
+        ["OLD" "ANCIE"]
+        "wall with engravings"
+        <+ ,OVISON ,READBIT ,SACREDBIT>
+        <>
+        ()
+        (ODESC1 "There are old engravings on the walls here."
+         OREAD 
 "The engravings were incised in the living rock of the cave wall by
 an unknown hand.  They depict, in symbolic form, the beliefs of the
 ancient peoples of Zork.  Skillfully interwoven with the bas reliefs
@@ -5891,320 +5891,320 @@ to have considered them blasphemous and just as skillfully excised
 them." )>
 
 <OBJECT ["ETCH2" "ETCHI" "WALLS" "WALL"]
-	[]
-	"wall with etchings"
-	<+ ,OVISON ,READBIT ,NDESCBIT ,FINDMEBIT>
-	<>
-	()
-	(OREAD 
-"		        o  b  o
-		    r 		  z
-		 f   M  A  G  I  C   z
-		 c    W  E   L  L    y
-		    o		  n
-		        m  p  a
+        []
+        "wall with etchings"
+        <+ ,OVISON ,READBIT ,NDESCBIT ,FINDMEBIT>
+        <>
+        ()
+        (OREAD 
+"                       o  b  o
+                    r             z
+                 f   M  A  G  I  C   z
+                 c    W  E   L  L    y
+                    o             n
+                        m  p  a
 " )>
 
 <OBJECT ["ETCH1" "ETCHI" "WALLS" "WALL"]
-	[]
-	"wall with etchings"
-	<+ ,OVISON ,READBIT ,NDESCBIT ,FINDMEBIT>
-	<>
-	()
-	(OREAD 
-"		        o  b  o
+        []
+        "wall with etchings"
+        <+ ,OVISON ,READBIT ,NDESCBIT ,FINDMEBIT>
+        <>
+        ()
+        (OREAD 
+"                       o  b  o
 
-		        A  G  I
-		         E   L
+                        A  G  I
+                         E   L
 
-		        m  p  a
+                        m  p  a
 " )>
 
 <OBJECT ["TTREE" "TREE"]
-	["LARGE"]
-	"large tree"
-	<+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
+        ["LARGE"]
+        "large tree"
+        <+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
 
 <OBJECT ["FTREE" "TREE"]
-	["LARGE"]
-	"large tree"
-	<+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
+        ["LARGE"]
+        "large tree"
+        <+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
 
 <OBJECT ["CCLIF" "CLIFF" "LEDGE"]
-	["ROCKY" "SHEER"]
-	"cliff"
-	<+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
+        ["ROCKY" "SHEER"]
+        "cliff"
+        <+ ,OVISON ,NDESCBIT ,CLIMBBIT>>
 
 <OBJECT ["WCLIF" "CLIFF"]
-	["WHITE"]
-	"white cliffs"
-	<+ ,OVISON ,NDESCBIT ,CLIMBBIT>
-	WCLIF-OBJECT>
+        ["WHITE"]
+        "white cliffs"
+        <+ ,OVISON ,NDESCBIT ,CLIMBBIT>
+        WCLIF-OBJECT>
 
 <OBJECT ["WHBK" "BOOK"]
-	["WHITE"]
-	"white book"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1 "There is a white book here."
-	 OCAPAC 2
-	 OSIZE 10
-	 OREAD ,GREEK-TO-ME)>
+        ["WHITE"]
+        "white book"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,CONTBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1 "There is a white book here."
+         OCAPAC 2
+         OSIZE 10
+         OREAD ,GREEK-TO-ME)>
 
 <OBJECT ["WHWAL" "WALL" "PANEL"]
-	["WHITE"]
-	"white panel"
-	<+ ,OVISON ,NDESCBIT>
-	MPANELS>
+        ["WHITE"]
+        "white panel"
+        <+ ,OVISON ,NDESCBIT>
+        MPANELS>
 
 <OBJECT ["WINDO"]
-	[]
-	"window"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	WINDOW-FUNCTION>
+        []
+        "window"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        WINDOW-FUNCTION>
 
 <OBJECT ["FUSE" "COIL" "WIRE"]
-	["SHINY" "THIN"]
-	"wire coil"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT>
-	FUSE-FUNCTION
-	()
-	(ODESC1 "There is a coil of thin shiny wire here."
-	 OSIZE 1
-	 OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,FUSIN 2>>])>
+        ["SHINY" "THIN"]
+        "wire coil"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT>
+        FUSE-FUNCTION
+        ()
+        (ODESC1 "There is a coil of thin shiny wire here."
+         OSIZE 1
+         OLINT [0 <CLOCK-DISABLE <CLOCK-INT ,FUSIN 2>>])>
 
 <OBJECT ["WDBAR" "BAR"]
-	["WOOD" "WOODE" "CROSS"]
-	"wooden bar"
-	<+ ,OVISON ,NDESCBIT>>
+        ["WOOD" "WOODE" "CROSS"]
+        "wooden bar"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["BUCKE"]
-	["WOODE"]
-	"wooden bucket"
-	<+ ,OVISON ,VEHBIT ,OPENBIT>
-	BUCKET
-	()
-	(ODESC1 
+        ["WOODE"]
+        "wooden bucket"
+        <+ ,OVISON ,VEHBIT ,OPENBIT>
+        BUCKET
+        ()
+        (ODESC1 
 "There is a wooden bucket here, 3 feet in diameter and 3 feet high."
-	 OCAPAC 100
-	 OSIZE 100
-	 OVTYPE ,RBUCKBIT)>
+         OCAPAC 100
+         OSIZE 100
+         OVTYPE ,RBUCKBIT)>
 
 <OBJECT ["QDOOR" "DOOR"]
-	["WOOD" "WOODE"]
-	"wooden door"
-	<+ ,OVISON ,DOORBIT ,NDESCBIT>
-	WOOD-DOOR>
+        ["WOOD" "WOODE"]
+        "wooden door"
+        <+ ,OVISON ,DOORBIT ,NDESCBIT>
+        WOOD-DOOR>
 
 <OBJECT ["POSTS" "POST"]
-	["WOODE"]
-	"group of wooden posts"
-	<+ ,OVISON>>
+        ["WOODE"]
+        "group of wooden posts"
+        <+ ,OVISON>>
 
 <OBJECT ["WRENC"]
-	[]
-	"wrench"
-	<+ ,OVISON ,TAKEBIT ,TOOLBIT>
-	<>
-	()
-	(ODESC1 "There is a wrench here."
-	 OSIZE 10)>
+        []
+        "wrench"
+        <+ ,OVISON ,TAKEBIT ,TOOLBIT>
+        <>
+        ()
+        (ODESC1 "There is a wrench here."
+         OSIZE 10)>
 
 <OBJECT ["YLWAL" "WALL" "PANEL"]
-	["YELLO"]
-	"yellow panel"
-	<+ ,OVISON ,NDESCBIT>
-	MPANELS>
+        ["YELLO"]
+        "yellow panel"
+        <+ ,OVISON ,NDESCBIT>
+        MPANELS>
 
 <OBJECT ["TCHST" "CHEST"]
-	["TOOL"]
-	"group of tool chests"
-	<+ ,OVISON ,NDESCBIT>
-	TOOL-CHEST>
+        ["TOOL"]
+        "group of tool chests"
+        <+ ,OVISON ,NDESCBIT>
+        TOOL-CHEST>
 
 <OBJECT ["CPANL" "PANEL"]
-	["CONTR"]
-	"control panel"
-	<+ ,OVISON ,NDESCBIT>>
+        ["CONTR"]
+        "control panel"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["BROCH"]
-	["FREE"]
-	"free brochure"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT ,CONTBIT ,OPENBIT ,READBIT>
-	BROCHURE
-	(<GET-OBJ "DSTMP">)
-	(ODESCO "In the mailbox is a large brochure."
-	 ODESC1 "There is a large brochure here."
-	 OSIZE 30
-	 OCAPAC 1)>
+        ["FREE"]
+        "free brochure"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT ,CONTBIT ,OPENBIT ,READBIT>
+        BROCHURE
+        (<GET-OBJ "DSTMP">)
+        (ODESCO "In the mailbox is a large brochure."
+         ODESC1 "There is a large brochure here."
+         OSIZE 30
+         OCAPAC 1)>
 
 <OBJECT ["DSTMP" "STAMP"]
-	["DON" "WOODS" "DWOOD"]
-	"Don Woods stamp"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT ,READBIT>
-	BROCHURE
-	()
-	(ODESC1 "There is a Don Woods Commemorative stamp here."
-	 OSIZE 1
-	 OTVAL 1
-	 OREAD
+        ["DON" "WOODS" "DWOOD"]
+        "Don Woods stamp"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT ,READBIT>
+        BROCHURE
+        ()
+        (ODESC1 "There is a Don Woods Commemorative stamp here."
+         OSIZE 1
+         OTVAL 1
+         OREAD
 "
 ---v----v----v----v----v---
-|	  _______	  |
->  One	 /  	 \\     G  <
-| Lousy /   	  \\    U  |
-> Point	|   ___   |    E  <
-|	|  (___)  |	  |
->	<--)___(-->    P  <
-|	/ /	\\ \\    o  |
->      / /	 \\ \\   s  <
+|         _______         |
+>  One   /       \\     G  <
+| Lousy /         \\    U  |
+> Point |   ___   |    E  <
+|       |  (___)  |       |
+>       <--)___(-->    P  <
+|       / /     \\ \\    o  |
+>      / /       \\ \\   s  <
 |     |-|---------|-|  t  |
 >     | |  \\ _ /  | |  a  <
 |     | | --(_)-- | |  g  |
 >     | |  /| |\\  | |  e  <
-|     |-|---|_|---|-|	  |
->      \\ \\__/_\\__/ /	  <
-|	_/_______\\_	  |
->      |  f.m.l.c. |	  <
-|      -------------	  |
->			  <
+|     |-|---|_|---|-|     |
+>      \\ \\__/_\\__/ /      <
+|       _/_______\\_       |
+>      |  f.m.l.c. |      <
+|      -------------      |
+>                         <
 |   Donald Woods, Editor  |
->     Spelunker Today	  <
-|			  |
+>     Spelunker Today     <
+|                         |
 ---^----^----^----^----^---")>
-	 
+         
 
 ; "SUBTITLE BANK OBJECTS"
 
 <OBJECT ["BILLS" "STACK" "PILE"]
-	["NEAT" "200" "ZORKM"]
-	"stack of zorkmid bills"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	BILLS-OBJECT
-	()
-	(ODESC1
-	 "200 neatly stacked zorkmid bills are here."
-	 ODESCO
-	 "On the floor sit 200 neatly stacked zorkmid bills."
-	 OSIZE 10
-	 OTVAL 15
-	 OFVAL 10
-	 OREAD
+        ["NEAT" "200" "ZORKM"]
+        "stack of zorkmid bills"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        BILLS-OBJECT
+        ()
+        (ODESC1
+         "200 neatly stacked zorkmid bills are here."
+         ODESCO
+         "On the floor sit 200 neatly stacked zorkmid bills."
+         OSIZE 10
+         OTVAL 15
+         OFVAL 10
+         OREAD
 "
 ______________________________________________________________
 | 1  0   0          GREAT UNDERGROUND EMPIRE         1  0   0 |
-| 1 0 0 0 0					     1 0 0 0 0|
-| 1 0 0 0 0					     1 0 0 0 0|
-| 1  0   0		    DIMWIT		     1  0   0 |
-|	               ||||||||||||||||	  		      |
-|		       ||   __  __   ||		   B30332744D |
-|		       ||  -OO  OO-  ||	  		      |
-|	IN  FROBS      \\||    >>    ||/	    WE  TRUST         |
-|		        ||  ______  ||	       		      |
-| B30332744D	         |  ------  |	       		      |
-|                        \\\\________//	       		      |
-| 1  0   0    Series	   FLATHEAD	LD Flathead  1  0   0 |
-| 1 0 0 0 0   719GUE	   		 Treasurer   1 0 0 0 0|
-| 1 0 0 0 0 					     1 0 0 0 0|
-| 1  0   0	  One Hundred Royal Zorkmids	     1  0   0 |
+| 1 0 0 0 0                                          1 0 0 0 0|
+| 1 0 0 0 0                                          1 0 0 0 0|
+| 1  0   0                  DIMWIT                   1  0   0 |
+|                      ||||||||||||||||                       |
+|                      ||   __  __   ||            B30332744D |
+|                      ||  -OO  OO-  ||                       |
+|       IN  FROBS      \\||    >>    ||/     WE  TRUST         |
+|                       ||  ______  ||                        |
+| B30332744D             |  ------  |                         |
+|                        \\\\________//                         |
+| 1  0   0    Series       FLATHEAD     LD Flathead  1  0   0 |
+| 1 0 0 0 0   719GUE                     Treasurer   1 0 0 0 0|
+| 1 0 0 0 0                                          1 0 0 0 0|
+| 1  0   0        One Hundred Royal Zorkmids         1  0   0 |
 |_____________________________________________________________|
 
 ")>
-	 
+         
 <OBJECT ["PORTR" "PAINT" "ART"]
-	["FLATH"]
-	"portrait of J. Pierpont Flathead"
-	<+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1
-	 "The portrait of J. Pierpont Flathead is here."
-	 ODESCO
-	 "A portrait of J. Pierpont Flathead hangs on the wall."
-	 OSIZE 25
-	 OTVAL 5
-	 OFVAL 10
-	 OREAD
-	 
-" 		    
-	             ||||||||||||||
-		    ||   __  __   ||
-		    ||	 $$  $$   ||
-		    \\||	   >>    ||/
-		     ||  ______  ||	       
-		      |  -//--   |	       
-		      \\\\_//_____//	       
-	 	     ___//|  |	
-		    /__// |  |
-			  |  |
-	       __________//  \\\\__________
-	      / $ /	  ****	     \\ $ \\
-	     /   /	   **	      \\   \\
-	    /	/|	   **	      |\\   \\
-	   /   / |	   **	      | \\   \\
-	  /   /  |         **         |  \\   \\
-	  ^   ^__|______$Z$**$Z$______|___^   ^
-	  \\   	    *	$Z$**$Z$   *	     /
-	   \\________*___$Z$**$Z$___*________/
-		 |	$Z$**$Z$      |
+        ["FLATH"]
+        "portrait of J. Pierpont Flathead"
+        <+ ,OVISON ,READBIT ,TAKEBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1
+         "The portrait of J. Pierpont Flathead is here."
+         ODESCO
+         "A portrait of J. Pierpont Flathead hangs on the wall."
+         OSIZE 25
+         OTVAL 5
+         OFVAL 10
+         OREAD
+         
+"                   
+                     ||||||||||||||
+                    ||   __  __   ||
+                    ||   $$  $$   ||
+                    \\||    >>    ||/
+                     ||  ______  ||            
+                      |  -//--   |             
+                      \\\\_//_____//             
+                     ___//|  |  
+                    /__// |  |
+                          |  |
+               __________//  \\\\__________
+              / $ /       ****       \\ $ \\
+             /   /         **         \\   \\
+            /   /|         **         |\\   \\
+           /   / |         **         | \\   \\
+          /   /  |         **         |  \\   \\
+          ^   ^__|______$Z$**$Z$______|___^   ^
+          \\         *   $Z$**$Z$   *         /
+           \\________*___$Z$**$Z$___*________/
+                 |      $Z$**$Z$      |
 
- 	 	 J.  PIERPONT  FLATHEAD
-			CHAIRMAN
+                 J.  PIERPONT  FLATHEAD
+                        CHAIRMAN
 ")>
 
 <OBJECT ["VAULT" "CUBE" "LETTE"]
-	["STONE" "LARGE"]
-	"large stone cube"
-	<+ ,OVISON ,READBIT>
-	<>
-	()
-	(OREAD
-	 
-"	        Bank of Zork
-		   VAULT
-         	 *722 GUE*
+        ["STONE" "LARGE"]
+        "large stone cube"
+        <+ ,OVISON ,READBIT>
+        <>
+        ()
+        (OREAD
+         
+"               Bank of Zork
+                   VAULT
+                 *722 GUE*
           Frobozz Magic Vault Company
 ")>
 
 <OBJECT ["SCOL" "CURTA" "LIGHT"]
-	["SHIMM"]
-	"shimmering curtain of light"
-	,OVISON
-	SCOL-OBJECT>
+        ["SHIMM"]
+        "shimmering curtain of light"
+        ,OVISON
+        SCOL-OBJECT>
 
 <OBJECT ["ZGNOM" "GNOME"]
-	["ZURIC"]
-	"Gnome of Zurich"
-	<+ ,OVISON ,VICBIT ,VILLAIN>
-	ZGNOME-FUNCTION
-	()
-	(ODESC1 "There is a Gnome of Zurich here.")>
+        ["ZURIC"]
+        "Gnome of Zurich"
+        <+ ,OVISON ,VICBIT ,VILLAIN>
+        ZGNOME-FUNCTION
+        ()
+        (ODESC1 "There is a Gnome of Zurich here.")>
 
 
 ;"SUBTITLE FOREST OBJECTS"
 
 <OBJECT ["NEST"]
-	["BIRDS" "SMALL"]
-	"birds nest"
-	<+ ,OVISON ,TAKEBIT ,BURNBIT ,OPENBIT>
-	<>
-	(<GET-OBJ "EGG">)
-	(ODESC1 "There is a small birds nest here."
-	 ODESCO "On the branch is a small birds nest."
-	 OCAPAC 20)>
+        ["BIRDS" "SMALL"]
+        "birds nest"
+        <+ ,OVISON ,TAKEBIT ,BURNBIT ,OPENBIT>
+        <>
+        (<GET-OBJ "EGG">)
+        (ODESC1 "There is a small birds nest here."
+         ODESCO "On the branch is a small birds nest."
+         OCAPAC 20)>
 
 <OBJECT ["EGG"]
-	["BIRDS" "ENCRU"]
-	"jewel-encrusted egg"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT>
-	EGG-OBJECT
-	(<GET-OBJ "GCANA">)
-	(OFVAL 5
-	 OTVAL 5 
-	 ODESC1 "There is a jewel-encrusted egg here."
-	 OCAPAC 6
-	 ODESCO
+        ["BIRDS" "ENCRU"]
+        "jewel-encrusted egg"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT>
+        EGG-OBJECT
+        (<GET-OBJ "GCANA">)
+        (OFVAL 5
+         OTVAL 5 
+         ODESC1 "There is a jewel-encrusted egg here."
+         OCAPAC 6
+         ODESCO
 "In the bird's nest is a large egg encrusted with precious jewels,
 apparently scavenged somewhere by a childless songbird.  The egg is 
 covered with fine gold inlay, and ornamented in lapis lazuli and
@@ -6213,34 +6213,34 @@ delicate looking clasp holding it closed.  The egg appears extremely
 fragile.")>
 
 <OBJECT ["BEGG" "EGG"]
-	["BROKE" "BIRDS" "ENCRU"]
-	"broken jewel-encrusted egg"
-	<+ ,OVISON ,TAKEBIT ,CONTBIT ,OPENBIT>
-	<>
-	(<GET-OBJ "BCANA">)
-	(OCAPAC 6
-	 ODESC1 "There is a somewhat ruined egg here.")>
+        ["BROKE" "BIRDS" "ENCRU"]
+        "broken jewel-encrusted egg"
+        <+ ,OVISON ,TAKEBIT ,CONTBIT ,OPENBIT>
+        <>
+        (<GET-OBJ "BCANA">)
+        (OCAPAC 6
+         ODESC1 "There is a somewhat ruined egg here.")>
 
 <OBJECT ["BAUBL"]
-	["BRASS" "BEAUT"]
-	"beautiful brass bauble"
-	<+ ,OVISON ,TAKEBIT>
-	<>
-	()
-	(OFVAL 1
-	 OTVAL 1
-	 ODESC1 "There is a beautiful brass bauble here.")>
+        ["BRASS" "BEAUT"]
+        "beautiful brass bauble"
+        <+ ,OVISON ,TAKEBIT>
+        <>
+        ()
+        (OFVAL 1
+         OTVAL 1
+         ODESC1 "There is a beautiful brass bauble here.")>
 
 <OBJECT ["GCANA" "CANAR"]
-	["CLOCK" "MECHA" "GOLD" "GOLDE"]
-	"clockwork canary"
-	<+ ,OVISON ,TAKEBIT>
-	CANARY-OBJECT
-	()
-	(OFVAL 6
-	 OTVAL 2
-	 ODESC1 "There is golden clockwork canary here."
-	 ODESCO
+        ["CLOCK" "MECHA" "GOLD" "GOLDE"]
+        "clockwork canary"
+        <+ ,OVISON ,TAKEBIT>
+        CANARY-OBJECT
+        ()
+        (OFVAL 6
+         OTVAL 2
+         ODESC1 "There is golden clockwork canary here."
+         ODESCO
 
 "There is a golden clockwork canary nestled in the egg.  It has ruby
 eyes and a silver beak.  Through a crystal window below its left
@@ -6248,13 +6248,13 @@ wing you can see intricate machinery inside.  It appears to have
 wound down.")>
 
 <OBJECT ["BCANA" "CANAR"]
-	["BROKE" "CLOCK" "MECHA" "GOLD" "GOLDE"]
-	"broken clockwork canary"
-	<+ ,OVISON ,TAKEBIT>
-	CANARY-OBJECT
-	()
-	(ODESC1 "There is a non-functional canary here."
-	 ODESCO
+        ["BROKE" "CLOCK" "MECHA" "GOLD" "GOLDE"]
+        "broken clockwork canary"
+        <+ ,OVISON ,TAKEBIT>
+        CANARY-OBJECT
+        ()
+        (ODESC1 "There is a non-functional canary here."
+         ODESCO
 
 "There is a golden clockwork canary nestled in the egg.  It seems to
 have recently had a bad experience.  The mountings for its jewel-like
@@ -6268,15 +6268,15 @@ have, as the mainspring seems sprung.")>
 ;"SUBTITLE CHINESE PUZZLE OBJECTS"
 
 <OBJECT ["WARNI" "NOTE" "PAPER" "PIECE"]
-	[]
-	"note of warning"
-	<+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT>
-	<>
-	()
-	(ODESC1
-	 "There is a piece of paper on the ground here."
-	 OREAD
-	 "
+        []
+        "note of warning"
+        <+ ,OVISON ,TAKEBIT ,READBIT ,BURNBIT>
+        <>
+        ()
+        (ODESC1
+         "There is a piece of paper on the ground here."
+         OREAD
+         "
 The paper is rather worn; although the writing is barely legible (the
 author probably had only a used pencil), it is a very elegant
 copperplate.
@@ -6287,186 +6287,186 @@ To Whom It May Concern:
 in the chamber to which this passage leads have no basis in fact.
 Should you nevertheless be sufficiently foolhardy to enter, it will
 be quite impossible for you to exit.
-				
-				Sincerely yours,
-				The Thief
+                                
+                                Sincerely yours,
+                                The Thief
 ")>
 
 <PUT <OBJECT ["CPSLT" "SLIT" "SLOT"]
-	["SMALL"]
-	"small slit"
-	<+ ,OVISON ,NDESCBIT>
-	CPSLT-OBJECT
-	()
-	(OCAPAC 4)>
+        ["SMALL"]
+        "small slit"
+        <+ ,OVISON ,NDESCBIT>
+        CPSLT-OBJECT
+        ()
+        (OCAPAC 4)>
      ,OROOM <GET-ROOM "CP">>
 
 <TRO <FIND-OBJ "CPSLT"> ,OPENBIT>
 
 <OBJECT ["CPDR2" "DOOR"]
-	["STEEL"]
-	"steel door"
-	<+ ,OVISON ,NDESCBIT>>
+        ["STEEL"]
+        "steel door"
+        <+ ,OVISON ,NDESCBIT>>
 
 <PUT <OBJECT ["CPDOR" "DOOR"]
-	["STEEL"]
-	"steel door"
-	<+ ,OVISON ,NDESCBIT>>
+        ["STEEL"]
+        "steel door"
+        <+ ,OVISON ,NDESCBIT>>
      ,OROOM <GET-ROOM "CP">>
 
 <PUT <OBJECT ["GCARD" "CARD"]
-	["GOLD"]
-	"gold card"
-	<+ ,TAKEBIT ,OVISON ,READBIT>
-	<>
-	()
-	(ODESC1
-	 "There is a solid gold engraved card here."
-	 ODESCO
-	 "Nestled inside the niche is an engraved gold card."
-	 OREAD
-	 "
+        ["GOLD"]
+        "gold card"
+        <+ ,TAKEBIT ,OVISON ,READBIT>
+        <>
+        ()
+        (ODESC1
+         "There is a solid gold engraved card here."
+         ODESCO
+         "Nestled inside the niche is an engraved gold card."
+         OREAD
+         "
  ____________________________________________________________
-|							     |
-|              FROBOZZ MAGIC SECURITY SYSTEMS		     |
+|                                                            |
+|              FROBOZZ MAGIC SECURITY SYSTEMS                |
 |    Door Pass                  Royal Zork Puzzle Museum     |
-|							     |
-|                     #632-988-496-XTHF			     |
-|							     |
-|							     |
-|     USE OF THIS PASS BY UNAUTHORIZED PERSONS OR AFTER	     |
+|                                                            |
+|                     #632-988-496-XTHF                      |
+|                                                            |
+|                                                            |
+|     USE OF THIS PASS BY UNAUTHORIZED PERSONS OR AFTER      |
 |   EXPIRATION DATE WILL RESULT IN IMMEDIATE CONFISCATION    |
-|							     |
-|							     |
-|                              (approved)		     |
-|                              Will Weng		     |
-|                               789 G.U.E.		     |
-|							     |
+|                                                            |
+|                                                            |
+|                              (approved)                    |
+|                              Will Weng                     |
+|                               789 G.U.E.                   |
+|                                                            |
 |                                        Expires 792 G.U.E.  |
 |____________________________________________________________|
 "
-	 OTVAL
-	 15
-	 OFVAL
-	 10
-	 OSIZE
-	 4)> ,OROOM <GET-ROOM "CP">>
+         OTVAL
+         15
+         OFVAL
+         10
+         OSIZE
+         4)> ,OROOM <GET-ROOM "CP">>
 
 
 ; "SUBTITLE PALANTIR OBJECTS"
 
 
 <SETG SMALL-PAPERS ![<GET-OBJ "BLABE"> <GET-OBJ "LABEL"> <GET-OBJ "CARD">
-		     <GET-OBJ "WARNI"> <GET-OBJ "PAPER"> <GET-OBJ "GUIDE">]>
+                     <GET-OBJ "WARNI"> <GET-OBJ "PAPER"> <GET-OBJ "GUIDE">]>
   
 <SETG PALOBJS ![<GET-OBJ "SCREW"> <GET-OBJ "KEYS">
-		<GET-OBJ "STICK"> <GET-OBJ "PKEY">]>
+                <GET-OBJ "STICK"> <GET-OBJ "PKEY">]>
 
 <OBJECT ["PDOOR" "DOOR"]
-	["WOODE" "OAK"]
-	"door made of oak"
-	<+ ,OVISON ,DOORBIT ,CONTBIT>
-	PDOOR-FUNCTION>
+        ["WOODE" "OAK"]
+        "door made of oak"
+        <+ ,OVISON ,DOORBIT ,CONTBIT>
+        PDOOR-FUNCTION>
 
 <OBJECT ["PWIND" "WINDO"]
-	["BARRE"]
-	"barred window"
-	<+ ,OVISON ,DOORBIT>
-	PWIND-FUNCTION>
+        ["BARRE"]
+        "barred window"
+        <+ ,OVISON ,DOORBIT>
+        PWIND-FUNCTION>
 
 <OBJECT ["PLID1" "LID"]
-	["METAL"]
-	"metal lid"
-	<+ ,OVISON ,NDESCBIT ,CONTBIT>
-	PLID-FUNCTION>
+        ["METAL"]
+        "metal lid"
+        <+ ,OVISON ,NDESCBIT ,CONTBIT>
+        PLID-FUNCTION>
 
 <OBJECT ["PLID2" "LID"]
-	["METAL"]
-	"metal lid"
-	<+ ,OVISON ,NDESCBIT ,CONTBIT ,OPENBIT>
-	PLID-FUNCTION>
+        ["METAL"]
+        "metal lid"
+        <+ ,OVISON ,NDESCBIT ,CONTBIT ,OPENBIT>
+        PLID-FUNCTION>
 
 <OBJECT ["PTABL" "TABLE"]
-	["DUSTY" "WOODE"]
-	"table"
-	<+ ,OVISON ,NDESCBIT>>
+        ["DUSTY" "WOODE"]
+        "table"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["PCRAK" "CRACK"]
-	["NARRO"]
-	"narrow crack"
-	<+ ,OVISON ,NDESCBIT>>
+        ["NARRO"]
+        "narrow crack"
+        <+ ,OVISON ,NDESCBIT>>
 
 <OBJECT ["PKH1" "KEYHO" "HOLE"]
-	[]
-	"keyhole"
-	<+ ,OVISON ,NDESCBIT ,OPENBIT>
-	PKH-FUNCTION
-	()
-	(OCAPAC 12)>
+        []
+        "keyhole"
+        <+ ,OVISON ,NDESCBIT ,OPENBIT>
+        PKH-FUNCTION
+        ()
+        (OCAPAC 12)>
 
 <OBJECT ["PKH2" "KEYHO" "HOLE"]
-	[]
-	"keyhole"
-	<+ ,OVISON ,NDESCBIT ,OPENBIT>
-	PKH-FUNCTION
-	(<GET-OBJ "PKEY">)
-	(OCAPAC 12)>
+        []
+        "keyhole"
+        <+ ,OVISON ,NDESCBIT ,OPENBIT>
+        PKH-FUNCTION
+        (<GET-OBJ "PKEY">)
+        (OCAPAC 12)>
 
 <OBJECT ["PKEY" "KEY"]
-	["IRON" "RUSTY"]
-	"rusty iron key"
-	<+ ,OVISON ,TAKEBIT ,NDESCBIT ,TURNBIT ,TOOLBIT>
-	PKEY-FUNCTION
-	()
-	(ODESCO "" ODESC1 "There is a rusty iron key here.")>
+        ["IRON" "RUSTY"]
+        "rusty iron key"
+        <+ ,OVISON ,TAKEBIT ,NDESCBIT ,TURNBIT ,TOOLBIT>
+        PKEY-FUNCTION
+        ()
+        (ODESCO "" ODESC1 "There is a rusty iron key here.")>
 
 <OBJECT ["PALAN" "STONE" "SPHER"]
-	["GLASS" "SEEIN" "CRYST" "BLUE"]
-	"blue crystal sphere"
-	<+ ,OVISON ,TAKEBIT>
-	PALANTIR
-	()
-	(OTVAL 5
-	 OFVAL 10
-	 ODESCO
-	 "In the center of the table sits a blue crystal sphere."
-	 ODESC1
-	 "There is blue crystal sphere here.")>
+        ["GLASS" "SEEIN" "CRYST" "BLUE"]
+        "blue crystal sphere"
+        <+ ,OVISON ,TAKEBIT>
+        PALANTIR
+        ()
+        (OTVAL 5
+         OFVAL 10
+         ODESCO
+         "In the center of the table sits a blue crystal sphere."
+         ODESC1
+         "There is blue crystal sphere here.")>
 
 <OBJECT ["MAT"]
-	["WELCO" "RUBBE"]
-	"welcome mat"
-	<+ ,OVISON ,TAKEBIT ,READBIT>
-	MAT-FUNCTION
-	()
-	(ODESCO
-	 "A rubber mat saying 'Welcome to Zork!' lies by the door."
-	 ODESC1
-	 "There is a welcome mat here."
-	 OREAD
-	 "Welcome to Zork!"
-	 OSIZE
-	 12
-	 )>
+        ["WELCO" "RUBBE"]
+        "welcome mat"
+        <+ ,OVISON ,TAKEBIT ,READBIT>
+        MAT-FUNCTION
+        ()
+        (ODESCO
+         "A rubber mat saying 'Welcome to Zork!' lies by the door."
+         ODESC1
+         "There is a welcome mat here."
+         OREAD
+         "Welcome to Zork!"
+         OSIZE
+         12
+         )>
 
 <OBJECT ["STOVE"]
-	["OLD"]
-	"old coal stove"
-	<+ ,OVISON ,NDESCBIT ,FLAMEBIT ,ONBIT>
-	STOVE-FUNCTION>
+        ["OLD"]
+        "old coal stove"
+        <+ ,OVISON ,NDESCBIT ,FLAMEBIT ,ONBIT>
+        STOVE-FUNCTION>
 
 <OBJECT ["PAL3" "PALAN" "STONE" "SPHER"]
-	["GLASS" "SEEIN" "CRYST" "RED"]
-	"red crystal sphere"
-	<+ ,OVISON ,TAKEBIT>
-	PALANTIR
-	()
-	(OTVAL 5
-	 OFVAL 10
-	 ODESCO
-	 "On the floor sits a red crystal sphere."
-	 ODESC1
-	 "There is red crystal sphere here.")>
+        ["GLASS" "SEEIN" "CRYST" "RED"]
+        "red crystal sphere"
+        <+ ,OVISON ,TAKEBIT>
+        PALANTIR
+        ()
+        (OTVAL 5
+         OFVAL 10
+         ODESCO
+         "On the floor sits a red crystal sphere."
+         ODESC1
+         "There is red crystal sphere here.")>
 
 
 
@@ -6490,7 +6490,7 @@ be quite impossible for you to exit.
 ; "SUBTITLE LISTS OF VILLAINS AND WEAPONRY"
 
 <SETG WEAPONS (<GET-OBJ "STICK"> <GET-OBJ "KNIFE"> <GET-OBJ "SWORD">
-	       <GET-OBJ "RKNIF">)>
+               <GET-OBJ "RKNIF">)>
 
 <SETG VILLAINS (<GET-OBJ "TROLL"> <GET-OBJ "THIEF"> <GET-OBJ "CYCLO">)>
 
@@ -6508,18 +6508,18 @@ be quite impossible for you to exit.
 
 <ADD-DEMON
      <SETG ROBBER-DEMON
-	   <CHTYPE [ROBBER () ,ROOMS <1 ,ROOMS> <GET-OBJ "THIEF"> <>]
-		   HACK>>>
+           <CHTYPE [ROBBER () ,ROOMS <1 ,ROOMS> <GET-OBJ "THIEF"> <>]
+                   HACK>>>
 
 <ADD-DEMON
      <SETG SWORD-DEMON
-	   <CHTYPE [SWORD-GLOW ,VILLAINS () <1 ,ROOMS> <GET-OBJ "SWORD"> <>]
-		   HACK>>>
+           <CHTYPE [SWORD-GLOW ,VILLAINS () <1 ,ROOMS> <GET-OBJ "SWORD"> <>]
+                   HACK>>>
 
 <ADD-DEMON
      <SETG FIGHT-DEMON
-	   <CHTYPE [FIGHTING ,VILLAINS () <1 ,ROOMS> <GET-OBJ "TROLL"> <>]
-		   HACK>>>
+           <CHTYPE [FIGHTING ,VILLAINS () <1 ,ROOMS> <GET-OBJ "TROLL"> <>]
+                   HACK>>>
 
 
 
@@ -6531,7 +6531,7 @@ through the cyclops room?" ["TEMPL"]>
 
 <ADD-QUESTION 
 "Beside the Temple, to which room is it possible to go from the Altar?"
-	["FORES"]>
+        ["FORES"]>
 
 <ADD-QUESTION 
 "What is the absolute minimum specified value of the Zork treasures,
@@ -6539,7 +6539,7 @@ in Zorkmids?" ["30003"]>
 
 <ADD-QUESTION
 "What object is of use in determining the function of the iced cakes?"
-	[<GET-OBJ "FLASK">]>
+        [<GET-OBJ "FLASK">]>
 
 <ADD-QUESTION
 "What can be done to the Mirror that is useful?" [<PLOOKUP "RUB" ,ACTIONS-POBL>]>
@@ -6552,3 +6552,4 @@ in Zorkmids?" ["30003"]>
 <ADD-INQOBJ <GET-OBJ "KNIFE">>
 
 <ADD-QUESTION "In which room is 'Hello, Sailor!' useful?" ["NONE" "NOWHE"]>
+

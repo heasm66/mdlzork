@@ -58,6 +58,7 @@ act2.27 --> 77act2.mud
 ======================
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
+* Add missing space on line 25 (issue #51) 
 
 act3.17 --> 77act3.mud
 ======================

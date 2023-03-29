@@ -22,7 +22,7 @@ Fortunately, there is justice in the world.">)
 			  (<TELL
 "Oh dear.  It appears that the smell coming from this room was coal
 gas.  I would have thought twice about carrying a " ,LONG-TELL1
-						    <ODESC2 .O> "in here.">)>
+						    <ODESC2 .O> " in here.">)>
 		    <FWEEP 7>
 		    <JIGS-UP "   BOOOOOOOOOOOM      ">>
 		   <JIGS-UP "   BOOOOOOOOOOOM      ">>)>)>>    

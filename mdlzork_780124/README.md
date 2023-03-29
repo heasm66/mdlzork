@@ -75,7 +75,7 @@ Other changes to this file:
 ~~~
 * Change EOL to "(Windows CR LF)"
 * Remove all [FF] & [NUL]
-* Add missing space on line 25 (issue #51) 
+* Add missing space on line 21 (issue #51) 
 ~~~
 
 ## act3.18 --> 78act3.mud

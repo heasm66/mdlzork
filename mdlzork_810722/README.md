@@ -47,7 +47,7 @@ Change line 719 in rooms.mud from (issue #40):
 to:
 	(<AND <TRNN .Y ,OVISON> <OR <TRNN .Y ,TOUCHBIT> <EMPTY? <ODESCO .Y>>>
 
-Add missing space on line 25 in act2.mud (issue #51) 
+Added missing space on line 25 in act2.mud (issue #51) 
 
 Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.
 

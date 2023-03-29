@@ -48,7 +48,7 @@ Change line 705 in rooms.mud from (issue #40):
 to:
 	(<AND <TRNN .Y ,OVISON> <OR <TRNN .Y ,TOUCHBIT> <EMPTY? <ODESCO .Y>>>
 	
-Add missing space on line 25 in act2.mud (issue #51) 
+Added missing space on line 25 in act2.mud (issue #51) 
 
 Differences between the 1979 and 1981 version
 =============================================

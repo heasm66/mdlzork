@@ -213,7 +213,7 @@ Note that this version of Zork does not have a definite ending, the|
 game is considered finished when you have reached the maxscore.|
 Please report bugs or other differences against the original Zork (aside|
 from the above mentioned) to: heasm66@gmail.com.|
-Thanks to Jesse McGrew for the modern ZIL compiler Zilf and to the orginal|
+Thanks to Tara McGrew for the modern ZIL compiler Zilf and to the original|
 implementors of Zork.|
 Henrik Åsman, Stockholm 2021" CR>>
 

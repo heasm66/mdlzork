@@ -3323,7 +3323,7 @@ beneath you."
 
 <ROOM "SLID3"
 "You have reached the end of your rope.  Below you is darkness as
-the chute makes a sharp turn.  On the east here is a small ledge
+the chute makes a sharp turn.  On the east there is a small ledge
 which you might be able to stand on."
       "Slide"
       <EXIT "DOWN" "CELLA" "UP" "SLID2" "EAST" "SLEDG">

@@ -1,25 +1,38 @@
 # Confusion ver 0.2 patched to compile with latest gcc
 I made some small changes to make it able to build with the latest version of gcc. 
 I have tried building it on CygWin and on Ubuntu 20.04 LTS, both 64-bit. Bevare that there are some warnings.
-On CygWin I had the following packages, which might or might not be needed, installed:
+## Compiling on CygWin
 ~~~
-gcc-g++ (version 10.2.0-1)
-perl (version 5.30.3-1)
-libgc-devel (version 8.0.4-1)
-make (version 4.3-1)
+Packages (all may or may not be needed):
+	gcc-g++ (version 11.4.0-1)
+	perl (version 5.36.3-1)
+	libgc-devel (version 8.2.6-1)
+	make (version 4.4.1-1)
+	
+Compile:
+git clone https://github.com/heasm66/mdlzork.git
+cd mdlzork/confusion_patched
+make
 ~~~
-and on Ubuntu 20.04 LTS (sudo apt-get install *package*):
+## Compiling on Ubuntu 22.04.4 LTS
 ~~~
-build-essential
-libgc-dev (version 7.6.4)
+Packages (sudo apt-get install package):
+	build-essentials (12.9ubuntu3)
+	libgc-dev (1:8.0.6-1.1build1)
+
+Compile:
+git clone https://github.com/heasm66/mdlzork.git
+cd mdlzork/confusion_patched
+make
 ~~~
-If you want to run Confusion in Windows, outside CygWin the following files must be in the same directory as "mdli.exe":
+## Running on Windows
+If you want to run Confusion in Windows, compile for *CygWin* as above and distrubute the following files from the *CygWin* `bin` folder together in the same directory as `mdli.exe`:
 ~~~
 cygwin1.dll
 cyggc-1.dll
 cyggcc_s-seh-1.dll
-cyggccpp-1
-cygstdc++-6
+cyggccpp-1.dll
+cygstdc++-6.dll
 ~~~
 
 ## README from orginal package

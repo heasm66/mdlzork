@@ -50,6 +50,17 @@ to:
 	
 Added missing space on line 25 in act2.mud (issue #51) 
 
+Added new function for dummy window in NHOUS and SHOUS on line 1664-1167 in act1.mud (issue #58)
+	<DEFINE DWIND-FUNCTION ()
+	    <COND (<VERB? "OPEN">
+	           <TELL
+	"The window cannot be opened.">)>>
+
+Changed line 1516 in dung.mud, to use new function, from (issue #58):
+	<>>
+to:
+	DWIND-FUNCTION>
+
 Differences between the 1979 and 1981 version
 =============================================
 

@@ -6099,6 +6099,11 @@ mdl_value_t *mdl_builtin_eval_mod(mdl_value_t *form, mdl_value_t *args)
     return mdl_new_fix(result);
 }
 
+
+ //HEASM: Global variables and init values for MDL 36-bit RANDOM function 
+MDL_INT RHI = 0267762113337;
+MDL_INT RLOW = 0155256071112;
+
 mdl_value_t *mdl_builtin_eval_random(mdl_value_t *form, mdl_value_t *args)
 /* SUBR */
 {
@@ -6130,6 +6135,8 @@ mdl_value_t *mdl_builtin_eval_random(mdl_value_t *form, mdl_value_t *args)
         rseed[2] = tot_seed;
 #endif
         seed48(rseed);
+        RHI = (MDL_INT)seed1->v.w;  //HEASM: Set seed 1 
+        RLOW = (MDL_INT)seed2->v.w; //       and 2
     }
     else if (seed1)
     {
@@ -6144,11 +6151,22 @@ mdl_value_t *mdl_builtin_eval_random(mdl_value_t *form, mdl_value_t *args)
         rseed[2] = seed1->v.w & 0xF;
 #endif
         seed48(rseed);
+        RHI = (MDL_INT)seed1->v.w; //HEASM: Set seed 1
     }
 #ifdef MDL32
     rvalue = mrand48();
 #else
-    rvalue = (MDL_INT)(((MDL_UINT)mrand48() << 32) ^ ((MDL_UINT)mrand48()));
+    // HEASM: Use same logic for random as in MDL original
+    MDL_INT A = RHI;
+    MDL_INT B = RLOW;
+    if (A < 0) A = A + 0x1000000000;
+    B = B >> 1;
+    if (A % 2 != 0) B = B | 0x800000000;
+    RLOW = A;
+    A = A ^ B;
+    if (A > 0x7ffffffff) A = A - 0x1000000000;
+    RHI = A;
+    rvalue = A;
 #endif
     return mdl_new_fix(rvalue);
 

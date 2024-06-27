@@ -1169,7 +1169,7 @@ large bag.  Finding nothing of value, he left disgruntled.">)>)>)
                        <PUT .HACK ,HOBJS <SET HH <ROB-ROOM .RM .HH 100>>>
                        <PUT .HACK ,HOBJS <SET HH <ROB-ADV .WIN .HH>>>
                        <COND (<MEMQ <SFIND-OBJ "ROPE"> .HH>
-                              <SETG DOME-FLAG!-FLAG <>>)>
+                              <ROPE-BACK>)>
                        <COND (<==? .OBJT .HH>
                               <TELL
 "The other occupant (he of the large bag), finding nothing of value,
@@ -1229,7 +1229,7 @@ this fine "                   3 <ODESC2 .X> " is doing here.\"">
                               <MAPLEAVE>)>>
                <ROBJS .RM>>
          <COND (<MEMQ <SFIND-OBJ "ROPE"> .HH>
-                <SETG DOME-FLAG!-FLAG <>>)>)>)>
+                <ROPE-BACK>)>)>)>
      <COND (<SET ONCE <NOT .ONCE>>               ;"Move to next room, and hack."
             <PROG ((ROOMS <HROOMS .HACK>))
               #DECL ((ROOMS) <LIST [REST ROOM]>)

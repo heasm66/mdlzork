@@ -1203,10 +1203,7 @@ a distant room, which can be described clearly....">
                         <N==? <PRSI> .TIMBER>
                         <N==? <PRSI> .COFFIN>>
                     <N==? .HERE .SROOM>>>
-         <SETG DOME-FLAG!-FLAG <>>
-         <SETG TIMBER-TIE!-FLAG <>>
-         <TRZ .TIMBER ,NDESCBIT>
-         <TRZ .COFFIN ,NDESCBIT>
+         <ROPE-BACK>
          <COND (<VERB? "TIE">
                 <TELL "There is nothing it can be tied to.">)>)
         (<AND <VERB? "CLDN"> <==? .HERE <SFIND-ROOM "CPANT">>>
@@ -1256,9 +1253,7 @@ hole after you, nearly cracking your skull.">
                        <COND (<==? .TTIE .COFFIN>
                               <ODESC1 .COFFIN ,COFFIN-UNTIED>)
                              (<ODESC1 .TIMBER ,TIMBER-UNTIED>)>)>
-                <SETG DOME-FLAG!-FLAG <>>
-                <SETG TIMBER-TIE!-FLAG <>>
-                <TRZ .ROPE <+ ,CLIMBBIT ,NDESCBIT>>
+                <ROPE-BACK>
                 <TELL 
 "The rope is now untied.">)
                (<TELL "It is not tied to anything.">)>)
@@ -1289,6 +1284,18 @@ hole after you, nearly cracking your skull.">
            <DROP-OBJECT .ROPE>
            <INSERT-OBJECT .ROPE .RM>)>>
     
+<DEFINE ROPE-BACK ("AUX" (ROPE <SFIND-OBJ "ROPE">) (TTIE ,TIMBER-TIE!-FLAG)
+             (COFFIN <SFIND-OBJ "COFFI">)
+             (TIMBER <SFIND-OBJ "TIMBE">))
+    #DECL ((ROPE COFFIN TIMBER) OBJECT (TTIE) <OR OBJECT FALSE>)
+    <SETG DOME-FLAG!-FLAG <>>
+    <SETG TIMBER-TIE!-FLAG <>>
+    <TRZ .ROPE <+ ,CLIMBBIT ,NDESCBIT>>
+    <AND .TTIE <TRZ .TTIE ,NDESCBIT>>
+    <COND (<==? .TTIE .COFFIN>
+       <ODESC1 .COFFIN ,COFFIN-UNTIED>)
+      (<ODESC1 .TIMBER ,TIMBER-UNTIED>)>>
+
 <DEFINE SLIDE-ROPE ()
     <COND (<VERB? "TAKE">
            <TELL "What do you think is suspending you in midair?">)
@@ -1322,7 +1329,7 @@ of rope, which is dangling down the slide.">)>)>>
            <GO&LOOK <SFIND-ROOM "CELLA">>)
           (<VERB? "PUT">
            <COND (<==? <PRSO> ,TIMBER-TIE!-FLAG>
-                  <SETG TIMBER-TIE!-FLAG <>>)>
+                  <ROPE-BACK>)>
            <SLIDER <PRSO>>)>>
 
 <DEFINE GO&LOOK (RM "AUX" (SEEN? <RTRNN .RM ,RSEENBIT>))

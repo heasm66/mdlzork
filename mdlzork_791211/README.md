@@ -92,6 +92,69 @@ Change line 1431 in act3.mud from (issue #41):
 to:
     <TELL "Affixed loosely to the brochure is a small stamp.">> T)
 
+Add new function to act3.mud (issue #45)
+    <DEFINE ROPE-BACK ("AUX" (ROPE <SFIND-OBJ "ROPE">) (TTIE ,TIMBER-TIE!-FLAG)
+                 (COFFIN <SFIND-OBJ "COFFI">)
+                 (TIMBER <SFIND-OBJ "TIMBE">))
+        #DECL ((ROPE COFFIN TIMBER) OBJECT (TTIE) <OR OBJECT FALSE>)
+        <SETG DOME-FLAG!-FLAG <>>
+        <SETG TIMBER-TIE!-FLAG <>>
+        <TRZ .ROPE <+ ,CLIMBBIT ,NDESCBIT>>
+        <AND .TTIE <TRZ .TTIE ,NDESCBIT>>
+        <COND (<==? .TTIE .COFFIN>
+           <ODESC1 .COFFIN ,COFFIN-UNTIED>)
+          (<ODESC1 .TIMBER ,TIMBER-UNTIED>)>>
+
+Changes to act1.mud (issue #45):
+    @@ -1169,7 +1169,7 @@ 
+                           <PUT .HACK ,HOBJS <SET HH <ROB-ROOM .RM .HH 100>>>
+                           <PUT .HACK ,HOBJS <SET HH <ROB-ADV .WIN .HH>>>
+                           <COND (<MEMQ <SFIND-OBJ "ROPE"> .HH>
+-                                 <SETG DOME-FLAG!-FLAG <>>)>
++                                 <ROPE-BACK>)>
+                           <COND (<==? .OBJT .HH>
+                                  <TELL
+    "The other occupant (he of the large bag), finding nothing of value,
+    @@ -1229,7 +1229,7 @@
+                                  <MAPLEAVE>)>>
+                   <ROBJS .RM>>
+             <COND (<MEMQ <SFIND-OBJ "ROPE"> .HH>
+-                   <SETG DOME-FLAG!-FLAG <>>)>)>)>
++                   <ROPE-BACK>)>)>)>
+         <COND (<SET ONCE <NOT .ONCE>>               ;"Move to next room, and hack."
+                <PROG ((ROOMS <HROOMS .HACK>))
+                  #DECL ((ROOMS) <LIST [REST ROOM]>)
+
+Changes to act3.mud (issue #45):
+    @@ -1203,8 +1203,5 @@
+                        <N==? .HERE .SROOM>>>
+-            <SETG DOME-FLAG!-FLAG <>>
+-            <SETG TIMBER-TIE!-FLAG <>>
+-            <TRZ .TIMBER ,NDESCBIT>
+-            <TRZ .COFFIN ,NDESCBIT>
++            <ROPE-BACK>
+             <COND (<VERB? "TIE">
+                    <TELL "There is nothing it can be tied to.">)>)
+            (<AND <VERB? "CLDN"> <==? .HERE <SFIND-ROOM "CPANT">>>
+    @@ -1256,9 +1253,7 @@
+                           <COND (<==? .TTIE .COFFIN>
+                                  <ODESC1 .COFFIN ,COFFIN-UNTIED>)
+                                 (<ODESC1 .TIMBER ,TIMBER-UNTIED>)>)>
+-                   <SETG DOME-FLAG!-FLAG <>>
+-                   <SETG TIMBER-TIE!-FLAG <>>
+-                   <TRZ .ROPE <+ ,CLIMBBIT ,NDESCBIT>>
++                   <ROPE-BACK>
+                    <TELL 
+    "The rope is now untied.">)
+                   (<TELL "It is not tied to anything.">)>)
+    @@ -1322,5 +1329,5 @@
+               <GO&LOOK <SFIND-ROOM "CELLA">>)
+              (<VERB? "PUT">
+               <COND (<==? <PRSO> ,TIMBER-TIE!-FLAG>
+-                     <SETG TIMBER-TIE!-FLAG <>>)>
++                     <ROPE-BACK>)>
+               <SLIDER <PRSO>>)>>
+
 
 Differences between the 1979 and 1981 version
 =============================================

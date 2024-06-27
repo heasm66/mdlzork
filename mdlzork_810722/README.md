@@ -86,6 +86,12 @@ to:
                                           <FORM ==? <FORM LVAL VA> <PSTRING .A>>>
                                       .AL>>>>)>>
 
+Change line 1433 in act3.mud from (issue #41):
+    <TELL "Affixed loosely to the brochure is a small stamp.">>) 
+to:
+    <TELL "Affixed loosely to the brochure is a small stamp.">> T)
+
+
 Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.
 
 

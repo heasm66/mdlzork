@@ -1428,7 +1428,7 @@ Unfortunately, wishing makes the coins go....">
                     <==? <PRSO> <SFIND-OBJ "BROCH">>>
                <TELL ,BRO1 1 ,USER-NAME ,BRO2>
                <AND <OCAN .STAMP>
-                    <TELL "Affixed loosely to the brochure is a small stamp.">>)
+                    <TELL "Affixed loosely to the brochure is a small stamp.">> T)
               (<AND <VERB? "FIND"> ,BR1!-FLAG>
                <TELL "It's probably on the way.">)
               (<VERB? "SEND">

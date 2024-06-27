@@ -87,6 +87,12 @@ to:
                                           <FORM ==? <FORM LVAL VA> <PSTRING .A>>>
                                       .AL>>>>)>>
 
+Change line 1431 in act3.mud from (issue #41):
+    <TELL "Affixed loosely to the brochure is a small stamp.">>) 
+to:
+    <TELL "Affixed loosely to the brochure is a small stamp.">> T)
+
+
 Differences between the 1979 and 1981 version
 =============================================
 

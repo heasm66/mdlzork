@@ -92,7 +92,7 @@ Change line 1431 in act3.mud from (issue #41):
 to:
     <TELL "Affixed loosely to the brochure is a small stamp.">> T)
 
-Add new function to act3.mud (issue #45)
+Add new function to act3.mud (issue #45):
     <DEFINE ROPE-BACK ("AUX" (ROPE <SFIND-OBJ "ROPE">) (TTIE ,TIMBER-TIE!-FLAG)
                  (COFFIN <SFIND-OBJ "COFFI">)
                  (TIMBER <SFIND-OBJ "TIMBE">))
@@ -155,6 +155,8 @@ Changes to act3.mud (issue #45):
 +                     <ROPE-BACK>)>
                <SLIDER <PRSO>>)>>
 
+Add initial value to THIEF-ENGROSSED!-FLAG in melee.mud on line 38 (issue #62)
+    <SETG THIEF-ENGROSSED!-FLAG <>>
 
 Differences between the 1979 and 1981 version
 =============================================

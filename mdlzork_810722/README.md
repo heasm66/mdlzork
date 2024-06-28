@@ -91,7 +91,7 @@ Change line 1433 in act3.mud from (issue #41):
 to:
     <TELL "Affixed loosely to the brochure is a small stamp.">> T)
 
-Add new function to act3.mud (issue #45)
+Add new function to act3.mud (issue #45):
     <DEFINE ROPE-BACK ("AUX" (ROPE <SFIND-OBJ "ROPE">) (TTIE ,TIMBER-TIE!-FLAG)
                  (COFFIN <SFIND-OBJ "COFFI">)
                  (TIMBER <SFIND-OBJ "TIMBE">))
@@ -154,6 +154,8 @@ Changes to act3.mud (issue #45):
 +                     <ROPE-BACK>)>
                <SLIDER <PRSO>>)>>
 
+Add initial value to THIEF-ENGROSSED!-FLAG in melee.mud on line 38 (issue #62)
+    <SETG THIEF-ENGROSSED!-FLAG <>>
 
 
 Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.

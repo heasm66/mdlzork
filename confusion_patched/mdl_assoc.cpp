@@ -15,7 +15,11 @@
 /*    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 /*****************************************************************************/
 #define _XOPEN_SOURCE
+#ifdef _WIN32
+#include "mdl_win32.h"
+#else
 #include <unistd.h>
+#endif
 #include <gc/gc.h>
 #include <string.h>
 #include "macros.hpp"
@@ -51,7 +55,11 @@ mdl_create_assoc_table()
 {
     mdl_assoc_table_t *result = (mdl_assoc_table_t *)GC_MALLOC(sizeof(mdl_assoc_table_t) + sizeof(mdl_assoc_t *) * (MDL_ASSOC_NBUCKETS - 1));
     result->nbuckets = (MDL_ASSOC_NBUCKETS - 1);
+#ifdef _WIN32
+    result->last_clean = GC_gc_no;
+#else
     result->last_clean = GC_get_gc_no();
+#endif
     return result;
 }
 
@@ -59,7 +67,11 @@ void mdl_clear_assoc_table(mdl_assoc_table_t *table)
 {
     // Garbage collection does make some things easier...
     memset(table->buckets, 0, sizeof(table->buckets[0])*table->nbuckets);
+#ifdef _WIN32
+    table->last_clean = GC_gc_no;
+#else
     table->last_clean = GC_get_gc_no();
+#endif
     table->size = 0;
 }
 
@@ -99,7 +111,11 @@ static mdl_assoc_t *mdl_find_assoc(mdl_assoc_table_t *table, mdl_assoc_key_t *in
     mdl_assoc_t *cursor;
     int bucketnum;
 
+#ifdef _WIN32
+    if (table->last_clean != GC_gc_no) mdl_assoc_clean(table);
+#else
     if (table->last_clean != GC_get_gc_no()) mdl_assoc_clean(table);
+#endif
     bucketnum = mdl_hash_assoc_key(inkey) % table->nbuckets;
     cursor = table->buckets[bucketnum];
     while (cursor)
@@ -125,7 +141,11 @@ mdl_value_t *mdl_delete_assoc(mdl_assoc_table_t *table, mdl_assoc_key_t *inkey)
     mdl_assoc_t *cursor, *lastcursor;
     int bucketnum;
 
+#ifdef _WIN32
+    if (table->last_clean != GC_gc_no) mdl_assoc_clean(table);
+#else
     if (table->last_clean != GC_get_gc_no()) mdl_assoc_clean(table);
+#endif
     bucketnum = mdl_hash_assoc_key(inkey) % table->nbuckets;
     cursor = table->buckets[bucketnum];
     if (!cursor) return NULL; // no bucket means there was no such association
@@ -202,7 +222,11 @@ mdl_assoc_clean(mdl_assoc_table_t *table)
         else
             mdl_assoc_iterator_increment(iter);
     }
+#ifdef _WIN32
+    table->last_clean = GC_gc_no; 
+#else
     table->last_clean = GC_get_gc_no();
+#endif
 //    fprintf(stderr, "ASSOC cleaning done %d\n", table->size);
     return result;
 }

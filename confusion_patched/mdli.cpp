@@ -21,7 +21,11 @@
 #include "mdl_internal_defs.h"
 #include <set>
 #include <string>
+#ifdef _WIN32
+#include "mdl_win32.h"
+#else
 #include <unistd.h>
+#endif
 
 using namespace std;
 

@@ -470,13 +470,23 @@ void mdl_print_string_to_chan(mdl_value_t *chan,
                               bool addspacebefore // add a space if no break
                               );
 
-void mdl_internal_erret(mdl_value_t *result, mdl_value_t *frame)  __attribute__((noreturn));
-void mdl_longjmp_to(mdl_frame_t *frame, int value) __attribute__((noreturn));
+#ifdef _WIN32
+__declspec(noreturn) void mdl_internal_erret(mdl_value_t* result, mdl_value_t* frame);
+__declspec(noreturn) void mdl_longjmp_to(mdl_frame_t* frame, int value);
+#else
+void mdl_internal_erret(mdl_value_t* result, mdl_value_t* frame)  __attribute__((noreturn));
+void mdl_longjmp_to(mdl_frame_t* frame, int value) __attribute__((noreturn));
+#endif
 
 void mdl_write_image(FILE *f, mdl_value_t *save_arg);
 bool mdl_read_image(FILE *f);
-mdl_value_t *mdl_call_error(const char *errstr, ...) __attribute__((sentinel));
-mdl_value_t *mdl_call_error_ext(const char *errstr, const char *reason, ...) __attribute__((sentinel));
+#ifdef _WIN32
+mdl_value_t* mdl_call_error(const char* errstr, ...);
+mdl_value_t* mdl_call_error_ext(const char* errstr, const char* reason, ...);
+#else
+mdl_value_t* mdl_call_error(const char* errstr, ...) __attribute__((sentinel));
+mdl_value_t* mdl_call_error_ext(const char* errstr, const char* reason, ...) __attribute__((sentinel));
+#endif
 mdl_value_t *mdl_boolean_value(bool v);
 bool mdl_is_true(mdl_value_t *item);
 bool mdl_internal_struct_is_empty(mdl_value_t *arg);

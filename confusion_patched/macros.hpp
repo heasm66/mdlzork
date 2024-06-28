@@ -199,5 +199,9 @@ mdl_value_t *mdl_get_default_outchan();
 bool mdl_chan_at_eof(mdl_value_t *chan);
 mdl_charclass_t mdl_get_charclass(MDL_INT ch);
 int mdl_read_from_chan(mdl_value_t *chan);
+#ifdef _WIN32
+__declspec(noreturn) void mdl_error(const char* err);
+#else
 void mdl_error(const char *err)  __attribute__((noreturn));
+#endif
 void mdl_toplevel(FILE *restorefile);

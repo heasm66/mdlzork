@@ -1,6 +1,17 @@
-# Confusion ver 0.2 patched to compile with latest gcc
-I made some small changes to make it able to build with the latest version of gcc. 
-I have tried building it on CygWin and on Ubuntu 20.04 LTS, both 64-bit. Bevare that there are some warnings.
+# Confusion ver 0.2 patched to compile with latest GCC and Visual Studio
+There are some small changes to these files to make it build with the latest version of GCC and Visual Studio. 
+The instructions are tested on CygWin, Ubuntu 20.04 LTS and Visual Studio 2022.
+## Compiling on Ubuntu 22.04.4 LTS
+~~~
+Packages (sudo apt-get install package):
+	build-essentials (12.9ubuntu3)
+	libgc-dev (1:8.0.6-1.1build1)
+
+Compile:
+git clone https://github.com/heasm66/mdlzork.git
+cd mdlzork/confusion_patched
+make
+~~~
 ## Compiling on CygWin
 ~~~
 Packages (all may or may not be needed):
@@ -14,18 +25,7 @@ git clone https://github.com/heasm66/mdlzork.git
 cd mdlzork/confusion_patched
 make
 ~~~
-## Compiling on Ubuntu 22.04.4 LTS
-~~~
-Packages (sudo apt-get install package):
-	build-essentials (12.9ubuntu3)
-	libgc-dev (1:8.0.6-1.1build1)
-
-Compile:
-git clone https://github.com/heasm66/mdlzork.git
-cd mdlzork/confusion_patched
-make
-~~~
-## Running on Windows
+## Running CygWin files on Windows
 If you want to run Confusion in Windows, compile for *CygWin* as above and distrubute the following files from the *CygWin* `bin` folder together in the same directory as `mdli.exe`:
 ~~~
 cygwin1.dll
@@ -34,8 +34,72 @@ cyggcc_s-seh-1.dll
 cyggccpp-1.dll
 cygstdc++-6.dll
 ~~~
+## Compiling on Windows with Visual Studio 2022
+The following steps lean heavy on David Kinder's instructions for his [win32 version](https://www.ifarchive.org/indexes/if-archive/programming/mdl/interpreters/confusion/).
+~~~
+1. Get version 6.8 of Hans-J. Boehm's conservative garbage collector for C and C++
+   from IF Archive (https://www.ifarchive.org/indexes/if-archive/programming/mdl/interpreters/confusion/).
 
+2. Copy all Confusion files from \confusion_patched\ into \confusion_win32\confusion\. The files
+
+    copying.c
+    mdl_builtin_types.cpp
+    mdl_builtin_types.h
+    mdl_builtins.cpp
+    mdl_builtins.h
+
+   are pre-saved but can be regenerated with perl and awk during a compilation on CygWin
+   and copied here.
+   
+   The files mdl_win32.h & mdl_win32.cpp are by David Kinder (slightly modified by me) and
+   mimics some POSIX behaviour not supported in MSVC.
+
+3. Copy the following 34 files from version 6.8 of Hans-J. Boehm's GC into confusion_winew\gc\
+
+    \private\dbg_mlc.h
+    \private\gc_pmark.h
+    \private\gc_priv.h
+    \allchblk.c
+    \alloc.c
+    \blacklst.c
+    \dbg_mlc.c
+    \dyn_load.c
+    \finalize.c
+    \gc.h
+    \gc_allocator.h
+    \gc_config_macros.h
+    \gc_cpp.c
+    \gc_cpp.h
+    \gc_hdrs.h
+    \gc_locks.h
+    \gc_mark.h
+    \gc_typed.h
+    \gcconfig.h
+    \headers.c
+    \mach_dep.c
+    \malloc.c
+    \mallocx.c
+    \mark.c
+    \mark_rts.c
+    \misc.c
+    \new_hblk.c
+    \obj_map.c
+    \os_dep.c
+    \ptr_chck.c
+    \reclaim.c
+    \stubborn.c
+    \typd_mlc.c
+    \version.h
+
+   (You can also use David Kinder's more direct approach, described in step 2 in his
+    instructions below.)
+
+4. Open the solution (.sln) in Visual Studio and compile a release for x86 (be sure you
+   compile for "release" and not !"debug" because the latter can run into memory problem
+   when loading Zork.
+~~~
 ## README from orginal package
+~~~
 Confusion: A MDL interpreter
 (or, "How to Fit a Small Program into a Large Machine")
 
@@ -88,7 +152,51 @@ Confusion probably won't be developed further.
 Notable features not supported: proper SAVE/RESTORE (an incompatible but
 useful version is provided), GC-DUMP/GC-READ,  interrupts, processes, 
 overflow, compiled code.
+~~~
+## README from David Kinder's win32 version
+~~~
+The following steps describe how to replicate what I did to build the
+Confusion MDLI interpreter on Windows, using Microsoft's Visual Studio.
 
+1) Get the Confusion sources from the same web location as you downloaded
+   this archive. This should also be available from the IF-Archive and
+   mirrors:
+
+    http://www.ifarchive.org/indexes/if-archiveXprogrammingXmdlXinterpretersXconfusion.html
+
+   Unpack the source so that the sources files are in a sub-directory
+   of this directory called "confusion".
+
+2) Get the sources for the Boehm garbage collector, at least version 6.8.
+   This is available both from the IF-Archive, and Hans Boehm's web site:
+
+    http://www.ifarchive.org/indexes/if-archiveXprogrammingXmdlXinterpretersXconfusion.html
+    http://www.hpl.hp.com/personal/Hans_Boehm/gc/
+
+   Unpack the source so that the sources files are in a sub-directory
+   of this directory called "gc". Copy the contents (including sub-
+   directories) of the directory "gc\include" into "gc".
+
+3) Apply the patches in "diffs.txt" to the Confusion sources using a
+   Windows build of "patch" (for example, such as the one that comes with
+   Cygwin).
+
+4) Generate these files and copy into the "confusion" directory:
+
+    copying.c
+    mdl_builtin_types.cpp
+    mdl_builtin_types.h
+    mdl_builtins.cpp
+    mdl_builtins.h
+
+   This is somewhat awkward: these files are generated as part of Matthew's
+   Linux makefile, using perl and awk. To get round this I first did a build
+   of Confusion using Cygwin, a Linux-like environment for Windows, then
+   copied the above files from there.
+
+5) Start Visual Studio and load the solution "mdli.sln". Rebuild the
+   solution, which should produce a fully functioning "mdli.exe"
+~~~
 ## MDL F/SUBR Implementet in Confusion and comparison with ZILF
 ~~~
 F/SUBR         Name            Type    Routine                           In ZILF   Comment             

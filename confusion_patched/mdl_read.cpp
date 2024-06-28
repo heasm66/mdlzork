@@ -20,7 +20,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <errno.h>
+#ifdef _WIN32
+#include "mdl_win32.h"
+#else
 #include <unistd.h>
+#endif
 
 #define BANGCHAR(ch) (('!' << 8) | (ch))
 #define IS_BANGCHAR(ch) (((ch) >> 8) == '!')
@@ -943,7 +947,11 @@ mdl_value_t *mdl_advance_readstate(mdl_value_t *chan, readstate_t **rdstatep, MD
 #ifdef MDL32
                 MDL_INT oct = strtol(rdstate->buf + 1, NULL, 8);
 #else
+#ifdef _WIN32
+                MDL_INT oct = _strtoi64(rdstate->buf + 1, NULL, 8);
+#else
                 MDL_INT oct = strtoll(rdstate->buf + 1, NULL, 8);
+#endif
 #endif
                 obj = mdl_new_fix(oct);
                 break;
@@ -954,7 +962,11 @@ mdl_value_t *mdl_advance_readstate(mdl_value_t *chan, readstate_t **rdstatep, MD
 #ifdef MDL32
                 MDL_INT num = strtol(rdstate->buf, NULL, radix);
 #else
+#ifdef _WIN32
+                MDL_INT num = _strtoi64(rdstate->buf, NULL, radix);
+#else
                 MDL_INT num = strtoll(rdstate->buf, NULL, radix);
+#endif
 #endif
 //                printf("MDL_INT = %lld %s\n", num, rdstate->buf);
                 obj = mdl_new_fix(num);
@@ -965,7 +977,11 @@ mdl_value_t *mdl_advance_readstate(mdl_value_t *chan, readstate_t **rdstatep, MD
 #ifdef MDL32
                 MDL_INT dec = strtol(rdstate->buf, NULL, 10);
 #else
+#ifdef _WIN32
+                MDL_INT dec = _strtoi64(rdstate->buf, NULL, 10);
+#else
                 MDL_INT dec = strtoll(rdstate->buf, NULL, 10);
+#endif
 #endif
                 obj = mdl_new_fix(dec);
                 break;
@@ -1015,7 +1031,11 @@ mdl_value_t *mdl_advance_readstate(mdl_value_t *chan, readstate_t **rdstatep, MD
 #ifdef MDL32
                     mantissa = strtol(rdstate->buf, NULL, 0);
 #else
+#ifdef _WIN32
+                    mantissa = _strtoi64(rdstate->buf, NULL, 0);
+#else
                     mantissa = strtoll(rdstate->buf, NULL, 0);
+#endif
 #endif
                     if (errno == ERANGE) notfix = true;
                     exponent = strtol(exp, NULL, 10);

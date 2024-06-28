@@ -15,8 +15,10 @@
 /*    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 /*****************************************************************************/
 #include <sys/stat.h>
+#ifndef _WIN32
 #include <sys/time.h>
 #include <sys/resource.h>
+#endif
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,11 +27,16 @@
 #include "macros.hpp"
 #include "mdl_internal_defs.h"
 #include "mdl_builtin_types.h"
+#ifdef _WIN32
+#include "mdl_win32.h"
+#endif
 #include "mdl_builtins.h"
 #include "mdl_assoc.hpp"
 #include "mdl_strbuf.h"
+#ifndef _WIN32
 #include <unistd.h>
 #include <time.h>
+#endif
 
 #define DECODE_TENEX_FILESPECS
 
@@ -3022,7 +3029,11 @@ void mdl_interp_init()
     mdl_set_lval(mdl_value_atom_outchan->v.a, def_outchan, initial_frame);
     mdl_set_gval(mdl_value_atom_outchan->v.a, def_outchan);
     
+#ifdef _WIN32
+    last_assoc_clean = GC_gc_no;
+#else
     last_assoc_clean = GC_get_gc_no();
+#endif
 }
 
 bool mdl_is_true(mdl_value_t *item)
@@ -5439,6 +5450,9 @@ mdl_value_t *mdl_builtin_eval_return(mdl_value_t *form, mdl_value_t *args)
     
     act->v.f->result = val;
     mdl_longjmp_to(act->v.f, LONGJMP_RETURN);
+#ifdef _WIN32
+    return 0;
+#endif
 }
 
 mdl_value_t *mdl_builtin_eval_prog(mdl_value_t *form, mdl_value_t *args)
@@ -5470,6 +5484,9 @@ mdl_value_t *mdl_builtin_eval_mapret(mdl_value_t *form, mdl_value_t *args)
     
     act->v.f->result = args;
     mdl_longjmp_to(act->v.f, LONGJMP_MAPRET);
+#ifdef _WIN32
+    return 0;
+#endif
 }
 
 mdl_value_t *mdl_builtin_eval_mapstop(mdl_value_t *form, mdl_value_t *args)
@@ -5482,6 +5499,9 @@ mdl_value_t *mdl_builtin_eval_mapstop(mdl_value_t *form, mdl_value_t *args)
     
     act->v.f->result = args;
     mdl_longjmp_to(act->v.f, LONGJMP_MAPSTOP);
+#ifdef _WIN32
+    return 0;
+#endif
 }
 
 mdl_value_t *mdl_builtin_eval_mapleave(mdl_value_t *form, mdl_value_t *args)
@@ -7482,6 +7502,9 @@ mdl_value_t *mdl_builtin_eval_erret(mdl_value_t *form, mdl_value_t *args)
     if (cursor) mdl_error("Too many args to erret");
 
     mdl_internal_erret(result, frame);
+#ifdef _WIN32
+    return 0;
+#endif
 }
 
 mdl_value_t *mdl_builtin_eval_retry(mdl_value_t *form, mdl_value_t *args)
@@ -7497,6 +7520,9 @@ mdl_value_t *mdl_builtin_eval_retry(mdl_value_t *form, mdl_value_t *args)
     if (!frame) frame = mdl_local_symbol_lookup_pname("L-ERR !-INTERRUPTS!-", cur_frame);
     if (!frame) mdl_error("No frame in RETRY!");
     mdl_longjmp_to(frame->v.f, LONGJMP_RETRY);
+#ifdef _WIN32
+    return 0;
+#endif
 }
 
 mdl_value_t *mdl_builtin_eval_unwind(mdl_value_t *form, mdl_value_t *args)
@@ -7955,6 +7981,17 @@ mdl_value_t *mdl_builtin_eval_gettimedate(mdl_value_t *form, mdl_value_t *args)
     else
         mdl_error("Wrong type of time to GETTIMEDATE");
 
+#ifdef _WIN32
+    time_t sec = tv.tv_sec;
+    if (!isgmt || !mdl_is_true(isgmt))
+    {
+        localtime_r(&sec, &broketime);
+    }
+    else
+    {
+        gmtime_r(&sec, &broketime);
+    }
+#else
     if (!isgmt || !mdl_is_true(isgmt))
     {
         localtime_r(&tv.tv_sec, &broketime);
@@ -7963,7 +8000,8 @@ mdl_value_t *mdl_builtin_eval_gettimedate(mdl_value_t *form, mdl_value_t *args)
     {
         gmtime_r(&tv.tv_sec, &broketime);
     }
-    
+#endif
+   
     result = mdl_new_empty_uvector(7, MDL_TYPE_UVECTOR);
     UVTYPE(result) = MDL_TYPE_FIX;
     elems = UVREST(result, 0);
@@ -8119,10 +8157,16 @@ mdl_value_t *mdl_builtin_eval_warranty(mdl_value_t *form, mdl_value_t *args)
     return &mdl_value_false;
 }
 
+#ifdef _WIN32
+extern "C" const char copying[];
+#endif
+
 mdl_value_t *mdl_builtin_eval_copying(mdl_value_t *form, mdl_value_t *args)
 /* SUBR */
 {
+#ifndef _WIN32
     extern const char copying[];
+#endif
     mdl_value_t *chan = NULL;
     ARGSETUP(args);
     NOMOREARGS(args);

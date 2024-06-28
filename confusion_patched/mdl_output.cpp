@@ -21,7 +21,11 @@
 #include <string.h>
 #include <errno.h>
 #include "mdl_strbuf.h"
+#ifdef _WIN32
+#include <io.h>
+#else
 #include <unistd.h>
+#endif
 
 typedef enum outbuf_items_t
 {

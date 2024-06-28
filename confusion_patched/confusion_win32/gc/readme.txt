@@ -1,0 +1,33 @@
+Put the following 31 files from version 6.8 of Hans-J. Boehm's GC here.
+
+    allchblk.c
+    alloc.c
+    blacklst.c
+    dbg_mlc.c
+    dyn_load.c
+    finalize.c
+    gc.h
+    gc_allocator.h
+    gc_config_macros.h
+    gc_cpp.c
+    gc_cpp.h
+    gc_hdrs.h
+    gc_locks.h
+    gc_mark.h
+    gc_typed.h
+    gcconfig.h
+    headers.c
+    mach_dep.c
+    malloc.c
+    mallocx.c
+    mark.c
+    mark_rts.c
+    misc.c
+    new_hblk.c
+    obj_map.c
+    os_dep.c
+    ptr_chck.c
+    reclaim.c
+    stubborn.c
+    typd_mlc.c
+    version.h

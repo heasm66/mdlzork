@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="gc">
+      <UniqueIdentifier>{8e75bd93-dfd4-4f37-aeea-a1a9f3b38302}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gc\allchblk.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\alloc.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\blacklst.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\dbg_mlc.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\dyn_load.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\finalize.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gc_cpp.cc">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\headers.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\mach_dep.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\malloc.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\mallocx.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\mark.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\mark_rts.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\misc.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\new_hblk.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\obj_map.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\os_dep.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\ptr_chck.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\reclaim.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\stubborn.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\typd_mlc.c">
+      <Filter>gc</Filter>
+    </ClCompile>
+    <ClCompile Include="confusion\copying.c" />
+    <ClCompile Include="confusion\macros.cpp" />
+    <ClCompile Include="confusion\mdl_assoc.cpp" />
+    <ClCompile Include="confusion\mdl_binary_io.cpp" />
+    <ClCompile Include="confusion\mdl_builtin_types.cpp" />
+    <ClCompile Include="confusion\mdl_builtins.cpp" />
+    <ClCompile Include="confusion\mdl_decl.cpp" />
+    <ClCompile Include="confusion\mdl_output.cpp" />
+    <ClCompile Include="confusion\mdl_read.cpp" />
+    <ClCompile Include="confusion\mdl_strbuf.c" />
+    <ClCompile Include="confusion\mdli.cpp" />
+    <ClCompile Include="confusion\mdl_win32.cpp" />
+  </ItemGroup>
+</Project>

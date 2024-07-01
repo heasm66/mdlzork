@@ -1,0 +1,59 @@
+
+<SETG STR <ISTRING 2000>>
+
+<SETG NSTR <ISTRING 10>>
+
+<DEFINE LOG-CONS (FNAM
+		  "OPTIONAL" (L ())
+		  "AUX" C (S ,STR) (NS ,NSTR) LEN STR SCORE MOVES M)
+	#DECL ((C) <OR CHANNEL FALSE> (S NS STR) STRING (SCORE LEN MOVES) FIX
+	       (L) LIST (M) <LIST [REST STRING FIX FIX FIX]>)
+	<COND (<SET C <OPEN "READ" .FNAM>>
+	       <REPEAT ()
+		       <READSTRING .S .C "(" '<RETURN>>
+		       <SET LEN <READSTRING .NS .C ")">>
+		       <SET STR <SUBSTRUC .NS 1 <- .LEN 1>>>
+		       <READSTRING .S .C ".">
+		       <SET LEN <READSTRING .NS .C "/">>
+		       <SET SCORE <PARSE <SUBSTRUC .NS 3 <- .LEN 3>>>>
+		       <READSTRING .S .C ",">
+		       <SET LEN <READSTRING .NS .C "m">>
+		       <SET MOVES <PARSE <SUBSTRUC .NS 2 <- .LEN 3>>>>
+		       <SET M
+			    <COND (<MEMBER .STR .L>)
+				  (<SET L (.STR 0 0 0 !.L)>)>>
+		       <PUT .M 2 <+ <2 .M> 1>>
+		       <PUT .M 3 <+ <3 .M> .MOVES>>
+		       <COND (<G? .SCORE <4 .M>> <PUT .M 4 .SCORE>)>>
+	       <CLOSE .C>
+	       <SETG LOG-LIST .L>
+	       <SETG LOG-VECT <VECTOR !.L>>
+	       "Done.")>>
+
+<DEFINE LOG-OUT (FNAM "AUX" C)
+    #DECL ((FNAM) STRING (C) <OR FALSE CHANNEL>)
+    <COND (<SET C <OPEN "PRINT" .FNAM>>
+	   <LOG-PRINT .C>
+	   <CLOSE .C>)>>
+
+<DEFINE LOG-PRINT ("OPTIONAL" (OUTCHAN ,OUTCHAN) "AUX" (V ,LOG-VECT)) 
+	#DECL ((V) VECTOR (OUTCHAN) <SPECIAL CHANNEL>)
+	<PRINC "
+Name    #Plays  #Moves  Best
+">
+	<REPEAT ((V .V))
+		#DECL ((V) VECTOR)
+		<COND (<EMPTY? .V> <RETURN>)
+		      (<PRINC <1 .V>>
+		       <PRINC ":	">
+		       <PRIN1 <2 .V>>
+		       <PRINC "	">
+		       <PRIN1 <3 .V>>
+		       <PRINC "	">
+		       <PRIN1 <4 .V>>
+		       <CRLF>
+		       <SET V <REST .V 4>>)>>>
+
+<DEFINE LOG-SORT (OFF) 
+	#DECL ((OFF) FIX)
+	<SORT <COND (<0? .OFF> <>) (,L?)> ,LOG-VECT 4 .OFF>>

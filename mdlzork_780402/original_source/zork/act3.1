@@ -1,0 +1,331 @@
+; "SUBTITLE TOMB OF THE UNKNOWN IMPLEMENTER"
+
+<DEFINE COKE-BOTTLES ()
+  <COND (<VERB? "THROW" "MUNG">
+	 <TELL 
+"Congratulations!  You've managed to break all those bottles.
+Fortunately for your feet, they were made of magic glass and disappear
+immediately." ,LONG-TELL1>
+	 <TRZ <PRSO> ,OVISON>
+	 <OSIZE <PRSO> 0>
+	 T)>>
+
+<DEFINE HEAD-FUNCTION ("AUX" (NL ()) (LCASE <FIND-OBJ "LCASE">))
+  #DECL ((NL) <LIST [REST OBJECT]> (LCASE) OBJECT)
+  <COND (<VERB? "HELLO">
+	 <TELL "The implementers are dead; therefore they do not respond.">)
+	(<NOT <VERB? "READ">>
+	 <TELL
+"Although the implementers are dead, they foresaw that some cretin
+would tamper with their remains.  Therefore, they took steps to
+punish such actions." ,LONG-TELL1>
+	 <SET NL <ROB-ADV ,WINNER .NL>>
+	 <SET NL <ROB-ROOM ,HERE .NL 100>>
+	 <COND (<NOT <EMPTY? .NL>>
+		<OR <OROOM .LCASE> <INSERT-OBJECT .LCASE <FIND-ROOM "LROOM">>>
+		<PUT .LCASE ,OCONTENTS (!<OCONTENTS .LCASE> !.NL)>)>
+	 <JIGS-UP
+"Unfortunately, we've run out of poles.  Therefore, in punishment for
+your most grievous sin, we shall deprive you of all your valuables,
+and of your life.">
+	 T)>>
+
+<SETG THEN 0>
+
+\
+; "SUBTITLE A DROP IN THE BUCKET"
+
+<SETG BUCKET-TOP!-FLAG <>>
+
+<DEFINE BUCKET ("OPTIONAL" (ARG <>)
+		"AUX" (W <FIND-OBJ "WATER">) (BUCK <FIND-OBJ "BUCKE">))
+	#DECL ((ARG) <OR FALSE ATOM> (W BUCK) OBJECT)
+	<COND (<==? .ARG READ-IN> <>)
+	      (<AND <VERB? "C-INT">
+		    <COND (<MEMQ .W <OCONTENTS .BUCK>>
+			   <REMOVE-OBJECT .W>
+			   <>)
+			  (T)>>)
+	      (<==? .ARG READ-OUT>
+	       <COND (<AND <==? <OCAN .W> .BUCK> <NOT ,BUCKET-TOP!-FLAG>>
+		      <TELL "The bucket rises and comes to a stop.">
+		      <SETG BUCKET-TOP!-FLAG T>
+		      <PASS-THE-BUCKET <FIND-ROOM "TWELL"> .BUCK>
+		      <CLOCK-INT ,BCKIN 100>
+		      <>)
+		     (<AND ,BUCKET-TOP!-FLAG <N==? <OCAN .W> .BUCK>>
+		      <TELL "The bucket descends and comes to a stop.">
+		      <SETG BUCKET-TOP!-FLAG <>>
+		      <PASS-THE-BUCKET <FIND-ROOM "BWELL"> .BUCK>)>)>>
+
+<DEFINE PASS-THE-BUCKET (R B "AUX" (PRSO <PRSO>) (PRSVEC ,PRSVEC))
+    #DECL ((R) ROOM (B) OBJECT (PRSVEC) VECTOR (PRSO) OBJECT)
+    <PUT .PRSVEC 2 <>>
+    <REMOVE-OBJECT .B>
+    <INSERT-OBJECT .B .R>
+    <COND (<==? <AVEHICLE ,WINNER> .B>
+	   <GOTO .R>
+    	   <ROOM-INFO>)>
+    <PUT .PRSVEC 2 .PRSO>>
+
+\
+; "SUBTITLE CHOMPERS IN WONDERLAND"
+
+<DEFINE EATME-FUNCTION ("AUX" R C (HERE ,HERE))
+    #DECL ((C) OBJECT (HERE R) ROOM)
+    <COND (<AND <VERB? "EAT">
+		<==? <PRSO> <SET C <FIND-OBJ "ECAKE">>>
+		<==? .HERE <FIND-ROOM "ALICE">>>
+	   <TELL 
+"Suddenly, the room appears to have become very large.">
+	   <REMOVE-OBJECT .C>
+	   <SET R <FIND-ROOM "ALISM">>
+	   <TRZ <FIND-OBJ "ROBOT"> ,OVISON>
+	   <PUT .R ,ROBJS <ROBJS .HERE>>
+	   <MAPF <>
+		 <FUNCTION (X) #DECL ((X) OBJECT)
+			    <OSIZE .X <* 64 <OSIZE .X>>>
+			    <PUT .X ,OROOM .R>>
+		 <ROBJS .HERE>>
+	   <GOTO .R>)>>
+
+<DEFINE CAKE-FUNCTION ("AUX" (RICE <FIND-OBJ "RDICE">) (OICE <FIND-OBJ "ORICE">)
+			     (BICE <FIND-OBJ "BLICE">) (HERE ,HERE) R)
+	#DECL ((RICE OICE BICE) OBJECT (HERE R) ROOM)
+	<COND (<VERB? "READ">
+	       <COND (<NOT <EMPTY? <PRSI>>>
+		      <COND (<==? <PRSI> <FIND-OBJ "BOTTL">>
+			     <TELL 
+"The letters appear larger, but still are too small to be read.">)
+			    (<==? <PRSI> <FIND-OBJ "FLASK">>
+			     <TELL "The icing, now visible, says '"
+				   1
+				   <COND (<==? <PRSO> .RICE> "Evaporate")
+					 (<==? <PRSO> .OICE> "Explode")
+					 ("Enlarge")>
+				   "'.">)
+			    (<TELL "You can't see through that!">)>)
+		     (<TELL 
+"The only writing legible is a capital E.  The rest is too small to
+be clearly visible.">)>)
+	      (<AND <VERB? "EAT"> <MEMBER "ALI" <STRINGP <RID .HERE>>>>
+	       <COND (<==? <PRSO> .OICE>
+		      <REMOVE-OBJECT <PRSO>>
+		      <ICEBOOM>)
+		     (<==? <PRSO> .BICE>
+		      <REMOVE-OBJECT <PRSO>>
+		      <TELL "The room around you seems to be getting smaller.">
+		      <COND (<==? .HERE <FIND-ROOM "ALISM">>
+			     <SET R <FIND-ROOM "ALICE">>
+			     <TRO <FIND-OBJ "ROBOT"> ,OVISON>
+			     <PUT .R ,ROBJS <ROBJS .HERE>>
+			     <MAPF <>
+				   <FUNCTION (X) #DECL ((X) OBJECT)
+					     <PUT .X ,OROOM .R>
+					     <OSIZE .X </ <OSIZE .X> 64>>>
+				   <ROBJS .HERE>>
+			     <GOTO .R>)
+			    (<JIGS-UP ,CRUSHED>)>)>)
+	      (<AND <VERB? "THROW">
+		    <==? <PRSO> .OICE>
+		    <MEMBER "ALI" <STRINGP <RID .HERE>>>>
+	       <REMOVE-OBJECT <PRSO>>
+	       <ICEBOOM>)
+	      (<AND <VERB? "THROW">
+		    <==? <PRSO> .RICE>
+		    <==? <PRSI> <FIND-OBJ "POOL">>>
+	       <REMOVE-OBJECT <PRSI>>
+	       <TELL 
+"The pool of water evaporates, revealing a tin of rare spices.">
+	       <TRO <FIND-OBJ "SAFFR"> ,OVISON>)>>
+
+<DEFINE FLASK-FUNCTION ()
+    <COND (<VERB? "OPEN">
+	   <MUNG-ROOM ,HERE "Noxious vapors prevent your entry.">
+	   <JIGS-UP ,VAPORS>)
+	  (<VERB? "MUNG" "THROW">
+	   <TELL "The flask breaks into pieces.">
+	   <TRZ <PRSO> ,OVISON>
+	   <JIGS-UP ,VAPORS>)>>
+
+<DEFINE ICEBOOM () 
+    <MUNG-ROOM ,HERE ,ICEMUNG>
+    <JIGS-UP ,ICEBLAST>>
+
+<DEFINE MAGNET-ROOM ()
+	<COND (<VERB? "LOOK">
+	       <TELL 
+"You are in a room with a low ceiling which is circular in shape. 
+There are exits to the east and the southeast.">)
+	      (<AND <VERB? "GO-IN"> ,CAROUSEL-FLIP!-FLAG>
+	       <COND (,CAROUSEL-ZOOM!-FLAG
+		      <JIGS-UP <COND (<==? ,PLAYER ,WINNER> ,SPINDIZZY)
+				     (ELSE ,SPINROBOT)>>)
+		     (<TELL 
+"As you enter, your compass starts spinning wildly.">
+		      <>)>)>>
+
+<DEFINE MAGNET-ROOM-EXIT ("AUX" (PV ,PRSVEC) (DIR <2 .PV>))
+	#DECL ((DIR) DIRECTION (PV) <VECTOR [3 ANY]>)
+	<COND (,CAROUSEL-FLIP!-FLAG
+	       <TELL "You cannot get your bearings...">
+	       <COND (<PROB 50>
+		      <FIND-ROOM "CMACH">)
+		     (<FIND-ROOM "ALICE">)>)
+	      (<==? .DIR <FIND-DIR "E">>
+	       <FIND-ROOM "CMACH">)
+	      (<OR <==? .DIR <FIND-DIR "SE">>
+		   <==? .DIR <FIND-DIR "OUT">>>
+	       <FIND-ROOM "ALICE">)>> 
+
+<DEFINE CMACH-ROOM ()
+    <COND (<VERB? "LOOK">
+	   <TELL ,CMACH-DESC ,LONG-TELL1>)>>
+	  
+<SETG CAROUSEL-ZOOM!-FLAG <>>
+
+<SETG CAROUSEL-FLIP!-FLAG <>>
+
+<DEFINE BUTTONS ("AUX" I) 
+	#DECL ((I) OBJECT)
+	<COND (<VERB? "PUSH">
+	       <COND (<==? ,WINNER ,PLAYER>
+		      <JIGS-UP 
+"There is a giant spark and you are fried to a crisp.">)
+		     (<==? <PRSO> <FIND-OBJ "SQBUT">>
+		      <COND (,CAROUSEL-ZOOM!-FLAG
+			     <TELL "Nothing seems to happen.">)
+			    (<SETG CAROUSEL-ZOOM!-FLAG T>
+		      	     <TELL "The whirring increases in intensity slightly.">)>)
+		     (<==? <PRSO> <FIND-OBJ "RNBUT">>
+		      <COND (,CAROUSEL-ZOOM!-FLAG
+			     <SETG CAROUSEL-ZOOM!-FLAG <>>
+		      	     <TELL "The whirring decreases in intensity slightly.">)
+			    (<TELL "Nothing seems to happen.">)>)
+		     (<==? <PRSO> <FIND-OBJ "TRBUT">>
+		      <SETG CAROUSEL-FLIP!-FLAG <NOT ,CAROUSEL-FLIP!-FLAG>>
+		      <COND (<==? <OROOM <SET I <FIND-OBJ "IRBOX">>>
+				  <FIND-ROOM "CAROU">>
+			     <TELL
+"A dull thump is heard in the distance.">
+			     <TRC .I ,OVISON>
+			     <COND (<TRNN .I ,OVISON>
+				    <RTRZ <FIND-ROOM "CAROU"> ,RSEENBIT>)>
+			     T)
+			    (<TELL "Click.">)>)>)>>
+
+<SETG CAGE-SOLVE!-FLAG <>>
+
+<DEFINE SPHERE-FUNCTION ("AUX" (R <FIND-OBJ "ROBOT">) C FL RACT)
+	#DECL ((C) ROOM (R) OBJECT (FL) <OR ATOM FALSE> (RACT) ADV)
+	<SET FL <AND <NOT ,CAGE-SOLVE!-FLAG> <VERB? "TAKE">>>
+	<COND (<AND .FL <==? ,PLAYER ,WINNER>>
+	       <TELL 
+"As you reach for the sphere, a steel cage falls from the ceiling
+to entrap you.  To make matters worse, poisonous gas starts coming
+into the room." ,LONG-TELL1>
+	       <COND (<==? <OROOM .R> ,HERE>
+		      <GOTO <SET C <FIND-ROOM "CAGED">>>
+		      <REMOVE-OBJECT .R>
+		      <INSERT-OBJECT .R .C>
+		      <PUT <SET RACT <OACTOR .R>> ,AROOM .C>
+		      <TRO .R ,NDESCBIT>
+		      <SETG SPHERE-CLOCK <CLOCK-INT ,SPHIN 10>>
+		      T)
+		     (ELSE
+		      <TRZ <FIND-OBJ "SPHER"> ,OVISON>
+		      <MUNG-ROOM <FIND-ROOM "CAGER">
+				 "You are stopped by a cloud of poisonous gas.">
+		      <JIGS-UP ,POISON>)>)
+	      (.FL
+	       <TRZ <FIND-OBJ "SPHER"> ,OVISON>
+	       <JIGS-UP ,ROBOT-CRUSH>
+	       <REMOVE-OBJECT .R>
+	       <TRZ <PRSO> ,OVISON>
+	       <INSERT-OBJECT <FIND-OBJ "RCAGE"> ,HERE>
+	       T)
+	      (<VERB? "C-INT">
+	       <MUNG-ROOM <FIND-ROOM "CAGER">
+			  "You are stopped by a cloud of poisonous gas.">
+	       <JIGS-UP ,POISON>)>>
+
+<DEFINE CAGED-ROOM ()
+    <COND (,CAGE-SOLVE!-FLAG <SETG HERE <FIND-ROOM "CAGER">>)>>
+
+<GDECL (SPHERE-CLOCK) CEVENT (ROBOT-ACTIONS) <UVECTOR [REST VERB]>>
+
+<DEFINE ROBOT-ACTOR ("AUX" C CAGE (R <FIND-OBJ "ROBOT">) RACT) 
+	#DECL ((C) ROOM (CAGE) OBJECT (R) OBJECT (RACT) ADV)
+	<COND (<AND <VERB? "RAISE"> <==? <PRSO> <FIND-OBJ "CAGE">>>
+	       <TELL "The cage shakes and is hurled across the room.">
+	       <CLOCK-DISABLE ,SPHERE-CLOCK>
+	       <SETG WINNER ,PLAYER>
+	       <GOTO <SET C <FIND-ROOM "CAGER">>>
+	       <INSERT-OBJECT <SET CAGE <FIND-OBJ "CAGE">> .C>
+	       <TRO .CAGE ,TAKEBIT>
+	       <TRZ .CAGE ,NDESCBIT>
+	       <TRZ .R ,NDESCBIT>
+	       <TRO <FIND-OBJ "SPHER"> ,TAKEBIT>
+	       <REMOVE-OBJECT .R>
+	       <INSERT-OBJECT .R .C>
+	       <PUT <SET RACT <OACTOR .R>> ,AROOM .C>
+	       <SETG CAGE-SOLVE!-FLAG T>)
+	      (<VERB? "EAT" "DRINK">
+	       <TELL
+"\"I am sorry but that action is difficult for a being with no mouth.\"">)
+	      (<VERB? "READ">
+	       <TELL
+"\"My vision is not sufficiently acute to read such small type.\"">)
+	      (<MEMQ <PRSA> ,ROBOT-ACTIONS> <>)
+	      (<TELL 
+"\"I am only a stupid robot and cannot perform that command.\"">)>>
+
+<DEFINE CRETIN ("AUX" (ME ,PLAYER))
+    #DECL ((ME) ADV)
+    <COND (<AND <VERB? "GIVE"> <NOT <TRNN <PRSO> ,NO-CHECK-BIT>>>
+	   <REMOVE-OBJECT <PRSO>>
+	   <PUT .ME ,AOBJS (<PRSO> !<AOBJS .ME>)>
+	   <TELL "Done.">)
+	  (<VERB? "KILL" "MUNG">
+	   <JIGS-UP 
+"If you insist.... Poof, you're dead!">)
+	  (<VERB? "TAKE">
+	   <TELL "How romantic!">)>>
+
+<DEFINE ROBOT-FUNCTION ("AUX" AA)
+	#DECL ((AA) ADV)
+	<COND (<VERB? "GIVE">
+	       <SET AA <OACTOR <PRSI>>>
+	       <REMOVE-OBJECT <PRSO>>
+	       <PUT .AA ,AOBJS (<PRSO> !<AOBJS .AA>)>
+	       <TELL "The robot gladly takes the "
+		     1
+		     <ODESC2 <PRSO>>
+		     "
+and nods his head-like appendage in thanks.">)
+	      (<VERB? "THROW" "MUNG">
+	       <TELL 
+"The robot is injured (being of shoddy construction) and falls to the
+floor in a pile of garbage, which disintegrates before your eyes." ,LONG-TELL1>
+	       <REMOVE-OBJECT <COND (<VERB? "THROW"> <PRSI>) (<PRSO>)>>)>> 
+
+\
+; "SUBTITLE MORE RANDOM VERBS"
+
+<DEFINE KNOCK ()
+    <COND (<OBJECT-ACTION>)
+	  (<MEMQ <PSTRING "DOOR"> <ONAMES <PRSO>>>
+	   <TELL "I don't think that anybody's home.">)
+	  (<TELL "Why knock on a " 0 <ODESC2 <PRSO>> "?">)>>
+
+<DEFINE CHOMP ()
+    <TELL "I don't know how to do that.  I win in all cases!">>
+
+<DEFINE FROBOZZ ()
+    <TELL "The FROBOZZ Corporation created, owns, and operates this dungeon.">>
+
+<DEFINE WIN ()
+    <TELL "Naturally!">>
+
+<DEFINE YELL ()
+    <TELL "Aaaarrrrrrrrgggggggggggggghhhhhhhhhhhhhh!">>

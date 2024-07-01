@@ -1,0 +1,29 @@
+zork
+└── [Jan 15 15:48]  ~~~gsb
+    ├── [Apr  2  1978]  act1z.1
+    ├── [Apr  2  1978]  act2z.1
+    ├── [Apr  2  1978]  act3z.1
+    ├── [Apr  2  1978]  act4z.1
+    ├── [Apr  2  1978]  b.1
+    ├── [Apr  2  1978]  compil.crock
+    ├── [Apr  2  1978]  crufty.1
+    ├── [Apr  2  1978]  defs.1
+    ├── [Apr  2  1978]  dungz.1
+    ├── [Apr  2  1978]  load.1
+    ├── [Apr  2  1978]  logger.1
+    ├── [Apr  2  1978]  makstr.1
+    ├── [Apr  2  1978]  melee.1
+    ├── [Apr  2  1978]  parser.1
+    ├── [Apr  2  1978]  pobl.1
+    ├── [Apr  2  1978]  prim.1
+    ├── [Apr  2  1978]  rooms.1
+    ├── [Apr  2  1978]  scrmbz.1
+    ├── [Apr  2  1978]  sr.1
+    ├── [Apr  2  1978]  tell.1
+    ├── [Mar 29  1978]  ts.scr
+    ├── [Apr  2  1978]  typhak.1
+    ├── [Apr  2  1978]  util.1
+    ├── [Apr  2  1978]  zork.files
+    └── [Apr  2  1978]  zork.xfile
+
+1 directory, 25 files

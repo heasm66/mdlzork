@@ -19,7 +19,13 @@ cygquadmath-0.dll
 cyggcc_s-seh-1.dll
 cyggfortran-5.dll
 ~~~
+## Differences between Zork and Dungeon
+There are some small differences in the gameplay. Among them are:
+- The diamond making machine can be referred to as a "VAX". (Zork already have "PDP10" as a synonym for it.)
+- "Up a Tree" (TREE), "Cage" (CAGED) and the "note of warning" (WARNI) are sacred (have RSACREDBIT or SACREDBIT) and won't be visited or snatched by the thief.
+- There is a new room, the Translator's Annex, added south of the Tomb of the Unknown Implementer. The only exit is back north. The south exit, the "Entrance To MLO-6B", is blocked because "You are not wearing your badge."
 
+There are also small textual differences. These have been collected in a Google Doc [here](https://docs.google.com/spreadsheets/d/1tE66brvL_eBK8HN_MZYyNLf2HFIoO6fDS6vAReG2uDg/edit?usp=sharing) by [eriktorbjorn](https://github.com/eriktorbjorn) (there is a pdf-capture from 2024-07-01 of this document in this folder).
 ## README from orginal package
 
 DUNGEON (Zork)

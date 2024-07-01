@@ -32,6 +32,7 @@ using namespace std;
 const char copyright_notice[] = 
     "Welcome to 'Confusion', a MDL interpreter.\n"
     "Copyright 2009 Matthew T. Russotto"
+    "\nThis Confusion created " __DATE__ " @ " __TIME__
     "\nThis program comes with ABSOLUTELY NO WARRANTY; for details type <WARRANTY>.\n"
     "This is free software, and you are welcome to distribute under certain conditions; type <COPYING> for details\n";
 

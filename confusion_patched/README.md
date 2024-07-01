@@ -98,6 +98,8 @@ The following steps lean heavy on David Kinder's instructions for his [win32 ver
    compile for "release" and not !"debug" because the latter can run into memory problem
    when loading Zork.
 ~~~
+## Precompiled binaries for win32 and Linux
+There are precompiled binaries of *Confusion* for Win32 and Linux available at this [link](https://drive.google.com/drive/folders/1zt2q_Tlz-GAKQvcgU9ibVRwb13X9Qrn3?usp=drive_link).
 ## README from orginal package
 ~~~
 Confusion: A MDL interpreter

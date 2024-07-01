@@ -184,6 +184,9 @@ to:
 
     <SAVE-IT>
 
+Added RSACREDBIT to "TREE" in dung.mud line 1715:
+    <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
+
 
 Timestamps of the original madadv.help, madadv.info and madadv.doc are 790317, 790317 and 790406.
 

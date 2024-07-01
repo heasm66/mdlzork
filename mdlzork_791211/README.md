@@ -155,6 +155,9 @@ Changes to act3.mud (issue #45):
 +                     <ROPE-BACK>)>
                <SLIDER <PRSO>>)>>
 
+Add initial value to THIEF-ENGROSSED!-FLAG in melee.mud on line 38 (issue #62)
+    <SETG THIEF-ENGROSSED!-FLAG <>>
+
 Change line 93-94 in tell-repl.mud from (issue #42 & #61):
     <DEFINE GXUNAME () "MTRZORK">
     <SETG XUNM "MTRZORK">
@@ -182,10 +185,9 @@ to:
 
     <SAVE-IT>
 
-
-Add initial value to THIEF-ENGROSSED!-FLAG in melee.mud on line 38 (issue #62)
-    <SETG THIEF-ENGROSSED!-FLAG <>>
-
+Added RSACREDBIT to "TREE" in dung.mud line 1715:
+    <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
+	
 Differences between the 1979 and 1981 version
 =============================================
 

@@ -1712,7 +1712,7 @@ particularly large tree with some low branches stands here.">
             "UP" #NEXIT "You cannot climb any higher.">
       (<GET-OBJ "NEST"> <GET-OBJ "TTREE">)
       TREE-ROOM
-      <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT>
+      <+ ,RLANDBIT ,RLIGHTBIT ,RNWALLBIT ,RSACREDBIT>
       (RGLOBAL <+ ,BIRDBIT ,HOUSEBIT>)>
 
 <ROOM "FORE4"

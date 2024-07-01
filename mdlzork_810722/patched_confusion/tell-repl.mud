@@ -90,8 +90,8 @@ are never both set (no lowercase or a few other symbols)"
    <COND (<G=? .Y 75> <+ 1900 .Y>) (T <+ 2000 .Y>)>
 >
 
-<DEFINE GXUNAME () "MTRZORK">
-<SETG XUNM "MTRZORK">
+<DEFINE GXUNAME () ,XUNM>
+<COND (<NOT <GASSIGNED? XUNM>> <SETG XUNM "MTRZORK">)>
 <SETG SCRIPT-CHANNEL <>>
 
 <DEFINE STARTER () 1>

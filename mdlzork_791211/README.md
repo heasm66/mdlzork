@@ -155,6 +155,34 @@ Changes to act3.mud (issue #45):
 +                     <ROPE-BACK>)>
                <SLIDER <PRSO>>)>>
 
+Change line 93-94 in tell-repl.mud from (issue #42 & #61):
+    <DEFINE GXUNAME () "MTRZORK">
+    <SETG XUNM "MTRZORK">
+to:
+    <DEFINE GXUNAME () ,XUNM>
+    <COND (<NOT <GASSIGNED? XUNM>> <SETG XUNM "MTRZORK">)>
+
+Change run.mud from (issue #42 & #61):
+    <FLOAD "loadall.mud">
+    <SAVE-IT>
+to:
+    "User name is used as seed in RANDOM and as name on the directory where SAVE- and SCRIPT-files are saved.
+     Full name is used inside the game once for flavour.
+     Change them for your own amusement."
+    <SETG XUNM "MTRZORK">                    ;"Username, traditionally 3-6 characters."
+    <PUT ,OUTCHAN 10 "Intrepid Adventurer">  ;"Full name"
+
+    <FLOAD "loadall.mud">
+
+    <CRLF>
+    <TELL "This copy is built with username '" 0 ,XUNM "' and with full name '"> 
+    <TELL <GET-NAME> 1 "'.">
+    <TELL "(See 'run.mud' what they do and on how to change them.)">
+    <CRLF>
+
+    <SAVE-IT>
+
+
 Add initial value to THIEF-ENGROSSED!-FLAG in melee.mud on line 38 (issue #62)
     <SETG THIEF-ENGROSSED!-FLAG <>>
 

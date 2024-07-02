@@ -98,9 +98,22 @@ The following steps lean heavy on David Kinder's instructions for his [win32 ver
    compile for "release" and not !"debug" because the latter can run into memory problem
    when loading Zork.
 ~~~
+## Compiling on MacOS
+These are notes from a compilation done by Andrew Plotkin.
+
+"I gave it a shot on a current Mac (ARM architecture). Got it to build.
+
+I had to install the garbage-collector package via homebrew:
+```
+brew install bdw-gc
+```
+Then I added `-I/opt/homebrew/include` to `COPTFLAGS` in the `Makefile`. (Homebrew packages were on `/usr/local` on Intel MacOS, but `/opt/homebrew` on ARM MacOS.) Then `make` worked."
+
+You also may need to add `-static` to `COPTFLAGS` to link the `bdw-gc` library statically instead of dynamically.
 ## Precompiled binaries for win32 and Linux
-There are precompiled binaries of *Confusion* for Win32 and Linux available at this [link](https://drive.google.com/drive/folders/1zt2q_Tlz-GAKQvcgU9ibVRwb13X9Qrn3?usp=drive_link).
+There are precompiled binaries of *Confusion* for Win32, Linux and MacOS (ARM) available at this [link](https://drive.google.com/drive/folders/1zt2q_Tlz-GAKQvcgU9ibVRwb13X9Qrn3?usp=drive_link).
 ## README from orginal package
+Note that the link GC is outdated and it now is at: https://www.hboehm.info/gc/
 ~~~
 Confusion: A MDL interpreter
 (or, "How to Fit a Small Program into a Large Machine")
@@ -156,6 +169,7 @@ useful version is provided), GC-DUMP/GC-READ,  interrupts, processes,
 overflow, compiled code.
 ~~~
 ## README from David Kinder's win32 version
+Note that the link GC is outdated and it now is at: https://www.hboehm.info/gc/
 ~~~
 The following steps describe how to replicate what I did to build the
 Confusion MDLI interpreter on Windows, using Microsoft's Visual Studio.

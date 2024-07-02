@@ -109,7 +109,10 @@ brew install bdw-gc
 ```
 Then I added `-I/opt/homebrew/include` to `COPTFLAGS` in the `Makefile`. (Homebrew packages were on `/usr/local` on Intel MacOS, but `/opt/homebrew` on ARM MacOS.) Then `make` worked."
 
-You also may need to add `-static` to `COPTFLAGS` to link the `bdw-gc` library statically instead of dynamically.
+To link the `bdw-gc` library statically, instead of dynamically, you also need to change the `LIBS` in `Makefile` to:
+```
+LIBS = /opt/homebrew/lib/libgc.a /opt/homebrew/lib/libgccpp.a
+```
 ## Precompiled binaries for win32 and Linux
 There are precompiled binaries of *Confusion* for Win32, Linux and MacOS (ARM) available at this [link](https://drive.google.com/drive/folders/1zt2q_Tlz-GAKQvcgU9ibVRwb13X9Qrn3?usp=drive_link).
 ## README from orginal package

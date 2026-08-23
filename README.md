@@ -99,7 +99,7 @@ make validate            # Load-test all four game images
 - C++ compiler (gcc/clang)
 - Boehm GC library (`make install-deps` can install it)
 
-**Output:** `confusion-mdl/mdli` executable
+**Output:** `confusion-mdl/_obj/mdli` executable
 
 ## Playing the Games
 
@@ -131,7 +131,7 @@ If you want to work with the raw MDL files:
 
 ```bash
 cd mdlzork_810722
-../confusion-mdl/mdli
+../confusion-mdl/_obj/mdli
 ```
 
 Then in the MDL interpreter:
@@ -146,7 +146,7 @@ Or to restore a save file:
 
 To start directly from a save file:
 ```bash
-../confusion-mdl/mdli -r MDL/MADADV.SAVE
+../confusion-mdl/_obj/mdli -r MDL/MADADV.SAVE
 ```
 
 ## Project Structure
@@ -166,6 +166,7 @@ mdlzork/
 ├── confusion-mdl/        # MDL interpreter (submodule)
 │   ├── Makefile          # Native build
 │   ├── Makefile.wasm     # WASM build
+│   ├── _obj/             # Generated native objects and executable
 │   ├── gc_stub.h/cpp     # GC replacement for WASM
 │   └── wasm_config.h     # WASM configuration
 ├── scripts/              # Build support and WASM smoke test

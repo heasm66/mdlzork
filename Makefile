@@ -9,7 +9,8 @@ EMSDK_VERSION := 4.0.20
 
 # Interpreter paths
 CONFUSION_DIR := confusion-mdl
-CONFUSION_INTERPRETER := $(CONFUSION_DIR)/mdli
+CONFUSION_OBJ_DIR := $(CONFUSION_DIR)/_obj
+CONFUSION_INTERPRETER := $(CONFUSION_OBJ_DIR)/mdli
 
 # ============================================================================
 # Submodule Management
@@ -234,10 +235,10 @@ run-native: interpreter
 	fi; \
 	cd "$$GAME_NAME" && \
 	if [ -n "$$SAVE_FILE" ]; then \
-		../confusion-mdl/mdli -r "$$SAVE_FILE"; \
+		../$(CONFUSION_INTERPRETER) -r "$$SAVE_FILE"; \
 	elif [ -f "MDL/MADADV.SAVE" ]; then \
 		echo "Using MDL/MADADV.SAVE"; \
-		../confusion-mdl/mdli -r "MDL/MADADV.SAVE"; \
+		../$(CONFUSION_INTERPRETER) -r "MDL/MADADV.SAVE"; \
 	else \
 		echo "Error: No save file found (tried MDL/MADADV.SAVE)"; \
 		exit 1; \
@@ -250,7 +251,7 @@ validate: interpreter
 	for game in mdlzork_771212 mdlzork_780124 mdlzork_791211 mdlzork_810722; do \
 		if [ -d "$$game" ] && [ -f "$$game/MDL/MADADV.SAVE" ]; then \
 			printf "  %s/MDL/MADADV.SAVE ... " "$$game"; \
-			if scripts/run-with-timeout.pl 5 sh -c "cd $$game && printf 'QUIT\\n' | ../confusion-mdl/mdli -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
+			if scripts/run-with-timeout.pl 5 sh -c "cd $$game && printf 'QUIT\\n' | ../$(CONFUSION_INTERPRETER) -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
 				echo "✅ OK"; \
 			else \
 				echo "❌ FAILED"; \
@@ -279,7 +280,8 @@ $(CONFUSION_INTERPRETER): check-submodules check-deps
 # Clean build artifacts and temporary files
 clean:
 	@echo "Cleaning build artifacts..."
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(RELEASE_DIR)
+	$(MAKE) -C $(CONFUSION_DIR) clean
 	# Clean legacy build artifacts from previous build layout
 	rm -rf wasm-build
 	rm -f web/mdli.js web/mdli.wasm web/mdli.data
@@ -291,7 +293,7 @@ clean:
 
 # Clean everything including compiled interpreter
 clean-all: clean
-	$(MAKE) -C $(CONFUSION_DIR) clean
+	rm -rf $(EMSDK_DIR) node_modules playwright-report test-results
 
 # ============================================================================
 # WASM Build Targets

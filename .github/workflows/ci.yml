@@ -49,7 +49,7 @@ jobs:
         run: make build-native
 
       - name: Verify native interpreter
-        run: test -x confusion-mdl/mdli
+        run: test -x confusion-mdl/_obj/mdli
 
       - name: Validate game save files
         run: make validate

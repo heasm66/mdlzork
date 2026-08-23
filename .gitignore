@@ -2,6 +2,8 @@
 build/
 wasm-build/
 releases/
+_obj/
+confusion-mdl/_obj/
 emsdk/
 
 # Python

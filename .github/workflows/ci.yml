@@ -10,8 +10,9 @@ on:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
+
+env:
+  EMSDK_VERSION: 4.0.20
 
 # Allow one concurrent deployment
 concurrency:
@@ -48,10 +49,10 @@ jobs:
         run: make build-native
 
       - name: Verify native interpreter
-        run: |
-          test -f confusion-mdl/mdli || exit 1
-          echo "✓ Native interpreter built successfully"
-          ./confusion-mdl/mdli --version 2>&1 || echo "✓ Binary exists and runs"
+        run: test -x confusion-mdl/mdli
+
+      - name: Validate game save files
+        run: make validate
 
   wasm-build:
     name: WASM Build
@@ -67,9 +68,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: emsdk
-          key: ${{ runner.os }}-emsdk-latest
-          restore-keys: |
-            ${{ runner.os }}-emsdk-
+          key: ${{ runner.os }}-emsdk-${{ env.EMSDK_VERSION }}
 
       - name: Setup Emscripten
         run: |
@@ -77,8 +76,8 @@ jobs:
             git clone https://github.com/emscripten-core/emsdk.git
           fi
           cd emsdk
-          ./emsdk install latest
-          ./emsdk activate latest
+          ./emsdk install "$EMSDK_VERSION"
+          ./emsdk activate "$EMSDK_VERSION"
 
       - name: Build WASM
         run: make build
@@ -88,7 +87,9 @@ jobs:
           echo "Checking for required build artifacts..."
           test -f build/wasm/mdli.js && echo "✓ mdli.js exists" || exit 1
           test -f build/wasm/mdli.wasm && echo "✓ mdli.wasm exists" || exit 1
+          test -f build/wasm/mdli.data && echo "✓ mdli.data exists" || exit 1
           test -f build/web/index.html && echo "✓ web app assembled" || exit 1
+          test -f build/web/mdli.data && echo "✓ game data assembled" || exit 1
 
           echo ""
           echo "File sizes:"
@@ -97,14 +98,14 @@ jobs:
           echo ""
           echo "✓ WASM build successful!"
 
+      - name: Smoke-test WASM module and game data
+        run: node scripts/smoke-wasm.mjs build/web
+
       - name: Prepare deployment directory
         run: |
           CACHE_VERSION=$(git rev-parse --short HEAD)
           # Copy assembled web app to deploy directory
           cp -r build/web deploy
-          # Update cache-busting versions with git SHA (in deploy dir only)
-          sed -i "s|mdli.js?v=[0-9]*|mdli.js?v=${CACHE_VERSION}|g" deploy/index.html
-          sed -i "s|app.js?v=[0-9]*|app.js?v=${CACHE_VERSION}|g" deploy/index.html
           # Update service worker cache name with git SHA
           sed -i "s|mdlzork-v[0-9.]*|mdlzork-v${CACHE_VERSION}|" deploy/sw.js
           # Create .nojekyll to prevent GitHub Pages from processing
@@ -120,6 +121,9 @@ jobs:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     needs: [native-build, wasm-build]
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

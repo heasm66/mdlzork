@@ -10,8 +10,7 @@ Play the original mainframe Zork games written in MDL (MIT Design Language) from
 
 - 🌐 **Runs Entirely in Browser** - No server required after initial load
 - 📱 **Progressive Web App** - Install on desktop or mobile
-- 💾 **Save/Load with IndexedDB** - Persistent saves across sessions
-- 📤 **Export/Import Saves** - Share saves between devices
+- 💾 **Portable Save Files** - Download and upload native Confusion save files
 - 🎮 **4 Game Versions** - Play Zork from 1977 to 1981
 - ⚡ **Offline Support** - Play without internet after first load
 - 🖥️ **Retro Terminal** - Authentic green-on-black aesthetic with xterm.js
@@ -102,7 +101,7 @@ make clean-native        # Clean native artifacts
 **Requirements:**
 - C++ compiler (gcc/clang)
 - Python 3 (for server mode only)
-- Boehm GC library (auto-installed on macOS)
+- Boehm GC library (`make install-deps` can install it)
 
 **Output:** `confusion-mdl/mdli` executable
 
@@ -120,14 +119,14 @@ make clean-native        # Clean native artifacts
 - Type commands and press Enter
 - Up/Down arrows for command history
 - Ctrl+C to interrupt
-- Save/Load buttons to manage progress
-- Export/Import to share saves
+- Type `SAVE`, then use **Download Save File** to copy it out of the browser sandbox
+- Use **Upload Save File**, then type `RESTORE` to continue from a downloaded save
 
 ### Terminal (Native CLI)
 
 ```bash
 cd mdlzork_810722
-../confusion-mdl/mdli -r SAVEFILE/ZORK.SAVE
+../confusion-mdl/mdli -r MDL/MADADV.SAVE
 ```
 
 ## Manual MDL Usage
@@ -136,7 +135,7 @@ If you want to work with the raw MDL files:
 
 ```bash
 cd mdlzork_810722
-../../confusion-mdl/mdli
+../confusion-mdl/mdli
 ```
 
 Then in the MDL interpreter:
@@ -151,7 +150,7 @@ Or to restore a save file:
 
 To start directly from a save file:
 ```bash
-../../confusion-mdl/mdli -r SAVEFILE/ZORK.SAVE
+../confusion-mdl/mdli -r MDL/MADADV.SAVE
 ```
 
 ## Project Structure
@@ -181,7 +180,6 @@ mdlzork/
 ├── mdlzork_810722/       # Zork 1981-07-22 (final MDL)
 ├── dungeon_3_2b/         # Fortran version
 ├── zork_285/             # ZIL version (June 1977)
-├── Makefile              # Build system
 └── Makefile              # Build system
 ```
 
@@ -191,7 +189,7 @@ mdlzork/
 1. **C/C++ Source** (confusion-mdl/) → Emscripten → **WASM**
 2. **GC Replacement**: Boehm GC → malloc/free stub (gc_stub.h)
 3. **Game Files**: 4 versions preloaded into 16MB .data file
-4. **Web App**: xterm.js terminal + IndexedDB saves + Service Worker
+4. **Web App**: xterm.js terminal + portable save files + Service Worker
 
 ### Deployment
 - **GitHub Actions** auto-builds on every push
@@ -237,14 +235,14 @@ sudo apt-get install libgc-dev
 - Clear site data and reload
 - Check browser supports Service Workers
 
-**Save/Load not working**
-- IndexedDB must be enabled in browser
-- Check browser storage settings
+**Save-file transfer not working**
+- Type `SAVE` before downloading so the browser sandbox contains current progress
+- Upload a compatible `.SAVE` file before typing `RESTORE`
 
 ## Make Targets Reference
 
 ### Main Targets
-- `make` - Default: build native interpreter + install deps
+- `make` - Default: build and serve the WASM application
 - `make build` - Build WASM version
 - `make run` - Build WASM and start test server
 - `make help` - Show all available targets
@@ -252,8 +250,6 @@ sudo apt-get install libgc-dev
 ### Native Targets
 - `make build-native` - Build native interpreter
 - `make run-native` - Run interactive CLI launcher
-- `make run-native-server` - Run web server
-- `make clean-native` - Clean native artifacts
 
 ### WASM Targets
 - `make wasm-deps` - Install Emscripten SDK

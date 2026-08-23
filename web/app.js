@@ -11,18 +11,17 @@ class ZorkGame {
         this.statusEl = document.getElementById('status');
         this.startBtn = document.getElementById('start-btn');
         this.versionSelect = document.getElementById('version-select');
-        this.saveBtn = document.getElementById('save-btn');
-        this.loadBtn = document.getElementById('load-btn');
         this.exportBtn = document.getElementById('export-btn');
         this.importBtn = document.getElementById('import-btn');
+        this.saveFileInput = document.getElementById('save-file-input');
 
         this.isReady = false;
         this.isRunning = false;
+        this.hasRun = false;
         this.inputBuffer = '';
         this.commandHistory = [];
         this.historyIndex = -1;
         this.currentGamePath = null;
-        this.db = null;
 
         // Game version mappings
         this.gameVersions = {
@@ -30,6 +29,7 @@ class ZorkGame {
                 name: 'Zork 1981-07-22 (Final MDL, 585 pts)',
                 path: '/game/mdlzork_810722',
                 saveFile: 'MDL/MADADV.SAVE',
+                userSaveFile: 'MTRZORK/ZORK.SAVE',
                 description: 'The final MDL version of Zork, split into three parts for Infocom.',
                 maxPoints: 585
             },
@@ -37,6 +37,7 @@ class ZorkGame {
                 name: 'Zork 1979-12-11 (616 pts)',
                 path: '/game/mdlzork_791211',
                 saveFile: 'MDL/MADADV.SAVE',
+                userSaveFile: 'MTRZORK/ZORK.SAVE',
                 description: 'The most complete single-file Zork with all puzzles and end-game.',
                 maxPoints: 616
             },
@@ -44,6 +45,7 @@ class ZorkGame {
                 name: 'Zork 1978-01-24 (Incomplete end-game)',
                 path: '/game/mdlzork_780124',
                 saveFile: 'MDL/MADADV.SAVE',
+                userSaveFile: 'SAVEFILE/ZORK.SAVE',
                 description: 'Early version with partial end-game implementation.',
                 maxPoints: null
             },
@@ -51,6 +53,7 @@ class ZorkGame {
                 name: 'Zork 1977-12-12 (500 pts, no end-game)',
                 path: '/game/mdlzork_771212',
                 saveFile: 'MDL/MADADV.SAVE',
+                userSaveFile: 'SAVEFILE/ZORK.SAVE',
                 description: 'The earliest surviving playable version of Zork.',
                 maxPoints: 500
             }
@@ -58,7 +61,6 @@ class ZorkGame {
 
         this.setupTerminal();
         this.setupEventListeners();
-        this.initIndexedDB();
     }
 
     setupTerminal() {
@@ -91,7 +93,8 @@ class ZorkGame {
             },
             cols: 80,
             rows: 24,
-            scrollback: 1000
+            scrollback: 1000,
+            screenReaderMode: true
         });
 
         this.fitAddon = new FitAddon.FitAddon();
@@ -119,54 +122,16 @@ class ZorkGame {
     }
 
     setupEventListeners() {
-        this.startBtn.addEventListener('click', () => this.startGame());
-        this.saveBtn.addEventListener('click', () => this.saveGame());
-        this.loadBtn.addEventListener('click', () => this.loadGame());
-        this.exportBtn.addEventListener('click', () => this.exportSave());
-        this.importBtn.addEventListener('click', () => this.importSave());
-    }
-
-    // Initialize IndexedDB for persistent storage
-    async initIndexedDB() {
-        try {
-            this.db = await new Promise((resolve, reject) => {
-                const request = indexedDB.open('ZorkSaveDB', 1);
-                request.onerror = () => reject(request.error);
-                request.onsuccess = () => resolve(request.result);
-                request.onupgradeneeded = (event) => {
-                    const db = event.target.result;
-                    if (!db.objectStoreNames.contains('saves')) {
-                        db.createObjectStore('saves', { keyPath: 'id' });
-                    }
-                };
-            });
-            console.log('IndexedDB initialized');
-        } catch (e) {
-            console.error('IndexedDB failed to open:', e);
-            this.terminal.writeln('\x1b[33m[Warning: Save/load features unavailable]\x1b[0m');
-        }
-    }
-
-    // Helper: run an IndexedDB transaction as a Promise
-    _idbTransaction(storeName, mode, callback) {
-        return new Promise((resolve, reject) => {
-            const tx = this.db.transaction([storeName], mode);
-            const store = tx.objectStore(storeName);
-            const result = callback(store);
-            tx.oncomplete = () => resolve(result);
-            tx.onerror = () => reject(tx.error);
+        this.startBtn.addEventListener('click', () => {
+            if (this.hasRun) {
+                window.location.reload();
+            } else {
+                this.startGame();
+            }
         });
-    }
-
-    // Helper: get all records from a store as a Promise
-    _idbGetAll(storeName) {
-        return new Promise((resolve, reject) => {
-            const tx = this.db.transaction([storeName], 'readonly');
-            const store = tx.objectStore(storeName);
-            const request = store.getAll();
-            request.onsuccess = () => resolve(request.result);
-            request.onerror = () => reject(request.error);
-        });
+        this.exportBtn.addEventListener('click', () => this.exportSaveFile());
+        this.importBtn.addEventListener('click', () => this.saveFileInput.click());
+        this.saveFileInput.addEventListener('change', (event) => this.importSaveFile(event));
     }
 
     updateStatus(message, type = 'info') {
@@ -182,7 +147,7 @@ class ZorkGame {
             this.terminal.write('^C\r\n');
             this.inputBuffer = '';
             if (this.isRunning) {
-                this.stopGame();
+                this.terminal.writeln('\x1b[33m[Use Restart to reset the interpreter safely.]\x1b[0m');
             }
             return;
         }
@@ -195,12 +160,12 @@ class ZorkGame {
             if (command) {
                 this.commandHistory.push(command);
                 this.historyIndex = this.commandHistory.length;
+            }
 
-                if (this.isRunning && this.module) {
-                    this.sendToStdin(command + '\n');
-                } else {
-                    this.terminal.writeln('\x1b[33m[Game not running. Click "Start Game" first.]\x1b[0m');
-                }
+            if (this.isRunning && this.module) {
+                this.sendToStdin(this.inputBuffer + '\n');
+            } else {
+                this.terminal.writeln('\x1b[33m[Game not running. Click "Start Game" first.]\x1b[0m');
             }
 
             this.inputBuffer = '';
@@ -315,6 +280,8 @@ class ZorkGame {
             this.updateStatus('Ready to start game', 'ready');
             this.startBtn.disabled = false;
             this.versionSelect.disabled = false;
+            this.exportBtn.disabled = false;
+            this.importBtn.disabled = false;
 
             this.terminal.writeln('\x1b[32mModule loaded successfully.\x1b[0m');
             this.terminal.writeln('');
@@ -329,7 +296,7 @@ class ZorkGame {
     }
 
     async startGame() {
-        if (!this.isReady || this.isRunning) return;
+        if (!this.isReady || this.isRunning || this.hasRun) return;
 
         const version = this.versionSelect.value;
         const gameInfo = this.gameVersions[version];
@@ -351,8 +318,7 @@ class ZorkGame {
         this.startBtn.disabled = true;
         this.versionSelect.disabled = true;
         this.isRunning = true;
-        this.saveBtn.disabled = false;
-        this.loadBtn.disabled = false;
+        this.hasRun = true;
         this.exportBtn.disabled = false;
         this.importBtn.disabled = false;
 
@@ -361,7 +327,7 @@ class ZorkGame {
             this.module.FS.chdir(gameInfo.path);
         } catch (e) {
             this.terminal.writeln('\x1b[31mError: Could not find game directory: ' + e.message + '\x1b[0m');
-            this.stopGame();
+            this.finishGame();
             return;
         }
 
@@ -371,7 +337,7 @@ class ZorkGame {
             this.module.FS.stat(saveFilePath);
         } catch (e) {
             this.terminal.writeln('\x1b[31mError: Save file not found: ' + saveFilePath + '\x1b[0m');
-            this.stopGame();
+            this.finishGame();
             return;
         }
 
@@ -381,10 +347,6 @@ class ZorkGame {
 
         // Call the WASM game starter (async: Asyncify suspends C code on stdin reads)
         try {
-            if (!this.module._mdl_start_game) {
-                throw new Error('mdl_start_game not available in WASM module');
-            }
-
             const result = await this.module.ccall(
                 'mdl_start_game', 'number',
                 ['string', 'string'], [gameInfo.path, gameInfo.saveFile],
@@ -393,189 +355,71 @@ class ZorkGame {
 
             if (result !== 0) {
                 let errorMsg = 'Unknown error';
-                if (this.module._mdl_get_last_error) {
-                    errorMsg = this.module.ccall('mdl_get_last_error', 'string', [], []);
-                }
+                errorMsg = this.module.ccall('mdl_get_last_error', 'string', [], []);
                 this.terminal.writeln(`\x1b[31mError starting game: ${errorMsg}\x1b[0m`);
             }
-            this.stopGame();
+            this.finishGame();
         } catch (mainError) {
             const errorMsg = mainError.message || mainError.toString();
             if (!errorMsg.includes('exit(0)')) {
                 console.error('Game error:', mainError);
                 this.terminal.writeln('\x1b[31mError: ' + errorMsg + '\x1b[0m');
             }
-            this.stopGame();
+            this.finishGame();
         }
     }
 
-    // Save game state to IndexedDB
-    async saveGame() {
-        if (!this.isRunning || !this.db) {
-            this.terminal.writeln('\x1b[33m[Cannot save - game not running or storage unavailable]\x1b[0m');
-            return;
-        }
-
-        try {
-            const version = this.versionSelect.value;
-            const timestamp = new Date().toISOString();
-
-            const saveData = {
-                id: `${version}_${Date.now()}`,
-                version: version,
-                timestamp: timestamp,
-                // TODO: Capture actual WASM filesystem state for full save/restore
-                fs: this.captureFilesystem()
-            };
-
-            await this._idbTransaction('saves', 'readwrite', (store) => {
-                store.put(saveData);
-            });
-
-            this.terminal.writeln(`\x1b[32mGame saved: ${timestamp}\x1b[0m`);
-        } catch (e) {
-            this.terminal.writeln(`\x1b[31mSave error: ${e.message}\x1b[0m`);
-        }
+    getUserSavePath() {
+        const gameInfo = this.gameVersions[this.versionSelect.value];
+        return `${gameInfo.path}/${gameInfo.userSaveFile}`;
     }
 
-    // Load game state from IndexedDB
-    async loadGame() {
-        if (!this.db) {
-            this.terminal.writeln('\x1b[33m[Storage unavailable]\x1b[0m');
-            return;
-        }
-
+    exportSaveFile() {
         try {
-            const version = this.versionSelect.value;
-            const allSaves = await this._idbGetAll('saves');
-            const saves = allSaves
-                .filter(s => s.version === version)
-                .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-            if (saves.length === 0) {
-                this.terminal.writeln('\x1b[33m[No saved games found for this version]\x1b[0m');
-                return;
-            }
-
-            const saveData = saves[0];
-            this.restoreFilesystem(saveData.fs);
-            this.terminal.writeln(`\x1b[32mGame loaded: ${saveData.timestamp}\x1b[0m`);
-        } catch (e) {
-            this.terminal.writeln(`\x1b[31mLoad error: ${e.message}\x1b[0m`);
-        }
-    }
-
-    // Export save to file
-    async exportSave() {
-        if (!this.db) {
-            this.terminal.writeln('\x1b[33m[Storage unavailable]\x1b[0m');
-            return;
-        }
-
-        try {
-            const version = this.versionSelect.value;
-            const allSaves = await this._idbGetAll('saves');
-            const saves = allSaves
-                .filter(s => s.version === version)
-                .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-            if (saves.length === 0) {
-                this.terminal.writeln('\x1b[33m[No saved games to export]\x1b[0m');
-                return;
-            }
-
-            const saveData = saves[0];
-            const blob = new Blob([JSON.stringify(saveData, null, 2)], { type: 'application/json' });
+            const data = this.module.FS.readFile(this.getUserSavePath());
+            const blob = new Blob([data], { type: 'application/octet-stream' });
             const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `zork_${version}_${saveData.timestamp.replace(/[:.]/g, '-')}.json`;
-            a.click();
-            URL.revokeObjectURL(url);
-
-            this.terminal.writeln('\x1b[32mSave exported\x1b[0m');
-        } catch (e) {
-            this.terminal.writeln(`\x1b[31mExport error: ${e.message}\x1b[0m`);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${this.versionSelect.value}-${new Date().toISOString().replace(/[:.]/g, '-')}.SAVE`;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 0);
+            this.terminal.writeln('\x1b[32m[Save file downloaded. Type SAVE in the game first to capture current progress.]\x1b[0m');
+        } catch (error) {
+            this.terminal.writeln(`\x1b[31m[Could not download save file: ${error.message}]\x1b[0m`);
         }
     }
 
-    // Import save from file
-    async importSave() {
-        if (!this.db) {
-            this.terminal.writeln('\x1b[33m[Storage unavailable]\x1b[0m');
+    async importSaveFile(event) {
+        const file = event.target.files[0];
+        event.target.value = '';
+        if (!file) return;
+
+        if (file.size < 100 || file.size > 16 * 1024 * 1024) {
+            this.terminal.writeln('\x1b[31m[Invalid save file size.]\x1b[0m');
             return;
         }
 
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = '.json';
-
-        input.onchange = async (e) => {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            try {
-                const text = await file.text();
-                const saveData = JSON.parse(text);
-
-                if (!saveData.id || !saveData.version || !saveData.timestamp) {
-                    this.terminal.writeln('\x1b[31mInvalid save file format\x1b[0m');
-                    return;
-                }
-
-                saveData.id = `${saveData.version}_${Date.now()}_imported`;
-
-                await this._idbTransaction('saves', 'readwrite', (store) => {
-                    store.put(saveData);
-                });
-
-                this.terminal.writeln(`\x1b[32mSave imported: ${saveData.timestamp}\x1b[0m`);
-            } catch (e) {
-                this.terminal.writeln(`\x1b[31mImport error: ${e.message}\x1b[0m`);
-            }
-        };
-
-        input.click();
-    }
-
-    // TODO: Implement full WASM filesystem state capture for save/restore
-    captureFilesystem() {
-        if (!this.module || !this.module.FS) return null;
         try {
-            return {
-                cwd: this.module.FS.cwd(),
-                timestamp: Date.now()
-            };
-        } catch (e) {
-            console.error('Filesystem capture error:', e);
-            return null;
+            const data = new Uint8Array(await file.arrayBuffer());
+            this.module.FS.writeFile(this.getUserSavePath(), data);
+            this.terminal.writeln('\x1b[32m[Save file uploaded. Type RESTORE in the game to load it.]\x1b[0m');
+        } catch (error) {
+            this.terminal.writeln(`\x1b[31m[Could not upload save file: ${error.message}]\x1b[0m`);
         }
     }
 
-    // TODO: Implement full WASM filesystem state restore from saved data
-    restoreFilesystem(fsData) {
-        if (!this.module || !this.module.FS || !fsData) return;
-        try {
-            if (fsData.cwd) {
-                this.module.FS.chdir(fsData.cwd);
-            }
-        } catch (e) {
-            console.error('Filesystem restore error:', e);
-        }
-    }
-
-    stopGame() {
+    finishGame() {
         this.isRunning = false;
         this.startBtn.disabled = false;
-        this.versionSelect.disabled = false;
-        this.saveBtn.disabled = true;
-        this.loadBtn.disabled = true;
-        this.exportBtn.disabled = true;
+        this.startBtn.textContent = 'Restart';
         this.importBtn.disabled = true;
 
-        this.updateStatus('Game stopped', 'ready');
+        this.updateStatus('Game ended', 'ready');
         this.terminal.writeln('');
-        this.terminal.writeln('\x1b[33m[Game ended. Select a version to play again.]\x1b[0m');
+        this.terminal.writeln('\x1b[33m[Game ended. Restart to create a fresh interpreter.]\x1b[0m');
     }
 }
 

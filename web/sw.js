@@ -4,7 +4,8 @@
  */
 
 const CACHE_NAME = 'mdlzork-v2.0.0';
-const RUNTIME_CACHE = 'mdlzork-runtime';
+const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
+const CACHE_PREFIX = 'mdlzork-';
 
 // Assets to cache on install (relative paths for GitHub Pages compatibility)
 const PRECACHE_ASSETS = [
@@ -15,7 +16,15 @@ const PRECACHE_ASSETS = [
     './manifest.json',
     './icon.svg',
     './offline.html',
-    // xterm.js from CDN
+    './icons/icon-192.png',
+    './icons/icon-512.png',
+    './icons/icon-maskable-512.png',
+    './mdli.js',
+    './mdli.wasm',
+    './mdli.data'
+];
+
+const OPTIONAL_ASSETS = [
     'https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js',
     'https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css',
     'https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js'
@@ -29,9 +38,10 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME).then((cache) => {
             console.log('[SW] Caching app shell');
             return cache.addAll(PRECACHE_ASSETS);
-        }).then(() => {
+        }).then(async () => {
+            const cache = await caches.open(CACHE_NAME);
+            await Promise.allSettled(OPTIONAL_ASSETS.map((asset) => cache.add(asset)));
             console.log('[SW] Installation complete');
-            return self.skipWaiting();
         })
     );
 });
@@ -44,7 +54,9 @@ self.addEventListener('activate', (event) => {
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheName !== CACHE_NAME) {
+                    if (cacheName.startsWith(CACHE_PREFIX) &&
+                        cacheName !== CACHE_NAME &&
+                        cacheName !== RUNTIME_CACHE) {
                         console.log('[SW] Deleting old cache:', cacheName);
                         return caches.delete(cacheName);
                     }
@@ -63,7 +75,7 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(request.url);
 
     // Skip cross-origin requests we don't control
-    if (url.origin !== location.origin && !url.hostname.includes('cdn.jsdelivr.net')) {
+    if (url.origin !== location.origin && url.origin !== 'https://cdn.jsdelivr.net') {
         return;
     }
 
@@ -73,10 +85,11 @@ self.addEventListener('fetch', (event) => {
         event.respondWith(
             fetch(request)
                 .then((response) => {
+                    if (!response.ok) {
+                        return response;
+                    }
                     const responseClone = response.clone();
-                    caches.open(RUNTIME_CACHE).then((cache) => {
-                        cache.put(request, responseClone);
-                    });
+                    event.waitUntil(caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseClone)));
                     return response;
                 })
                 .catch(() => {
@@ -102,11 +115,9 @@ self.addEventListener('fetch', (event) => {
                 }
 
                 return fetch(request).then((response) => {
-                    if (response.status === 200) {
+                    if (response.ok) {
                         const responseClone = response.clone();
-                        caches.open(RUNTIME_CACHE).then((cache) => {
-                            cache.put(request, responseClone);
-                        });
+                        event.waitUntil(caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseClone)));
                     }
                     return response;
                 });
@@ -123,11 +134,9 @@ self.addEventListener('fetch', (event) => {
             }
 
             return fetch(request).then((response) => {
-                if (request.method === 'GET' && response.status === 200) {
+                if (request.method === 'GET' && response.ok) {
                     const responseClone = response.clone();
-                    caches.open(RUNTIME_CACHE).then((cache) => {
-                        cache.put(request, responseClone);
-                    });
+                    event.waitUntil(caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseClone)));
                 }
                 return response;
             });
@@ -145,10 +154,14 @@ self.addEventListener('message', (event) => {
         event.waitUntil(
             caches.keys().then((cacheNames) => {
                 return Promise.all(
-                    cacheNames.map((cacheName) => caches.delete(cacheName))
+                    cacheNames
+                        .filter((cacheName) => cacheName.startsWith(CACHE_PREFIX))
+                        .map((cacheName) => caches.delete(cacheName))
                 );
             }).then(() => {
-                event.ports[0].postMessage({ success: true });
+                if (event.ports[0]) {
+                    event.ports[0].postMessage({ success: true });
+                }
             })
         );
     }

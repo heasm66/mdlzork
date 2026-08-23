@@ -5,6 +5,7 @@
 
 # Local test server port
 SERVER_PORT := 8000
+EMSDK_VERSION := 4.0.20
 
 # Interpreter paths
 CONFUSION_DIR := confusion-mdl
@@ -17,9 +18,15 @@ CONFUSION_INTERPRETER := $(CONFUSION_DIR)/mdli
 # Check if submodules are initialized, initialize if necessary
 check-submodules:
 	@if [ ! -f "$(CONFUSION_DIR)/Makefile" ]; then \
-		echo "⚠️  Submodules not initialized. Running 'git submodule update --init --recursive'..."; \
-		git submodule update --init --recursive; \
-		echo "✅ Submodules initialized"; \
+		echo "Submodules are not initialized; run 'git submodule update --init --recursive'"; \
+		exit 1; \
+	fi
+	@EXPECTED=$$(git ls-files --stage $(CONFUSION_DIR) | cut -d' ' -f2); \
+	ACTUAL=$$(git -C $(CONFUSION_DIR) rev-parse HEAD); \
+	if [ "$$EXPECTED" != "$$ACTUAL" ]; then \
+		echo "$(CONFUSION_DIR) is at $$ACTUAL, expected $$EXPECTED"; \
+		echo "Run 'git submodule update --init --recursive'"; \
+		exit 1; \
 	fi
 
 # Check if required dependencies are installed
@@ -36,7 +43,7 @@ check-deps:
 	fi; \
 	GC_FOUND=0; \
 	if command -v pkg-config >/dev/null 2>&1; then \
-		if pkg-config --exists bdw-gc 2>/dev/null; then \
+		if pkg-config --exists bdw-gc 2>/dev/null || pkg-config --exists gc 2>/dev/null; then \
 			GC_FOUND=1; \
 		fi; \
 	fi; \
@@ -189,17 +196,17 @@ build-native: interpreter
 	@echo "✅ Native interpreter built!"
 	@echo ""
 	@echo "Usage:"
-	@echo "  make run-native mdlzork_810722"
-	@echo "  make run-native mdlzork_810722 MDL/MADADV.SAVE"
+	@echo "  make run-native GAME=mdlzork_810722"
+	@echo "  make run-native GAME=mdlzork_810722 SAVE=MDL/MADADV.SAVE"
 
 # Run native CLI version (compiled executable)
-# Usage: make run-native <game-name> [save-file]
-# Example: make run-native mdlzork_810722
-# Example: make run-native mdlzork_810722 MDL/MADADV.SAVE
+# Usage: make run-native GAME=<game-name> [SAVE=<save-file>]
+# Example: make run-native GAME=mdlzork_810722
+# Example: make run-native GAME=mdlzork_810722 SAVE=MDL/MADADV.SAVE
 run-native: interpreter
-	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
+	@if [ -z "$(GAME)" ]; then \
 		echo ""; \
-		echo "Usage: make run-native <game-name> [save-file]"; \
+		echo "Usage: make run-native GAME=<game-name> [SAVE=<save-file>]"; \
 		echo ""; \
 		echo "Available games:"; \
 		echo "  - mdlzork_771212  (Zork 1977-12-12, 500 pts)"; \
@@ -211,15 +218,15 @@ run-native: interpreter
 		echo "  - mdlzork_780402  (source only, no save files)"; \
 		echo ""; \
 		echo "Examples:"; \
-		echo "  make run-native mdlzork_810722"; \
-		echo "  make run-native mdlzork_810722 MDL/MADADV.SAVE"; \
+		echo "  make run-native GAME=mdlzork_810722"; \
+		echo "  make run-native GAME=mdlzork_810722 SAVE=MDL/MADADV.SAVE"; \
 		echo ""; \
 		echo "Note: A save file is REQUIRED to bootstrap the game."; \
 		echo "      Default is MDL/MADADV.SAVE if not specified."; \
 		exit 1; \
 	fi
-	@GAME_NAME=$(word 2,$(MAKECMDGOALS)); \
-	SAVE_FILE=$(word 3,$(MAKECMDGOALS)); \
+	@GAME_NAME="$(GAME)"; \
+	SAVE_FILE="$(SAVE)"; \
 	if [ ! -d "$$GAME_NAME" ]; then \
 		echo "Error: Game directory '$$GAME_NAME' not found"; \
 		echo "Available games: mdlzork_771212 mdlzork_780124 mdlzork_791211 mdlzork_810722"; \
@@ -240,10 +247,14 @@ run-native: interpreter
 validate: interpreter
 	@echo "Validating save files..."
 	@FAILURES=0; \
+	TIMEOUT_CMD=""; \
+	if command -v timeout >/dev/null 2>&1; then TIMEOUT_CMD="timeout 5"; \
+	elif command -v gtimeout >/dev/null 2>&1; then TIMEOUT_CMD="gtimeout 5"; \
+	else echo "Install GNU coreutils to provide timeout/gtimeout"; exit 1; fi; \
 	for game in mdlzork_771212 mdlzork_780124 mdlzork_791211 mdlzork_810722; do \
 		if [ -d "$$game" ] && [ -f "$$game/MDL/MADADV.SAVE" ]; then \
-			echo -n "  $$game/MDL/MADADV.SAVE ... "; \
-			if timeout 5 sh -c "cd $$game && echo 'QUIT' | ../confusion-mdl/mdli -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
+			printf "  %s/MDL/MADADV.SAVE ... " "$$game"; \
+			if $$TIMEOUT_CMD sh -c "cd $$game && printf 'QUIT\\n' | ../confusion-mdl/mdli -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
 				echo "✅ OK"; \
 			else \
 				echo "❌ FAILED"; \
@@ -267,13 +278,6 @@ interpreter: check-submodules check-deps $(CONFUSION_INTERPRETER)
 
 $(CONFUSION_INTERPRETER): check-submodules check-deps
 	@echo "Building MDL interpreter..."
-	@# Patch Makefile to use pkg-config for GC (Linux/macOS compatibility)
-	@if ! grep -q "pkg-config" $(CONFUSION_DIR)/Makefile; then \
-		echo "Patching confusion-mdl Makefile for pkg-config support..."; \
-		sed -i.bak 's|^LIBS = -lgc -lgccpp|GC_CFLAGS := $$(shell pkg-config --cflags bdw-gc 2>/dev/null \|\| echo "-I/opt/homebrew/include")\nGC_LIBS := $$(shell pkg-config --libs bdw-gc 2>/dev/null \|\| echo "-L/opt/homebrew/lib -lgc")\nLIBS = $$(GC_LIBS) -lgccpp|' $(CONFUSION_DIR)/Makefile; \
-		sed -i.bak 's|^CFLAGS = \(.*\)|CFLAGS = \1 $$(GC_CFLAGS)|' $(CONFUSION_DIR)/Makefile; \
-		sed -i.bak 's|^CXXFLAGS = \(.*\)|CXXFLAGS = \1 $$(GC_CFLAGS)|' $(CONFUSION_DIR)/Makefile; \
-	fi
 	$(MAKE) -C $(CONFUSION_DIR)
 
 # Clean build artifacts and temporary files
@@ -307,8 +311,8 @@ $(EMSDK_DIR):
 
 $(EMSDK_ACTIVATE): $(EMSDK_DIR)
 	@echo "Setting up Emscripten SDK..."
-	cd $(EMSDK_DIR) && ./emsdk install latest
-	cd $(EMSDK_DIR) && ./emsdk activate latest
+	cd $(EMSDK_DIR) && ./emsdk install $(EMSDK_VERSION)
+	cd $(EMSDK_DIR) && ./emsdk activate $(EMSDK_VERSION)
 	@echo "✅ Emscripten SDK installed and activated"
 	@echo ""
 	@echo "⚠️  IMPORTANT: Run 'source $(EMSDK_ACTIVATE)' in your shell before building"
@@ -338,6 +342,13 @@ check-emscripten:
 wasm-build: check-submodules wasm-deps
 	@echo "Building WASM interpreter..."
 	@echo "Sourcing Emscripten environment..."
+	@for save in \
+		mdlzork_771212/MDL/MADADV.SAVE \
+		mdlzork_780124/MDL/MADADV.SAVE \
+		mdlzork_791211/MDL/MADADV.SAVE \
+		mdlzork_810722/MDL/MADADV.SAVE; do \
+		if [ ! -f "$$save" ]; then echo "Missing required game file: $$save"; exit 1; fi; \
+	done
 	@GAME_DIRS=""; \
 	for game in mdlzork_771212 mdlzork_780124 mdlzork_791211 mdlzork_810722; do \
 		if [ -d "$$game" ]; then \
@@ -351,17 +362,15 @@ wasm-build: check-submodules wasm-deps
 		exit 1; \
 	fi
 	@echo "Verifying WASM build..."
-	@if [ ! -f $(WASM_BUILD_DIR)/mdli.js ] || [ ! -f $(WASM_BUILD_DIR)/mdli.wasm ]; then \
-		echo "❌ WASM build failed - mdli.js or mdli.wasm not found in $(WASM_BUILD_DIR)"; \
+	@if [ ! -f $(WASM_BUILD_DIR)/mdli.js ] || [ ! -f $(WASM_BUILD_DIR)/mdli.wasm ] || [ ! -f $(WASM_BUILD_DIR)/mdli.data ]; then \
+		echo "❌ WASM build failed - mdli.js, mdli.wasm, or mdli.data not found in $(WASM_BUILD_DIR)"; \
 		exit 1; \
 	fi
 	@echo "Assembling web application in $(WEB_BUILD_DIR)/..."
 	@mkdir -p $(WEB_BUILD_DIR)
 	@cp -r web/* $(WEB_BUILD_DIR)/
 	@cp $(WASM_BUILD_DIR)/mdli.js $(WASM_BUILD_DIR)/mdli.wasm $(WEB_BUILD_DIR)/
-	@if [ -f $(WASM_BUILD_DIR)/mdli.data ]; then \
-		cp $(WASM_BUILD_DIR)/mdli.data $(WEB_BUILD_DIR)/; \
-	fi
+	@cp $(WASM_BUILD_DIR)/mdli.data $(WEB_BUILD_DIR)/
 	@echo "✅ Web application assembled in $(WEB_BUILD_DIR)/"
 
 # Serve WASM build for testing
@@ -467,8 +476,4 @@ help:
 	@echo "Quick Start:"
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	@echo "  Browser:  make run"
-	@echo "  Native:   make build-native && make run-native mdlzork_810722"
-
-# Catch-all for game directory names used as make targets
-mdlzork_%:
-	@true
+	@echo "  Native:   make build-native && make run-native GAME=mdlzork_810722"

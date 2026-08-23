@@ -1,85 +1,36 @@
-# MDL Zork - Web Application
+# MDL Zork Web Application
 
-This directory contains the static web application for MDL Zork, compiled to WebAssembly.
+This directory contains the source assets for the WebAssembly Progressive Web App. Generated interpreter files are assembled with these assets in `build/web/`.
 
-## Quick Start
+## Run Locally
 
-1. **Build the WASM files** (if not already built):
-   ```bash
-   cd ..
-   make wasm-build
-   ```
+From the repository root:
 
-2. **Start local server**:
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-3. **Open in browser**:
-   ```
-   http://localhost:8000/web/
-   ```
-
-4. **Hard refresh** to clear cache:
-   - Mac: `Cmd + Shift + R`
-   - Windows/Linux: `Ctrl + Shift + R`
-
-## Files
-
-- `index.html` - Main application page
-- `app.js` - Game interface and WASM integration
-- `style.css` - Terminal styling
-- `manifest.json` - PWA manifest
-- `sw.js` - Service worker for offline support
-- `icon.svg` - App icon (SVG)
-- `icons/` - Generated PNG icons for PWA
-- `mdli.js` - Emscripten JavaScript glue code (generated)
-- `mdli.wasm` - WebAssembly binary (generated)
-- `mdli.data` - Preloaded game files (generated)
-
-## Current Status
-
-**✅ Working:**
-- WASM compilation and loading
-- File system with embedded game data
-- Save file loading
-- Game initialization and display
-- Terminal emulation with xterm.js
-- PWA manifest and icons
-
-**⚠️ Known Limitation:**
-- Interactive gameplay requires modifying the MDL interpreter C source code
-- The game successfully loads and displays the starting location
-- User input triggers EOF due to blocking I/O in the interpreter
-
-See `../WASM_STATUS.md` for technical details and solutions.
-
-## What You'll See
-
-When you load the game:
-```
-Welcome to 'Confusion', a MDL interpreter.
-...
-West of House
-This is an open field west of a white house, with a boarded front door.
-There is a small mailbox here.
-A rubber mat saying 'Welcome to Zork!' lies by the door.
-
-[Limitation message explaining the stdin issue]
-```
-
-This demonstrates that ~90% of the WASM migration is complete. The remaining work requires modifying the C code to use non-blocking I/O.
-
-## Development
-
-To rebuild after changes:
 ```bash
-cd ..
-make clean-wasm && make wasm-build
+make run
 ```
 
-Files are automatically copied to this directory by the build system.
+Open `http://localhost:8000/`. The build pins Emscripten and preloads all four playable game versions.
 
-## Deployment
+## Save Files
 
-For GitHub Pages deployment, these files can be served as-is. The application is fully static with no server dependencies.
+The games write native Confusion save files inside Emscripten's in-memory filesystem:
+
+1. Type `SAVE` in the game.
+2. Click **Download Save File** to export the resulting `.SAVE` file to the host.
+3. In a later session, click **Upload Save File** and select that file.
+4. Type `RESTORE` in the game.
+
+Save files are version-specific. Upload a save into the same game version that created it.
+
+## Source Files
+
+- `index.html` - Application shell
+- `app.js` - Terminal and WebAssembly integration
+- `style.css` - Responsive terminal styling
+- `manifest.json` - Install metadata
+- `sw.js` - Offline cache and update lifecycle
+- `offline.html` - Navigation fallback
+- `icon.svg` and `icons/` - Application icons
+
+`mdli.js`, `mdli.wasm`, and `mdli.data` are generated under `build/` and are not source files.

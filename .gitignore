@@ -33,3 +33,8 @@ confusion-mdl/mdl_builtins.cpp
 confusion-mdl/mdl_builtins.h
 confusion-mdl/mdl_builtin_types.cpp
 confusion-mdl/mdl_builtin_types.h
+
+# Legacy in-tree web build output
+web/mdli.js
+web/mdli.wasm
+web/mdli.data

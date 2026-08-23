@@ -11,6 +11,7 @@ body {
     background-color: #0a0a0a;
     color: #33ff33;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -71,6 +72,7 @@ select, button {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.2s;
+    min-height: 44px;
 }
 
 select:hover, button:hover:not(:disabled) {
@@ -78,8 +80,9 @@ select:hover, button:hover:not(:disabled) {
     box-shadow: 0 0 5px #33ff33;
 }
 
-select:focus, button:focus {
-    outline: none;
+select:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 2px solid #66ff66;
+    outline-offset: 2px;
     border-color: #66ff66;
     box-shadow: 0 0 10px #33ff33;
 }
@@ -193,6 +196,10 @@ button:disabled {
         font-size: 12px;
     }
 
+    #terminal-container {
+        min-height: 55dvh;
+    }
+
     #controls {
         flex-direction: column;
     }
@@ -203,6 +210,14 @@ button:disabled {
 
     select, button {
         width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

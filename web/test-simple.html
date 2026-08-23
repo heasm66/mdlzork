@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDL Zork - WASM Test</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #33ff33;
+        }
+        h1 {
+            text-align: center;
+            color: #33ff33;
+        }
+        #status {
+            padding: 10px;
+            border: 1px solid #33ff33;
+            margin: 20px 0;
+            min-height: 50px;
+        }
+        .error {
+            color: #ff3333;
+        }
+        .success {
+            color: #33ff33;
+        }
+        #console {
+            background-color: #000;
+            border: 1px solid #33ff33;
+            padding: 10px;
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MDL Zork WASM - Simple Test</h1>
+    
+    <div id="status">Loading WASM module...</div>
+    <div id="console"></div>
+    
+    <script src="../confusion-mdl/mdli.js"></script>
+    <script>
+        const statusEl = document.getElementById('status');
+        const consoleEl = document.getElementById('console');
+        
+        function log(message, type = 'info') {
+            const line = document.createElement('div');
+            line.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            line.className = type;
+            consoleEl.appendChild(line);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+        
+        log('Starting WASM load...');
+        
+        createMDLI({
+            print: function(text) {
+                log('STDOUT: ' + text);
+            },
+            printErr: function(text) {
+                log('STDERR: ' + text, 'error');
+            },
+            onRuntimeInitialized: function() {
+                log('Runtime initialized!', 'success');
+                statusEl.innerHTML = '<span class="success">✓ WASM Module Loaded Successfully!</span>';
+                log('Module object available', 'success');
+                log('Exported functions: ' + Object.keys(this).filter(k => typeof this[k] === 'function').slice(0, 10).join(', '));
+            }
+        }).then(function(Module) {
+            window.MDLModule = Module;
+            log('Module stored in window.MDLModule', 'success');
+            log('Filesystem available: ' + (typeof Module.FS !== 'undefined'), 'success');
+            
+            // Try listing game files
+            try {
+                if (Module.FS) {
+                    log('Checking for /game directory...', 'info');
+                    const gameDirs = Module.FS.readdir('/game');
+                    log('Game files found: ' + gameDirs.join(', '), 'success');
+                }
+            } catch(e) {
+                log('Error checking game files: ' + e.message, 'error');
+            }
+            
+        }).catch(function(err) {
+            log('FATAL ERROR: ' + err, 'error');
+            statusEl.innerHTML = '<span class="error">✗ Failed to load WASM module</span>';
+            console.error(err);
+        });
+    </script>
+</body>
+</html>

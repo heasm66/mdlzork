@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play the original mainframe Zork games from 1977-1981 in your browser">
+    <title>MDL Zork - Original Mainframe Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#33ff33">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MDL Zork">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    
+    <!-- xterm.js terminal emulator -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css">
+</head>
+<body>
+    <header>
+        <h1>⚔️ MDL ZORK ⚔️</h1>
+        <div class="subtitle">Original Mainframe Adventure Games (1977-1981)</div>
+    </header>
+
+    <main>
+        <div id="controls">
+            <div class="control-group">
+                <select id="version-select" disabled>
+                    <option value="zork-810722">Zork 1981-07-22 (Final MDL, 585 pts)</option>
+                    <option value="zork-791211">Zork 1979-12-11 (616 pts)</option>
+                    <option value="zork-780124">Zork 1978-01-24 (Incomplete end-game)</option>
+                    <option value="zork-771212">Zork 1977-12-12 (500 pts, no end-game)</option>
+                </select>
+                <button id="start-btn" disabled>Start Game</button>
+            </div>
+            <div class="control-group">
+                <button id="save-btn" disabled>Save Game</button>
+                <button id="load-btn" disabled>Load Game</button>
+                <button id="export-btn" disabled>Export Save</button>
+                <button id="import-btn" disabled>Import Save</button>
+            </div>
+        </div>
+
+        <div id="status" class="loading">
+            Initializing...
+        </div>
+
+        <div id="terminal-container">
+            <div id="terminal"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Original Zork by Tim Anderson, Marc Blank, Bruce Daniels & Dave Lebling (1977-1981) |
+            <a href="https://github.com/jordanhubbard/mdlzork" target="_blank">Source Code</a>
+        </p>
+    </footer>
+
+    <!-- Load xterm.js and addons -->
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+    
+    <!-- Load WASM module and game interface -->
+    <script src="mdli.js?v=12"></script>
+    <script src="app.js?v=12"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => {
+                        console.log('ServiceWorker registered:', registration.scope);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    if (confirm('New version available! Reload to update?')) {
+                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.warn('ServiceWorker registration failed:', error);
+                    });
+            });
+            
+            // Handle service worker updates
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (!refreshing) {
+                    refreshing = true;
+                    window.location.reload();
+                }
+            });
+        }
+        
+        // Install prompt for PWA
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install button or notification
+            console.log('PWA install prompt available');
+            
+            // You could show an install button here
+            // For now, we'll let the browser handle it naturally
+        });
+        
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully');
+            deferredPrompt = null;
+        });
+    </script>
+</body>
+</html>

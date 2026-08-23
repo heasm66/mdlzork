@@ -1,0 +1,35 @@
+# Build artifacts
+build/
+wasm-build/
+releases/
+emsdk/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Confusion generated sources (needed by native build, stay in-tree)
+confusion-mdl/*.o
+confusion-mdl/copying.c
+confusion-mdl/mdl_builtins.cpp
+confusion-mdl/mdl_builtins.h
+confusion-mdl/mdl_builtin_types.cpp
+confusion-mdl/mdl_builtin_types.h

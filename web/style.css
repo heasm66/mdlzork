@@ -1,0 +1,225 @@
+/* MDL Zork - Retro Terminal Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Courier', monospace;
+    background-color: #0a0a0a;
+    color: #33ff33;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #33ff33;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #33ff33;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #99ff99;
+    margin-top: 5px;
+}
+
+/* Main container */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Controls */
+#controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+select, button {
+    background-color: #1a1a1a;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    padding: 8px 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+select:hover, button:hover:not(:disabled) {
+    background-color: #2a2a2a;
+    box-shadow: 0 0 5px #33ff33;
+}
+
+select:focus, button:focus {
+    outline: none;
+    border-color: #66ff66;
+    box-shadow: 0 0 10px #33ff33;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Status bar */
+#status {
+    background-color: #1a1a1a;
+    border: 1px solid #33ff33;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#status.loading {
+    color: #ffff33;
+}
+
+#status.ready {
+    color: #33ff33;
+}
+
+#status.error {
+    color: #ff3333;
+    border-color: #ff3333;
+}
+
+/* Terminal container */
+#terminal-container {
+    flex: 1;
+    background-color: #000;
+    border: 2px solid #33ff33;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    box-shadow:
+        inset 0 0 20px rgba(51, 255, 51, 0.1),
+        0 0 15px rgba(51, 255, 51, 0.15),
+        0 0 30px rgba(51, 255, 51, 0.05);
+    position: relative;
+}
+
+/* xterm.js terminal */
+#terminal {
+    flex: 1;
+    height: 100%;
+}
+
+/* Override xterm.js default styles to match our theme */
+#terminal .xterm {
+    height: 100%;
+    padding: 5px;
+}
+
+#terminal .xterm-viewport {
+    background-color: #000 !important;
+}
+
+#terminal .xterm-screen {
+    background-color: #000 !important;
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #33ff33;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* CRT effect (optional) */
+@media (min-width: 768px) {
+    #terminal-container::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #terminal {
+        font-size: 12px;
+    }
+
+    #controls {
+        flex-direction: column;
+    }
+
+    .control-group {
+        width: 100%;
+    }
+
+    select, button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid #333;
+}
+
+footer a {
+    color: #33ff33;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDL Zork - Offline</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0a;
+            color: #33ff33;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #33ff33;
+        }
+        
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .error-code {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            opacity: 0.5;
+        }
+        
+        button {
+            background-color: #1a1a1a;
+            color: #33ff33;
+            border: 2px solid #33ff33;
+            padding: 12px 24px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background-color: #2a2a2a;
+            box-shadow: 0 0 10px #33ff33;
+        }
+        
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">📡</div>
+    <div class="error-code">OFFLINE</div>
+    <h1>Connection Lost</h1>
+    <p>
+        It looks like you're offline. MDL Zork requires an internet connection
+        for the initial load, but once cached, you can play offline.
+    </p>
+    <p>
+        Please check your connection and try again.
+    </p>
+    <button onclick="window.location.reload()">Retry Connection</button>
+    <button onclick="window.history.back()">Go Back</button>
+</body>
+</html>

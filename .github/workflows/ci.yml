@@ -1,0 +1,130 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  native-build:
+    name: Native Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install build dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libgc-dev pkg-config
+
+      - name: Install build dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install bdw-gc
+
+      - name: Build native interpreter
+        run: make build-native
+
+      - name: Verify native interpreter
+        run: |
+          test -f confusion-mdl/mdli || exit 1
+          echo "✓ Native interpreter built successfully"
+          ./confusion-mdl/mdli --version 2>&1 || echo "✓ Binary exists and runs"
+
+  wasm-build:
+    name: WASM Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Cache Emscripten SDK
+        uses: actions/cache@v4
+        with:
+          path: emsdk
+          key: ${{ runner.os }}-emsdk-latest
+          restore-keys: |
+            ${{ runner.os }}-emsdk-
+
+      - name: Setup Emscripten
+        run: |
+          if [ ! -d "emsdk" ]; then
+            git clone https://github.com/emscripten-core/emsdk.git
+          fi
+          cd emsdk
+          ./emsdk install latest
+          ./emsdk activate latest
+
+      - name: Build WASM
+        run: make build
+
+      - name: Verify build artifacts
+        run: |
+          echo "Checking for required build artifacts..."
+          test -f build/wasm/mdli.js && echo "✓ mdli.js exists" || exit 1
+          test -f build/wasm/mdli.wasm && echo "✓ mdli.wasm exists" || exit 1
+          test -f build/web/index.html && echo "✓ web app assembled" || exit 1
+
+          echo ""
+          echo "File sizes:"
+          ls -lh build/wasm/mdli.js build/wasm/mdli.wasm
+
+          echo ""
+          echo "✓ WASM build successful!"
+
+      - name: Prepare deployment directory
+        run: |
+          CACHE_VERSION=$(git rev-parse --short HEAD)
+          # Copy assembled web app to deploy directory
+          cp -r build/web deploy
+          # Update cache-busting versions with git SHA (in deploy dir only)
+          sed -i "s|mdli.js?v=[0-9]*|mdli.js?v=${CACHE_VERSION}|g" deploy/index.html
+          sed -i "s|app.js?v=[0-9]*|app.js?v=${CACHE_VERSION}|g" deploy/index.html
+          # Update service worker cache name with git SHA
+          sed -i "s|mdlzork-v[0-9.]*|mdlzork-v${CACHE_VERSION}|" deploy/sw.js
+          # Create .nojekyll to prevent GitHub Pages from processing
+          touch deploy/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./deploy
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    needs: [native-build, wasm-build]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

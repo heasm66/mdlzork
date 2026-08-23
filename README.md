@@ -1,48 +1,45 @@
-# MDL Zork - Original Mainframe Zork Collection
+# MDL Zork: Original Mainframe Zork Collection
 
 [![CI](https://github.com/jordanhubbard/mdlzork/actions/workflows/ci.yml/badge.svg)](https://github.com/jordanhubbard/mdlzork/actions/workflows/ci.yml)
 
-Play the original mainframe Zork games written in MDL (MIT Design Language) from 1977-1981, compiled to WebAssembly and running entirely in your browser as a Progressive Web App.
+Play the original mainframe Zork games written in MDL (MIT Design Language) from 1977-1981. The four playable versions run either in a native terminal or entirely in a browser through WebAssembly.
 
-🎮 **Play Online**: https://jordanhubbard.github.io/mdlzork _(auto-deployed from master)_
+**Play online:** https://jordanhubbard.github.io/mdlzork
 
-## ✨ Features
+## Features
 
-- 🌐 **Runs Entirely in Browser** - No server required after initial load
-- 📱 **Progressive Web App** - Install on desktop or mobile
-- 💾 **Portable Save Files** - Download and upload native Confusion save files
-- 🎮 **4 Game Versions** - Play Zork from 1977 to 1981
-- ⚡ **Offline Support** - Play without internet after first load
-- 🖥️ **Retro Terminal** - Authentic green-on-black aesthetic with xterm.js
+- **Browser and terminal play** - Use the WebAssembly PWA or native Confusion interpreter
+- **Four playable versions** - Explore Zork snapshots from 1977 through 1981
+- **Portable save files** - Transfer native Confusion `.SAVE` files between the browser sandbox and host
+- **Offline support** - The PWA caches its application shell, interpreter, and game data
+- **Responsive terminal** - xterm.js interface for desktop and mobile browsers
 
 ## Quick Start
 
 ### Play Online (Easiest)
 
-Visit **https://jordanhubbard.github.io/mdlzork** to play immediately - no installation required!
+Visit **https://jordanhubbard.github.io/mdlzork** to play without installing local build tools.
 
 ### Build and Run Locally
 
 ```bash
-# Build WASM and start local server
+git clone --recurse-submodules https://github.com/jordanhubbard/mdlzork.git
+cd mdlzork
 make run
-
-# Then open: http://localhost:8000/
 ```
 
-The app will automatically cache itself for offline use.
+Then open `http://localhost:8000/`. If the repository was cloned without submodules, initialize them first with `git submodule update --init --recursive`.
 
 ### Native Terminal Build (Advanced)
 
 For running in a native terminal (no browser):
 
 ```bash
-# Build native interpreter
 make build-native
-
-# Run specific game version
-make run-native mdlzork_810722
+make run-native GAME=mdlzork_810722
 ```
+
+To start from another image, pass `SAVE`, for example `make run-native GAME=mdlzork_810722 SAVE=MTRZORK/ZORK.SAVE`.
 
 ## Game Versions
 
@@ -72,17 +69,17 @@ Recovered binary files that work with MDL in the [PDP-10 ITS emulator](https://g
 ### WASM Build (Progressive Web App)
 
 ```bash
-make build          # Build WASM (auto-installs Emscripten)
+make build          # Build the browser application
 make run            # Build and serve on localhost:8000
-make wasm-deps      # Install Emscripten SDK manually
+make wasm-deps      # Install the pinned Emscripten SDK
 make clean-wasm     # Clean WASM artifacts
 ```
 
 **Requirements:**
-- Git (for Emscripten SDK)
+- Git and initialized submodules
 - Python 3 (for local test server only)
 - Make
-- ~500 MB disk space for Emscripten
+- Enough disk space for Emscripten and generated game data
 
 **Output:**
 - `build/web/mdli.js` - Emscripten glue code
@@ -92,15 +89,14 @@ make clean-wasm     # Clean WASM artifacts
 ### Native Build (Terminal Application)
 
 ```bash
-make build-native        # Build native interpreter
-make run-native          # Interactive CLI game launcher
-make run-native-server   # Run web server (Flask-based)
-make clean-native        # Clean native artifacts
+make build-native
+make run-native GAME=mdlzork_810722
+make run-native GAME=mdlzork_810722 SAVE=MTRZORK/ZORK.SAVE
+make validate            # Load-test all four game images
 ```
 
 **Requirements:**
 - C++ compiler (gcc/clang)
-- Python 3 (for server mode only)
 - Boehm GC library (`make install-deps` can install it)
 
 **Output:** `confusion-mdl/mdli` executable
@@ -109,24 +105,24 @@ make clean-native        # Clean native artifacts
 
 ### In Browser (Recommended)
 
-1. Visit https://jordanhubbard.github.io/mdlzork/ OR
-2. Run locally: `make run` → open http://localhost:8000/
-3. Select game version (1977-1981)
-4. Click "Start Game"
-5. Type commands in the terminal
+1. Visit https://jordanhubbard.github.io/mdlzork/ or run `make run` locally.
+2. Select a game version.
+3. Click **Start Game**.
+4. Type commands in the terminal.
 
 **Game Controls:**
 - Type commands and press Enter
 - Up/Down arrows for command history
-- Ctrl+C to interrupt
+- Use **Restart** after a game ends to create a fresh interpreter instance
 - Type `SAVE`, then use **Download Save File** to copy it out of the browser sandbox
-- Use **Upload Save File**, then type `RESTORE` to continue from a downloaded save
+- Use **Upload Save File** for the matching game version, then type `RESTORE`
+
+Browser save files are not stored automatically. The game first writes a native Confusion save into its in-memory filesystem; the download and upload controls transfer that file across the browser sandbox boundary. Save files are version-specific.
 
 ### Terminal (Native CLI)
 
 ```bash
-cd mdlzork_810722
-../confusion-mdl/mdli -r MDL/MADADV.SAVE
+make run-native GAME=mdlzork_810722
 ```
 
 ## Manual MDL Usage
@@ -172,8 +168,9 @@ mdlzork/
 │   ├── Makefile.wasm     # WASM build
 │   ├── gc_stub.h/cpp     # GC replacement for WASM
 │   └── wasm_config.h     # WASM configuration
-├── build/                # Generated native and web build artifacts
-├── emsdk/                # Emscripten SDK (auto-installed)
+├── scripts/              # Build support and WASM smoke test
+├── build/                # Generated WASM and assembled web output
+├── emsdk/                # Pinned Emscripten SDK (generated locally)
 ├── mdlzork_771212/       # Zork 1977-12-12 (500 points)
 ├── mdlzork_780124/       # Zork 1978-01-24 (with end-game)
 ├── mdlzork_791211/       # Zork 1979-12-11 (616 points)
@@ -186,16 +183,18 @@ mdlzork/
 ## Architecture
 
 ### WASM Build Pipeline
-1. **C/C++ Source** (confusion-mdl/) → Emscripten → **WASM**
-2. **GC Replacement**: Boehm GC → malloc/free stub (gc_stub.h)
-3. **Game Files**: 4 versions preloaded into 16MB .data file
-4. **Web App**: xterm.js terminal + portable save files + Service Worker
+1. **C/C++ source** (`confusion-mdl/`) is compiled into a modularized WebAssembly interpreter.
+2. **Memory management** uses the interpreter's WASM allocation shim instead of Boehm GC.
+3. **Game files** for all four playable versions are preloaded into Emscripten's virtual filesystem.
+4. **Web application** connects xterm.js to asynchronous interpreter input and output.
+5. **Save transfer** exposes native game save files as browser downloads and uploads.
 
 ### Deployment
-- **GitHub Actions** auto-builds on every push
-- **Emscripten SDK** cached for fast CI builds
-- **GitHub Pages** serves static site
-- **Service Worker** caches 18MB for offline use
+- GitHub Actions builds on pushes and pull requests.
+- Native CI builds on Linux and macOS and load-tests all four game images.
+- WASM CI uses Emscripten 4.0.20 and smoke-tests the module and preloaded files.
+- GitHub Pages serves the assembled static application from `build/web/`.
+- The service worker caches the application and game payload for offline use.
 
 ## Documentation
 
@@ -206,12 +205,12 @@ mdlzork/
 
 ### Build Issues
 
-**"Emscripten SDK not found"**
+**Emscripten setup fails**
 ```bash
-make wasm-deps  # Installs Emscripten (~500MB, 10-15 min)
+make wasm-deps
 ```
 
-**"Game files not found"**
+**Submodule is missing or at the wrong revision**
 ```bash
 git submodule update --init --recursive
 ```
@@ -237,7 +236,8 @@ sudo apt-get install libgc-dev
 
 **Save-file transfer not working**
 - Type `SAVE` before downloading so the browser sandbox contains current progress
-- Upload a compatible `.SAVE` file before typing `RESTORE`
+- Select the matching game version before uploading a compatible `.SAVE` file
+- Type `RESTORE` after the upload completes
 
 ## Make Targets Reference
 
@@ -249,7 +249,9 @@ sudo apt-get install libgc-dev
 
 ### Native Targets
 - `make build-native` - Build native interpreter
-- `make run-native` - Run interactive CLI launcher
+- `make run-native GAME=<directory>` - Run a game using its default image
+- `make run-native GAME=<directory> SAVE=<path>` - Run a selected image
+- `make validate` - Load-test the four playable game images
 
 ### WASM Targets
 - `make wasm-deps` - Install Emscripten SDK
@@ -264,7 +266,7 @@ sudo apt-get install libgc-dev
 - `make clean-releases` - Clean release artifacts
 
 ### Cleanup
-- `make clean` - Clean Python artifacts
+- `make clean` - Clean generated build artifacts
 - `make clean-all` - Clean everything
 
 ## Credits

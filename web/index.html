@@ -69,6 +69,8 @@
     <!-- Register Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
+            let updateAccepted = false;
+
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
                     .then((registration) => {
@@ -80,6 +82,7 @@
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
                                     if (confirm('New version available! Reload to update?')) {
+                                        updateAccepted = true;
                                         newWorker.postMessage({ type: 'SKIP_WAITING' });
                                     }
                                 }
@@ -94,7 +97,7 @@
             // Handle service worker updates
             let refreshing = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
-                if (!refreshing) {
+                if (updateAccepted && !refreshing) {
                     refreshing = true;
                     window.location.reload();
                 }

@@ -193,6 +193,7 @@ mdlzork/
 - GitHub Actions builds on pushes and pull requests.
 - Native CI builds on Linux and macOS and load-tests all four game images.
 - WASM CI uses Emscripten 4.0.20 and smoke-tests the module and preloaded files.
+- A headless-browser test starts Zork, enters `look`, and rejects unexpected EOF failures.
 - GitHub Pages serves the assembled static application from `build/web/`.
 - The service worker caches the application and game payload for offline use.
 

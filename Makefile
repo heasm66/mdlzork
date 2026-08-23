@@ -247,14 +247,10 @@ run-native: interpreter
 validate: interpreter
 	@echo "Validating save files..."
 	@FAILURES=0; \
-	TIMEOUT_CMD=""; \
-	if command -v timeout >/dev/null 2>&1; then TIMEOUT_CMD="timeout 5"; \
-	elif command -v gtimeout >/dev/null 2>&1; then TIMEOUT_CMD="gtimeout 5"; \
-	else echo "Install GNU coreutils to provide timeout/gtimeout"; exit 1; fi; \
 	for game in mdlzork_771212 mdlzork_780124 mdlzork_791211 mdlzork_810722; do \
 		if [ -d "$$game" ] && [ -f "$$game/MDL/MADADV.SAVE" ]; then \
 			printf "  %s/MDL/MADADV.SAVE ... " "$$game"; \
-			if $$TIMEOUT_CMD sh -c "cd $$game && printf 'QUIT\\n' | ../confusion-mdl/mdli -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
+			if scripts/run-with-timeout.pl 5 sh -c "cd $$game && printf 'QUIT\\n' | ../confusion-mdl/mdli -r MDL/MADADV.SAVE" >/dev/null 2>&1; then \
 				echo "✅ OK"; \
 			else \
 				echo "❌ FAILED"; \

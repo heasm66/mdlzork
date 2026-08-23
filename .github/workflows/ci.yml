@@ -101,6 +101,14 @@ jobs:
       - name: Smoke-test WASM module and game data
         run: node scripts/smoke-wasm.mjs build/web
 
+      - name: Install browser test dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Test browser input
+        run: npm run test:browser
+
       - name: Prepare deployment directory
         run: |
           CACHE_VERSION=$(git rev-parse --short HEAD)

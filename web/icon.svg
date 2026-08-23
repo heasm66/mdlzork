@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0a0a0a"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="492" height="492" fill="none" stroke="#33ff33" stroke-width="4"/>
+  
+  <!-- Terminal cursor effect -->
+  <rect x="30" y="30" width="452" height="452" fill="#000000" stroke="#33ff33" stroke-width="2"/>
+  
+  <!-- Text "ZORK" in retro style -->
+  <text x="256" y="200" font-family="Courier New, monospace" font-size="80" font-weight="bold" fill="#33ff33" text-anchor="middle">
+    ZORK
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="256" y="260" font-family="Courier New, monospace" font-size="32" fill="#99ff99" text-anchor="middle">
+    MDL 1977-1981
+  </text>
+  
+  <!-- Blinking cursor -->
+  <rect x="240" y="280" width="32" height="40" fill="#33ff33" opacity="0.8"/>
+  
+  <!-- Bottom decoration -->
+  <text x="256" y="420" font-family="Courier New, monospace" font-size="24" fill="#33ff33" text-anchor="middle">
+    ⚔ Adventure Awaits ⚔
+  </text>
+</svg>

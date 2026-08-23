@@ -1,0 +1,142 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+
+env:
+  EMSDK_VERSION: 4.0.20
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  native-build:
+    name: Native Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install build dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libgc-dev pkg-config
+
+      - name: Install build dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install bdw-gc
+
+      - name: Build native interpreter
+        run: make build-native
+
+      - name: Verify native interpreter
+        run: test -x confusion-mdl/_obj/mdli
+
+      - name: Validate game save files
+        run: make validate
+
+  wasm-build:
+    name: WASM Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Cache Emscripten SDK
+        uses: actions/cache@v4
+        with:
+          path: emsdk
+          key: ${{ runner.os }}-emsdk-${{ env.EMSDK_VERSION }}
+
+      - name: Setup Emscripten
+        run: |
+          if [ ! -d "emsdk" ]; then
+            git clone https://github.com/emscripten-core/emsdk.git
+          fi
+          cd emsdk
+          ./emsdk install "$EMSDK_VERSION"
+          ./emsdk activate "$EMSDK_VERSION"
+
+      - name: Build WASM
+        run: make build
+
+      - name: Verify build artifacts
+        run: |
+          echo "Checking for required build artifacts..."
+          test -f build/wasm/mdli.js && echo "✓ mdli.js exists" || exit 1
+          test -f build/wasm/mdli.wasm && echo "✓ mdli.wasm exists" || exit 1
+          test -f build/wasm/mdli.data && echo "✓ mdli.data exists" || exit 1
+          test -f build/web/index.html && echo "✓ web app assembled" || exit 1
+          test -f build/web/mdli.data && echo "✓ game data assembled" || exit 1
+
+          echo ""
+          echo "File sizes:"
+          ls -lh build/wasm/mdli.js build/wasm/mdli.wasm
+
+          echo ""
+          echo "✓ WASM build successful!"
+
+      - name: Smoke-test WASM module and game data
+        run: node scripts/smoke-wasm.mjs build/web
+
+      - name: Install browser test dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Test browser input
+        run: npm run test:browser
+
+      - name: Prepare deployment directory
+        run: |
+          CACHE_VERSION=$(git rev-parse --short HEAD)
+          # Copy assembled web app to deploy directory
+          cp -r build/web deploy
+          # Update service worker cache name with git SHA
+          sed -i "s|mdlzork-v[0-9.]*|mdlzork-v${CACHE_VERSION}|" deploy/sw.js
+          # Create .nojekyll to prevent GitHub Pages from processing
+          touch deploy/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./deploy
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    needs: [native-build, wasm-build]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

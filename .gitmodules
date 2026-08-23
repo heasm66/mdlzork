@@ -1,0 +1,3 @@
+[submodule "confusion-mdl"]
+	path = confusion-mdl
+	url = https://github.com/jordanhubbard/confusion-mdl.git
